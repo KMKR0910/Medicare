@@ -53,6 +53,7 @@ namespace Diploma_Final_Project_1
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txt_userID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_salary)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,6 +76,7 @@ namespace Diploma_Final_Project_1
             this.btn_save.TabIndex = 50;
             this.btn_save.Text = "Save";
             this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // numericUpDown_salary
             // 
@@ -96,6 +98,9 @@ namespace Diploma_Final_Project_1
             // 
             this.comboBox_postion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_postion.FormattingEnabled = true;
+            this.comboBox_postion.Items.AddRange(new object[] {
+            "Doctor",
+            "Med"});
             this.comboBox_postion.Location = new System.Drawing.Point(323, 283);
             this.comboBox_postion.Name = "comboBox_postion";
             this.comboBox_postion.Size = new System.Drawing.Size(212, 39);
@@ -276,11 +281,19 @@ namespace Diploma_Final_Project_1
             this.label1.TabIndex = 28;
             this.label1.Text = "First Name";
             // 
+            // txt_userID
+            // 
+            this.txt_userID.Location = new System.Drawing.Point(795, 117);
+            this.txt_userID.Name = "txt_userID";
+            this.txt_userID.Size = new System.Drawing.Size(100, 31);
+            this.txt_userID.TabIndex = 52;
+            // 
             // User_Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1121, 1546);
+            this.Controls.Add(this.txt_userID);
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.numericUpDown_salary);
@@ -307,6 +320,7 @@ namespace Diploma_Final_Project_1
             this.Controls.Add(this.label1);
             this.Name = "User_Registration";
             this.Text = "User_Registration";
+            this.Load += new System.EventHandler(this.User_Registration_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_salary)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -339,5 +353,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txt_userID;
     }
 }
