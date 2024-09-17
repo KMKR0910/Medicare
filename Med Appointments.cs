@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Diploma_Final_Project_1
 {
-    public partial class User_Login : Form
+    public partial class Med_Appointments : Form
     {
-        public User_Login()
+        public Med_Appointments()
         {
             InitializeComponent();
         }

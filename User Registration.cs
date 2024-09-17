@@ -63,7 +63,21 @@ namespace Diploma_Final_Project_1
 
 
         }
-    
+        private string GeneratePassword(int length) {
+            const string validChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*";
+            StringBuilder password = new StringBuilder();
+            Random random = new Random();
+
+            for (int i = 0; i < length; i++)
+            {
+                password.Append(validChars[random.Next(validChars.Length)]);
+            }
+
+            return password.ToString();
+
+        }
+
+
 
         private void btn_save_Click(object sender, EventArgs e)
         {
@@ -91,34 +105,21 @@ namespace Diploma_Final_Project_1
                 {*/
                 string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                // save user details
+                  // save user details
                 SqlConnection con1 = new SqlConnection(cs);
                     con1.Open();
 
 
 
-                string sql = "INSERT INTO tbl_Internal_User ([User ID],[First Name],[Last Name],Postion)" +
-                    "VALUES (@userid,@Fname,@Lname,@postion)";
+                string sql = "INSERT INTO tbl_Internal_User ([User ID],[User Password],[First Name],[Last Name],Postion)" +
+                    "VALUES (@userid,@userpwd,@Fname,@Lname,@postion)";
                 /*
-                string sql = "INSERT INTO tbl_Internal_User ([User ID],[First Name],[Last Name],Postion,[House No],[Street Name],City,DOB,[Email Address],Salary,Qualifications)" +
-                        "VALUES (@userid,@Fname,@Lname,@postion,@houseNO,@streetName,@city,@DOB,@email,@salary,@qualification)";*/
-                    SqlCommand com = new SqlCommand(sql, con1);
+                string sql = "INSERT INTO tbl_Internal_User ([User ID],[User Password],[First Name],[Last Name],Postion,[House No],[Street Name],City,DOB,[Email Address],Salary,Qualifications)" +
+                        "VALUES (@userid,@userpwd,@Fname,@Lname,@postion,@houseNO,@streetName,@city,@DOB,@email,@salary,@qualification)";*/
+                SqlCommand com = new SqlCommand(sql, con1);
 
                 com.Parameters.AddWithValue("@userid", this.txt_userID.Text);
+                com.Parameters.AddWithValue("@userpwd", this.txt_userpwd.Text);
                 com.Parameters.AddWithValue("@Fname", this.txt_F_name.Text);
                     com.Parameters.AddWithValue("@Lname", this.txt_L_Name.Text);
                     com.Parameters.AddWithValue("@postion", this.comboBox_postion.Text);
@@ -158,11 +159,158 @@ namespace Diploma_Final_Project_1
             
 
             string newUserID = GenerateUserID();
+            int plengh = 4;
+            string newuserpassword = GeneratePassword(plengh);
+            txt_userpwd.Text = newuserpassword;
+
             if (!string.IsNullOrEmpty(newUserID))
             {
                 txt_userID.Text =newUserID;
 
             }
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            this.txt_F_name.Clear();
+            this.txt_L_Name.Clear();
+            this.txt_address_HNO.Clear();
+            this.txt_address_StreetName.Clear();
+            this.txt_address_city.Clear();
+            this.txt_contact.Clear();
+            this.txt_contact2.Clear();
+            this.txt_email.Clear();
+            this.comboBox_postion.SelectedIndex = -1;
+            this.numericUpDown_salary.Value = 0;
+            this.txt_qulifications.Clear();
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+
+            Users_Login m1 = new Users_Login();
+            m1.Show();
+            this.Hide();
+        }
+
+        private void dateTimePicker_DOB_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox_postion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_contact2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_address_HNO_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_address_StreetName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_address_city_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_email_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_contact_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_qulifications_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_F_name_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_L_Name_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown_salary_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
