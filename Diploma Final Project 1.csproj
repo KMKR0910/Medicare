@@ -33,8 +33,51 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialSkin.2.2.3.1\lib\net461\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=110.2.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>packages\RestSharp.110.2.0\lib\net471\RestSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.CodeDom, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.CodeDom.8.0.0\lib\net462\System.CodeDom.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encodings.Web.7.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=7.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Json.7.0.2\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,20 +89,155 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="User Login.cs">
+    <Compile Include="Doctor Appointment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User Login.Designer.cs">
-      <DependentUpon>User Login.cs</DependentUpon>
+    <Compile Include="Doctor Appointment.Designer.cs">
+      <DependentUpon>Doctor Appointment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Doctor Employee User Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor Employee User Profile.Designer.cs">
+      <DependentUpon>Doctor Employee User Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor Genarate Medical Certificate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor Genarate Medical Certificate.Designer.cs">
+      <DependentUpon>Doctor Genarate Medical Certificate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor Home.Designer.cs">
+      <DependentUpon>Doctor Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor Visit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor Visit.Designer.cs">
+      <DependentUpon>Doctor Visit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee User Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee User Profile.Designer.cs">
+      <DependentUpon>Employee User Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generate Medical Certificate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Generate Medical Certificate.Designer.cs">
+      <DependentUpon>Generate Medical Certificate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Med Add Appoinment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Med Add Appoinment.Designer.cs">
+      <DependentUpon>Med Add Appoinment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Med Add Prescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Med Add Prescription.Designer.cs">
+      <DependentUpon>Med Add Prescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Med Appointments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Med Appointments.Designer.cs">
+      <DependentUpon>Med Appointments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Med Edit Appoinment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Med Edit Appoinment.Designer.cs">
+      <DependentUpon>Med Edit Appoinment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Med home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Med home.Designer.cs">
+      <DependentUpon>Med home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Med Patient Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Med Patient Details.Designer.cs">
+      <DependentUpon>Med Patient Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient Details Doctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient Details Doctor.Designer.cs">
+      <DependentUpon>Patient Details Doctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Phar Prescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Phar Prescription.Designer.cs">
+      <DependentUpon>Phar Prescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User Registration.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="User Registration.Designer.cs">
       <DependentUpon>User Registration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Users Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users Login.Designer.cs">
+      <DependentUpon>Users Login.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Doctor Appointment.resx">
+      <DependentUpon>Doctor Appointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor Employee User Profile.resx">
+      <DependentUpon>Doctor Employee User Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor Genarate Medical Certificate.resx">
+      <DependentUpon>Doctor Genarate Medical Certificate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor Home.resx">
+      <DependentUpon>Doctor Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor Visit.resx">
+      <DependentUpon>Doctor Visit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee User Profile.resx">
+      <DependentUpon>Employee User Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Generate Medical Certificate.resx">
+      <DependentUpon>Generate Medical Certificate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Med Add Appoinment.resx">
+      <DependentUpon>Med Add Appoinment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Med Add Prescription.resx">
+      <DependentUpon>Med Add Prescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Med Appointments.resx">
+      <DependentUpon>Med Appointments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Med Edit Appoinment.resx">
+      <DependentUpon>Med Edit Appoinment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Med home.resx">
+      <DependentUpon>Med home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Med Patient Details.resx">
+      <DependentUpon>Med Patient Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient Details Doctor.resx">
+      <DependentUpon>Patient Details Doctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Phar Prescription.resx">
+      <DependentUpon>Phar Prescription.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -69,12 +247,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="User Login.resx">
-      <DependentUpon>User Login.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="User Registration.resx">
       <DependentUpon>User Registration.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Users Login.resx">
+      <DependentUpon>Users Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

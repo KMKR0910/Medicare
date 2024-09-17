@@ -16,7 +16,7 @@ namespace Diploma_Final_Project_1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Med_Add_Prescription());
         }
     }
 }
