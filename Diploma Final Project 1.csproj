@@ -153,6 +153,12 @@
     <Compile Include="Doctor Home.Designer.cs">
       <DependentUpon>Doctor Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="Doctor User Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor User Profile.Designer.cs">
+      <DependentUpon>Doctor User Profile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Doctor Visit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,12 @@
     </Compile>
     <Compile Include="Generate Medical Certificate.Designer.cs">
       <DependentUpon>Generate Medical Certificate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Med Add Appoinment.cs">
       <SubType>Form</SubType>
@@ -248,6 +260,9 @@
     <EmbeddedResource Include="Doctor Home.resx">
       <DependentUpon>Doctor Home.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Doctor User Profile.resx">
+      <DependentUpon>Doctor User Profile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Doctor Visit.resx">
       <DependentUpon>Doctor Visit.cs</DependentUpon>
     </EmbeddedResource>
@@ -256,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Generate Medical Certificate.resx">
       <DependentUpon>Generate Medical Certificate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Med Add Appoinment.resx">
       <DependentUpon>Med Add Appoinment.cs</DependentUpon>
@@ -289,6 +307,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="User Registration.resx">
       <DependentUpon>User Registration.cs</DependentUpon>
@@ -312,6 +331,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\Screenshot 2024-09-19 031429.png" />
+    <None Include="Resources\images %284%29.jpeg" />
+    <None Include="Resources\360_F_372435911_7Nq7sVzcNRRYFLQ1iZzQVgRLgXL5C839.jpg" />
+    <None Include="Resources\medical-record-line-icon-patient-diagnosis-report-linear-pictogram-health-information-on-clipboard-outline-icon-hospital-note-diagnostic-document-editable-stroke-isolated-illustration-vector1.jpg" />
+    <None Include="Resources\medical-record-line-icon-patient-diagnosis-report-linear-pictogram-health-information-on-clipboard-outline-icon-hospital-note-diagnostic-document-editable-stroke-isolated-illustration-vector.jpg" />
+    <None Include="Resources\images %283%29.png" />
+    <None Include="Resources\4883268-200.png" />
+    <None Include="Resources\images %282%29.png" />
+    <None Include="Resources\3682281.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

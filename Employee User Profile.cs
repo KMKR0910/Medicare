@@ -13,10 +13,13 @@ namespace Diploma_Final_Project_1
 {
     public partial class Employee_User_Profile : Form
     {
-        public Employee_User_Profile()
+
+        private string _userId;
+        public Employee_User_Profile(string userID)
         {
             InitializeComponent();
             DisableFields();
+            _userId = userID;
         }
         private void DisableFields()
         {
@@ -32,7 +35,7 @@ namespace Diploma_Final_Project_1
             txt_qulifications.Enabled = false;
             txt_pwd1.Enabled = false;
             txt_pwd2.Enabled = false;
-           
+
         }
         private void EnableFields()
         {
@@ -78,7 +81,7 @@ namespace Diploma_Final_Project_1
                     {
                         MessageBox.Show("Retrive Password successfully.", "Information");
 
-                        
+
 
                     }
 
@@ -104,6 +107,7 @@ namespace Diploma_Final_Project_1
         private void Employee_User_Profile_Load(object sender, EventArgs e)
         {
             txt_pwd1.TextChanged += new EventHandler(txt_pwd1_TextChanged);
+            txt_userID.Text = _userId;
         }
 
         private void btn_edit_Click(object sender, EventArgs e)
@@ -138,24 +142,24 @@ namespace Diploma_Final_Project_1
                 string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
 
 
-                 // save user details
+                // save user details
                 SqlConnection con1 = new SqlConnection(cs);
                 con1.Open();
 
 
 
                 string sql = "UPDATE  tbl_Internal_User SET [First Name]=@Fname,[Last Name]=@Lname) WHERE  [User ID]=@userid";
-                   
+
                 /*
                 string sql = "UPDATE  tbl_Internal_User SET ([User ID],[User Password],[First Name],[Last Name],Postion,[House No],[Street Name],City,DOB,[Email Address],Salary,Qualifications)" +
                         "VALUES (@userid,@userpwd,@Fname,@Lname,@postion,@houseNO,@streetName,@city,@DOB,@email,@salary,@qualification)";*/
                 SqlCommand com = new SqlCommand(sql, con1);
 
                 com.Parameters.AddWithValue("@userid", this.txt_userID.Text);
-                
+
                 com.Parameters.AddWithValue("@Fname", this.txt_F_name.Text);
                 com.Parameters.AddWithValue("@Lname", this.txt_L_Name.Text);
-                
+
                 /*com.Parameters.AddWithValue("@houseNO", this.txt_address_HNO.Text);
                 com.Parameters.AddWithValue("@streetName", this.txt_address_StreetName.Text);
                 com.Parameters.AddWithValue("@city", this.txt_address_city.Text);
@@ -165,7 +169,7 @@ namespace Diploma_Final_Project_1
                 com.Parameters.AddWithValue("@qualification", this.txt_qulifications.Text)
                 com.Parameters.AddWithValue("@userpwd", this.txt_userpwd.Text);/*/
 
-               if(txt_pwd1.Text == "desired_value")
+                if (txt_pwd1.Text == "desired_value")
                 {
                     ResetPassword();
                 }
@@ -192,6 +196,55 @@ namespace Diploma_Final_Project_1
 
         private void txt_pwd1_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void txt_userID_TextChanged(object sender, EventArgs e)
+        {
+            string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
+            // save user details
+            SqlConnection con1 = new SqlConnection(cs);
+
+
+            con1.Open();
+
+            string sql = "SELECT * FROM tbl_Internal_User WHERE [User ID] =@userid";
+
+            SqlCommand com = new SqlCommand(sql, con1);
+
+
+            com.Parameters.AddWithValue("@userid", this.txt_userID.Text);
+            SqlDataAdapter dap = new SqlDataAdapter(com);
+            DataSet ds = new DataSet();
+            dap.Fill(ds);
+
+
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+
+                DataRow rows = ds.Tables[0].Rows[0];
+
+
+                this.txt_F_name.Text = rows["First Name"].ToString();
+                this.txt_L_Name.Text = rows["Last Name"].ToString();
+                this.txt_address_HNO.Text = rows["House No"].ToString();
+                this.txt_address_StreetName.Text = rows["Street Name"].ToString();
+                this.txt_address_city.Text = rows["City"].ToString();
+                this.dateTimePicker_DOB.Text = rows["DOB"].ToString();
+                this.txt_email.Text = rows["Email Address"].ToString();
+                this.txt_contact.Text = rows["ContactNumber"].ToString();
+                this.txt_qulifications.Text = rows["Qualifications"].ToString();
+
+
+
+
+
+
+            }
+            con1.Close();
+
+            //            string sql = "SELECT [Name] FROM tbl_patient_info WHERE [Contact Number]=@number";
+
 
         }
     }

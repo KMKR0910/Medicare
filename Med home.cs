@@ -23,9 +23,8 @@ namespace Diploma_Final_Project_1
         }
 
         private void btn_userProfile_Click(object sender, EventArgs e)
-        {
-            Employee_User_Profile home = new Employee_User_Profile();
-            home.Show();
+        {// Employee_User_Profile home = new Employee_User_Profile();
+          //  home.Show();
         }
 
         private void btn_appoinments_Click(object sender, EventArgs e)
