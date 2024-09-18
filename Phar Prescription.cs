@@ -144,8 +144,8 @@ namespace Diploma_Final_Project_1
 
                 string sql = @"
                  SELECT td.* 
-                 FROM [tbl_prescription] td
-                 INNER JOIN tbl_patient_info p ON td.[Patient ID] = p.[Patient ID]
+                 FROM [tbl_prescript] td
+                 INNER JOIN tbl_patient_info p ON td.patientid = p.[Patient ID]
                   WHERE p.[Contact Number] = @number";
                 SqlCommand com = new SqlCommand(sql, con);
 
@@ -169,21 +169,29 @@ namespace Diploma_Final_Project_1
 
         private void dataGridView_Prescription_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            try
             {
-                // Get the current row
-                DataGridViewRow row = dataGridView_Prescription.Rows[e.RowIndex];
+                if (e.RowIndex >= 0)
+                {
+                    // Get the current row
+                    DataGridViewRow row = dataGridView_Prescription.Rows[e.RowIndex];
 
-                // Assuming you want the data from the first column (index 0)
-                string cellValue = row.Cells[0].Value.ToString();
-                string cellValue2 = row.Cells[1].Value.ToString();
-                string cellValue3 = row.Cells[2].Value.ToString();
+                    // Assuming you want the data from the first column (index 0)
 
-                // Set the value to the TextBox
-                txt_prescription.Text = cellValue;
-                txt_drugs.Text = cellValue2;
-                txt_description.Text = cellValue2;
-
+                    string cellValue2 = row.Cells[1].Value.ToString();
+                    string cellValue3 = row.Cells[2].Value.ToString();
+                    string cellValue4 = row.Cells[3].Value.ToString();
+                    string cellValue5 = row.Cells[5].Value.ToString();
+                    // Set the value to the TextBox
+                    txt_medicine.Text = cellValue2;
+                    txt_dosage.Text = cellValue2;
+                    txt_duration.Text = cellValue4;
+                    txt_prescripton_number.Text = cellValue5;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

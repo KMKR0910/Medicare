@@ -175,8 +175,8 @@ namespace Diploma_Final_Project_1
 
                 string sql = @"
                  SELECT td.* 
-                 FROM [tbl_prescription] td
-                 INNER JOIN tbl_patient_info p ON td.[Patient ID] = p.[Patient ID]
+                 FROM [tbl_prescript] td
+                 INNER JOIN tbl_patient_info p ON td.patientid = p.[Patient ID]
                   WHERE p.[Contact Number] = @number";
                 SqlCommand com = new SqlCommand(sql, con);
 

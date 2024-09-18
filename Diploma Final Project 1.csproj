@@ -89,8 +89,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="addDrug.cs" />
-    <Compile Include="addDrug.Designer.cs" />
     <Compile Include="Doctor Appointment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,7 +205,6 @@
     <Compile Include="Users Login.Designer.cs">
       <DependentUpon>Users Login.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="addDrug.resx" />
     <EmbeddedResource Include="Doctor Appointment.resx">
       <DependentUpon>Doctor Appointment.cs</DependentUpon>
     </EmbeddedResource>
