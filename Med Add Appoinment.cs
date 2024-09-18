@@ -251,10 +251,7 @@ namespace Diploma_Final_Project_1
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -268,6 +265,19 @@ namespace Diploma_Final_Project_1
 
         private void btn_cancel_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btn_check_Click(object sender, EventArgs e)
+        {
+            string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
+
+           
+            SqlConnection con1 = new SqlConnection(cs);
+            con1.Open();
+
+            string query = "SELECT [Room Number] FROM tbl_room WHERE [Room Type]= @RoomType AND Avaliability = 1";
+
 
         }
     }

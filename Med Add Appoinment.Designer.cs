@@ -42,7 +42,7 @@ namespace Diploma_Final_Project_1
             this.label5 = new System.Windows.Forms.Label();
             this.txt_contact = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_check = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // dateTimePicker_date
@@ -175,23 +175,23 @@ namespace Diploma_Final_Project_1
             this.label4.TabIndex = 96;
             this.label4.Text = "Patient Contact Number";
             // 
-            // button1
+            // btn_check
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(444, 365);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(216, 55);
-            this.button1.TabIndex = 98;
-            this.button1.Text = "Check Avalibility";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_check.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_check.Location = new System.Drawing.Point(444, 365);
+            this.btn_check.Name = "btn_check";
+            this.btn_check.Size = new System.Drawing.Size(216, 55);
+            this.btn_check.TabIndex = 98;
+            this.btn_check.Text = "Check Avalibility";
+            this.btn_check.UseVisualStyleBackColor = true;
+            this.btn_check.Click += new System.EventHandler(this.btn_check_Click);
             // 
             // Med_Add_Appoinment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1066, 1292);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_check);
             this.Controls.Add(this.txt_contact);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dateTimePicker_date);
@@ -228,6 +228,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_contact;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_check;
     }
 }
