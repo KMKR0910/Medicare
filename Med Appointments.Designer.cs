@@ -37,7 +37,10 @@ namespace Diploma_Final_Project_1
             this.btn_appoinment = new System.Windows.Forms.Button();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.dateTimePicker_date = new System.Windows.Forms.DateTimePicker();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.calendarPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_appoinment)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView_appoinment
@@ -115,11 +118,29 @@ namespace Diploma_Final_Project_1
             this.dateTimePicker_date.Size = new System.Drawing.Size(520, 38);
             this.dateTimePicker_date.TabIndex = 89;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(658, 223);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 82;
+            this.dataGridView1.Size = new System.Drawing.Size(8, 8);
+            this.dataGridView1.TabIndex = 91;
+            // 
+            // calendarPanel
+            // 
+            this.calendarPanel.Location = new System.Drawing.Point(42, 131);
+            this.calendarPanel.Name = "calendarPanel";
+            this.calendarPanel.Size = new System.Drawing.Size(1448, 694);
+            this.calendarPanel.TabIndex = 92;
+            // 
             // Med_Appointments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1546, 1433);
+            this.Controls.Add(this.calendarPanel);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.dateTimePicker_date);
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_appoinment);
@@ -130,7 +151,9 @@ namespace Diploma_Final_Project_1
             this.Controls.Add(this.dateTimePicker_AP_date);
             this.Name = "Med_Appointments";
             this.Text = "Med_Appointments";
+            this.Load += new System.EventHandler(this.Med_Appointments_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_appoinment)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,5 +169,7 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.Button btn_appoinment;
         private System.Windows.Forms.Button btn_cancel;
         private System.Windows.Forms.DateTimePicker dateTimePicker_date;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel calendarPanel;
     }
 }
