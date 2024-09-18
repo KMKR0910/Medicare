@@ -44,14 +44,16 @@ namespace Diploma_Final_Project_1
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txt_prescription = new System.Windows.Forms.TextBox();
-            this.txt_drugs = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txt_description = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView_Prescription = new System.Windows.Forms.DataGridView();
+            this.txt_duration = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txt_medicine = new System.Windows.Forms.TextBox();
+            this.txt_prescripton_number = new System.Windows.Forms.TextBox();
+            this.txt_dosage = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -201,82 +203,22 @@ namespace Diploma_Final_Project_1
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.txt_description);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.txt_prescription);
-            this.groupBox2.Controls.Add(this.txt_drugs);
+            this.groupBox2.Controls.Add(this.txt_duration);
             this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.txt_medicine);
+            this.groupBox2.Controls.Add(this.txt_prescripton_number);
+            this.groupBox2.Controls.Add(this.txt_dosage);
             this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(779, 47);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(935, 639);
+            this.groupBox2.Size = new System.Drawing.Size(1184, 639);
             this.groupBox2.TabIndex = 60;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Prescription Details";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
-            // 
-            // txt_prescription
-            // 
-            this.txt_prescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_prescription.Location = new System.Drawing.Point(454, 90);
-            this.txt_prescription.Name = "txt_prescription";
-            this.txt_prescription.Size = new System.Drawing.Size(328, 38);
-            this.txt_prescription.TabIndex = 54;
-            this.txt_prescription.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // txt_drugs
-            // 
-            this.txt_drugs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_drugs.Location = new System.Drawing.Point(454, 165);
-            this.txt_drugs.Multiline = true;
-            this.txt_drugs.Name = "txt_drugs";
-            this.txt_drugs.Size = new System.Drawing.Size(328, 141);
-            this.txt_drugs.TabIndex = 53;
-            this.txt_drugs.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(28, 157);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(236, 84);
-            this.label7.TabIndex = 52;
-            this.label7.Text = "Drugs";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(28, 84);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(357, 42);
-            this.label8.TabIndex = 51;
-            this.label8.Text = "Prescription Number";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
-            // 
-            // txt_description
-            // 
-            this.txt_description.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_description.Location = new System.Drawing.Point(454, 399);
-            this.txt_description.Multiline = true;
-            this.txt_description.Name = "txt_description";
-            this.txt_description.Size = new System.Drawing.Size(328, 141);
-            this.txt_description.TabIndex = 56;
-            this.txt_description.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(28, 391);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(205, 42);
-            this.label9.TabIndex = 55;
-            this.label9.Text = "Description";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // groupBox3
             // 
@@ -297,9 +239,84 @@ namespace Diploma_Final_Project_1
             this.dataGridView_Prescription.Name = "dataGridView_Prescription";
             this.dataGridView_Prescription.RowHeadersWidth = 82;
             this.dataGridView_Prescription.RowTemplate.Height = 33;
-            this.dataGridView_Prescription.Size = new System.Drawing.Size(919, 193);
+            this.dataGridView_Prescription.Size = new System.Drawing.Size(1174, 420);
             this.dataGridView_Prescription.TabIndex = 2;
             this.dataGridView_Prescription.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Prescription_CellContentClick);
+            // 
+            // txt_duration
+            // 
+            this.txt_duration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_duration.Location = new System.Drawing.Point(438, 489);
+            this.txt_duration.Multiline = true;
+            this.txt_duration.Name = "txt_duration";
+            this.txt_duration.Size = new System.Drawing.Size(711, 84);
+            this.txt_duration.TabIndex = 96;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(37, 506);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(159, 42);
+            this.label7.TabIndex = 95;
+            this.label7.Text = "Duration";
+            // 
+            // txt_medicine
+            // 
+            this.txt_medicine.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_medicine.Location = new System.Drawing.Point(438, 207);
+            this.txt_medicine.Multiline = true;
+            this.txt_medicine.Name = "txt_medicine";
+            this.txt_medicine.Size = new System.Drawing.Size(711, 92);
+            this.txt_medicine.TabIndex = 94;
+            // 
+            // txt_prescripton_number
+            // 
+            this.txt_prescripton_number.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_prescripton_number.Location = new System.Drawing.Point(425, 84);
+            this.txt_prescripton_number.Name = "txt_prescripton_number";
+            this.txt_prescripton_number.Size = new System.Drawing.Size(372, 44);
+            this.txt_prescripton_number.TabIndex = 93;
+            // 
+            // txt_dosage
+            // 
+            this.txt_dosage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_dosage.Location = new System.Drawing.Point(438, 363);
+            this.txt_dosage.Multiline = true;
+            this.txt_dosage.Name = "txt_dosage";
+            this.txt_dosage.Size = new System.Drawing.Size(711, 84);
+            this.txt_dosage.TabIndex = 92;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(37, 81);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(349, 42);
+            this.label8.TabIndex = 91;
+            this.label8.Text = "Prescrption Number";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(37, 207);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(168, 42);
+            this.label9.TabIndex = 90;
+            this.label9.Text = "Medicine";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(37, 363);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(148, 42);
+            this.label10.TabIndex = 89;
+            this.label10.Text = "Dosage";
             // 
             // Phar_Prescription
             // 
@@ -343,13 +360,15 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txt_prescription;
-        private System.Windows.Forms.TextBox txt_drugs;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txt_description;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dataGridView_Prescription;
+        private System.Windows.Forms.TextBox txt_duration;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txt_medicine;
+        private System.Windows.Forms.TextBox txt_prescripton_number;
+        private System.Windows.Forms.TextBox txt_dosage;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }
