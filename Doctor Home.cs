@@ -70,7 +70,7 @@ namespace Diploma_Final_Project_1
         private void btn_userProfile_Click(object sender, EventArgs e)
         {
 
-            string postion = "Admin";
+            string postion = "Doctor";
             string cs = "Data Source=ASUS; Initial Catalog = Diploma Final Project DB1; Integrated Security=True";
 
             SqlConnection con = new SqlConnection(cs);
@@ -137,6 +137,11 @@ namespace Diploma_Final_Project_1
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
         {
 
         }

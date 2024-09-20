@@ -88,7 +88,7 @@ namespace Diploma_Final_Project_1
                     {
 
 
-                        User_Registration m1 = new User_Registration();
+                        Doctor_Home m1 = new Doctor_Home();
                         m1.Show();
                         this.Hide();
                     }

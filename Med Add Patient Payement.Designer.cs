@@ -1,0 +1,253 @@
+﻿
+namespace Diploma_Final_Project_1
+{
+    partial class Med_Add_Patient_Payement
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.btn_search = new System.Windows.Forms.Button();
+            this.txt_search = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txt_date = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.numericUpDownCost = new System.Windows.Forms.NumericUpDown();
+            this.btn_cancel = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_add = new System.Windows.Forms.Button();
+            this.btn_genarate = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txt_patient = new System.Windows.Forms.TextBox();
+            this.txt_pay_type = new System.Windows.Forms.TextBox();
+            this.txt_paymnet_number = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCost)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // btn_search
+            // 
+            this.btn_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_search.Location = new System.Drawing.Point(816, 22);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(216, 55);
+            this.btn_search.TabIndex = 67;
+            this.btn_search.Text = "Search";
+            this.btn_search.UseVisualStyleBackColor = true;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
+            // 
+            // txt_search
+            // 
+            this.txt_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_search.Location = new System.Drawing.Point(363, 28);
+            this.txt_search.Name = "txt_search";
+            this.txt_search.Size = new System.Drawing.Size(372, 44);
+            this.txt_search.TabIndex = 68;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(37, 28);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(263, 42);
+            this.label5.TabIndex = 69;
+            this.label5.Text = "Search Patient";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(58, 241);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(259, 42);
+            this.label3.TabIndex = 72;
+            this.label3.Text = "Payment Type";
+            // 
+            // txt_date
+            // 
+            this.txt_date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_date.Location = new System.Drawing.Point(446, 337);
+            this.txt_date.Name = "txt_date";
+            this.txt_date.Size = new System.Drawing.Size(372, 44);
+            this.txt_date.TabIndex = 75;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(58, 334);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 42);
+            this.label1.TabIndex = 74;
+            this.label1.Text = "Date";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(58, 432);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(188, 42);
+            this.label2.TabIndex = 76;
+            this.label2.Text = "Total Cost";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // numericUpDownCost
+            // 
+            this.numericUpDownCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownCost.Location = new System.Drawing.Point(446, 445);
+            this.numericUpDownCost.Name = "numericUpDownCost";
+            this.numericUpDownCost.Size = new System.Drawing.Size(372, 44);
+            this.numericUpDownCost.TabIndex = 78;
+            this.numericUpDownCost.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            // 
+            // btn_cancel
+            // 
+            this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancel.Location = new System.Drawing.Point(1212, 612);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Size = new System.Drawing.Size(216, 90);
+            this.btn_cancel.TabIndex = 89;
+            this.btn_cancel.Text = "Cancel";
+            this.btn_cancel.UseVisualStyleBackColor = true;
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete.Location = new System.Drawing.Point(472, 612);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(216, 90);
+            this.btn_delete.TabIndex = 88;
+            this.btn_delete.Text = "Delete";
+            this.btn_delete.UseVisualStyleBackColor = true;
+            // 
+            // btn_add
+            // 
+            this.btn_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add.Location = new System.Drawing.Point(55, 612);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(216, 90);
+            this.btn_add.TabIndex = 87;
+            this.btn_add.Text = "Add";
+            this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
+            // 
+            // btn_genarate
+            // 
+            this.btn_genarate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_genarate.Location = new System.Drawing.Point(867, 612);
+            this.btn_genarate.Name = "btn_genarate";
+            this.btn_genarate.Size = new System.Drawing.Size(216, 90);
+            this.btn_genarate.TabIndex = 90;
+            this.btn_genarate.Text = "Genarate";
+            this.btn_genarate.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(58, 119);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(243, 42);
+            this.label4.TabIndex = 91;
+            this.label4.Text = "Patient Name";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // txt_patient
+            // 
+            this.txt_patient.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_patient.Location = new System.Drawing.Point(446, 122);
+            this.txt_patient.Name = "txt_patient";
+            this.txt_patient.Size = new System.Drawing.Size(372, 44);
+            this.txt_patient.TabIndex = 92;
+            // 
+            // txt_pay_type
+            // 
+            this.txt_pay_type.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_pay_type.Location = new System.Drawing.Point(446, 244);
+            this.txt_pay_type.Name = "txt_pay_type";
+            this.txt_pay_type.Size = new System.Drawing.Size(372, 44);
+            this.txt_pay_type.TabIndex = 73;
+            // 
+            // txt_paymnet_number
+            // 
+            this.txt_paymnet_number.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_paymnet_number.Location = new System.Drawing.Point(1089, 33);
+            this.txt_paymnet_number.Name = "txt_paymnet_number";
+            this.txt_paymnet_number.Size = new System.Drawing.Size(372, 44);
+            this.txt_paymnet_number.TabIndex = 93;
+            // 
+            // Med_Add_Patient_Payement
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1494, 857);
+            this.Controls.Add(this.txt_paymnet_number);
+            this.Controls.Add(this.txt_patient);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btn_genarate);
+            this.Controls.Add(this.btn_cancel);
+            this.Controls.Add(this.btn_delete);
+            this.Controls.Add(this.btn_add);
+            this.Controls.Add(this.numericUpDownCost);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txt_date);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txt_pay_type);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btn_search);
+            this.Controls.Add(this.txt_search);
+            this.Controls.Add(this.label5);
+            this.Name = "Med_Add_Patient_Payement";
+            this.Text = "Med_Add_Patient_Payement";
+            this.Load += new System.EventHandler(this.Med_Add_Patient_Payement_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCost)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Button btn_search;
+        private System.Windows.Forms.TextBox txt_search;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txt_date;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown numericUpDownCost;
+        private System.Windows.Forms.Button btn_cancel;
+        private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.Button btn_add;
+        private System.Windows.Forms.Button btn_genarate;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txt_patient;
+        private System.Windows.Forms.TextBox txt_pay_type;
+        private System.Windows.Forms.TextBox txt_paymnet_number;
+    }
+}
