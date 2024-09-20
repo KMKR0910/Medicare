@@ -80,6 +80,7 @@ namespace Diploma_Final_Project_1
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -100,13 +101,14 @@ namespace Diploma_Final_Project_1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.groupBox10.SuspendLayout();
+            this.groupBox11.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.btn_home);
-            this.groupBox1.Location = new System.Drawing.Point(27, 116);
+            this.groupBox1.Location = new System.Drawing.Point(27, 48);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(371, 303);
             this.groupBox1.TabIndex = 0;
@@ -140,7 +142,7 @@ namespace Diploma_Final_Project_1
             // 
             this.groupBox2.Controls.Add(this.pictureBox2);
             this.groupBox2.Controls.Add(this.btn_userProfile);
-            this.groupBox2.Location = new System.Drawing.Point(432, 116);
+            this.groupBox2.Location = new System.Drawing.Point(432, 48);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(371, 303);
             this.groupBox2.TabIndex = 1;
@@ -172,7 +174,7 @@ namespace Diploma_Final_Project_1
             // 
             this.groupBox3.Controls.Add(this.pictureBox4);
             this.groupBox3.Controls.Add(this.btn_appoinments);
-            this.groupBox3.Location = new System.Drawing.Point(835, 116);
+            this.groupBox3.Location = new System.Drawing.Point(835, 48);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(371, 303);
             this.groupBox3.TabIndex = 1;
@@ -205,7 +207,7 @@ namespace Diploma_Final_Project_1
             // 
             this.groupBox4.Controls.Add(this.pictureBox5);
             this.groupBox4.Controls.Add(this.btn_patients);
-            this.groupBox4.Location = new System.Drawing.Point(27, 464);
+            this.groupBox4.Location = new System.Drawing.Point(27, 396);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(371, 303);
             this.groupBox4.TabIndex = 1;
@@ -236,7 +238,7 @@ namespace Diploma_Final_Project_1
             // 
             this.groupBox5.Controls.Add(this.pictureBox6);
             this.groupBox5.Controls.Add(this.btn_prescription);
-            this.groupBox5.Location = new System.Drawing.Point(432, 479);
+            this.groupBox5.Location = new System.Drawing.Point(432, 411);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(371, 288);
             this.groupBox5.TabIndex = 1;
@@ -267,7 +269,7 @@ namespace Diploma_Final_Project_1
             // 
             this.groupBox6.Controls.Add(this.pictureBox7);
             this.groupBox6.Controls.Add(this.btn_diaganosisData);
-            this.groupBox6.Location = new System.Drawing.Point(835, 492);
+            this.groupBox6.Location = new System.Drawing.Point(835, 424);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(371, 275);
             this.groupBox6.TabIndex = 1;
@@ -297,7 +299,7 @@ namespace Diploma_Final_Project_1
             // 
             this.groupBox7.Controls.Add(this.pictureBox10);
             this.groupBox7.Controls.Add(this.btn_finance);
-            this.groupBox7.Location = new System.Drawing.Point(835, 837);
+            this.groupBox7.Location = new System.Drawing.Point(835, 769);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(371, 275);
             this.groupBox7.TabIndex = 2;
@@ -329,7 +331,7 @@ namespace Diploma_Final_Project_1
             // 
             this.groupBox8.Controls.Add(this.pictureBox8);
             this.groupBox8.Controls.Add(this.btn_drugInventory);
-            this.groupBox8.Location = new System.Drawing.Point(27, 809);
+            this.groupBox8.Location = new System.Drawing.Point(27, 741);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(371, 303);
             this.groupBox8.TabIndex = 3;
@@ -360,7 +362,7 @@ namespace Diploma_Final_Project_1
             // 
             this.groupBox9.Controls.Add(this.pictureBox9);
             this.groupBox9.Controls.Add(this.btn_employee);
-            this.groupBox9.Location = new System.Drawing.Point(432, 824);
+            this.groupBox9.Location = new System.Drawing.Point(432, 756);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(371, 288);
             this.groupBox9.TabIndex = 4;
@@ -401,7 +403,7 @@ namespace Diploma_Final_Project_1
             this.prescriptionToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(2008, 40);
+            this.menuStrip1.Size = new System.Drawing.Size(1992, 40);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -458,7 +460,7 @@ namespace Diploma_Final_Project_1
             this.groupBox10.Controls.Add(this.linkLabel2);
             this.groupBox10.Controls.Add(this.linkLabel1);
             this.groupBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox10.Location = new System.Drawing.Point(1225, 123);
+            this.groupBox10.Location = new System.Drawing.Point(1624, 123);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(341, 954);
             this.groupBox10.TabIndex = 6;
@@ -605,22 +607,32 @@ namespace Diploma_Final_Project_1
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Appoinments";
             // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.groupBox7);
+            this.groupBox11.Controls.Add(this.groupBox8);
+            this.groupBox11.Controls.Add(this.groupBox9);
+            this.groupBox11.Controls.Add(this.groupBox6);
+            this.groupBox11.Controls.Add(this.groupBox4);
+            this.groupBox11.Controls.Add(this.groupBox3);
+            this.groupBox11.Controls.Add(this.groupBox5);
+            this.groupBox11.Controls.Add(this.groupBox2);
+            this.groupBox11.Controls.Add(this.groupBox1);
+            this.groupBox11.Location = new System.Drawing.Point(12, 65);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(1606, 1361);
+            this.groupBox11.TabIndex = 7;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "groupBox11";
+            // 
             // Doctor_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(2008, 1237);
+            this.ClientSize = new System.Drawing.Size(1992, 1448);
+            this.Controls.Add(this.groupBox11);
             this.Controls.Add(this.groupBox10);
-            this.Controls.Add(this.groupBox7);
-            this.Controls.Add(this.groupBox8);
-            this.Controls.Add(this.groupBox9);
-            this.Controls.Add(this.groupBox6);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Doctor_Home";
@@ -648,6 +660,7 @@ namespace Diploma_Final_Project_1
             this.menuStrip1.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
+            this.groupBox11.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -705,5 +718,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.GroupBox groupBox11;
     }
 }

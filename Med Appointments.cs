@@ -8,98 +8,274 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Syncfusion.Windows.Forms.Tools;
+using System.Data.SqlClient;
+
 
 
 namespace Diploma_Final_Project_1
 {
     public partial class Med_Appointments : Form
     {
-        private DateTime _currentDate;
-        private List<Label> _dayLabels = new List<Label>();
+        string status1 = "Completed";
+        string status2 = "Pending";
+
 
         public Med_Appointments()
         {
             InitializeComponent();
-            _currentDate = DateTime.Now;
-            InitializeCalendar();
-        }
-
-        private void InitializeCalendar()
-        {
-            // Create labels for each day of the month
-            int day = 1;
-            int row = 0;
-            int col = 0;
-
-            // Calculate the starting day of the week for the current month
-            int firstDay = (int)_currentDate.DayOfWeek;
-            for (int i = 0; i < firstDay; i++)
-            {
-                Label label = new Label();
-                label.Text = "";
-                label.AutoSize = true;
-                label.Location = new Point(col * 50 + 10, row * 30 + 10);
-                calendarPanel.Controls.Add(label);
-                _dayLabels.Add(label);
-                col++;
-                if (col == 7)
-                {
-                    col = 0;
-                    row++;
-                }
-            }
-
-            // Add labels for the remaining days of the month
-            while (day <= DateTime.DaysInMonth(_currentDate.Year, _currentDate.Month))
-            {
-                Label label = new Label();
-                label.Text = day.ToString();
-                label.AutoSize = true;
-                label.Location = new Point(col * 50 + 10, row * 30 + 10);
-                calendarPanel.Controls.Add(label);
-                _dayLabels.Add(label);
-                day++;
-                col++;
-                if (col == 7)
-                {
-                    col = 0;
-                    row++;
-                }
-            }
-        }
-        private void NextMonthButton_Click(object sender, EventArgs e)
-        {
-            _currentDate = _currentDate.AddMonths(1);
-            // Update the calendar with the new date
-            UpdateCalendar();
-        }
-
-        private void PreviousMonthButton_Click(object sender, EventArgs e)
-        {
-            _currentDate = _currentDate.AddMonths(-1);
-            UpdateCalendar();
-        }
-
-        private void UpdateCalendar()
-        {
-            // Clear existing day labels
-            calendarPanel.Controls.Clear();
-            _dayLabels.Clear();
-
-            // Re-initialize the calendar with the updated date
-            InitializeCalendar();
+            
+            
         }
 
         private void Med_Appointments_Load(object sender, EventArgs e)
         {
+            string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
+            try
+            {
 
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+
+
+                string sql = "SELECT COUNT(*)  FROM [tbl_appoinment] WHERE [Date] = @date  ";
+                SqlCommand com = new SqlCommand(sql, con);
+                com.Parameters.AddWithValue("@date", this.dateTimePicker_AP_date.Value.Date);
+
+                int appointmentCount = (int)com.ExecuteScalar();
+
+                txt_appoinment.Text = appointmentCount.ToString();
+
+
+                string sql1 = "SELECT COUNT(*)  FROM [tbl_appoinment] WHERE [Date] = @date AND [status]=@status1 ";
+                SqlCommand com1 = new SqlCommand(sql1, con);
+
+                com1.Parameters.AddWithValue("@date", this.dateTimePicker_AP_date.Value.Date);
+
+                com1.Parameters.AddWithValue("@status1", status1);
+                int appointmentStaus1 = (int)com1.ExecuteScalar();
+                txt_completed.Text = appointmentStaus1.ToString();
+
+
+
+                string sql2 = "SELECT COUNT(*)  FROM [tbl_appoinment] WHERE [Date] = @date AND [status]=@status2 ";
+                SqlCommand com2 = new SqlCommand(sql2, con);
+
+                com2.Parameters.AddWithValue("@date", this.dateTimePicker_AP_date.Value.Date);
+
+                com2.Parameters.AddWithValue("@status2", status2);
+                int appointmentStaus2 = (int)com2.ExecuteScalar();
+                txt_pending.Text = appointmentStaus2.ToString();
+
+
+
+                con.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+            try
+            {
+
+
+
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+
+
+
+
+
+                string sql = @"
+                SELECT a.[time], a.[Appoinment Number], p.Name, a.[status]
+            FROM [tbl_appoinment] a
+            JOIN tbl_patient_info p ON a.[Patient ID] = p.[Patient ID]
+            
+            WHERE a.[Date] = @date"
+;
+                SqlCommand com = new SqlCommand(sql, con);
+
+                com.Parameters.AddWithValue("@date", this.dateTimePicker_AP_date.Value);
+
+
+
+                SqlDataAdapter dap = new SqlDataAdapter(com);
+                DataSet ds = new DataSet();
+                dap.Fill(ds);
+
+                this.dataGridView_appointment.DataSource = ds.Tables[0];
+
+
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void monthCalendar_appoinment_DateChanged(object sender, DateRangeEventArgs e)
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
+            try
+            {
+
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+
+
+                string sql = "SELECT COUNT(*)  FROM [tbl_appoinment] WHERE [Date] = @date  ";
+                SqlCommand com = new SqlCommand(sql, con);
+                com.Parameters.AddWithValue("@date", this.monthCalendar1.SelectionRange.Start.Date);
+
+                int appointmentCount = (int)com.ExecuteScalar();
+
+                txt_appoinment.Text = appointmentCount.ToString();
+
+
+                string sql1 = "SELECT COUNT(*)  FROM [tbl_appoinment] WHERE [Date] = @date AND [status]=@status1 ";
+                SqlCommand com1 = new SqlCommand(sql1, con);
+
+                com1.Parameters.AddWithValue("@date", this.monthCalendar1.SelectionRange.Start.Date);
+
+                com1.Parameters.AddWithValue("@status1", status1);
+                int appointmentStaus1 = (int)com1.ExecuteScalar();
+                txt_completed.Text = appointmentStaus1.ToString();
+
+
+
+                string sql2 = "SELECT COUNT(*)  FROM [tbl_appoinment] WHERE [Date] = @date AND [status]=@status2 ";
+                SqlCommand com2 = new SqlCommand(sql2, con);
+
+                com2.Parameters.AddWithValue("@date", this.monthCalendar1.SelectionRange.Start.Date);
+
+                com2.Parameters.AddWithValue("@status2", status2);
+                int appointmentStaus2 = (int)com2.ExecuteScalar();
+                txt_pending.Text = appointmentStaus2.ToString();
+
+
+
+                con.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            loadAppointment();
+        }
+        private void loadAppointment()
+        {
+            string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
+
+            try
+            {
+
+
+
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+
+
+
+
+
+                string sql = @"
+                SELECT a.[time] , a.[Appoinment Number], p.Name, a.[status]
+            FROM [tbl_appoinment] a
+            JOIN tbl_patient_info p ON a.[Patient ID] = p.[Patient ID]
+            
+            WHERE a.[Date] = @date"
+;
+                SqlCommand com = new SqlCommand(sql, con);
+
+                com.Parameters.AddWithValue("@date", monthCalendar1.SelectionRange.Start.Date);
+
+
+                SqlDataAdapter dap = new SqlDataAdapter(com);
+                DataSet ds = new DataSet();
+                dap.Fill(ds);
+
+                this.dataGridView_appointment.DataSource = ds.Tables[0];
+
+
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dataGridView_appointment_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+            if (e.RowIndex >= 0)
+            {
+                // Get the current row
+                DataGridViewRow row = dataGridView_appointment.Rows[e.RowIndex];
+
+                // Assuming you want the data from the first column (index 0)
+                string cellValue = row.Cells[2].Value.ToString();
+                string cellValue2 = row.Cells[1].Value.ToString() ;
+
+                // Set the value to the TextBox
+                txt_name.Text = cellValue;
+                txt_appointmentNumber.Text = cellValue2;
+
+            }
         }
 
-       
+        private void btn_complete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+               
+                string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
+
+                // save user details
+                SqlConnection con1 = new SqlConnection(cs);
+                con1.Open();
+
+
+
+                string sql = @"
+                UPDATE a
+                SET a.[status] = @status1
+                FROM [tbl_appoinment] a
+                JOIN [tbl_patient_info] p ON a.[Patient ID] = p.[Patient ID]
+                WHERE p.Name = @name AND a.[Appoinment Number]=@number";
+
+                SqlCommand com = new SqlCommand(sql, con1);
+
+                com.Parameters.AddWithValue("@name", this.txt_name.Text);
+                com.Parameters.AddWithValue("@status1", status2);
+                com.Parameters.AddWithValue("@number", this.txt_appointmentNumber.Text);
+
+
+
+
+
+                int ret = com.ExecuteNonQuery();
+                if (ret >0)
+                {
+                    MessageBox.Show("Updated", "Information");
+                    loadAppointment();
+                }
+               
+                
+                con1.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

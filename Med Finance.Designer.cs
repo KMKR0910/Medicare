@@ -1,7 +1,7 @@
 ﻿
 namespace Diploma_Final_Project_1
 {
-    partial class Doctor_User_Profile
+    partial class Med_Finance
     {
         /// <summary>
         /// Required designer variable.
@@ -29,20 +29,33 @@ namespace Diploma_Final_Project_1
         /// </summary>
         private void InitializeComponent()
         {
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.SuspendLayout();
             // 
-            // Doctor_User_Profile
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(44, 109);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1494, 1215);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // Med_Finance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1995, 1448);
-            this.Name = "Doctor_User_Profile";
-            this.Text = "Doctor_User_Profile";
-            this.Load += new System.EventHandler(this.Doctor_User_Profile_Load);
+            this.ClientSize = new System.Drawing.Size(1999, 1437);
+            this.Controls.Add(this.groupBox1);
+            this.Name = "Med_Finance";
+            this.Text = "Med_Finance";
+            this.Load += new System.EventHandler(this.Med_Finance_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
