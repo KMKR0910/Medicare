@@ -39,6 +39,40 @@ namespace Diploma_Final_Project_1
             // Show the form inside the GroupBox
             form2.Show();
         }
+        private void LoadAppoinment()
+        {
+            //Create an instance of Form2
+            Doctor_Appointment form2 = new Doctor_Appointment();
+
+            // Remove borders and make the form a child control
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.Dock = DockStyle.Fill;
+
+            // Add the form to the GroupBox
+            groupBox11.Controls.Clear();  // Optionally clear previous controls
+            groupBox11.Controls.Add(form2);
+
+            // Show the form inside the GroupBox
+            form2.Show();
+        }
+        private void LoadPatient()
+        {
+            //Create an instance of Form2
+            Patient_Details_Doctor form2 = new Patient_Details_Doctor();
+
+            // Remove borders and make the form a child control
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.Dock = DockStyle.Fill;
+
+            // Add the form to the GroupBox
+            groupBox11.Controls.Clear();  // Optionally clear previous controls
+            groupBox11.Controls.Add(form2);
+
+            // Show the form inside the GroupBox
+            form2.Show();
+        }
 
         private void btn_home_Click(object sender, EventArgs e)
         {
@@ -47,14 +81,12 @@ namespace Diploma_Final_Project_1
 
         private void btn_appoinments_Click(object sender, EventArgs e)
         {
-            Doctor_Appointment home = new Doctor_Appointment();
-            home.Show();
+            LoadAppoinment();
         }
 
         private void btn_patients_Click(object sender, EventArgs e)
         {
-            Patient_Details_Doctor home = new Patient_Details_Doctor();
-            home.Show();
+            LoadPatient();
         }
 
         private void btn_employee_Click(object sender, EventArgs e)
@@ -164,6 +196,11 @@ namespace Diploma_Final_Project_1
         private void employeeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LoadEmployeeInGroupBox1();
+        }
+
+        private void appoinmentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadAppoinment();
         }
     }
 }
