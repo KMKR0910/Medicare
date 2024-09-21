@@ -125,12 +125,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Add Diagnose History.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Add Diagnose History.Designer.cs">
-      <DependentUpon>Add Diagnose History.cs</DependentUpon>
-    </Compile>
     <Compile Include="Doctor Appointment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,23 +161,23 @@
     <Compile Include="Doctor Visit.Designer.cs">
       <DependentUpon>Doctor Visit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Drug Adding.cs" />
+    <Compile Include="Drug Adding.Designer.cs" />
+    <Compile Include="Drug Order.cs" />
+    <Compile Include="Drug Order.Designer.cs" />
     <Compile Include="Employee User Profile.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Employee User Profile.Designer.cs">
       <DependentUpon>Employee User Profile.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form1.cs" />
+    <Compile Include="Form1.Designer.cs" />
     <Compile Include="Generate Medical Certificate.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Generate Medical Certificate.Designer.cs">
       <DependentUpon>Generate Medical Certificate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Main.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Med Add Appoinment.cs">
       <SubType>Form</SubType>
@@ -271,6 +265,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Request Drug Order.cs" />
+    <Compile Include="Request Drug Order.Designer.cs" />
+    <Compile Include="SupplerReg.cs" />
+    <Compile Include="SupplerReg.Designer.cs" />
     <Compile Include="User Registration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -283,9 +281,6 @@
     <Compile Include="Users Login.Designer.cs">
       <DependentUpon>Users Login.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Add Diagnose History.resx">
-      <DependentUpon>Add Diagnose History.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Doctor Appointment.resx">
       <DependentUpon>Doctor Appointment.cs</DependentUpon>
     </EmbeddedResource>
@@ -304,14 +299,14 @@
     <EmbeddedResource Include="Doctor Visit.resx">
       <DependentUpon>Doctor Visit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Drug Adding.resx" />
+    <EmbeddedResource Include="Drug Order.resx" />
     <EmbeddedResource Include="Employee User Profile.resx">
       <DependentUpon>Employee User Profile.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx" />
     <EmbeddedResource Include="Generate Medical Certificate.resx">
       <DependentUpon>Generate Medical Certificate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Med Add Appoinment.resx">
       <DependentUpon>Med Add Appoinment.cs</DependentUpon>
@@ -365,6 +360,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Request Drug Order.resx" />
+    <EmbeddedResource Include="SupplerReg.resx" />
     <EmbeddedResource Include="User Registration.resx">
       <DependentUpon>User Registration.cs</DependentUpon>
     </EmbeddedResource>
