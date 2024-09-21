@@ -83,6 +83,14 @@ namespace Diploma_Final_Project_1
         {
             try
             {
+
+                string v1 = txt_address_HNO.Text;
+                string v2 = txt_address_StreetName.Text;
+                string v3 = txt_address_city.Text;
+
+                string address = v1 + " , " + v2 + " ,"  + v3;
+                string sql = "";
+                string userType= this.comboBox_postion.Text;
                 /*
 
                 string email = this.txt_email.Text;
@@ -109,27 +117,56 @@ namespace Diploma_Final_Project_1
                 SqlConnection con1 = new SqlConnection(cs);
                     con1.Open();
 
+                if (userType == "Doctor")
+                {
+                    sql = "INSERT INTO [tbl_doctor] ([Doctor ID],[User Password],[First Name],[Last Name],Address,DOB,[Email Address],Qualifications,ContactNumber)" +
+                        "VALUES (@userid,@userpwd,@Fname,@Lname,@address,@DOB,@email,@qualification,@number)"; 
+
+                }
+
+                if (userType == "Medical Centre Assistant")
+                {
+                    sql = "INSERT INTO [tbl_Medical_Centre_Assistant] ([Med_Assistant_ID] ,[User Password],[First Name],[Last Name],[Address],DOB,[Email Address],Salary,Qualifications,ContactNumber)" +
+                        "VALUES (@userid,@userpwd,@Fname,@Lname,@address,@DOB,@email,@salary,@qualification,@number)";
+
+                }
+
+                if (userType == "Pharamacists")
+                {
+                    sql = "INSERT INTO tbl_Pharamacists (Pharamacists_ID,[User Password],[First Name],[Last Name],[Address],DOB,[Email Address],Salary,Qualifications,ContactNumber)" +
+                        "VALUES (@userid,@userpwd,@Fname,@Lname,@address,@DOB,@email,@salary,@qualification,@number)";
+
+                }
+
+                if (userType == "Laboratary Assistant")
+                {
+                    sql = "INSERT INTO [tbl_Lab_Assistant] ([Lab_Assistant_ID],[User Password],[First Name],[Last Name],[Address],DOB,[Email Address],Salary,Qualifications,ContactNumber)" +
+                        "VALUES (@userid,@userpwd,@Fname,@Lname,@address,@DOB,@email,@salary,@qualification,@number)";
+
+                }
+                if (userType == "Admin")
+                {
+                    sql = "INSERT INTO [tbl_Admin] ([Admin_ID],[User Password],[First Name],[Last Name],[Address],DOB,[Email Address],Salary,ContactNumber)" +
+                        "VALUES (@userid,@userpwd,@Fname,@Lname,@address,@DOB,@email,@salary,@qualification,@number)";
+
+                }
 
 
-                string sql = "INSERT INTO tbl_Internal_User ([User ID],[User Password],[First Name],[Last Name],Postion)" +
-                    "VALUES (@userid,@userpwd,@Fname,@Lname,@postion)";
-                /*
-                string sql = "INSERT INTO tbl_Internal_User ([User ID],[User Password],[First Name],[Last Name],Postion,[House No],[Street Name],City,DOB,[Email Address],Salary,Qualifications)" +
-                        "VALUES (@userid,@userpwd,@Fname,@Lname,@postion,@houseNO,@streetName,@city,@DOB,@email,@salary,@qualification)";*/
+
                 SqlCommand com = new SqlCommand(sql, con1);
 
-                com.Parameters.AddWithValue("@userid", this.txt_userID.Text);
-                com.Parameters.AddWithValue("@userpwd", this.txt_userpwd.Text);
-                com.Parameters.AddWithValue("@Fname", this.txt_F_name.Text);
+                    com.Parameters.AddWithValue("@userid", this.txt_userID.Text);
+                    com.Parameters.AddWithValue("@userpwd", this.txt_userpwd.Text);
+                    com.Parameters.AddWithValue("@Fname", this.txt_F_name.Text);
                     com.Parameters.AddWithValue("@Lname", this.txt_L_Name.Text);
-                    com.Parameters.AddWithValue("@postion", this.comboBox_postion.Text);
-                    /*com.Parameters.AddWithValue("@houseNO", this.txt_address_HNO.Text);
-                    com.Parameters.AddWithValue("@streetName", this.txt_address_StreetName.Text);
-                    com.Parameters.AddWithValue("@city", this.txt_address_city.Text);
-                    com.Parameters.AddWithValue("@DOB", this.dateTimePicker_DOB.Text);
+                   
+                   
+                    com.Parameters.AddWithValue("@address", address);
+                    com.Parameters.AddWithValue("@DOB", this.dateTimePicker_DOB.Value);
                     com.Parameters.AddWithValue("@email", this.txt_email.Text);
                     com.Parameters.AddWithValue("@salary", this.numericUpDown_salary.Text);
-                    com.Parameters.AddWithValue("@qualification", this.txt_qulifications.Text)/*/
+                com.Parameters.AddWithValue("@qualification", this.txt_qulifications.Text);
+                com.Parameters.AddWithValue("@number", this.txt_contact.Text);
 
 
 
@@ -138,11 +175,13 @@ namespace Diploma_Final_Project_1
 
 
 
-                    int ret = com.ExecuteNonQuery();
+                int ret = com.ExecuteNonQuery();
                     if (ret == 1)
                     {
                         MessageBox.Show("User Registered", "Information");
                     }
+                
+
                     con1.Close();
                 }
                 catch (Exception ex)

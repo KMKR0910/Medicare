@@ -98,6 +98,7 @@ namespace Diploma_Final_Project_1
                     this.dateTimePicker_DOB.Text = rows["DOB"].ToString();
                     this.txt_contact.Text = rows["Contact Number"].ToString();
                     this.txt_email.Text = rows["email"].ToString();
+                    this.comboBox_gender.Text = rows["Gender"].ToString();
 
                     // Parse the DOB field to a DateTime object
                     DateTime dob = DateTime.Parse(rows["DOB"].ToString());
@@ -241,7 +242,7 @@ namespace Diploma_Final_Project_1
 
 
 
-                string sql = "UPDATE [tbl_patient_info] SET [Name]=@name, [Address]=@address, [DOB]=@dob,  [Contact Number]=@number1 ,[Email]=@email WHERE [Contact Number]=@number";
+                string sql = "UPDATE [tbl_patient_info] SET [Name]=@name, [Address]=@address, [DOB]=@dob,  [Contact Number]=@number1 ,[Email]=@email ,[Gender]=@gender WHERE [Contact Number]=@number,";
 
                 SqlCommand com = new SqlCommand(sql, con1);
                 com.Parameters.AddWithValue("@number", this.txt_search.Text);
@@ -254,6 +255,7 @@ namespace Diploma_Final_Project_1
                 com.Parameters.AddWithValue("@number1", this.txt_contact.Text);
 
                 com.Parameters.AddWithValue("@email", this.txt_email.Text);
+                com.Parameters.AddWithValue("@gender", this.comboBox_gender.Text);
 
                 int ret = com.ExecuteNonQuery();
                 if (ret == 1)

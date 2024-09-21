@@ -31,38 +31,136 @@ namespace Diploma_Final_Project_1
         {
             this.dataGridView_visits = new System.Windows.Forms.DataGridView();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btn_save = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_visits)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView_visits
             // 
             this.dataGridView_visits.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_visits.Location = new System.Drawing.Point(62, 164);
+            this.dataGridView_visits.Location = new System.Drawing.Point(53, 110);
             this.dataGridView_visits.Name = "dataGridView_visits";
             this.dataGridView_visits.RowHeadersWidth = 82;
             this.dataGridView_visits.RowTemplate.Height = 33;
-            this.dataGridView_visits.Size = new System.Drawing.Size(1259, 928);
+            this.dataGridView_visits.Size = new System.Drawing.Size(1424, 541);
             this.dataGridView_visits.TabIndex = 0;
+            this.dataGridView_visits.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_visits_CellContentClick);
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Location = new System.Drawing.Point(85, 25);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(463, 31);
+            this.dateTimePicker1.Size = new System.Drawing.Size(583, 44);
             this.dateTimePicker1.TabIndex = 1;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.btn_delete);
+            this.groupBox1.Controls.Add(this.btn_save);
+            this.groupBox1.Controls.Add(this.dateTimePicker3);
+            this.groupBox1.Controls.Add(this.dateTimePicker2);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Location = new System.Drawing.Point(76, 752);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1367, 390);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker3.Location = new System.Drawing.Point(472, 135);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(400, 44);
+            this.dateTimePicker3.TabIndex = 118;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker2.Location = new System.Drawing.Point(472, 47);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(400, 44);
+            this.dateTimePicker2.TabIndex = 117;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(41, 49);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(188, 42);
+            this.label5.TabIndex = 116;
+            this.label5.Text = "Start Time";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(52, 137);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(177, 42);
+            this.label2.TabIndex = 115;
+            this.label2.Text = "End Time";
+            // 
+            // btn_save
+            // 
+            this.btn_save.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_save.Location = new System.Drawing.Point(59, 272);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(216, 90);
+            this.btn_save.TabIndex = 119;
+            this.btn_save.Text = "Save";
+            this.btn_save.UseVisualStyleBackColor = true;
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete.Location = new System.Drawing.Point(472, 272);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(216, 90);
+            this.btn_delete.TabIndex = 120;
+            this.btn_delete.Text = "Delete";
+            this.btn_delete.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(986, 261);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(216, 90);
+            this.button2.TabIndex = 121;
+            this.button2.Text = "Save";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Med_View_Doctor_Visits
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1376, 1219);
+            this.ClientSize = new System.Drawing.Size(1538, 1352);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.dataGridView_visits);
             this.Name = "Med_View_Doctor_Visits";
             this.Text = "Med_View_Doctor_Visits";
             this.Load += new System.EventHandler(this.Med_View_Doctor_Visits_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_visits)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -71,5 +169,13 @@ namespace Diploma_Final_Project_1
 
         private System.Windows.Forms.DataGridView dataGridView_visits;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_save;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_delete;
     }
 }

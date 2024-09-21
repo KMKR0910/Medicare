@@ -16,30 +16,9 @@ namespace Diploma_Final_Project_1
         public Patient_Details_Doctor()
         {
             InitializeComponent();
-            DisableFields();
+           
         }
-        private void DisableFields()
-        {
-            txt_Name.Enabled = false;
-            txt_address.Enabled = false;
-
-
-            dateTimePicker_DOB.Enabled = false;
-            
-            txt_contact.Enabled = false;
-            txt_age.Enabled = false;
-
-        }
-        private void EnableFields()
-        {
-            txt_Name.Enabled = true;
-            txt_address.Enabled = true;
-            dateTimePicker_DOB.Enabled = true;
-
-            txt_contact.Enabled = true;
-            txt_age.Enabled = true;
-
-        }
+       
         public int CalculateAge(DateTime dob)
         {
             // Get today's date
@@ -107,7 +86,8 @@ namespace Diploma_Final_Project_1
                     this.txt_address.Text = rows["Address"].ToString();
                     this.dateTimePicker_DOB.Text = rows["DOB"].ToString();
                     this.txt_contact.Text = rows["Contact Number"].ToString();
-                   
+                    this.txt_gender.Text = rows["Gender"].ToString();
+
 
                     // Parse the DOB field to a DateTime object
                     DateTime dob = DateTime.Parse(rows["DOB"].ToString());

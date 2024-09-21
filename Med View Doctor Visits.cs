@@ -103,5 +103,22 @@ namespace Diploma_Final_Project_1
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void dataGridView_visits_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.RowIndex >= 0)
+            {
+                // Get the current row
+                DataGridViewRow row = dataGridView_visits.Rows[e.RowIndex];
+
+                // Assuming you want the data from the first column (index 0)
+                string cellValue = row.Cells[4].Value.ToString();
+                string cellValue2 = row.Cells[2].Value.ToString();
+
+                // Set the value to the TextBox
+                dateTimePicker2.Text = cellValue;
+                dateTimePicker3.Text = cellValue2;
+            }
     }
 }

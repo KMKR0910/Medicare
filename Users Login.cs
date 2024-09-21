@@ -8,15 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using MaterialSkin;
-using MaterialSkin.Controls;
+
+
 
 
 
 
 namespace Diploma_Final_Project_1
 {
-    public partial class Users_Login : MaterialForm
+    public partial class Users_Login : Form
 
     {
 
@@ -25,17 +25,7 @@ namespace Diploma_Final_Project_1
         {
             InitializeComponent(); // You need this to properly initialize the form controls
 
-            // Initialize MaterialSkinManager
-            var materialSkinManager = MaterialSkinManager.Instance;
-            materialSkinManager.AddFormToManage(this);
-
-            // Set the theme and color scheme
-            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            materialSkinManager.ColorScheme = new ColorScheme(
-                Primary.Blue600, Primary.Blue700,
-                Primary.Blue200, Accent.LightBlue200,
-                TextShade.WHITE
-            );
+            
         }
 
 

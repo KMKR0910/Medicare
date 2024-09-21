@@ -51,6 +51,8 @@ namespace Diploma_Final_Project_1
             this.label5 = new System.Windows.Forms.Label();
             this.txt_search = new System.Windows.Forms.TextBox();
             this.btn_search = new System.Windows.Forms.Button();
+            this.Gender = new System.Windows.Forms.Label();
+            this.txt_gender = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Diagnose)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -64,6 +66,8 @@ namespace Diploma_Final_Project_1
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txt_gender);
+            this.groupBox1.Controls.Add(this.Gender);
             this.groupBox1.Controls.Add(this.txt_contact);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txt_age);
@@ -85,7 +89,7 @@ namespace Diploma_Final_Project_1
             // txt_contact
             // 
             this.txt_contact.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_contact.Location = new System.Drawing.Point(304, 555);
+            this.txt_contact.Location = new System.Drawing.Point(304, 617);
             this.txt_contact.Name = "txt_contact";
             this.txt_contact.Size = new System.Drawing.Size(328, 38);
             this.txt_contact.TabIndex = 56;
@@ -94,7 +98,7 @@ namespace Diploma_Final_Project_1
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(23, 551);
+            this.label6.Location = new System.Drawing.Point(23, 613);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(289, 42);
             this.label6.TabIndex = 55;
@@ -288,6 +292,24 @@ namespace Diploma_Final_Project_1
             this.btn_search.UseVisualStyleBackColor = true;
             this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
+            // Gender
+            // 
+            this.Gender.AutoSize = true;
+            this.Gender.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Gender.Location = new System.Drawing.Point(23, 545);
+            this.Gender.Name = "Gender";
+            this.Gender.Size = new System.Drawing.Size(143, 42);
+            this.Gender.TabIndex = 89;
+            this.Gender.Text = "Gender";
+            // 
+            // txt_gender
+            // 
+            this.txt_gender.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_gender.Location = new System.Drawing.Point(304, 545);
+            this.txt_gender.Name = "txt_gender";
+            this.txt_gender.Size = new System.Drawing.Size(328, 38);
+            this.txt_gender.TabIndex = 90;
+            // 
             // Patient_Details_Doctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -343,5 +365,7 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.TextBox txt_contact;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txt_gender;
+        private System.Windows.Forms.Label Gender;
     }
 }

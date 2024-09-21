@@ -47,6 +47,7 @@ namespace Diploma_Final_Project_1
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.btn_save = new System.Windows.Forms.Button();
             this.btn_cancel = new System.Windows.Forms.Button();
+            this.btn_clear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txt_today
@@ -62,7 +63,7 @@ namespace Diploma_Final_Project_1
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(642, 40);
+            this.label4.Location = new System.Drawing.Point(692, 40);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(97, 42);
             this.label4.TabIndex = 100;
@@ -80,9 +81,11 @@ namespace Diploma_Final_Project_1
             // 
             // dateTimePicker_Week
             // 
+            this.dateTimePicker_Week.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker_Week.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker_Week.Location = new System.Drawing.Point(481, 183);
             this.dateTimePicker_Week.Name = "dateTimePicker_Week";
-            this.dateTimePicker_Week.Size = new System.Drawing.Size(200, 31);
+            this.dateTimePicker_Week.Size = new System.Drawing.Size(236, 44);
             this.dateTimePicker_Week.TabIndex = 102;
             this.dateTimePicker_Week.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
@@ -90,7 +93,7 @@ namespace Diploma_Final_Project_1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(59, 298);
+            this.label1.Location = new System.Drawing.Point(50, 270);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(199, 42);
             this.label1.TabIndex = 103;
@@ -100,7 +103,7 @@ namespace Diploma_Final_Project_1
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(500, 318);
+            this.checkBox1.Location = new System.Drawing.Point(495, 284);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(162, 41);
             this.checkBox1.TabIndex = 104;
@@ -111,7 +114,7 @@ namespace Diploma_Final_Project_1
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(500, 388);
+            this.checkBox2.Location = new System.Drawing.Point(495, 343);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(171, 41);
             this.checkBox2.TabIndex = 105;
@@ -122,7 +125,7 @@ namespace Diploma_Final_Project_1
             // 
             this.checkBox3.AutoSize = true;
             this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.Location = new System.Drawing.Point(500, 445);
+            this.checkBox3.Location = new System.Drawing.Point(495, 405);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(217, 41);
             this.checkBox3.TabIndex = 106;
@@ -133,7 +136,7 @@ namespace Diploma_Final_Project_1
             // 
             this.checkBox4.AutoSize = true;
             this.checkBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox4.Location = new System.Drawing.Point(500, 641);
+            this.checkBox4.Location = new System.Drawing.Point(494, 642);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(157, 41);
             this.checkBox4.TabIndex = 107;
@@ -144,7 +147,7 @@ namespace Diploma_Final_Project_1
             // 
             this.checkBox5.AutoSize = true;
             this.checkBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox5.Location = new System.Drawing.Point(500, 497);
+            this.checkBox5.Location = new System.Drawing.Point(494, 466);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(183, 41);
             this.checkBox5.TabIndex = 108;
@@ -155,7 +158,7 @@ namespace Diploma_Final_Project_1
             // 
             this.checkBox6.AutoSize = true;
             this.checkBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox6.Location = new System.Drawing.Point(500, 545);
+            this.checkBox6.Location = new System.Drawing.Point(500, 528);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(138, 41);
             this.checkBox6.TabIndex = 109;
@@ -166,7 +169,7 @@ namespace Diploma_Final_Project_1
             // 
             this.checkBox7.AutoSize = true;
             this.checkBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox7.Location = new System.Drawing.Point(500, 594);
+            this.checkBox7.Location = new System.Drawing.Point(495, 585);
             this.checkBox7.Name = "checkBox7";
             this.checkBox7.Size = new System.Drawing.Size(177, 41);
             this.checkBox7.TabIndex = 110;
@@ -177,7 +180,7 @@ namespace Diploma_Final_Project_1
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(79, 855);
+            this.label2.Location = new System.Drawing.Point(61, 852);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(177, 42);
             this.label2.TabIndex = 111;
@@ -187,7 +190,7 @@ namespace Diploma_Final_Project_1
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(79, 754);
+            this.label5.Location = new System.Drawing.Point(50, 764);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(188, 42);
             this.label5.TabIndex = 112;
@@ -195,18 +198,20 @@ namespace Diploma_Final_Project_1
             // 
             // dateTimePicker2
             // 
+            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker2.Location = new System.Drawing.Point(500, 764);
+            this.dateTimePicker2.Location = new System.Drawing.Point(481, 762);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 31);
+            this.dateTimePicker2.Size = new System.Drawing.Size(400, 44);
             this.dateTimePicker2.TabIndex = 113;
             // 
             // dateTimePicker3
             // 
+            this.dateTimePicker3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker3.Location = new System.Drawing.Point(500, 865);
+            this.dateTimePicker3.Location = new System.Drawing.Point(481, 850);
             this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(200, 31);
+            this.dateTimePicker3.Size = new System.Drawing.Size(400, 44);
             this.dateTimePicker3.TabIndex = 114;
             // 
             // btn_save
@@ -223,18 +228,29 @@ namespace Diploma_Final_Project_1
             // btn_cancel
             // 
             this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.Location = new System.Drawing.Point(689, 1061);
+            this.btn_cancel.Location = new System.Drawing.Point(854, 1061);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(216, 90);
             this.btn_cancel.TabIndex = 117;
             this.btn_cancel.Text = "Cancel";
             this.btn_cancel.UseVisualStyleBackColor = true;
             // 
+            // btn_clear
+            // 
+            this.btn_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_clear.Location = new System.Drawing.Point(450, 1061);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(216, 90);
+            this.btn_clear.TabIndex = 118;
+            this.btn_clear.Text = "Clear";
+            this.btn_clear.UseVisualStyleBackColor = true;
+            // 
             // Doctor_Visit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1224, 1366);
+            this.ClientSize = new System.Drawing.Size(1224, 1309);
+            this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.dateTimePicker3);
@@ -281,5 +297,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.Button btn_save;
         private System.Windows.Forms.Button btn_cancel;
+        private System.Windows.Forms.Button btn_clear;
     }
 }

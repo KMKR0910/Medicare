@@ -29,6 +29,7 @@ namespace Diploma_Final_Project_1
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
             this.numericUpDown_salary = new System.Windows.Forms.NumericUpDown();
@@ -59,7 +60,9 @@ namespace Diploma_Final_Project_1
             this.label13 = new System.Windows.Forms.Label();
             this.txt_contact2 = new System.Windows.Forms.TextBox();
             this.btn_clear = new System.Windows.Forms.Button();
+            this.autoComplete1 = new Syncfusion.Windows.Forms.Tools.AutoComplete(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_salary)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autoComplete1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_cancel
@@ -373,6 +376,14 @@ namespace Diploma_Final_Project_1
             this.btn_clear.UseVisualStyleBackColor = true;
             this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
+            // autoComplete1
+            // 
+            this.autoComplete1.HeaderFont = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
+            this.autoComplete1.ItemFont = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.autoComplete1.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(158)))), ((int)(((byte)(218)))));
+            this.autoComplete1.ParentForm = this;
+            this.autoComplete1.Style = Syncfusion.Windows.Forms.Tools.AutoCompleteStyle.Default;
+            // 
             // User_Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -412,6 +423,7 @@ namespace Diploma_Final_Project_1
             this.Text = "User_Registration";
             this.Load += new System.EventHandler(this.User_Registration_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_salary)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autoComplete1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -449,5 +461,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txt_contact2;
         private System.Windows.Forms.Button btn_clear;
+        private Syncfusion.Windows.Forms.Tools.AutoComplete autoComplete1;
     }
 }
