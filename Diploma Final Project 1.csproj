@@ -191,6 +191,12 @@
     <Compile Include="Med Add Appoinment.Designer.cs">
       <DependentUpon>Med Add Appoinment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Med Add expenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Med Add expenses.Designer.cs">
+      <DependentUpon>Med Add expenses.cs</DependentUpon>
+    </Compile>
     <Compile Include="Med Add Patient Payement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +244,12 @@
     </Compile>
     <Compile Include="Med View Doctor Visits.Designer.cs">
       <DependentUpon>Med View Doctor Visits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Med View expenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Med View expenses.Designer.cs">
+      <DependentUpon>Med View expenses.cs</DependentUpon>
     </Compile>
     <Compile Include="Patient Details Doctor.cs">
       <SubType>Form</SubType>
@@ -298,6 +310,9 @@
     <EmbeddedResource Include="Med Add Appoinment.resx">
       <DependentUpon>Med Add Appoinment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Med Add expenses.resx">
+      <DependentUpon>Med Add expenses.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Med Add Patient Payement.resx">
       <DependentUpon>Med Add Patient Payement.cs</DependentUpon>
     </EmbeddedResource>
@@ -321,6 +336,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Med View Doctor Visits.resx">
       <DependentUpon>Med View Doctor Visits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Med View expenses.resx">
+      <DependentUpon>Med View expenses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patient Details Doctor.resx">
       <DependentUpon>Patient Details Doctor.cs</DependentUpon>

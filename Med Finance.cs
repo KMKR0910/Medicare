@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Diploma_Final_Project_1
 {
     public partial class Med_Finance : Form
     {
+        
         public Med_Finance()
         {
             InitializeComponent();
@@ -21,5 +23,26 @@ namespace Diploma_Final_Project_1
         {
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }
