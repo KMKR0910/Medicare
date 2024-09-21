@@ -190,7 +190,6 @@
             this.btnRep.TabIndex = 15;
             this.btnRep.Text = "Generate Report";
             this.btnRep.UseVisualStyleBackColor = true;
-            this.btnRep.Click += new System.EventHandler(this.btnRep_Click);
             // 
             // btnDel
             // 
@@ -237,8 +236,7 @@
             this.Controls.Add(this.btnSrch);
             this.Controls.Add(this.txtSearch);
             this.Name = "addDrug";
-            this.Text = "Drug Inventory";
-            this.Load += new System.EventHandler(this.addDrug_Load);
+            this.Text = "addDrug";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

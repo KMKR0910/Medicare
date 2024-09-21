@@ -86,10 +86,5 @@ namespace inventoryManagement
 
             string sql1 = "INSERT INTO ";
         }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
     }
 }

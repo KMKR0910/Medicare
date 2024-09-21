@@ -212,16 +212,6 @@ namespace inventoryManagement
             
 
         }
-
-        private void btnRep_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void addDrug_Load(object sender, EventArgs e)
-        {
-
-        }
     }
     
 }
