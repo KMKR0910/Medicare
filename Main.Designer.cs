@@ -40,7 +40,7 @@ namespace Diploma_Final_Project_1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(319, 443);
+            this.label1.Location = new System.Drawing.Point(604, 577);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(269, 42);
             this.label1.TabIndex = 29;
@@ -51,7 +51,7 @@ namespace Diploma_Final_Project_1
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(271, 367);
+            this.label2.Location = new System.Drawing.Point(556, 501);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(374, 42);
             this.label2.TabIndex = 30;
@@ -60,7 +60,7 @@ namespace Diploma_Final_Project_1
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Diploma_Final_Project_1.Properties.Resources.Screenshot_2024_09_19_031429;
-            this.pictureBox1.Location = new System.Drawing.Point(278, 125);
+            this.pictureBox1.Location = new System.Drawing.Point(563, 259);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(348, 203);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -71,7 +71,7 @@ namespace Diploma_Final_Project_1
             // btn_login
             // 
             this.btn_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_login.Location = new System.Drawing.Point(351, 591);
+            this.btn_login.Location = new System.Drawing.Point(636, 725);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(216, 90);
             this.btn_login.TabIndex = 51;
@@ -83,7 +83,7 @@ namespace Diploma_Final_Project_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(954, 1049);
+            this.ClientSize = new System.Drawing.Size(1619, 1388);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);

@@ -22,8 +22,24 @@ namespace Diploma_Final_Project_1
         {
 
         }
+        private void LoadEmployeeInGroupBox1()
+        {
+            //Create an instance of Form2
+            Doctor_Employee_User_Profile form2 = new Doctor_Employee_User_Profile();
 
-       
+            // Remove borders and make the form a child control
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.Dock = DockStyle.Fill;
+
+            // Add the form to the GroupBox
+            groupBox11.Controls.Clear();  // Optionally clear previous controls
+            groupBox11.Controls.Add(form2);
+
+            // Show the form inside the GroupBox
+            form2.Show();
+        }
+
         private void btn_home_Click(object sender, EventArgs e)
         {
 
@@ -43,8 +59,7 @@ namespace Diploma_Final_Project_1
 
         private void btn_employee_Click(object sender, EventArgs e)
         {
-            Doctor_Employee_User_Profile home = new Doctor_Employee_User_Profile();
-            home.Show();
+            LoadEmployeeInGroupBox1();
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -144,6 +159,11 @@ namespace Diploma_Final_Project_1
         private void pictureBox9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void employeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadEmployeeInGroupBox1();
         }
     }
 }

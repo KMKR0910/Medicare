@@ -108,7 +108,7 @@ namespace Diploma_Final_Project_1
             // 
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.btn_home);
-            this.groupBox1.Location = new System.Drawing.Point(27, 48);
+            this.groupBox1.Location = new System.Drawing.Point(40, 78);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(371, 303);
             this.groupBox1.TabIndex = 0;
@@ -142,7 +142,7 @@ namespace Diploma_Final_Project_1
             // 
             this.groupBox2.Controls.Add(this.pictureBox2);
             this.groupBox2.Controls.Add(this.btn_userProfile);
-            this.groupBox2.Location = new System.Drawing.Point(432, 48);
+            this.groupBox2.Location = new System.Drawing.Point(566, 92);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(371, 303);
             this.groupBox2.TabIndex = 1;
@@ -174,7 +174,7 @@ namespace Diploma_Final_Project_1
             // 
             this.groupBox3.Controls.Add(this.pictureBox4);
             this.groupBox3.Controls.Add(this.btn_appoinments);
-            this.groupBox3.Location = new System.Drawing.Point(835, 48);
+            this.groupBox3.Location = new System.Drawing.Point(1175, 78);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(371, 303);
             this.groupBox3.TabIndex = 1;
@@ -207,7 +207,7 @@ namespace Diploma_Final_Project_1
             // 
             this.groupBox4.Controls.Add(this.pictureBox5);
             this.groupBox4.Controls.Add(this.btn_patients);
-            this.groupBox4.Location = new System.Drawing.Point(27, 396);
+            this.groupBox4.Location = new System.Drawing.Point(6, 534);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(371, 303);
             this.groupBox4.TabIndex = 1;
@@ -238,7 +238,7 @@ namespace Diploma_Final_Project_1
             // 
             this.groupBox5.Controls.Add(this.pictureBox6);
             this.groupBox5.Controls.Add(this.btn_prescription);
-            this.groupBox5.Location = new System.Drawing.Point(432, 411);
+            this.groupBox5.Location = new System.Drawing.Point(566, 515);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(371, 288);
             this.groupBox5.TabIndex = 1;
@@ -269,7 +269,7 @@ namespace Diploma_Final_Project_1
             // 
             this.groupBox6.Controls.Add(this.pictureBox7);
             this.groupBox6.Controls.Add(this.btn_diaganosisData);
-            this.groupBox6.Location = new System.Drawing.Point(835, 424);
+            this.groupBox6.Location = new System.Drawing.Point(1175, 515);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(371, 275);
             this.groupBox6.TabIndex = 1;
@@ -299,7 +299,7 @@ namespace Diploma_Final_Project_1
             // 
             this.groupBox7.Controls.Add(this.pictureBox10);
             this.groupBox7.Controls.Add(this.btn_finance);
-            this.groupBox7.Location = new System.Drawing.Point(835, 769);
+            this.groupBox7.Location = new System.Drawing.Point(1175, 959);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(371, 275);
             this.groupBox7.TabIndex = 2;
@@ -331,7 +331,7 @@ namespace Diploma_Final_Project_1
             // 
             this.groupBox8.Controls.Add(this.pictureBox8);
             this.groupBox8.Controls.Add(this.btn_drugInventory);
-            this.groupBox8.Location = new System.Drawing.Point(27, 741);
+            this.groupBox8.Location = new System.Drawing.Point(6, 959);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(371, 303);
             this.groupBox8.TabIndex = 3;
@@ -362,7 +362,7 @@ namespace Diploma_Final_Project_1
             // 
             this.groupBox9.Controls.Add(this.pictureBox9);
             this.groupBox9.Controls.Add(this.btn_employee);
-            this.groupBox9.Location = new System.Drawing.Point(432, 756);
+            this.groupBox9.Location = new System.Drawing.Point(550, 959);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(371, 288);
             this.groupBox9.TabIndex = 4;
@@ -392,6 +392,8 @@ namespace Diploma_Final_Project_1
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -403,44 +405,46 @@ namespace Diploma_Final_Project_1
             this.prescriptionToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1992, 40);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(1, 4, 0, 4);
+            this.menuStrip1.Size = new System.Drawing.Size(1981, 62);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // homeToolStripMenuItem
             // 
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(100, 36);
+            this.homeToolStripMenuItem.Size = new System.Drawing.Size(141, 54);
             this.homeToolStripMenuItem.Text = "Home";
             // 
             // employeeToolStripMenuItem
             // 
             this.employeeToolStripMenuItem.Name = "employeeToolStripMenuItem";
-            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(140, 36);
+            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(202, 54);
             this.employeeToolStripMenuItem.Text = "Employee";
+            this.employeeToolStripMenuItem.Click += new System.EventHandler(this.employeeToolStripMenuItem_Click);
             // 
             // patientsToolStripMenuItem
             // 
             this.patientsToolStripMenuItem.Name = "patientsToolStripMenuItem";
-            this.patientsToolStripMenuItem.Size = new System.Drawing.Size(118, 36);
+            this.patientsToolStripMenuItem.Size = new System.Drawing.Size(172, 54);
             this.patientsToolStripMenuItem.Text = "Patients";
             // 
             // appoinmentToolStripMenuItem
             // 
             this.appoinmentToolStripMenuItem.Name = "appoinmentToolStripMenuItem";
-            this.appoinmentToolStripMenuItem.Size = new System.Drawing.Size(168, 36);
+            this.appoinmentToolStripMenuItem.Size = new System.Drawing.Size(247, 54);
             this.appoinmentToolStripMenuItem.Text = "Appoinment";
             // 
             // diagnosisToolStripMenuItem
             // 
             this.diagnosisToolStripMenuItem.Name = "diagnosisToolStripMenuItem";
-            this.diagnosisToolStripMenuItem.Size = new System.Drawing.Size(138, 36);
+            this.diagnosisToolStripMenuItem.Size = new System.Drawing.Size(202, 54);
             this.diagnosisToolStripMenuItem.Text = "Diagnosis";
             // 
             // prescriptionToolStripMenuItem
             // 
             this.prescriptionToolStripMenuItem.Name = "prescriptionToolStripMenuItem";
-            this.prescriptionToolStripMenuItem.Size = new System.Drawing.Size(160, 36);
+            this.prescriptionToolStripMenuItem.Size = new System.Drawing.Size(237, 54);
             this.prescriptionToolStripMenuItem.Text = "Prescription";
             // 
             // groupBox10
@@ -462,7 +466,7 @@ namespace Diploma_Final_Project_1
             this.groupBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox10.Location = new System.Drawing.Point(1624, 123);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(341, 954);
+            this.groupBox10.Size = new System.Drawing.Size(341, 1219);
             this.groupBox10.TabIndex = 6;
             this.groupBox10.TabStop = false;
             this.groupBox10.Enter += new System.EventHandler(this.groupBox10_Enter);
@@ -623,14 +627,13 @@ namespace Diploma_Final_Project_1
             this.groupBox11.Size = new System.Drawing.Size(1606, 1361);
             this.groupBox11.TabIndex = 7;
             this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "groupBox11";
             // 
             // Doctor_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1992, 1448);
+            this.ClientSize = new System.Drawing.Size(1981, 1440);
             this.Controls.Add(this.groupBox11);
             this.Controls.Add(this.groupBox10);
             this.Controls.Add(this.menuStrip1);
