@@ -54,7 +54,7 @@ namespace Diploma_Final_Project_1
                     "VALUES (@id,@date,@time,@number)";
                     SqlCommand com = new SqlCommand(sql, con1);
 
-                   
+
                     com.Parameters.AddWithValue("@date", this.dateTimePicker_date.Value);
                     com.Parameters.AddWithValue("@time", this.txt_time.Text);
                     com.Parameters.AddWithValue("@number", this.txt_AppoinmentNumber.Text);
@@ -74,7 +74,28 @@ namespace Diploma_Final_Project_1
                     {
                         MessageBox.Show("Appoinment Updated", "Information");
                     }
+                   
+
+
+                    string sql1 = "UPDATE [DoctorSessions] SET [AppointmentStatus] = @status WHERE  [AppointmentNumber]=@number  ";
+                    SqlCommand com1 = new SqlCommand(sql1, con1);
+
+
+                    com1.Parameters.AddWithValue("@status", false);
+                    com1.Parameters.AddWithValue("@number", this.txt_AppoinmentNumber.Text);
+                    int ret1 = com1.ExecuteNonQuery();
+                    if (ret1 == 1)
+                    {
+                        MessageBox.Show("Appoinment Updated  1", "Information");
+                    }
                     con1.Close();
+
+
+                    this.txt_time.Clear();
+                    this.txt_AppoinmentNumber.Clear();
+                    this.txt_patient_name.Clear();
+                    this.txt_contact.Clear();
+
                 }
             }
             catch (Exception ex)
@@ -89,7 +110,7 @@ namespace Diploma_Final_Project_1
             {
                 string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
 
-               
+
                 SqlConnection con1 = new SqlConnection(cs);
                 con1.Open();
 
@@ -126,9 +147,9 @@ namespace Diploma_Final_Project_1
 
 
             SqlConnection con = new SqlConnection(cs);
-            
-            con.Open();
 
+            con.Open();
+            /*
             // Create an instance of the AppointmentGenerator
             AppointmentGenerator appointmentGenerator = new AppointmentGenerator(con);
 
@@ -138,10 +159,10 @@ namespace Diploma_Final_Project_1
             // Display the appointment ID (or save it to your database)
             lastThreeDigits = appointmentID.Substring(appointmentID.Length - 3);
 
-            txt_AppoinmentNumber.Text = lastThreeDigits;
-
+            txt_time.Text = lastThreeDigits;
+            */
         }
-        public class AppointmentGenerator
+        /*public class AppointmentGenerator
         {
             private SqlConnection connection;
 
@@ -186,7 +207,7 @@ namespace Diploma_Final_Project_1
                 // Return the next number
                 return appointmentCount + 1;  // Increment count for the new appointment
             }
-        }
+        }*/
 
         private void txt_contact_TextChanged(object sender, EventArgs e)
         {
@@ -251,7 +272,7 @@ namespace Diploma_Final_Project_1
 
         }
 
-        
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -272,13 +293,37 @@ namespace Diploma_Final_Project_1
         {
             string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
 
-           
+
             SqlConnection con1 = new SqlConnection(cs);
             con1.Open();
 
-            string query = "SELECT [Room Number] FROM tbl_room WHERE [Room Type]= @RoomType AND Avaliability = 1";
+            string sql = "SELECT [AppointmentNumber],[StartTime] FROM [DoctorSessions] WHERE [SessionDate]= @date AND [AppointmentStatus] = 1";
+
+            SqlCommand cmd = new SqlCommand(sql, con1);
+            cmd.Parameters.AddWithValue("@date", dateTimePicker_date.Value.Date);
+
+            SqlDataAdapter dap = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            dap.Fill(ds);
 
 
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+
+                DataRow rows = ds.Tables[0].Rows[0];
+
+
+                this.txt_AppoinmentNumber.Text = rows["AppointmentNumber"].ToString();
+
+                this.txt_time.Text = rows["StartTime"].ToString();
+
+
+            }
+            else
+            {
+                MessageBox.Show("No Appoinment numbers avaliable for this day");
+            }
+            con1.Close();
         }
     }
 }

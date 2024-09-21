@@ -36,6 +36,16 @@
     <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\MaterialSkin.2.2.3.1\lib\net461\MaterialSkin.dll</HintPath>
     </Reference>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -45,7 +55,33 @@
     <Reference Include="RestSharp, Version=110.2.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
       <HintPath>packages\RestSharp.110.2.0\lib\net471\RestSharp.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="Syncfusion.Grid.Base, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>packages\Syncfusion.Grid.Base.27.1.48\lib\net462\Syncfusion.Grid.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Windows, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>packages\Syncfusion.Grid.Windows.27.1.48\lib\net462\Syncfusion.Grid.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>packages\Syncfusion.Licensing.27.1.48\lib\net462\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Base, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>packages\Syncfusion.Shared.Base.27.1.48\lib\net462\Syncfusion.Shared.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Windows, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>packages\Syncfusion.Shared.Windows.27.1.48\lib\net462\Syncfusion.Shared.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SpellChecker.Base, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>packages\Syncfusion.SpellChecker.Base.27.1.48\lib\net462\Syncfusion.SpellChecker.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Base, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>packages\Syncfusion.Tools.Base.27.1.48\lib\net462\Syncfusion.Tools.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Windows, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>packages\Syncfusion.Tools.Windows.27.1.48\lib\net462\Syncfusion.Tools.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
@@ -113,6 +149,12 @@
     <Compile Include="Doctor Home.Designer.cs">
       <DependentUpon>Doctor Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="Doctor User Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor User Profile.Designer.cs">
+      <DependentUpon>Doctor User Profile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Doctor Visit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,13 +179,23 @@
     <Compile Include="Generate Medical Certificate.Designer.cs">
       <DependentUpon>Generate Medical Certificate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Lab test.cs" />
-    <Compile Include="Lab test.Designer.cs" />
     <Compile Include="Med Add Appoinment.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Med Add Appoinment.Designer.cs">
       <DependentUpon>Med Add Appoinment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Med Add expenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Med Add expenses.Designer.cs">
+      <DependentUpon>Med Add expenses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Med Add Patient Payement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Med Add Patient Payement.Designer.cs">
+      <DependentUpon>Med Add Patient Payement.cs</DependentUpon>
     </Compile>
     <Compile Include="Med Add Prescription.cs">
       <SubType>Form</SubType>
@@ -163,6 +215,12 @@
     <Compile Include="Med Edit Appoinment.Designer.cs">
       <DependentUpon>Med Edit Appoinment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Med Finance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Med Finance.Designer.cs">
+      <DependentUpon>Med Finance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Med home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,11 +233,29 @@
     <Compile Include="Med Patient Details.Designer.cs">
       <DependentUpon>Med Patient Details.cs</DependentUpon>
     </Compile>
+    <Compile Include="Med View Doctor Visits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Med View Doctor Visits.Designer.cs">
+      <DependentUpon>Med View Doctor Visits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Med View expenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Med View expenses.Designer.cs">
+      <DependentUpon>Med View expenses.cs</DependentUpon>
+    </Compile>
     <Compile Include="Patient Details Doctor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Patient Details Doctor.Designer.cs">
       <DependentUpon>Patient Details Doctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pha Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pha Home.Designer.cs">
+      <DependentUpon>Pha Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Phar Prescription.cs">
       <SubType>Form</SubType>
@@ -217,6 +293,9 @@
     <EmbeddedResource Include="Doctor Home.resx">
       <DependentUpon>Doctor Home.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Doctor User Profile.resx">
+      <DependentUpon>Doctor User Profile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Doctor Visit.resx">
       <DependentUpon>Doctor Visit.cs</DependentUpon>
     </EmbeddedResource>
@@ -229,9 +308,14 @@
     <EmbeddedResource Include="Generate Medical Certificate.resx">
       <DependentUpon>Generate Medical Certificate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Lab test.resx" />
     <EmbeddedResource Include="Med Add Appoinment.resx">
       <DependentUpon>Med Add Appoinment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Med Add expenses.resx">
+      <DependentUpon>Med Add expenses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Med Add Patient Payement.resx">
+      <DependentUpon>Med Add Patient Payement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Med Add Prescription.resx">
       <DependentUpon>Med Add Prescription.cs</DependentUpon>
@@ -242,14 +326,26 @@
     <EmbeddedResource Include="Med Edit Appoinment.resx">
       <DependentUpon>Med Edit Appoinment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Med Finance.resx">
+      <DependentUpon>Med Finance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Med home.resx">
       <DependentUpon>Med home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Med Patient Details.resx">
       <DependentUpon>Med Patient Details.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Med View Doctor Visits.resx">
+      <DependentUpon>Med View Doctor Visits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Med View expenses.resx">
+      <DependentUpon>Med View expenses.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Patient Details Doctor.resx">
       <DependentUpon>Patient Details Doctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pha Home.resx">
+      <DependentUpon>Pha Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Phar Prescription.resx">
       <DependentUpon>Phar Prescription.cs</DependentUpon>
@@ -262,6 +358,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Request Drug Order.resx" />
     <EmbeddedResource Include="SupplerReg.resx" />
@@ -284,6 +381,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MetroFramework.txt" />
+    <None Include="Resources\Screenshot 2024-09-19 031429.png" />
+    <None Include="Resources\images %284%29.jpeg" />
+    <None Include="Resources\360_F_372435911_7Nq7sVzcNRRYFLQ1iZzQVgRLgXL5C839.jpg" />
+    <None Include="Resources\medical-record-line-icon-patient-diagnosis-report-linear-pictogram-health-information-on-clipboard-outline-icon-hospital-note-diagnostic-document-editable-stroke-isolated-illustration-vector1.jpg" />
+    <None Include="Resources\medical-record-line-icon-patient-diagnosis-report-linear-pictogram-health-information-on-clipboard-outline-icon-hospital-note-diagnostic-document-editable-stroke-isolated-illustration-vector.jpg" />
+    <None Include="Resources\images %283%29.png" />
+    <None Include="Resources\4883268-200.png" />
+    <None Include="Resources\images %282%29.png" />
+    <None Include="Resources\3682281.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

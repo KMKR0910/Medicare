@@ -149,7 +149,7 @@ namespace Diploma_Final_Project_1
             // btn_delete
             // 
             this.btn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete.Location = new System.Drawing.Point(718, 1288);
+            this.btn_delete.Location = new System.Drawing.Point(679, 1288);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(216, 90);
             this.btn_delete.TabIndex = 85;

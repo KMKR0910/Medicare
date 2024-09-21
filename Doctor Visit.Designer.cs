@@ -53,22 +53,20 @@ namespace Diploma_Final_Project_1
             // 
             this.txt_today.AcceptsTab = true;
             this.txt_today.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_today.Location = new System.Drawing.Point(943, 34);
+            this.txt_today.Location = new System.Drawing.Point(830, 38);
             this.txt_today.Name = "txt_today";
             this.txt_today.Size = new System.Drawing.Size(372, 44);
             this.txt_today.TabIndex = 101;
-            this.txt_today.TextChanged += new System.EventHandler(this.txt_contact_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(755, 36);
+            this.label4.Location = new System.Drawing.Point(642, 40);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(97, 42);
             this.label4.TabIndex = 100;
             this.label4.Text = "Date";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -79,7 +77,6 @@ namespace Diploma_Final_Project_1
             this.label3.Size = new System.Drawing.Size(228, 42);
             this.label3.TabIndex = 98;
             this.label3.Text = "Select Week";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // dateTimePicker_Week
             // 
@@ -142,7 +139,6 @@ namespace Diploma_Final_Project_1
             this.checkBox4.TabIndex = 107;
             this.checkBox4.Text = "Sunday";
             this.checkBox4.UseVisualStyleBackColor = true;
-            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
             // checkBox5
             // 
@@ -154,7 +150,6 @@ namespace Diploma_Final_Project_1
             this.checkBox5.TabIndex = 108;
             this.checkBox5.Text = "Thursday";
             this.checkBox5.UseVisualStyleBackColor = true;
-            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
             // 
             // checkBox6
             // 
@@ -197,7 +192,6 @@ namespace Diploma_Final_Project_1
             this.label5.Size = new System.Drawing.Size(188, 42);
             this.label5.TabIndex = 112;
             this.label5.Text = "Start Time";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // dateTimePicker2
             // 
@@ -240,7 +234,7 @@ namespace Diploma_Final_Project_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1337, 1366);
+            this.ClientSize = new System.Drawing.Size(1224, 1366);
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.dateTimePicker3);

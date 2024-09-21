@@ -334,6 +334,7 @@ namespace Diploma_Final_Project_1
             this.txt_userID.ReadOnly = true;
             this.txt_userID.Size = new System.Drawing.Size(252, 44);
             this.txt_userID.TabIndex = 87;
+            this.txt_userID.TextChanged += new System.EventHandler(this.txt_userID_TextChanged);
             // 
             // Employee_User_Profile
             // 

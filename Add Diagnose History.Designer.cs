@@ -55,26 +55,26 @@ namespace Diploma_Final_Project_1
             // txt_description
             // 
             this.txt_description.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_description.Location = new System.Drawing.Point(431, 687);
+            this.txt_description.Location = new System.Drawing.Point(431, 843);
             this.txt_description.Multiline = true;
             this.txt_description.Name = "txt_description";
-            this.txt_description.Size = new System.Drawing.Size(711, 84);
+            this.txt_description.Size = new System.Drawing.Size(711, 203);
             this.txt_description.TabIndex = 103;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(30, 704);
+            this.label4.Location = new System.Drawing.Point(30, 873);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(410, 84);
+            this.label4.Size = new System.Drawing.Size(205, 42);
             this.label4.TabIndex = 102;
             this.label4.Text = "Description";
             // 
             // txt_patient_name
             // 
             this.txt_patient_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_patient_name.Location = new System.Drawing.Point(418, 282);
+            this.txt_patient_name.Location = new System.Drawing.Point(431, 176);
             this.txt_patient_name.Name = "txt_patient_name";
             this.txt_patient_name.Size = new System.Drawing.Size(372, 44);
             this.txt_patient_name.TabIndex = 100;
@@ -82,19 +82,19 @@ namespace Diploma_Final_Project_1
             // txt_allergies
             // 
             this.txt_allergies.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_allergies.Location = new System.Drawing.Point(431, 561);
+            this.txt_allergies.Location = new System.Drawing.Point(431, 622);
             this.txt_allergies.Multiline = true;
             this.txt_allergies.Name = "txt_allergies";
-            this.txt_allergies.Size = new System.Drawing.Size(711, 84);
+            this.txt_allergies.Size = new System.Drawing.Size(711, 184);
             this.txt_allergies.TabIndex = 99;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(30, 279);
+            this.label3.Location = new System.Drawing.Point(30, 173);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(486, 84);
+            this.label3.Size = new System.Drawing.Size(243, 42);
             this.label3.TabIndex = 98;
             this.label3.Text = "Patient Name";
             // 
@@ -102,9 +102,9 @@ namespace Diploma_Final_Project_1
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(30, 405);
+            this.label2.Location = new System.Drawing.Point(30, 299);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(436, 84);
+            this.label2.Size = new System.Drawing.Size(218, 42);
             this.label2.TabIndex = 97;
             this.label2.Text = "Medications";
             // 
@@ -112,9 +112,9 @@ namespace Diploma_Final_Project_1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(30, 561);
+            this.label1.Location = new System.Drawing.Point(30, 622);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(322, 84);
+            this.label1.Size = new System.Drawing.Size(161, 42);
             this.label1.TabIndex = 96;
             this.label1.Text = "Allergies";
             // 
@@ -152,15 +152,15 @@ namespace Diploma_Final_Project_1
             // 
             this.txt_medication.FormattingEnabled = true;
             this.txt_medication.ItemHeight = 25;
-            this.txt_medication.Location = new System.Drawing.Point(431, 385);
+            this.txt_medication.Location = new System.Drawing.Point(431, 279);
             this.txt_medication.Name = "txt_medication";
-            this.txt_medication.Size = new System.Drawing.Size(726, 104);
+            this.txt_medication.Size = new System.Drawing.Size(478, 304);
             this.txt_medication.TabIndex = 106;
             // 
             // btn_add
             // 
             this.btn_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add.Location = new System.Drawing.Point(77, 980);
+            this.btn_add.Location = new System.Drawing.Point(1273, 226);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(216, 90);
             this.btn_add.TabIndex = 107;
@@ -172,7 +172,7 @@ namespace Diploma_Final_Project_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1761, 1455);
+            this.ClientSize = new System.Drawing.Size(1728, 1234);
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.txt_medication);
             this.Controls.Add(this.txt_date);

@@ -33,7 +33,7 @@ namespace Diploma_Final_Project_1
             this.txt_time = new System.Windows.Forms.TextBox();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.brn_delete = new System.Windows.Forms.Button();
-            this.btn_save = new System.Windows.Forms.Button();
+            this.btn_add = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_patient_name = new System.Windows.Forms.TextBox();
@@ -84,16 +84,16 @@ namespace Diploma_Final_Project_1
             this.brn_delete.UseVisualStyleBackColor = true;
             this.brn_delete.Click += new System.EventHandler(this.brn_delete_Click);
             // 
-            // btn_save
+            // btn_add
             // 
-            this.btn_save.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_save.Location = new System.Drawing.Point(444, 758);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(216, 55);
-            this.btn_save.TabIndex = 91;
-            this.btn_save.Text = "Save";
-            this.btn_save.UseVisualStyleBackColor = true;
-            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+            this.btn_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add.Location = new System.Drawing.Point(444, 758);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(216, 55);
+            this.btn_add.TabIndex = 91;
+            this.btn_add.Text = "Add";
+            this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // label2
             // 
@@ -198,7 +198,7 @@ namespace Diploma_Final_Project_1
             this.Controls.Add(this.txt_time);
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.brn_delete);
-            this.Controls.Add(this.btn_save);
+            this.Controls.Add(this.btn_add);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_patient_name);
@@ -219,7 +219,7 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.TextBox txt_time;
         private System.Windows.Forms.Button btn_cancel;
         private System.Windows.Forms.Button brn_delete;
-        private System.Windows.Forms.Button btn_save;
+        private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_patient_name;
