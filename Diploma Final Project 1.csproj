@@ -131,6 +131,12 @@
     <Compile Include="Add Diagnose History.Designer.cs">
       <DependentUpon>Add Diagnose History.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin View Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin View Users.Designer.cs">
+      <DependentUpon>Admin View Users.cs</DependentUpon>
+    </Compile>
     <Compile Include="Doctor Appointment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -285,6 +291,9 @@
     </Compile>
     <EmbeddedResource Include="Add Diagnose History.resx">
       <DependentUpon>Add Diagnose History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin View Users.resx">
+      <DependentUpon>Admin View Users.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Doctor Appointment.resx">
       <DependentUpon>Doctor Appointment.cs</DependentUpon>

@@ -192,6 +192,40 @@ namespace Diploma_Final_Project_1
             {
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            try
+            {
+
+
+
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+
+
+
+
+
+                string sql = @"
+                 SELECT DiagnosNumber,Date, Description ,Medications, Allergies
+                 FROM tbl_diagnostic_data";
+                SqlCommand com = new SqlCommand(sql, con);
+
+
+
+
+                SqlDataAdapter dap = new SqlDataAdapter(com);
+                DataSet ds = new DataSet();
+                dap.Fill(ds);
+
+                this.dataGridView1.DataSource = ds.Tables[0];
+
+
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
 
@@ -200,6 +234,56 @@ namespace Diploma_Final_Project_1
         {
              newUserID = GenerateUserID();
             
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                // Get the current row
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+
+                // Assuming you want the data from the first column (index 0)
+                string cellValue = row.Cells[2].Value.ToString();
+                string cellValue2 = row.Cells[4].Value.ToString();
+
+                // Set the value to the TextBox
+                
+                txt_allergies.Text = cellValue;
+                txt_description.Text = cellValue2;
+
+            }
+        }
+
+        private void btn_update_Click(object sender, EventArgs e)
+        {
+            string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
+
+            try
+            {
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+
+
+
+
+                SqlCommand cmd = new SqlCommand("UPDATE tbl_diagnostic_data SET Description = @description, Allergies = @allergies WHERE Name = @name ", con); 
+                cmd.ExecuteNonQuery();
+
+               
+                cmd.Parameters.AddWithValue("@description", txt_description.Text);
+                
+                cmd.Parameters.AddWithValue("@allergies", txt_allergies.Text);
+
+                con.Close();
+
+                MessageBox.Show("added successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
     }
 }
