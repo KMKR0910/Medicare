@@ -138,7 +138,7 @@ namespace Diploma_Final_Project_1
                 int ret = com.ExecuteNonQuery();
                 if (ret == 1)
                 {
-                    MessageBox.Show("User Updated", "Information");
+                    MessageBox.Show("Updated", "Information");
 
                 }
                 con1.Close();
