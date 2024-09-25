@@ -33,7 +33,7 @@ namespace Diploma_Final_Project_1
 
         private void User_Login_Load(object sender, EventArgs e)
         {
-            this.txt_password.Password = true;
+            //this.txt_password.Password = true;
         }
 
 
@@ -41,7 +41,7 @@ namespace Diploma_Final_Project_1
         {
             {
 
-                this.txt_password.Password = true;
+               // this.txt_password.Password = true;
                 //validation part
                 string password = txt_password.Text;
                 if (string.IsNullOrEmpty(this.txt_username.Text) || string.IsNullOrEmpty(this.txt_password.Text))
@@ -155,7 +155,7 @@ namespace Diploma_Final_Project_1
 
         private void checkBox_password_check1_CheckedChanged(object sender, EventArgs e)
         {
-            this.txt_password.Password = checkBox_password_check1.Checked;
+           // this.txt_password.PasswordChar = checkBox_password_check1.Checked;
         }
 
         private void linkLabel_forgot_password_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

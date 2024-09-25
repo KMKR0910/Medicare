@@ -47,6 +47,8 @@ namespace Diploma_Final_Project_1
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox_gender = new System.Windows.Forms.ComboBox();
+            this.Gender = new System.Windows.Forms.Label();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
             this.btn_edit = new System.Windows.Forms.Button();
@@ -56,8 +58,6 @@ namespace Diploma_Final_Project_1
             this.label5 = new System.Windows.Forms.Label();
             this.txt_search = new System.Windows.Forms.TextBox();
             this.btn_search = new System.Windows.Forms.Button();
-            this.Gender = new System.Windows.Forms.Label();
-            this.comboBox_gender = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_LabReport)).BeginInit();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_M_Certificate)).BeginInit();
@@ -163,6 +163,7 @@ namespace Diploma_Final_Project_1
             this.dataGridView_Diagnose.RowTemplate.Height = 33;
             this.dataGridView_Diagnose.Size = new System.Drawing.Size(919, 193);
             this.dataGridView_Diagnose.TabIndex = 2;
+            this.dataGridView_Diagnose.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Diagnose_CellContentClick);
             // 
             // txt_age
             // 
@@ -264,6 +265,28 @@ namespace Diploma_Final_Project_1
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Patient\'s Detail";
             // 
+            // comboBox_gender
+            // 
+            this.comboBox_gender.FormattingEnabled = true;
+            this.comboBox_gender.Items.AddRange(new object[] {
+            "Male",
+            "Female",
+            "Other"});
+            this.comboBox_gender.Location = new System.Drawing.Point(307, 550);
+            this.comboBox_gender.Name = "comboBox_gender";
+            this.comboBox_gender.Size = new System.Drawing.Size(272, 45);
+            this.comboBox_gender.TabIndex = 88;
+            // 
+            // Gender
+            // 
+            this.Gender.AutoSize = true;
+            this.Gender.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Gender.Location = new System.Drawing.Point(26, 544);
+            this.Gender.Name = "Gender";
+            this.Gender.Size = new System.Drawing.Size(143, 42);
+            this.Gender.TabIndex = 87;
+            this.Gender.Text = "Gender";
+            // 
             // btn_cancel
             // 
             this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -350,28 +373,6 @@ namespace Diploma_Final_Project_1
             this.btn_search.Text = "Search";
             this.btn_search.UseVisualStyleBackColor = true;
             this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
-            // 
-            // Gender
-            // 
-            this.Gender.AutoSize = true;
-            this.Gender.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Gender.Location = new System.Drawing.Point(26, 544);
-            this.Gender.Name = "Gender";
-            this.Gender.Size = new System.Drawing.Size(143, 42);
-            this.Gender.TabIndex = 87;
-            this.Gender.Text = "Gender";
-            // 
-            // comboBox_gender
-            // 
-            this.comboBox_gender.FormattingEnabled = true;
-            this.comboBox_gender.Items.AddRange(new object[] {
-            "Male",
-            "Female",
-            "Other"});
-            this.comboBox_gender.Location = new System.Drawing.Point(307, 550);
-            this.comboBox_gender.Name = "comboBox_gender";
-            this.comboBox_gender.Size = new System.Drawing.Size(272, 45);
-            this.comboBox_gender.TabIndex = 88;
             // 
             // Med_Patient_Details
             // 

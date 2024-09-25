@@ -15,6 +15,7 @@ namespace Diploma_Final_Project_1
     {
         string appointmentID;
         string lastThreeDigits;
+        string status = "Pending";
         public Med_Add_Appoinment()
         {
             InitializeComponent();
@@ -50,8 +51,8 @@ namespace Diploma_Final_Project_1
 
 
 
-                    string sql = "INSERT INTO tbl_appoinment ([Patient ID],Date,time,[Appoinment Number])" +
-                    "VALUES (@id,@date,@time,@number)";
+                    string sql = "INSERT INTO tbl_appoinment ([Patient ID],Date,time,[Appoinment Number],[status])" +
+                    "VALUES (@id,@date,@time,@number,@status)";
                     SqlCommand com = new SqlCommand(sql, con1);
 
 
@@ -59,7 +60,7 @@ namespace Diploma_Final_Project_1
                     com.Parameters.AddWithValue("@time", this.txt_time.Text);
                     com.Parameters.AddWithValue("@number", this.txt_AppoinmentNumber.Text);
                     com.Parameters.AddWithValue("@id", patientId);
-
+                    com.Parameters.AddWithValue("@status", status);
 
 
 
@@ -84,10 +85,7 @@ namespace Diploma_Final_Project_1
                     com1.Parameters.AddWithValue("@status", false);
                     com1.Parameters.AddWithValue("@number", this.txt_AppoinmentNumber.Text);
                     int ret1 = com1.ExecuteNonQuery();
-                    if (ret1 == 1)
-                    {
-                        MessageBox.Show("Appoinment Updated  1", "Information");
-                    }
+                  
                     con1.Close();
 
 

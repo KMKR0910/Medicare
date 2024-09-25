@@ -18,12 +18,12 @@ namespace Diploma_Final_Project_1
         {
             InitializeComponent();
         }
-        string userType = this.combobox_user.Text;
-        string sql1;
+       // string userType = this.combobox_user.Text;
+       // string sql1;
 
         private void btn_search_Click(object sender, EventArgs e)
         {
-            try
+           /* try
             {
                 string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
                 SqlConnection con = new SqlConnection(cs);
@@ -65,7 +65,12 @@ namespace Diploma_Final_Project_1
             catch (Exception ex)
             {
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        } 
+            }*/
+        }
+
+        private void Admin_View_Users_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

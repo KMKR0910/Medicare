@@ -40,7 +40,7 @@ namespace Diploma_Final_Project_1
             
             
             WHERE [SessionDate] = @date";
-;
+                ;
                 SqlCommand com = new SqlCommand(sql, con);
 
                 com.Parameters.AddWithValue("@date", dateTimePicker1.Value.Date);
@@ -120,5 +120,6 @@ namespace Diploma_Final_Project_1
                 dateTimePicker2.Text = cellValue;
                 dateTimePicker3.Text = cellValue2;
             }
+        }
     }
 }

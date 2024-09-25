@@ -187,7 +187,8 @@ namespace Diploma_Final_Project_1
             {
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            try
+           
+ try
             {
 
 
@@ -223,7 +224,6 @@ namespace Diploma_Final_Project_1
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void btn_edit_Click(object sender, EventArgs e)
         {
             EnableFields();
@@ -271,5 +271,10 @@ namespace Diploma_Final_Project_1
 
 
 }
+
+        private void dataGridView_Diagnose_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

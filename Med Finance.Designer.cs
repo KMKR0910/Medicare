@@ -33,6 +33,7 @@ namespace Diploma_Final_Project_1
             this.btn_add_expenses = new System.Windows.Forms.Button();
             this.btn_viewExpenses = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_P_payments = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_income_report
@@ -75,11 +76,22 @@ namespace Diploma_Final_Project_1
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
+            // btn_P_payments
+            // 
+            this.btn_P_payments.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_P_payments.Location = new System.Drawing.Point(35, 456);
+            this.btn_P_payments.Name = "btn_P_payments";
+            this.btn_P_payments.Size = new System.Drawing.Size(260, 118);
+            this.btn_P_payments.TabIndex = 4;
+            this.btn_P_payments.Text = "View Patient Payments";
+            this.btn_P_payments.UseVisualStyleBackColor = true;
+            // 
             // Med_Finance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1738, 1378);
+            this.Controls.Add(this.btn_P_payments);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_viewExpenses);
             this.Controls.Add(this.btn_add_expenses);
@@ -97,5 +109,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.Button btn_add_expenses;
         private System.Windows.Forms.Button btn_viewExpenses;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btn_P_payments;
     }
 }

@@ -38,7 +38,7 @@ namespace Diploma_Final_Project_1
             this.label2 = new System.Windows.Forms.Label();
             this.numericUpDownCost = new System.Windows.Forms.NumericUpDown();
             this.btn_cancel = new System.Windows.Forms.Button();
-            this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_clear = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
             this.btn_genarate = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -66,6 +66,7 @@ namespace Diploma_Final_Project_1
             this.txt_search.Name = "txt_search";
             this.txt_search.Size = new System.Drawing.Size(372, 44);
             this.txt_search.TabIndex = 68;
+            this.txt_search.TextChanged += new System.EventHandler(this.txt_search_TextChanged);
             // 
             // label5
             // 
@@ -120,6 +121,11 @@ namespace Diploma_Final_Project_1
             // 
             this.numericUpDownCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDownCost.Location = new System.Drawing.Point(446, 445);
+            this.numericUpDownCost.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.numericUpDownCost.Name = "numericUpDownCost";
             this.numericUpDownCost.Size = new System.Drawing.Size(372, 44);
             this.numericUpDownCost.TabIndex = 78;
@@ -135,15 +141,16 @@ namespace Diploma_Final_Project_1
             this.btn_cancel.Text = "Cancel";
             this.btn_cancel.UseVisualStyleBackColor = true;
             // 
-            // btn_delete
+            // btn_clear
             // 
-            this.btn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete.Location = new System.Drawing.Point(472, 612);
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(216, 90);
-            this.btn_delete.TabIndex = 88;
-            this.btn_delete.Text = "Delete";
-            this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_clear.Location = new System.Drawing.Point(472, 612);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(216, 90);
+            this.btn_clear.TabIndex = 88;
+            this.btn_clear.Text = "Clear";
+            this.btn_clear.UseVisualStyleBackColor = true;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // btn_add
             // 
@@ -211,7 +218,7 @@ namespace Diploma_Final_Project_1
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btn_genarate);
             this.Controls.Add(this.btn_cancel);
-            this.Controls.Add(this.btn_delete);
+            this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.numericUpDownCost);
             this.Controls.Add(this.label2);
@@ -242,7 +249,7 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown numericUpDownCost;
         private System.Windows.Forms.Button btn_cancel;
-        private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.Button btn_clear;
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.Button btn_genarate;
         private System.Windows.Forms.Label label4;

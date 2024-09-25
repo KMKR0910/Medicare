@@ -16,7 +16,7 @@ namespace Diploma_Final_Project_1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new User_Registration ());
+            Application.Run(new Med_view_patient_payments ());
         }
     }
 }

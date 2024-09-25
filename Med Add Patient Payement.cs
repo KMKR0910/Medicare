@@ -137,7 +137,7 @@ namespace Diploma_Final_Project_1
                 SqlCommand cmd = new SqlCommand("Insert Into [tbl_Patient_Payment] Values('" + paymentId + "','" + txt_date.Text + "','" + txt_pay_type.Text + "','" + numericUpDownCost.Value + "','" + patientID + "')", con);
                 cmd.ExecuteNonQuery();
                 con.Close();
-                MessageBox.Show("added successfully");
+                MessageBox.Show("Payment added ");
             }
             catch (Exception ex)
             {
@@ -188,6 +188,18 @@ namespace Diploma_Final_Project_1
             {
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        
+
+        private void txt_search_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

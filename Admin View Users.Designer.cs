@@ -57,11 +57,11 @@ namespace Diploma_Final_Project_1
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.combobox_user = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btn_search = new System.Windows.Forms.Button();
             this.txt_userID = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.combobox_user = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -330,6 +330,15 @@ namespace Diploma_Final_Project_1
             this.groupBox2.TabIndex = 116;
             this.groupBox2.TabStop = false;
             // 
+            // combobox_user
+            // 
+            this.combobox_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combobox_user.FormattingEnabled = true;
+            this.combobox_user.Location = new System.Drawing.Point(260, 13);
+            this.combobox_user.Name = "combobox_user";
+            this.combobox_user.Size = new System.Drawing.Size(265, 45);
+            this.combobox_user.TabIndex = 120;
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -371,15 +380,6 @@ namespace Diploma_Final_Project_1
             this.label12.TabIndex = 117;
             this.label12.Text = "User Type";
             // 
-            // combobox_user
-            // 
-            this.combobox_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.combobox_user.FormattingEnabled = true;
-            this.combobox_user.Location = new System.Drawing.Point(260, 13);
-            this.combobox_user.Name = "combobox_user";
-            this.combobox_user.Size = new System.Drawing.Size(265, 45);
-            this.combobox_user.TabIndex = 120;
-            // 
             // Admin_View_Users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -411,6 +411,7 @@ namespace Diploma_Final_Project_1
             this.Controls.Add(this.label1);
             this.Name = "Admin_View_Users";
             this.Text = "Admin_View_Users";
+            this.Load += new System.EventHandler(this.Admin_View_Users_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

@@ -70,5 +70,7 @@ namespace Diploma_Final_Project_1
         {
             LoadFinance3();
         }
+
+        
     }
 }
