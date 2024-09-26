@@ -191,6 +191,12 @@
     <Compile Include="Generate Medical Certificate.Designer.cs">
       <DependentUpon>Generate Medical Certificate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lab Prescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab Prescription.Designer.cs">
+      <DependentUpon>Lab Prescription.cs</DependentUpon>
+    </Compile>
     <Compile Include="Med Add Appoinment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +208,12 @@
     </Compile>
     <Compile Include="Med Add expenses.Designer.cs">
       <DependentUpon>Med Add expenses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Med Add Lab Prescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Med Add Lab Prescription.Designer.cs">
+      <DependentUpon>Med Add Lab Prescription.cs</DependentUpon>
     </Compile>
     <Compile Include="Med Add Patient Payement.cs">
       <SubType>Form</SubType>
@@ -337,11 +349,17 @@
     <EmbeddedResource Include="Generate Medical Certificate.resx">
       <DependentUpon>Generate Medical Certificate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Lab Prescription.resx">
+      <DependentUpon>Lab Prescription.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Med Add Appoinment.resx">
       <DependentUpon>Med Add Appoinment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Med Add expenses.resx">
       <DependentUpon>Med Add expenses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Med Add Lab Prescription.resx">
+      <DependentUpon>Med Add Lab Prescription.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Med Add Patient Payement.resx">
       <DependentUpon>Med Add Patient Payement.cs</DependentUpon>
