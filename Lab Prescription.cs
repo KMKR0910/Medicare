@@ -207,5 +207,10 @@ namespace Diploma_Final_Project_1
         {
 
         }
+
+        private void Lab_Prescription_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

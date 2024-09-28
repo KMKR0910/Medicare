@@ -351,6 +351,7 @@ namespace Diploma_Final_Project_1
             this.Controls.Add(this.btn_search);
             this.Name = "Lab_Prescription";
             this.Text = "Lab_Prescription";
+            this.Load += new System.EventHandler(this.Lab_Prescription_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_lab)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

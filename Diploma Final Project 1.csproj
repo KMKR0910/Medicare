@@ -191,11 +191,23 @@
     <Compile Include="Generate Medical Certificate.Designer.cs">
       <DependentUpon>Generate Medical Certificate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lab Add lab tests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab Add lab tests.Designer.cs">
+      <DependentUpon>Lab Add lab tests.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lab Prescription.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Lab Prescription.Designer.cs">
       <DependentUpon>Lab Prescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lab view lab test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab view lab test.Designer.cs">
+      <DependentUpon>Lab view lab test.cs</DependentUpon>
     </Compile>
     <Compile Include="Med Add Appoinment.cs">
       <SubType>Form</SubType>
@@ -349,8 +361,14 @@
     <EmbeddedResource Include="Generate Medical Certificate.resx">
       <DependentUpon>Generate Medical Certificate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Lab Add lab tests.resx">
+      <DependentUpon>Lab Add lab tests.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lab Prescription.resx">
       <DependentUpon>Lab Prescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab view lab test.resx">
+      <DependentUpon>Lab view lab test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Med Add Appoinment.resx">
       <DependentUpon>Med Add Appoinment.cs</DependentUpon>
