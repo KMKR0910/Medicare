@@ -56,6 +56,9 @@ namespace Diploma_Final_Project_1
             this.label5 = new System.Windows.Forms.Label();
             this.btn_search = new System.Windows.Forms.Button();
             this.txt_date = new System.Windows.Forms.TextBox();
+            this.btn_report_relesed = new System.Windows.Forms.Button();
+            this.btn_view_report = new System.Windows.Forms.Button();
+            this.btn_print = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_lab)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -192,6 +195,9 @@ namespace Diploma_Final_Project_1
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btn_print);
+            this.groupBox2.Controls.Add(this.btn_view_report);
+            this.groupBox2.Controls.Add(this.btn_report_relesed);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.btn_collected);
@@ -337,6 +343,37 @@ namespace Diploma_Final_Project_1
             this.txt_date.Size = new System.Drawing.Size(372, 44);
             this.txt_date.TabIndex = 97;
             // 
+            // btn_report_relesed
+            // 
+            this.btn_report_relesed.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_report_relesed.Location = new System.Drawing.Point(330, 488);
+            this.btn_report_relesed.Name = "btn_report_relesed";
+            this.btn_report_relesed.Size = new System.Drawing.Size(236, 104);
+            this.btn_report_relesed.TabIndex = 117;
+            this.btn_report_relesed.Text = "Report Relesed";
+            this.btn_report_relesed.UseVisualStyleBackColor = true;
+            this.btn_report_relesed.Click += new System.EventHandler(this.btn_report_relesed_Click);
+            // 
+            // btn_view_report
+            // 
+            this.btn_view_report.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_view_report.Location = new System.Drawing.Point(610, 489);
+            this.btn_view_report.Name = "btn_view_report";
+            this.btn_view_report.Size = new System.Drawing.Size(236, 104);
+            this.btn_view_report.TabIndex = 118;
+            this.btn_view_report.Text = "View Report";
+            this.btn_view_report.UseVisualStyleBackColor = true;
+            // 
+            // btn_print
+            // 
+            this.btn_print.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_print.Location = new System.Drawing.Point(910, 489);
+            this.btn_print.Name = "btn_print";
+            this.btn_print.Size = new System.Drawing.Size(236, 104);
+            this.btn_print.TabIndex = 119;
+            this.btn_print.Text = "Print";
+            this.btn_print.UseVisualStyleBackColor = true;
+            // 
             // Lab_Prescription
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -392,5 +429,8 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.Button btn_collected;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btn_report_relesed;
+        private System.Windows.Forms.Button btn_print;
+        private System.Windows.Forms.Button btn_view_report;
     }
 }

@@ -19,8 +19,10 @@ namespace Diploma_Final_Project_1
             InitializeComponent();
         }
         string status = "Collected";
+        string status2 = "Report Relesed";
+
         string report_ID;
-        DateTime DateTimeCollected = DateTime.Now;
+        DateTime DateTime = DateTime.Now;
 
         public int CalculateAge(DateTime dob)
         {
@@ -176,7 +178,7 @@ namespace Diploma_Final_Project_1
                 SqlCommand com = new SqlCommand(sql, con1);
 
                 com.Parameters.AddWithValue("@status", status);
-                com.Parameters.AddWithValue("@time", DateTimeCollected);
+                com.Parameters.AddWithValue("@time", DateTime);
                 com.Parameters.AddWithValue("@id", report_ID);
 
 
@@ -211,6 +213,51 @@ namespace Diploma_Final_Project_1
         private void Lab_Prescription_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_report_relesed_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
+
+
+                // save user details
+                SqlConnection con1 = new SqlConnection(cs);
+                con1.Open();
+
+
+
+                string sql = "UPDATE  [tbl_Lab_Test_Report] SET [Rep_status] =@status ,[Report_Relesed_Time]=@time WHERE  [Lab_Report_ID]=@id";
+
+                SqlCommand com = new SqlCommand(sql, con1);
+
+                com.Parameters.AddWithValue("@status", status2);
+                com.Parameters.AddWithValue("@time", DateTime);
+                com.Parameters.AddWithValue("@id", report_ID);
+
+
+
+
+
+
+
+
+
+                int ret = com.ExecuteNonQuery();
+                if (ret == 1)
+                {
+                    MessageBox.Show("Updated", "Information");
+                    loadDatagrid();
+
+
+                }
+                con1.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

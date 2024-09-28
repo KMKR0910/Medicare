@@ -331,6 +331,12 @@
     <Compile Include="Users Login.Designer.cs">
       <DependentUpon>Users Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="View Drug Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Drug Supplier.Designer.cs">
+      <DependentUpon>View Drug Supplier.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Add Diagnose History.resx">
       <DependentUpon>Add Diagnose History.cs</DependentUpon>
     </EmbeddedResource>
@@ -439,6 +445,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Users Login.resx">
       <DependentUpon>Users Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View Drug Supplier.resx">
+      <DependentUpon>View Drug Supplier.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
