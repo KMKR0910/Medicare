@@ -44,9 +44,7 @@ namespace Diploma_Final_Project_1
             this.txt_prescripton_number = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txt_test_Price = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.btn_collected = new System.Windows.Forms.Button();
             this.txt_price = new System.Windows.Forms.TextBox();
@@ -81,9 +79,9 @@ namespace Diploma_Final_Project_1
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(37, 81);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(349, 42);
+            this.label8.Size = new System.Drawing.Size(306, 42);
             this.label8.TabIndex = 91;
-            this.label8.Text = "Prescrption Number";
+            this.label8.Text = "Lab Test Number";
             // 
             // label9
             // 
@@ -170,9 +168,8 @@ namespace Diploma_Final_Project_1
             // 
             this.txt_test_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_test_name.Location = new System.Drawing.Point(425, 210);
-            this.txt_test_name.Multiline = true;
             this.txt_test_name.Name = "txt_test_name";
-            this.txt_test_name.Size = new System.Drawing.Size(711, 92);
+            this.txt_test_name.Size = new System.Drawing.Size(711, 44);
             this.txt_test_name.TabIndex = 94;
             // 
             // txt_prescripton_number
@@ -195,9 +192,7 @@ namespace Diploma_Final_Project_1
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.txt_test_Price);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.btn_collected);
             this.groupBox2.Controls.Add(this.txt_price);
@@ -214,14 +209,6 @@ namespace Diploma_Final_Project_1
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Prescription Details";
             // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(433, 381);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(372, 44);
-            this.textBox1.TabIndex = 117;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -231,15 +218,6 @@ namespace Diploma_Final_Project_1
             this.label10.Size = new System.Drawing.Size(186, 42);
             this.label10.TabIndex = 116;
             this.label10.Text = "Test Price";
-            // 
-            // txt_test_Price
-            // 
-            this.txt_test_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_test_Price.Location = new System.Drawing.Point(433, 216);
-            this.txt_test_Price.Multiline = true;
-            this.txt_test_Price.Name = "txt_test_Price";
-            this.txt_test_Price.Size = new System.Drawing.Size(711, 92);
-            this.txt_test_Price.TabIndex = 115;
             // 
             // label11
             // 
@@ -260,7 +238,7 @@ namespace Diploma_Final_Project_1
             this.btn_collected.TabIndex = 113;
             this.btn_collected.Text = "Blood Collected";
             this.btn_collected.UseVisualStyleBackColor = true;
-            this.btn_collected.Click += new System.EventHandler(this.btn_update_Click);
+            this.btn_collected.Click += new System.EventHandler(this.btn_collected_Click);
             // 
             // txt_price
             // 
@@ -411,9 +389,7 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.TextBox txt_price;
         private System.Windows.Forms.TextBox txt_date;
         private System.Windows.Forms.Button btn_collected;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txt_test_Price;
         private System.Windows.Forms.Label label11;
     }
 }
