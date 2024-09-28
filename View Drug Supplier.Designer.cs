@@ -74,6 +74,7 @@ namespace Diploma_Final_Project_1
             // 
             // btn_add
             // 
+            this.btn_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_add.Location = new System.Drawing.Point(71, 632);
             this.btn_add.Name = "btn_add";

@@ -209,6 +209,12 @@
     <Compile Include="Lab view lab test.Designer.cs">
       <DependentUpon>Lab view lab test.cs</DependentUpon>
     </Compile>
+    <Compile Include="Main Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main Dashboard.Designer.cs">
+      <DependentUpon>Main Dashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Med Add Appoinment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -375,6 +381,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Lab view lab test.resx">
       <DependentUpon>Lab view lab test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main Dashboard.resx">
+      <DependentUpon>Main Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Med Add Appoinment.resx">
       <DependentUpon>Med Add Appoinment.cs</DependentUpon>

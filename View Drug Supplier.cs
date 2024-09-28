@@ -16,6 +16,10 @@ namespace Diploma_Final_Project_1
         public View_Drug_Supplier()
         {
             InitializeComponent();
+
+            btn_add.FlatStyle = FlatStyle.Flat;
+            btn_add.BackColor = Color.FromArgb(0, 123, 255);  // Use custom colors
+            btn_add.ForeColor = Color.White;
         }
         string Sup_ID;
         private void btn_edit_Click(object sender, EventArgs e)
