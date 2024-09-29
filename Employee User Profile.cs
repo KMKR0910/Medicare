@@ -148,7 +148,7 @@ namespace Diploma_Final_Project_1
 
 
 
-                string sql = "UPDATE  tbl_Internal_User SET [First Name]=@Fname,[Last Name]=@Lname) WHERE  [User ID]=@userid";
+                string sql = "UPDATE  tbl_Internal_User SET [First Name]=@Fname,[Last Name]=@Lname WHERE  [User ID]=@userid";
 
                 /*
                 string sql = "UPDATE  tbl_Internal_User SET ([User ID],[User Password],[First Name],[Last Name],Postion,[House No],[Street Name],City,DOB,[Email Address],Salary,Qualifications)" +
@@ -169,23 +169,30 @@ namespace Diploma_Final_Project_1
                 com.Parameters.AddWithValue("@qualification", this.txt_qulifications.Text)
                 com.Parameters.AddWithValue("@userpwd", this.txt_userpwd.Text);/*/
 
-                if (txt_pwd1.Text == "desired_value")
+                if(txt_pwd2.Text == "desired_value")
                 {
                     ResetPassword();
                 }
+                else
+                {
+                    MessageBox.Show("Use22Updated", "Information");
 
-
-
-
-
-
-
+                }
 
                 int ret = com.ExecuteNonQuery();
-                if (ret == 1)
-                {
-                    MessageBox.Show("User Updated", "Information");
-                }
+                    if (ret == 1)
+                    {
+                        MessageBox.Show("User Updated", "Information");
+                    }
+                
+
+
+
+
+
+
+
+                
                 con1.Close();
             }
             catch (Exception ex)
@@ -245,6 +252,11 @@ namespace Diploma_Final_Project_1
 
             //            string sql = "SELECT [Name] FROM tbl_patient_info WHERE [Contact Number]=@number";
 
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
 
         }
     }

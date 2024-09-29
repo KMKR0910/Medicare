@@ -137,6 +137,12 @@
     <Compile Include="Add Diagnose History.Designer.cs">
       <DependentUpon>Add Diagnose History.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Home.Designer.cs">
+      <DependentUpon>Admin Home.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin View Users.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +202,12 @@
     </Compile>
     <Compile Include="Lab Add lab tests.Designer.cs">
       <DependentUpon>Lab Add lab tests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lab Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab Home.Designer.cs">
+      <DependentUpon>Lab Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Lab Prescription.cs">
       <SubType>Form</SubType>

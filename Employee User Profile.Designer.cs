@@ -287,6 +287,7 @@ namespace Diploma_Final_Project_1
             this.groupBox1.TabIndex = 86;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Reset Password";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // txt_pwd2
             // 
