@@ -364,6 +364,9 @@
     <EmbeddedResource Include="Add Diagnose History.resx">
       <DependentUpon>Add Diagnose History.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin Home.resx">
+      <DependentUpon>Admin Home.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin View Users.resx">
       <DependentUpon>Admin View Users.cs</DependentUpon>
     </EmbeddedResource>

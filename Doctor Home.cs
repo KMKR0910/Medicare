@@ -83,6 +83,7 @@ namespace Diploma_Final_Project_1
         }
         private void LoadPatient()
         {
+            SaveCurrentControls();
             //Create an instance of Form2
             Patient_Details_Doctor form2 = new Patient_Details_Doctor();
 
@@ -104,7 +105,7 @@ namespace Diploma_Final_Project_1
         {
             // Save the existing controls in the GroupBox to the list
             previousControls.Clear();
-            foreach (Control ctrl in groupBox1.Controls)
+            foreach (Control ctrl in groupBoxloc.Controls)
             {
                 previousControls.Add(ctrl);
             }
@@ -112,12 +113,13 @@ namespace Diploma_Final_Project_1
         private void RestoreHomeControls()
         {
             // Clear the current controls in the GroupBox
-            groupBox1.Controls.Clear();
+            groupBoxloc.Controls.Clear();
 
             // Add the previously saved controls back into the GroupBox
             foreach (Control ctrl in previousControls)
             {
-                groupBox1.Controls.Add(ctrl);
+                groupBoxloc.Controls.Add(ctrl);
+               
             }
         }
        
@@ -190,6 +192,7 @@ namespace Diploma_Final_Project_1
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
             RestoreHomeControls();
         }
 

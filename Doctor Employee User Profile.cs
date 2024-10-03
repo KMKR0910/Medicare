@@ -103,8 +103,11 @@ namespace Diploma_Final_Project_1
 
 
                 string sql = @"
-                 SELECT * 
-                 FROM tbl_Internal_User";
+                 SELECT [Lab-Assistant_ID] AS UserID , [First Name],[Last Name]
+                 FROM [tbl_Lab_Assistant]
+                UNION
+                  SELECT  [Doctor ID] AS UserID , [First Name],[Last Name]
+                 FROM [tbl_doctor]";
                 SqlCommand com = new SqlCommand(sql, con);
 
 

@@ -51,7 +51,7 @@ namespace Diploma_Final_Project_1
             this.dataGridView_Employees.Name = "dataGridView_Employees";
             this.dataGridView_Employees.RowHeadersWidth = 82;
             this.dataGridView_Employees.RowTemplate.Height = 33;
-            this.dataGridView_Employees.Size = new System.Drawing.Size(1168, 491);
+            this.dataGridView_Employees.Size = new System.Drawing.Size(2355, 491);
             this.dataGridView_Employees.TabIndex = 0;
             this.dataGridView_Employees.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Employees_CellContentClick);
             // 
