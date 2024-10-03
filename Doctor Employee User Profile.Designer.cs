@@ -31,15 +31,15 @@ namespace Diploma_Final_Project_1
         {
             this.dataGridView_Employees = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_cancel = new System.Windows.Forms.Button();
+            this.btn_save = new System.Windows.Forms.Button();
+            this.btn_edit = new System.Windows.Forms.Button();
             this.txt_Postion = new System.Windows.Forms.TextBox();
             this.txt_name = new System.Windows.Forms.TextBox();
             this.txt_salary = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_cancel = new System.Windows.Forms.Button();
-            this.btn_save = new System.Windows.Forms.Button();
-            this.btn_edit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Employees)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -67,66 +67,12 @@ namespace Diploma_Final_Project_1
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(32, 605);
+            this.groupBox1.Location = new System.Drawing.Point(32, 692);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1169, 555);
+            this.groupBox1.Size = new System.Drawing.Size(1170, 555);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Update Salary Details";
-            // 
-            // txt_Postion
-            // 
-            this.txt_Postion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Postion.Location = new System.Drawing.Point(345, 136);
-            this.txt_Postion.Name = "txt_Postion";
-            this.txt_Postion.Size = new System.Drawing.Size(328, 38);
-            this.txt_Postion.TabIndex = 81;
-            // 
-            // txt_name
-            // 
-            this.txt_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name.Location = new System.Drawing.Point(345, 221);
-            this.txt_name.Name = "txt_name";
-            this.txt_name.Size = new System.Drawing.Size(179, 38);
-            this.txt_name.TabIndex = 80;
-            // 
-            // txt_salary
-            // 
-            this.txt_salary.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_salary.Location = new System.Drawing.Point(347, 320);
-            this.txt_salary.Name = "txt_salary";
-            this.txt_salary.Size = new System.Drawing.Size(326, 38);
-            this.txt_salary.TabIndex = 79;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(67, 314);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(418, 84);
-            this.label6.TabIndex = 78;
-            this.label6.Text = "New Salary";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(67, 215);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(234, 84);
-            this.label4.TabIndex = 77;
-            this.label4.Text = "Name";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(64, 132);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(286, 84);
-            this.label1.TabIndex = 76;
-            this.label1.Text = "Postion";
             // 
             // btn_cancel
             // 
@@ -161,11 +107,65 @@ namespace Diploma_Final_Project_1
             this.btn_edit.UseVisualStyleBackColor = true;
             this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
+            // txt_Postion
+            // 
+            this.txt_Postion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Postion.Location = new System.Drawing.Point(345, 136);
+            this.txt_Postion.Name = "txt_Postion";
+            this.txt_Postion.Size = new System.Drawing.Size(328, 38);
+            this.txt_Postion.TabIndex = 81;
+            // 
+            // txt_name
+            // 
+            this.txt_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_name.Location = new System.Drawing.Point(345, 221);
+            this.txt_name.Name = "txt_name";
+            this.txt_name.Size = new System.Drawing.Size(179, 38);
+            this.txt_name.TabIndex = 80;
+            // 
+            // txt_salary
+            // 
+            this.txt_salary.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_salary.Location = new System.Drawing.Point(347, 320);
+            this.txt_salary.Name = "txt_salary";
+            this.txt_salary.Size = new System.Drawing.Size(326, 38);
+            this.txt_salary.TabIndex = 79;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(67, 314);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(209, 42);
+            this.label6.TabIndex = 78;
+            this.label6.Text = "New Salary";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(67, 215);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(117, 42);
+            this.label4.TabIndex = 77;
+            this.label4.Text = "Name";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(64, 132);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(143, 42);
+            this.label1.TabIndex = 76;
+            this.label1.Text = "Postion";
+            // 
             // Doctor_Employee_User_Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1254, 1172);
+            this.ClientSize = new System.Drawing.Size(2427, 1449);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView_Employees);
             this.Name = "Doctor_Employee_User_Profile";

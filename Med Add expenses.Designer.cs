@@ -179,6 +179,7 @@ namespace Diploma_Final_Project_1
             this.Controls.Add(this.label1);
             this.Name = "Med_Add_expenses";
             this.Text = "Med_Add_expenses";
+            this.Load += new System.EventHandler(this.Med_Add_expenses_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

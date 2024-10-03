@@ -122,7 +122,7 @@ namespace Diploma_Final_Project_1
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(27, 46);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(400, 84);
+            this.label3.Size = new System.Drawing.Size(200, 42);
             this.label3.TabIndex = 107;
             this.label3.Text = "Test Name";
             // 
@@ -132,7 +132,7 @@ namespace Diploma_Final_Project_1
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(27, 286);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(372, 84);
+            this.label1.Size = new System.Drawing.Size(186, 42);
             this.label1.TabIndex = 105;
             this.label1.Text = "Test Price";
             // 
@@ -153,6 +153,7 @@ namespace Diploma_Final_Project_1
             this.Controls.Add(this.label1);
             this.Name = "Lab_Add_lab_tests";
             this.Text = "Lab_Add_lab_tests";
+            this.Load += new System.EventHandler(this.Lab_Add_lab_tests_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_quantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_price)).EndInit();
             this.ResumeLayout(false);

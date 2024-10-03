@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace Diploma_Final_Project_1
 {
@@ -16,12 +11,41 @@ namespace Diploma_Final_Project_1
         public Doctor_Home()
         {
             InitializeComponent();
+            Color customC = ColorTranslator.FromHtml("#9083D5 ");
+                btn_home.BackColor = customC;
+            btn_userProfile.BackColor = customC;
+
+            btn_appoinments.BackColor = customC;
+            btn_patients.BackColor = customC;
+            btn_prescription.BackColor = customC;
+            btn_diaganosisData.BackColor = customC;
+            btn_drugInventory.BackColor = customC;
+            btn_employee.BackColor = customC;
+            btn_finance.BackColor = customC;
+            linkLabel1.LinkColor = customC;
+            linkLabel2.LinkColor = customC;
+            linkLabel3.LinkColor = customC;
+            linkLabel4.LinkColor = customC;
+            linkLabel5.LinkColor = customC;
+            linkLabel6.LinkColor = customC;
+            linkLabel7.LinkColor = customC;
+            linkLabel8.LinkColor = customC;
+            linkLabel9.LinkColor = customC;
+            linkLabel10.LinkColor = customC;
+            linkLabel11.LinkColor = customC;
+
+            menuStrip1.BackColor = customC;
+                      
+
+
+       
+
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+
         }
 
-        private void Doctor_Home_Load(object sender, EventArgs e)
-        {
-
-        }
+       
+      
         private void LoadEmployeeInGroupBox1()
         {
             //Create an instance of Form2
@@ -33,14 +57,15 @@ namespace Diploma_Final_Project_1
             form2.Dock = DockStyle.Fill;
 
             // Add the form to the GroupBox
-            groupBox11.Controls.Clear();  // Optionally clear previous controls
-            groupBox11.Controls.Add(form2);
+            groupBoxloc.Controls.Clear();  // Optionally clear previous controls
+            groupBoxloc.Controls.Add(form2);
 
             // Show the form inside the GroupBox
             form2.Show();
         }
         private void LoadAppoinment()
-        {
+        
+            {
             //Create an instance of Form2
             Doctor_Appointment form2 = new Doctor_Appointment();
 
@@ -50,8 +75,8 @@ namespace Diploma_Final_Project_1
             form2.Dock = DockStyle.Fill;
 
             // Add the form to the GroupBox
-            groupBox11.Controls.Clear();  // Optionally clear previous controls
-            groupBox11.Controls.Add(form2);
+            groupBoxloc.Controls.Clear();  // Optionally clear previous controls
+            groupBoxloc.Controls.Add(form2);
 
             // Show the form inside the GroupBox
             form2.Show();
@@ -65,54 +90,39 @@ namespace Diploma_Final_Project_1
             form2.TopLevel = false;
             form2.FormBorderStyle = FormBorderStyle.None;
             form2.Dock = DockStyle.Fill;
-
+            form2.Size = groupBox1.ClientSize;
+            form2.Location = new Point(0, 0);
             // Add the form to the GroupBox
-            groupBox11.Controls.Clear();  // Optionally clear previous controls
-            groupBox11.Controls.Add(form2);
+            groupBoxloc.Controls.Clear();  // Optionally clear previous controls
+            groupBoxloc.Controls.Add(form2);
 
             // Show the form inside the GroupBox
             form2.Show();
         }
-
-        private void btn_home_Click(object sender, EventArgs e)
+        private List<Control> previousControls = new List<Control>();
+        private void SaveCurrentControls()
         {
-
+            // Save the existing controls in the GroupBox to the list
+            previousControls.Clear();
+            foreach (Control ctrl in groupBox1.Controls)
+            {
+                previousControls.Add(ctrl);
+            }
         }
-
-        private void btn_appoinments_Click(object sender, EventArgs e)
+        private void RestoreHomeControls()
         {
-            LoadAppoinment();
+            // Clear the current controls in the GroupBox
+            groupBox1.Controls.Clear();
+
+            // Add the previously saved controls back into the GroupBox
+            foreach (Control ctrl in previousControls)
+            {
+                groupBox1.Controls.Add(ctrl);
+            }
         }
+       
 
-        private void btn_patients_Click(object sender, EventArgs e)
-        {
-            LoadPatient();
-        }
-
-        private void btn_employee_Click(object sender, EventArgs e)
-        {
-            LoadEmployeeInGroupBox1();
-        }
-
-        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
-        private void groupBox10_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
-        private void linkLabel9_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
+       
 
         private void btn_userProfile_Click(object sender, EventArgs e)
         {
@@ -143,54 +153,19 @@ namespace Diploma_Final_Project_1
             
         }
 
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+            RestoreHomeControls();
+        }
+
         private void groupBox3_Enter(object sender, EventArgs e)
         {
-
+            LoadAppoinment();
         }
 
-        private void btn_prescription_Click(object sender, EventArgs e)
+        private void groupBox9_Enter(object sender, EventArgs e)
         {
-
-        }
-
-        private void btn_finance_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox9_Click(object sender, EventArgs e)
-        {
-
+            LoadEmployeeInGroupBox1();
         }
 
         private void employeeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -201,6 +176,26 @@ namespace Diploma_Final_Project_1
         private void appoinmentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LoadAppoinment();
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+            LoadPatient();
+        }
+
+        private void patientsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadPatient();
+        }
+
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RestoreHomeControls();
+        }
+
+        private void Doctor_Home_Load(object sender, EventArgs e)
+        {
+            SaveCurrentControls();
         }
     }
 }

@@ -67,5 +67,10 @@ namespace Diploma_Final_Project_1
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void Med_Add_expenses_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

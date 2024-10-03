@@ -236,12 +236,12 @@ namespace Diploma_Final_Project_1
             // 
             // Doctor_Appointment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1856, 1188);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(2394, 1369);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.dateTimePicker_AP_date);
             this.Name = "Doctor_Appointment";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Doctor_Appointment";
             this.Load += new System.EventHandler(this.Doctor_Appointment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_appointment)).EndInit();

@@ -19,6 +19,7 @@ namespace Diploma_Final_Project_1
         public Doctor_Appointment()
         {
             InitializeComponent();
+          
         }
 
         private void txt_Name_TextChanged(object sender, EventArgs e)
@@ -28,6 +29,7 @@ namespace Diploma_Final_Project_1
 
         private void Doctor_Appointment_Load(object sender, EventArgs e)
         {
+
             string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
             try
             {

@@ -16,5 +16,10 @@ namespace Diploma_Final_Project_1
         {
             InitializeComponent();
         }
+
+        private void Lab_Add_lab_tests_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
