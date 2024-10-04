@@ -200,5 +200,15 @@ namespace Diploma_Final_Project_1
         {
             SaveCurrentControls();
         }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_userProfile_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -103,5 +103,10 @@ namespace Diploma_Final_Project_1
         {
 
         }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

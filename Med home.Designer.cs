@@ -501,6 +501,7 @@ namespace Diploma_Final_Project_1
             this.groupBox2.Size = new System.Drawing.Size(371, 303);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // pictureBox2
             // 

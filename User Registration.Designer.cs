@@ -115,16 +115,16 @@ namespace Diploma_Final_Project_1
             "Medical Centre Assistant",
             "Pharamacists",
             "Laboratary Assistant"});
-            this.comboBox_postion.Location = new System.Drawing.Point(327, 277);
+            this.comboBox_postion.Location = new System.Drawing.Point(327, 142);
             this.comboBox_postion.Name = "comboBox_postion";
-            this.comboBox_postion.Size = new System.Drawing.Size(271, 39);
+            this.comboBox_postion.Size = new System.Drawing.Size(424, 39);
             this.comboBox_postion.TabIndex = 47;
             this.comboBox_postion.SelectedIndexChanged += new System.EventHandler(this.comboBox_postion_SelectedIndexChanged);
             // 
             // txt_L_Name
             // 
             this.txt_L_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_L_Name.Location = new System.Drawing.Point(327, 117);
+            this.txt_L_Name.Location = new System.Drawing.Point(325, 290);
             this.txt_L_Name.Name = "txt_L_Name";
             this.txt_L_Name.Size = new System.Drawing.Size(328, 38);
             this.txt_L_Name.TabIndex = 46;
@@ -188,7 +188,7 @@ namespace Diploma_Final_Project_1
             // txt_F_name
             // 
             this.txt_F_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_F_name.Location = new System.Drawing.Point(327, 192);
+            this.txt_F_name.Location = new System.Drawing.Point(329, 215);
             this.txt_F_name.Name = "txt_F_name";
             this.txt_F_name.Size = new System.Drawing.Size(328, 38);
             this.txt_F_name.TabIndex = 39;
@@ -286,7 +286,7 @@ namespace Diploma_Final_Project_1
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(46, 271);
+            this.label3.Location = new System.Drawing.Point(46, 136);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(191, 42);
             this.label3.TabIndex = 30;
@@ -297,7 +297,7 @@ namespace Diploma_Final_Project_1
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(46, 186);
+            this.label2.Location = new System.Drawing.Point(49, 284);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(198, 42);
             this.label2.TabIndex = 29;
@@ -308,7 +308,7 @@ namespace Diploma_Final_Project_1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(46, 113);
+            this.label1.Location = new System.Drawing.Point(49, 211);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(199, 42);
             this.label1.TabIndex = 28;
@@ -383,12 +383,13 @@ namespace Diploma_Final_Project_1
             this.autoComplete1.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(158)))), ((int)(((byte)(218)))));
             this.autoComplete1.ParentForm = this;
             this.autoComplete1.Style = Syncfusion.Windows.Forms.Tools.AutoCompleteStyle.Default;
+            this.autoComplete1.ThemeName = "Default";
             // 
             // User_Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1481, 1467);
+            this.ClientSize = new System.Drawing.Size(2427, 1449);
             this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.txt_contact2);
             this.Controls.Add(this.label13);

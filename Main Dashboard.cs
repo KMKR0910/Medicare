@@ -41,11 +41,58 @@ namespace Diploma_Final_Project_1
 
                     SqlConnection con = new SqlConnection(cs);
                     con.Open();
+                    string UserID = this.txt_username.Text;
+                    string userType="";
+                    string sql = "";
+                    if (UserID.StartsWith("DOC", StringComparison.OrdinalIgnoreCase))
+                    {
+                        userType = "Doctor";
+                    }
+                    if (UserID.StartsWith("MED", StringComparison.OrdinalIgnoreCase))
+                    {
+                        userType = "Medical Centre Assistant";
+                    }
+                    if (UserID.StartsWith("PHA", StringComparison.OrdinalIgnoreCase))
+                    {
+                        userType = "Pharmacists";
+                    }
+                    if (UserID.StartsWith("LAB", StringComparison.OrdinalIgnoreCase))
+                    {
+                        userType = "Laboratory Assistant";
+                    }
+                    if (UserID.StartsWith("ADM", StringComparison.OrdinalIgnoreCase))
+                    {
+                        userType = "Admin";
+                    }
 
 
+
+                    if (userType == "Doctor")
+                    {
+                        sql = "SELECT  [Doctor ID],[User Password] FROM [tbl_doctor] WHERE [Doctor ID] = @userid AND [User Password]=@password";
+                    }
+
+                    if (userType == "Medical Centre Assistant")
+                    {
+                        sql = "SELECT  [Med_Assistant_ID],[User Password] FROM  [tbl_Medical_Centre_Assistant] WHERE [Med_Assistant_ID] = @userid AND [User Password]=@password";
+                    }
+
+                    if (userType == "Pharmacists")
+                    {
+                        sql = "SELECT  [Pharamacists_ID],[User Password] FROM [tbl_Pharamacists] WHERE [Pharamacists_ID] = @userid AND [User Password]=@password";
+                    }
+
+                    if (userType == "Laboratory Assistant")
+                    {
+                        sql = "SELECT  [Lab-Assistant_ID] ,[User Password] FROM  [tbl_Lab_Assistant] WHERE [Lab-Assistant_ID] = @userid AND [User Password]=@password";
+                    }
+
+                    if (userType == "Admin")
+                    {
+                        sql = "SELECT  [Admin_ID],[User Password] FROM [tbl_Admin] WHERE [Admin_ID] = @userid AND [User Password]=@password ";
+                    }
                     //define sql command
 
-                    string sql = "select [User ID],[User Password] from tbl_Internal_User WHERE [User ID]=@username AND [User Password]=@password";
                     SqlCommand com = new SqlCommand(sql, con);
 
 

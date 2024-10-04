@@ -33,7 +33,7 @@ namespace Diploma_Final_Project_1
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.employeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.UserRegisterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.patientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sytemMainatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.appoinmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,7 +81,7 @@ namespace Diploma_Final_Project_1
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.homeToolStripMenuItem,
-            this.employeeToolStripMenuItem,
+            this.UserRegisterToolStripMenuItem,
             this.patientsToolStripMenuItem,
             this.sytemMainatToolStripMenuItem,
             this.appoinmentToolStripMenuItem,
@@ -107,11 +107,12 @@ namespace Diploma_Final_Project_1
             this.homeToolStripMenuItem.Text = "Home";
             this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
             // 
-            // employeeToolStripMenuItem
+            // UserRegisterToolStripMenuItem
             // 
-            this.employeeToolStripMenuItem.Name = "employeeToolStripMenuItem";
-            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(322, 54);
-            this.employeeToolStripMenuItem.Text = "User Registration";
+            this.UserRegisterToolStripMenuItem.Name = "UserRegisterToolStripMenuItem";
+            this.UserRegisterToolStripMenuItem.Size = new System.Drawing.Size(322, 54);
+            this.UserRegisterToolStripMenuItem.Text = "User Registration";
+            this.UserRegisterToolStripMenuItem.Click += new System.EventHandler(this.UserRegisterToolStripMenuItem_Click);
             // 
             // patientsToolStripMenuItem
             // 
@@ -226,6 +227,7 @@ namespace Diploma_Final_Project_1
             this.groupBox_UserProfile.Size = new System.Drawing.Size(560, 369);
             this.groupBox_UserProfile.TabIndex = 10;
             this.groupBox_UserProfile.TabStop = false;
+            this.groupBox_UserProfile.Enter += new System.EventHandler(this.groupBox_UserProfile_Enter);
             // 
             // pictureBox2
             // 
@@ -397,7 +399,7 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem employeeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem UserRegisterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem patientsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem appoinmentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem diagnosisToolStripMenuItem;

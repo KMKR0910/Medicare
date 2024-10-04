@@ -41,6 +41,50 @@ namespace Diploma_Final_Project_1
             }
         }
 
+        private void LoadUserRegister()
+        {
+            //Create an instance of Form2
+            User_Registration form2 = new User_Registration();
+
+            // Remove borders and make the form a child control
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.Dock = DockStyle.Fill;
+
+            // Add the form to the GroupBox
+            groupBox_Main.Controls.Clear();  // Optionally clear previous controls
+            groupBox_Main.Controls.Add(form2);
+
+            // Show the form inside the GroupBox
+            form2.Show();
+        }
+        private void LoadUserProfile()
+        {
+
+            string postion = "Admin";
+            string cs = "Data Source=ASUS; Initial Catalog = Diploma Final Project DB1; Integrated Security=True";
+
+            SqlConnection con = new SqlConnection(cs);
+            con.Open();
+
+            string sql = "select [User ID] from tbl_Admin WHERE [Postion]=@postion";
+            SqlCommand com = new SqlCommand(sql, con);
+            com.Parameters.AddWithValue("@postion", postion);
+
+            var userId = com.ExecuteScalar()?.ToString();  // Fetch the first column of the first row
+
+            if (userId != null)
+            {
+                Employee_User_Profile profileForm = new Employee_User_Profile(userId);
+                profileForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("No user found with the specified position.");
+            }
+        }
+
+
         private void groupBox_Users_Enter(object sender, EventArgs e)
         {
             //Create an instance of Form2
@@ -57,6 +101,7 @@ namespace Diploma_Final_Project_1
 
             // Show the form inside the GroupBox
             form2.Show();
+           
         }
 
         private void Admin_Home_Load(object sender, EventArgs e)
@@ -67,6 +112,17 @@ namespace Diploma_Final_Project_1
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RestoreHomeControls();
+        }
+
+        private void UserRegisterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadUserRegister();
+           
+        }
+
+        private void groupBox_UserProfile_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

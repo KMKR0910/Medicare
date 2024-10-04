@@ -48,7 +48,7 @@ namespace Diploma_Final_Project_1
                         lastUserID = reader["Doctor ID"].ToString();
                     }
 
-                    // If no users exist yet, start with "U001"
+                    // If no users exist yet, start with "DOC1"
                     if (string.IsNullOrEmpty(lastUserID))
                     {
                         UserID1 = "DOC1";
@@ -56,7 +56,7 @@ namespace Diploma_Final_Project_1
                     else
                     {
                         // Extract the numeric part of the UserID and increment it
-                        string numericPart = lastUserID.Substring(1);
+                        string numericPart = lastUserID.Substring(3);
                         int newNumericPart = int.Parse(numericPart) + 1;
 
                         // Format the new user ID to have leading zeros
@@ -75,7 +75,7 @@ namespace Diploma_Final_Project_1
                         lastUserID = reader["Med_Assistant_ID"].ToString();
                     }
 
-                    // If no users exist yet, start with "U001"
+                    // If no users exist yet, start with "MED1"
                     if (string.IsNullOrEmpty(lastUserID))
                     {
                         UserID1 = "MED1";
@@ -83,7 +83,7 @@ namespace Diploma_Final_Project_1
                     else
                     {
                         // Extract the numeric part of the UserID and increment it
-                        string numericPart = lastUserID.Substring(1);
+                        string numericPart = lastUserID.Substring(3);
                         int newNumericPart = int.Parse(numericPart) + 1;
 
                         // Format the new user ID to have leading zeros
@@ -104,7 +104,7 @@ namespace Diploma_Final_Project_1
                         lastUserID = reader["Pharamacists_ID"].ToString();
                     }
 
-                    // If no users exist yet, start with "U001"
+                    // If no users exist yet, start with "PHA1"
                     if (string.IsNullOrEmpty(lastUserID))
                     {
                         UserID1 = "PHA1";
@@ -112,7 +112,7 @@ namespace Diploma_Final_Project_1
                     else
                     {
                         // Extract the numeric part of the UserID and increment it
-                        string numericPart = lastUserID.Substring(1);
+                        string numericPart = lastUserID.Substring(3);
                         int newNumericPart = int.Parse(numericPart) + 1;
 
                         // Format the new user ID to have leading zeros
@@ -137,7 +137,7 @@ namespace Diploma_Final_Project_1
                         lastUserID = reader["Lab-Assistant_ID"].ToString();
                     }
 
-                    // If no users exist yet, start with "U001"
+                    // If no users exist yet, start with "LAB1"
                     if (string.IsNullOrEmpty(lastUserID))
                     {
                         UserID1 = "LAB1";
@@ -145,7 +145,7 @@ namespace Diploma_Final_Project_1
                     else
                     {
                         // Extract the numeric part of the UserID and increment it
-                        string numericPart = lastUserID.Substring(1);
+                        string numericPart = lastUserID.Substring(3);
                         int newNumericPart = int.Parse(numericPart) + 1;
 
                         // Format the new user ID to have leading zeros
@@ -170,7 +170,7 @@ namespace Diploma_Final_Project_1
                         lastUserID = reader["Admin_ID"].ToString();
                     }
 
-                    // If no users exist yet, start with "U001"
+                    // If no users exist yet, start with "ADM1"
                     if (string.IsNullOrEmpty(lastUserID))
                     {
                         UserID1 = "ADM1";
@@ -178,7 +178,7 @@ namespace Diploma_Final_Project_1
                     else
                     {
                         // Extract the numeric part of the UserID and increment it
-                        string numericPart = lastUserID.Substring(1);
+                        string numericPart = lastUserID.Substring(3);
                         int newNumericPart = int.Parse(numericPart) + 1;
 
                         // Format the new user ID to have leading zeros
@@ -230,7 +230,7 @@ namespace Diploma_Final_Project_1
                 string v2 = txt_address_StreetName.Text;
                 string v3 = txt_address_city.Text;
 
-                string address = v1 + " , " + v2 + " ,"  + v3;
+                string address = v1 + " , " + v2 + " , "  + v3;
                 string sql = "";
                 userType = this.comboBox_postion.Text;
                 /*
@@ -355,6 +355,8 @@ namespace Diploma_Final_Project_1
             this.comboBox_postion.SelectedIndex = -1;
             this.numericUpDown_salary.Value = 0;
             this.txt_qulifications.Clear();
+            this.txt_userID.Clear();
+            this.txt_userpwd.Clear();
         }
 
         private void btn_cancel_Click(object sender, EventArgs e)
@@ -372,15 +374,22 @@ namespace Diploma_Final_Project_1
 
         private void comboBox_postion_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string newUserID = GenerateUserID();
-            int plengh = 4;
-            string newuserpassword = GeneratePassword(plengh);
-            txt_userpwd.Text = newuserpassword;
-
-            if (!string.IsNullOrEmpty(newUserID))
+            try
             {
-                txt_userID.Text = newUserID;
+                string newUserID = GenerateUserID();
+                int plengh = 4;
+                string newuserpassword = GeneratePassword(plengh);
+                txt_userpwd.Text = newuserpassword;
 
+                if (!string.IsNullOrEmpty(newUserID))
+                {
+                    txt_userID.Text = newUserID;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
