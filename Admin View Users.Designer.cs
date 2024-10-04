@@ -34,7 +34,7 @@ namespace Diploma_Final_Project_1
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.btn_cancel = new System.Windows.Forms.Button();
+            this.btn_Clear1 = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
             this.btn_Update = new System.Windows.Forms.Button();
             this.txt_contact2 = new System.Windows.Forms.TextBox();
@@ -58,12 +58,15 @@ namespace Diploma_Final_Project_1
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.combobox_user = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.btn_search = new System.Windows.Forms.Button();
             this.txt_userID = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.dataGridView_view_users = new System.Windows.Forms.DataGridView();
+            this.btn_reset = new System.Windows.Forms.Button();
+            this.btn_clear = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_view_users)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_pwd2
@@ -94,14 +97,16 @@ namespace Diploma_Final_Project_1
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_clear);
+            this.groupBox1.Controls.Add(this.btn_reset);
             this.groupBox1.Controls.Add(this.txt_pwd2);
             this.groupBox1.Controls.Add(this.txt_pwd1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(59, 1012);
+            this.groupBox1.Location = new System.Drawing.Point(1078, 980);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1479, 192);
+            this.groupBox1.Size = new System.Drawing.Size(1275, 399);
             this.groupBox1.TabIndex = 111;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Reset Password";
@@ -116,22 +121,22 @@ namespace Diploma_Final_Project_1
             this.label13.TabIndex = 80;
             this.label13.Text = "Password";
             // 
-            // btn_cancel
+            // btn_Clear1
             // 
-            this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.Location = new System.Drawing.Point(1322, 1289);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(216, 90);
-            this.btn_cancel.TabIndex = 110;
-            this.btn_cancel.Text = "Cancel";
-            this.btn_cancel.UseVisualStyleBackColor = true;
+            this.btn_Clear1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Clear1.Location = new System.Drawing.Point(754, 1289);
+            this.btn_Clear1.Name = "btn_Clear1";
+            this.btn_Clear1.Size = new System.Drawing.Size(216, 90);
+            this.btn_Clear1.TabIndex = 110;
+            this.btn_Clear1.Text = "Clear";
+            this.btn_Clear1.UseVisualStyleBackColor = true;
             // 
             // btn_Delete
             // 
             this.btn_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Delete.Location = new System.Drawing.Point(643, 1289);
+            this.btn_Delete.Location = new System.Drawing.Point(429, 1289);
             this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(216, 90);
+            this.btn_Delete.Size = new System.Drawing.Size(225, 90);
             this.btn_Delete.TabIndex = 109;
             this.btn_Delete.Text = "Delete User";
             this.btn_Delete.UseVisualStyleBackColor = true;
@@ -141,15 +146,16 @@ namespace Diploma_Final_Project_1
             this.btn_Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Update.Location = new System.Drawing.Point(94, 1289);
             this.btn_Update.Name = "btn_Update";
-            this.btn_Update.Size = new System.Drawing.Size(216, 90);
+            this.btn_Update.Size = new System.Drawing.Size(248, 90);
             this.btn_Update.TabIndex = 108;
             this.btn_Update.Text = "Update User";
             this.btn_Update.UseVisualStyleBackColor = true;
+            this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
             // 
             // txt_contact2
             // 
             this.txt_contact2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_contact2.Location = new System.Drawing.Point(356, 615);
+            this.txt_contact2.Location = new System.Drawing.Point(363, 795);
             this.txt_contact2.Name = "txt_contact2";
             this.txt_contact2.Size = new System.Drawing.Size(329, 38);
             this.txt_contact2.TabIndex = 107;
@@ -157,7 +163,7 @@ namespace Diploma_Final_Project_1
             // txt_contact
             // 
             this.txt_contact.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_contact.Location = new System.Drawing.Point(357, 551);
+            this.txt_contact.Location = new System.Drawing.Point(364, 731);
             this.txt_contact.Name = "txt_contact";
             this.txt_contact.Size = new System.Drawing.Size(329, 38);
             this.txt_contact.TabIndex = 100;
@@ -174,7 +180,7 @@ namespace Diploma_Final_Project_1
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(68, 775);
+            this.label11.Location = new System.Drawing.Point(75, 955);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(242, 42);
             this.label11.TabIndex = 97;
@@ -184,7 +190,7 @@ namespace Diploma_Final_Project_1
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(68, 551);
+            this.label9.Location = new System.Drawing.Point(75, 731);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(289, 42);
             this.label9.TabIndex = 96;
@@ -194,7 +200,7 @@ namespace Diploma_Final_Project_1
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(77, 474);
+            this.label8.Location = new System.Drawing.Point(84, 654);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(258, 42);
             this.label8.TabIndex = 95;
@@ -203,7 +209,7 @@ namespace Diploma_Final_Project_1
             // dateTimePicker_DOB
             // 
             this.dateTimePicker_DOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker_DOB.Location = new System.Drawing.Point(357, 401);
+            this.dateTimePicker_DOB.Location = new System.Drawing.Point(364, 581);
             this.dateTimePicker_DOB.Name = "dateTimePicker_DOB";
             this.dateTimePicker_DOB.Size = new System.Drawing.Size(329, 38);
             this.dateTimePicker_DOB.TabIndex = 106;
@@ -227,7 +233,7 @@ namespace Diploma_Final_Project_1
             // txt_address_StreetName
             // 
             this.txt_address_StreetName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_address_StreetName.Location = new System.Drawing.Point(1043, 234);
+            this.txt_address_StreetName.Location = new System.Drawing.Point(365, 336);
             this.txt_address_StreetName.Name = "txt_address_StreetName";
             this.txt_address_StreetName.Size = new System.Drawing.Size(579, 38);
             this.txt_address_StreetName.TabIndex = 103;
@@ -235,7 +241,7 @@ namespace Diploma_Final_Project_1
             // txt_address_city
             // 
             this.txt_address_city.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_address_city.Location = new System.Drawing.Point(360, 321);
+            this.txt_address_city.Location = new System.Drawing.Point(367, 501);
             this.txt_address_city.Name = "txt_address_city";
             this.txt_address_city.Size = new System.Drawing.Size(326, 38);
             this.txt_address_city.TabIndex = 102;
@@ -243,7 +249,7 @@ namespace Diploma_Final_Project_1
             // txt_email
             // 
             this.txt_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_email.Location = new System.Drawing.Point(360, 478);
+            this.txt_email.Location = new System.Drawing.Point(367, 658);
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(499, 38);
             this.txt_email.TabIndex = 101;
@@ -251,7 +257,7 @@ namespace Diploma_Final_Project_1
             // txt_qulifications
             // 
             this.txt_qulifications.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_qulifications.Location = new System.Drawing.Point(349, 764);
+            this.txt_qulifications.Location = new System.Drawing.Point(356, 944);
             this.txt_qulifications.Multiline = true;
             this.txt_qulifications.Name = "txt_qulifications";
             this.txt_qulifications.Size = new System.Drawing.Size(336, 194);
@@ -261,7 +267,7 @@ namespace Diploma_Final_Project_1
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(80, 401);
+            this.label7.Location = new System.Drawing.Point(87, 581);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(99, 42);
             this.label7.TabIndex = 94;
@@ -271,7 +277,7 @@ namespace Diploma_Final_Project_1
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(80, 315);
+            this.label6.Location = new System.Drawing.Point(87, 495);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(82, 42);
             this.label6.TabIndex = 93;
@@ -281,7 +287,7 @@ namespace Diploma_Final_Project_1
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(762, 228);
+            this.label5.Location = new System.Drawing.Point(75, 336);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(226, 42);
             this.label5.TabIndex = 92;
@@ -320,13 +326,11 @@ namespace Diploma_Final_Project_1
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.combobox_user);
-            this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.btn_search);
-            this.groupBox2.Controls.Add(this.txt_userID);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1592, 101);
+            this.groupBox2.Size = new System.Drawing.Size(899, 101);
             this.groupBox2.TabIndex = 116;
             this.groupBox2.TabStop = false;
             // 
@@ -339,20 +343,10 @@ namespace Diploma_Final_Project_1
             this.combobox_user.Size = new System.Drawing.Size(265, 45);
             this.combobox_user.TabIndex = 120;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(770, 13);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(206, 42);
-            this.label10.TabIndex = 119;
-            this.label10.Text = "User Name";
-            // 
             // btn_search
             // 
             this.btn_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_search.Location = new System.Drawing.Point(1352, 4);
+            this.btn_search.Location = new System.Drawing.Point(602, 13);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(216, 55);
             this.btn_search.TabIndex = 118;
@@ -364,7 +358,7 @@ namespace Diploma_Final_Project_1
             // 
             this.txt_userID.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txt_userID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_userID.Location = new System.Drawing.Point(1047, 13);
+            this.txt_userID.Location = new System.Drawing.Point(2092, 36);
             this.txt_userID.Name = "txt_userID";
             this.txt_userID.ReadOnly = true;
             this.txt_userID.Size = new System.Drawing.Size(252, 44);
@@ -380,14 +374,47 @@ namespace Diploma_Final_Project_1
             this.label12.TabIndex = 117;
             this.label12.Text = "User Type";
             // 
+            // dataGridView_view_users
+            // 
+            this.dataGridView_view_users.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_view_users.Location = new System.Drawing.Point(1078, 234);
+            this.dataGridView_view_users.Name = "dataGridView_view_users";
+            this.dataGridView_view_users.RowHeadersWidth = 82;
+            this.dataGridView_view_users.RowTemplate.Height = 33;
+            this.dataGridView_view_users.Size = new System.Drawing.Size(1275, 715);
+            this.dataGridView_view_users.TabIndex = 117;
+            this.dataGridView_view_users.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_view_users_CellContentClick);
+            // 
+            // btn_reset
+            // 
+            this.btn_reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_reset.Location = new System.Drawing.Point(52, 269);
+            this.btn_reset.Name = "btn_reset";
+            this.btn_reset.Size = new System.Drawing.Size(308, 90);
+            this.btn_reset.TabIndex = 118;
+            this.btn_reset.Text = "Reset Password";
+            this.btn_reset.UseVisualStyleBackColor = true;
+            // 
+            // btn_clear
+            // 
+            this.btn_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_clear.Location = new System.Drawing.Point(845, 269);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(308, 90);
+            this.btn_clear.TabIndex = 119;
+            this.btn_clear.Text = "Clear";
+            this.btn_clear.UseVisualStyleBackColor = true;
+            // 
             // Admin_View_Users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1644, 1436);
+            this.ClientSize = new System.Drawing.Size(2427, 1449);
+            this.Controls.Add(this.dataGridView_view_users);
             this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.txt_userID);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btn_cancel);
+            this.Controls.Add(this.btn_Clear1);
             this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.txt_contact2);
@@ -416,6 +443,7 @@ namespace Diploma_Final_Project_1
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_view_users)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -428,7 +456,7 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button btn_cancel;
+        private System.Windows.Forms.Button btn_Clear1;
         private System.Windows.Forms.Button btn_Delete;
         private System.Windows.Forms.Button btn_Update;
         private System.Windows.Forms.TextBox txt_contact2;
@@ -452,9 +480,11 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox combobox_user;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.TextBox txt_userID;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button btn_clear;
+        private System.Windows.Forms.Button btn_reset;
+        private System.Windows.Forms.DataGridView dataGridView_view_users;
     }
 }

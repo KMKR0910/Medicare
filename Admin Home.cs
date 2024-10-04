@@ -18,46 +18,55 @@ namespace Diploma_Final_Project_1
             InitializeComponent();
         }
 
-        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
+        private List<Control> previousControls = new List<Control>();
+        private void SaveCurrentControls()
         {
+            // Save the existing controls in the GroupBox to the list
+            previousControls.Clear();
+            foreach (Control ctrl in groupBox_Main.Controls)
+            {
+                previousControls.Add(ctrl);
+            }
+        }
+        private void RestoreHomeControls()
+        {
+            // Clear the current controls in the GroupBox
+            groupBox_Main.Controls.Clear();
 
+            // Add the previously saved controls back into the GroupBox
+            foreach (Control ctrl in previousControls)
+            {
+                groupBox_Main.Controls.Add(ctrl);
+
+            }
+        }
+
+        private void groupBox_Users_Enter(object sender, EventArgs e)
+        {
+            //Create an instance of Form2
+            Admin_View_Users form2 = new Admin_View_Users();
+
+            // Remove borders and make the form a child control
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.Dock = DockStyle.Fill;
+
+            // Add the form to the GroupBox
+            groupBox_Main.Controls.Clear();  // Optionally clear previous controls
+            groupBox_Main.Controls.Add(form2);
+
+            // Show the form inside the GroupBox
+            form2.Show();
         }
 
         private void Admin_Home_Load(object sender, EventArgs e)
         {
-
+            SaveCurrentControls();
         }
 
-        private void sytemMainatToolStripMenuItem_Click(object sender, EventArgs e)
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void employeeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void linkLabel7_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
-        private void linkLabel_backup_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            string backupFilePath = @"C:\Backup\hospital_db_backup.bak";
-            string sqlBackup = $@"BACKUP DATABASE hospital_db TO DISK = '{backupFilePath}'";
-            string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
-
-
-            using (SqlConnection conn = new SqlConnection(cs))
-            {
-                SqlCommand command = new SqlCommand(sqlBackup, conn);
-                conn.Open();
-                command.ExecuteNonQuery();
-                MessageBox.Show("Database backup successful.");
-            }
-
+            RestoreHomeControls();
         }
     }
 }

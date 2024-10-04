@@ -31,22 +31,25 @@ namespace Diploma_Final_Project_1
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_Home));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.patientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sytemMainatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.appoinmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.diagnosisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.prescriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sytemMainatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBoxloc = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox_Main = new System.Windows.Forms.GroupBox();
+            this.groupBox_Users = new System.Windows.Forms.GroupBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.btn_employee = new System.Windows.Forms.Button();
+            this.groupBox_Maintennance = new System.Windows.Forms.GroupBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btn_appoinments = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox_UserProfile = new System.Windows.Forms.GroupBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btn_userProfile = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox_Home = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_home = new System.Windows.Forms.Button();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
@@ -57,12 +60,14 @@ namespace Diploma_Final_Project_1
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.menuStrip1.SuspendLayout();
-            this.groupBoxloc.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.groupBox_Main.SuspendLayout();
+            this.groupBox_Users.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            this.groupBox_Maintennance.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.groupBox2.SuspendLayout();
+            this.groupBox_UserProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.groupBox_Home.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox10.SuspendLayout();
             this.SuspendLayout();
@@ -89,23 +94,35 @@ namespace Diploma_Final_Project_1
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(97, 54);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
             // homeToolStripMenuItem
             // 
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
             this.homeToolStripMenuItem.Size = new System.Drawing.Size(141, 54);
             this.homeToolStripMenuItem.Text = "Home";
+            this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
             // 
             // employeeToolStripMenuItem
             // 
             this.employeeToolStripMenuItem.Name = "employeeToolStripMenuItem";
             this.employeeToolStripMenuItem.Size = new System.Drawing.Size(322, 54);
             this.employeeToolStripMenuItem.Text = "User Registration";
-            this.employeeToolStripMenuItem.Click += new System.EventHandler(this.employeeToolStripMenuItem_Click);
             // 
             // patientsToolStripMenuItem
             // 
             this.patientsToolStripMenuItem.Name = "patientsToolStripMenuItem";
             this.patientsToolStripMenuItem.Size = new System.Drawing.Size(20, 54);
+            // 
+            // sytemMainatToolStripMenuItem
+            // 
+            this.sytemMainatToolStripMenuItem.Name = "sytemMainatToolStripMenuItem";
+            this.sytemMainatToolStripMenuItem.Size = new System.Drawing.Size(380, 54);
+            this.sytemMainatToolStripMenuItem.Text = "System Maintenance";
             // 
             // appoinmentToolStripMenuItem
             // 
@@ -122,41 +139,61 @@ namespace Diploma_Final_Project_1
             this.prescriptionToolStripMenuItem.Name = "prescriptionToolStripMenuItem";
             this.prescriptionToolStripMenuItem.Size = new System.Drawing.Size(20, 54);
             // 
-            // fileToolStripMenuItem
+            // groupBox_Main
             // 
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(97, 54);
-            this.fileToolStripMenuItem.Text = "File";
-            this.fileToolStripMenuItem.Click += new System.EventHandler(this.fileToolStripMenuItem_Click);
+            this.groupBox_Main.BackColor = System.Drawing.Color.White;
+            this.groupBox_Main.Controls.Add(this.groupBox_Users);
+            this.groupBox_Main.Controls.Add(this.groupBox_Maintennance);
+            this.groupBox_Main.Controls.Add(this.groupBox_UserProfile);
+            this.groupBox_Main.Controls.Add(this.groupBox_Home);
+            this.groupBox_Main.Location = new System.Drawing.Point(26, 79);
+            this.groupBox_Main.Name = "groupBox_Main";
+            this.groupBox_Main.Size = new System.Drawing.Size(2427, 1449);
+            this.groupBox_Main.TabIndex = 8;
+            this.groupBox_Main.TabStop = false;
             // 
-            // sytemMainatToolStripMenuItem
+            // groupBox_Users
             // 
-            this.sytemMainatToolStripMenuItem.Name = "sytemMainatToolStripMenuItem";
-            this.sytemMainatToolStripMenuItem.Size = new System.Drawing.Size(380, 54);
-            this.sytemMainatToolStripMenuItem.Text = "System Maintenance";
-            this.sytemMainatToolStripMenuItem.Click += new System.EventHandler(this.sytemMainatToolStripMenuItem_Click);
+            this.groupBox_Users.Controls.Add(this.pictureBox9);
+            this.groupBox_Users.Controls.Add(this.btn_employee);
+            this.groupBox_Users.Location = new System.Drawing.Point(923, 677);
+            this.groupBox_Users.Name = "groupBox_Users";
+            this.groupBox_Users.Size = new System.Drawing.Size(560, 370);
+            this.groupBox_Users.TabIndex = 14;
+            this.groupBox_Users.TabStop = false;
+            this.groupBox_Users.Enter += new System.EventHandler(this.groupBox_Users_Enter);
             // 
-            // groupBoxloc
+            // pictureBox9
             // 
-            this.groupBoxloc.BackColor = System.Drawing.Color.White;
-            this.groupBoxloc.Controls.Add(this.groupBox3);
-            this.groupBoxloc.Controls.Add(this.groupBox2);
-            this.groupBoxloc.Controls.Add(this.groupBox1);
-            this.groupBoxloc.Location = new System.Drawing.Point(26, 79);
-            this.groupBoxloc.Name = "groupBoxloc";
-            this.groupBoxloc.Size = new System.Drawing.Size(2427, 1449);
-            this.groupBoxloc.TabIndex = 8;
-            this.groupBoxloc.TabStop = false;
+            this.pictureBox9.Image = global::Diploma_Final_Project_1.Properties.Resources._360_F_372435911_7Nq7sVzcNRRYFLQ1iZzQVgRLgXL5C839;
+            this.pictureBox9.Location = new System.Drawing.Point(159, 59);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(251, 142);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 3;
+            this.pictureBox9.TabStop = false;
             // 
-            // groupBox3
+            // btn_employee
             // 
-            this.groupBox3.Controls.Add(this.pictureBox4);
-            this.groupBox3.Controls.Add(this.btn_appoinments);
-            this.groupBox3.Location = new System.Drawing.Point(1656, 75);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(605, 373);
-            this.groupBox3.TabIndex = 8;
-            this.groupBox3.TabStop = false;
+            this.btn_employee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.btn_employee.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_employee.ForeColor = System.Drawing.Color.White;
+            this.btn_employee.Location = new System.Drawing.Point(121, 242);
+            this.btn_employee.Name = "btn_employee";
+            this.btn_employee.Size = new System.Drawing.Size(321, 110);
+            this.btn_employee.TabIndex = 1;
+            this.btn_employee.Text = "Users";
+            this.btn_employee.UseVisualStyleBackColor = false;
+            // 
+            // groupBox_Maintennance
+            // 
+            this.groupBox_Maintennance.Controls.Add(this.pictureBox4);
+            this.groupBox_Maintennance.Controls.Add(this.btn_appoinments);
+            this.groupBox_Maintennance.Location = new System.Drawing.Point(1656, 75);
+            this.groupBox_Maintennance.Name = "groupBox_Maintennance";
+            this.groupBox_Maintennance.Size = new System.Drawing.Size(605, 373);
+            this.groupBox_Maintennance.TabIndex = 8;
+            this.groupBox_Maintennance.TabStop = false;
             // 
             // pictureBox4
             // 
@@ -180,15 +217,15 @@ namespace Diploma_Final_Project_1
             this.btn_appoinments.Text = "System Maintenance";
             this.btn_appoinments.UseVisualStyleBackColor = false;
             // 
-            // groupBox2
+            // groupBox_UserProfile
             // 
-            this.groupBox2.Controls.Add(this.pictureBox2);
-            this.groupBox2.Controls.Add(this.btn_userProfile);
-            this.groupBox2.Location = new System.Drawing.Point(905, 75);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(560, 369);
-            this.groupBox2.TabIndex = 10;
-            this.groupBox2.TabStop = false;
+            this.groupBox_UserProfile.Controls.Add(this.pictureBox2);
+            this.groupBox_UserProfile.Controls.Add(this.btn_userProfile);
+            this.groupBox_UserProfile.Location = new System.Drawing.Point(905, 75);
+            this.groupBox_UserProfile.Name = "groupBox_UserProfile";
+            this.groupBox_UserProfile.Size = new System.Drawing.Size(560, 369);
+            this.groupBox_UserProfile.TabIndex = 10;
+            this.groupBox_UserProfile.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -212,16 +249,16 @@ namespace Diploma_Final_Project_1
             this.btn_userProfile.Text = "User Profile";
             this.btn_userProfile.UseVisualStyleBackColor = false;
             // 
-            // groupBox1
+            // groupBox_Home
             // 
-            this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.btn_home);
-            this.groupBox1.ForeColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Location = new System.Drawing.Point(186, 69);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(557, 375);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
+            this.groupBox_Home.Controls.Add(this.pictureBox1);
+            this.groupBox_Home.Controls.Add(this.btn_home);
+            this.groupBox_Home.ForeColor = System.Drawing.Color.Transparent;
+            this.groupBox_Home.Location = new System.Drawing.Point(186, 69);
+            this.groupBox_Home.Name = "groupBox_Home";
+            this.groupBox_Home.Size = new System.Drawing.Size(557, 375);
+            this.groupBox_Home.TabIndex = 5;
+            this.groupBox_Home.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -258,7 +295,7 @@ namespace Diploma_Final_Project_1
             this.groupBox10.Controls.Add(this.linkLabel2);
             this.groupBox10.Controls.Add(this.linkLabel1);
             this.groupBox10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox10.Location = new System.Drawing.Point(2474, 79);
+            this.groupBox10.Location = new System.Drawing.Point(2459, 79);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(423, 1449);
             this.groupBox10.TabIndex = 9;
@@ -268,9 +305,9 @@ namespace Diploma_Final_Project_1
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(134, 510);
+            this.label2.Location = new System.Drawing.Point(31, 507);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(654, 90);
+            this.label2.Size = new System.Drawing.Size(327, 45);
             this.label2.TabIndex = 12;
             this.label2.Text = "System Maintennace";
             // 
@@ -287,31 +324,29 @@ namespace Diploma_Final_Project_1
             // linkLabel_restore
             // 
             this.linkLabel_restore.AutoSize = true;
-            this.linkLabel_restore.Location = new System.Drawing.Point(37, 677);
+            this.linkLabel_restore.Location = new System.Drawing.Point(32, 677);
             this.linkLabel_restore.Name = "linkLabel_restore";
-            this.linkLabel_restore.Size = new System.Drawing.Size(560, 90);
+            this.linkLabel_restore.Size = new System.Drawing.Size(280, 45);
             this.linkLabel_restore.TabIndex = 6;
             this.linkLabel_restore.TabStop = true;
             this.linkLabel_restore.Text = "Database Restore";
-            this.linkLabel_restore.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel7_LinkClicked);
             // 
             // linkLabel_backup
             // 
             this.linkLabel_backup.AutoSize = true;
             this.linkLabel_backup.Location = new System.Drawing.Point(32, 600);
             this.linkLabel_backup.Name = "linkLabel_backup";
-            this.linkLabel_backup.Size = new System.Drawing.Size(554, 90);
+            this.linkLabel_backup.Size = new System.Drawing.Size(277, 45);
             this.linkLabel_backup.TabIndex = 5;
             this.linkLabel_backup.TabStop = true;
             this.linkLabel_backup.Text = "Database Backup";
-            this.linkLabel_backup.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_backup_LinkClicked);
             // 
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Location = new System.Drawing.Point(31, 154);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(438, 90);
+            this.linkLabel2.Size = new System.Drawing.Size(219, 45);
             this.linkLabel2.TabIndex = 1;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Update Users";
@@ -321,7 +356,7 @@ namespace Diploma_Final_Project_1
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Location = new System.Drawing.Point(31, 85);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(346, 90);
+            this.linkLabel1.Size = new System.Drawing.Size(173, 45);
             this.linkLabel1.TabIndex = 0;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Add Users";
@@ -333,19 +368,22 @@ namespace Diploma_Final_Project_1
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2909, 1583);
             this.Controls.Add(this.groupBox10);
-            this.Controls.Add(this.groupBoxloc);
+            this.Controls.Add(this.groupBox_Main);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Admin_Home";
             this.Text = "Admin_Home";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Admin_Home_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.groupBoxloc.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
+            this.groupBox_Main.ResumeLayout(false);
+            this.groupBox_Users.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            this.groupBox_Maintennance.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.groupBox2.ResumeLayout(false);
+            this.groupBox_UserProfile.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.groupBox1.ResumeLayout(false);
+            this.groupBox_Home.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
@@ -365,14 +403,14 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.ToolStripMenuItem diagnosisToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem prescriptionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sytemMainatToolStripMenuItem;
-        private System.Windows.Forms.GroupBox groupBoxloc;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox_Main;
+        private System.Windows.Forms.GroupBox groupBox_Maintennance;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button btn_appoinments;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox_UserProfile;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btn_userProfile;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox_Home;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btn_home;
         private System.Windows.Forms.GroupBox groupBox10;
@@ -382,5 +420,8 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.LinkLabel linkLabel_backup;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.GroupBox groupBox_Users;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Button btn_employee;
     }
 }
