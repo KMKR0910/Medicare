@@ -17,6 +17,24 @@ namespace Diploma_Final_Project_1
         {
             InitializeComponent();
             this.UserID = UserID;
+
+            Color customC = ColorTranslator.FromHtml("#9083D5 ");
+            btn_home.BackColor = customC;
+            btn_home.BackColor = customC;
+            btn_userProfile.BackColor = customC;
+
+            btn_appoinments.BackColor = customC;
+          
+            btn_employee.BackColor = customC;
+           
+            linkLabel1.LinkColor = customC;
+            linkLabel2.LinkColor = customC;
+            linkLabel_backup.LinkColor = customC;
+            linkLabel_restore.LinkColor = customC;
+
+
+            menuStrip1.BackColor = customC;
+
         }
 
         private List<Control> previousControls = new List<Control>();

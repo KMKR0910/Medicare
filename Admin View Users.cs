@@ -365,7 +365,7 @@ namespace Diploma_Final_Project_1
                 // save user details
                 SqlConnection con1 = new SqlConnection(cs);
                 con1.Open();
-
+               
 
 
                 if (userType == "Doctor")

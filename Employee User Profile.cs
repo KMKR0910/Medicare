@@ -15,12 +15,19 @@ namespace Diploma_Final_Project_1
     {
 
         private string _userId;
+        string userType;
         public Employee_User_Profile(string userID)
         {
             InitializeComponent();
             DisableFields();
             _userId = userID;
+            Color customC = ColorTranslator.FromHtml("#9083D5 ");
+            btn_edit.BackColor = customC;
+            btn_clear.BackColor = customC;
+            btn_save.BackColor = customC;
+
         }
+        string sql = "";
         private void DisableFields()
         {
             txt_F_name.Enabled = false;
@@ -53,7 +60,29 @@ namespace Diploma_Final_Project_1
             txt_pwd2.Enabled = true;
 
         }
-
+        public void GetUserType()
+        {
+            if (_userId.StartsWith("DOC", StringComparison.OrdinalIgnoreCase))
+            {
+                userType = "Doctor";
+            }
+            if (_userId.StartsWith("MED", StringComparison.OrdinalIgnoreCase))
+            {
+                userType = "Medical Centre Assistant";
+            }
+            if (_userId.StartsWith("PHA", StringComparison.OrdinalIgnoreCase))
+            {
+                userType = "Pharmacists";
+            }
+            if (_userId.StartsWith("LAB", StringComparison.OrdinalIgnoreCase))
+            {
+                userType = "Laboratory Assistant";
+            }
+            if (_userId.StartsWith("ADM", StringComparison.OrdinalIgnoreCase))
+            {
+                userType = "Admin";
+            }
+        }
         private void ResetPassword()
         {
             try
@@ -214,8 +243,42 @@ namespace Diploma_Final_Project_1
 
 
             con1.Open();
+            GetUserType();
 
-            string sql = "SELECT * FROM tbl_Internal_User WHERE [User ID] =@userid";
+            if (userType == "Doctor")
+            {
+                sql = @"SELECT *
+                 FROM [tbl_doctor] WHERE [Doctor ID] =@userid";
+
+            }
+
+            if (userType == "Medical Centre Assistant")
+            {
+                sql = @"SELECT *
+                 FROM [tbl_Medical_Centre_Assistant] WHERE [Med_Assistant_ID] =@userid";
+
+            }
+
+            if (userType == "Pharamacists")
+            {
+                sql = @"SELECT *
+                 FROM [tbl_Pharamacists] WHERE [Pharamacists_ID] =@userid";
+
+            }
+
+            if (userType == "Laboratary Assistant")
+            {
+                sql = @"SELECT *
+                 FROM [tbl_Lab_Assistant] WHERE [Lab-Assistant_ID] =@userid";
+            }
+            if (userType == "Admin")
+            {
+                sql = @"SELECT *
+                 FROM [tbl_Admin] WHERE [Admin_ID] =@userid";
+
+            }
+
+         
 
             SqlCommand com = new SqlCommand(sql, con1);
 
@@ -250,7 +313,6 @@ namespace Diploma_Final_Project_1
             }
             con1.Close();
 
-            //            string sql = "SELECT [Name] FROM tbl_patient_info WHERE [Contact Number]=@number";
 
 
         }
@@ -258,6 +320,94 @@ namespace Diploma_Final_Project_1
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_reset_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string sql = "";
+                
+
+                string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
+
+
+                // save user details
+                SqlConnection con1 = new SqlConnection(cs);
+                con1.Open();
+
+                GetUserType();
+
+                if (userType == "Doctor")
+                {
+                    sql = @"UPDATE [tbl_doctor]  SET [User Password]=@newPWD WHERE [Doctor ID] =@ID";
+
+
+                }
+
+                if (userType == "Medical Centre Assistant")
+                {
+
+                    sql = @"UPDATE [tbl_Medical_Centre_Assistant] SET [User Password]=@newPWD WHERE[Med_Assistant_ID] =@ID";
+
+
+
+                }
+
+                if (userType == "Pharamacists")
+                {
+                    sql = @"UPDATE  [tbl_Pharamacists] SET [User Password]=@newPWD WHERE[Pharamacists_ID]=@ID";
+
+
+                }
+
+                if (userType == "Laboratary Assistant")
+                {
+                    sql = @"UPDATE  [tbl_Lab_Assistant] SET [User Password]=@newPWD WHERE [Lab-Assistant_ID] =@ID";
+
+
+                }
+                if (userType == "Admin")
+                {
+                    sql = @"UPDATE  [tbl_Admin] SET [User Password]=@newPWD WHERE [Admin_ID] =@ID";
+
+
+
+                }
+
+
+                SqlCommand com = new SqlCommand(sql, con1);
+
+                com.Parameters.AddWithValue("@ID", this.txt_userID.Text);
+                com.Parameters.AddWithValue("@newPWD", this.txt_pwd1.Text);
+
+                if (this.txt_pwd1.Text == this.txt_pwd2.Text)
+                {
+
+                    int ret = com.ExecuteNonQuery();
+                    if (ret == 1)
+                    {
+                        MessageBox.Show("Reset Password successfully", "Information");
+
+
+                    }
+
+                }
+
+
+
+
+
+
+
+
+
+                con1.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
