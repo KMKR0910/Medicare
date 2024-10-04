@@ -13,12 +13,16 @@ namespace Diploma_Final_Project_1
 {
     public partial class Admin_Home : Form
     {
-        public Admin_Home()
+        public Admin_Home(String UserID)
         {
             InitializeComponent();
+            this.UserID = UserID;
         }
 
         private List<Control> previousControls = new List<Control>();
+
+        public string UserID { get; private set; }
+
         private void SaveCurrentControls()
         {
             // Save the existing controls in the GroupBox to the list
@@ -60,28 +64,18 @@ namespace Diploma_Final_Project_1
         }
         private void LoadUserProfile()
         {
+            Employee_User_Profile form2 = new Employee_User_Profile(UserID);
+            // Remove borders and make the form a child control
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.Dock = DockStyle.Fill;
 
-            string postion = "Admin";
-            string cs = "Data Source=ASUS; Initial Catalog = Diploma Final Project DB1; Integrated Security=True";
+            // Add the form to the GroupBox
+            groupBox_Main.Controls.Clear();  // Optionally clear previous controls
+            groupBox_Main.Controls.Add(form2);
 
-            SqlConnection con = new SqlConnection(cs);
-            con.Open();
-
-            string sql = "select [User ID] from tbl_Admin WHERE [Postion]=@postion";
-            SqlCommand com = new SqlCommand(sql, con);
-            com.Parameters.AddWithValue("@postion", postion);
-
-            var userId = com.ExecuteScalar()?.ToString();  // Fetch the first column of the first row
-
-            if (userId != null)
-            {
-                Employee_User_Profile profileForm = new Employee_User_Profile(userId);
-                profileForm.Show();
-            }
-            else
-            {
-                MessageBox.Show("No user found with the specified position.");
-            }
+            // Show the form inside the GroupBox
+            form2.Show();
         }
 
 
@@ -122,7 +116,7 @@ namespace Diploma_Final_Project_1
 
         private void groupBox_UserProfile_Enter(object sender, EventArgs e)
         {
-
+            LoadUserProfile();
         }
     }
 }

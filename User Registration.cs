@@ -288,7 +288,7 @@ namespace Diploma_Final_Project_1
                 }
                 if (userType == "Admin")
                 {
-                    sql = "INSERT INTO [tbl_Admin] ([Admin_ID],[User Password],[First Name],[Last Name],[Address],DOB,[Email Address],Salary,ContactNumber)" +
+                    sql = "INSERT INTO [tbl_Admin] ([Admin_ID],[User Password],[First Name],[Last Name],[Address],DOB,[Email Address],Salary,Qualifications,ContactNumber)" +
                         "VALUES (@userid,@userpwd,@Fname,@Lname,@address,@DOB,@email,@salary,@qualification,@number)";
 
                 }

@@ -17,7 +17,7 @@ namespace Diploma_Final_Project_1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             
-            Application.Run(new Admin_Home ());
+            Application.Run(new Main_Dashboard ());
         }
     }
 }

@@ -267,7 +267,7 @@ namespace Diploma_Final_Project_1
             // btn_cancel
             // 
             this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.Location = new System.Drawing.Point(1345, 1327);
+            this.btn_cancel.Location = new System.Drawing.Point(2199, 1347);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(216, 90);
             this.btn_cancel.TabIndex = 84;
@@ -341,7 +341,7 @@ namespace Diploma_Final_Project_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1677, 1478);
+            this.ClientSize = new System.Drawing.Size(2427, 1449);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txt_userID);
             this.Controls.Add(this.groupBox1);

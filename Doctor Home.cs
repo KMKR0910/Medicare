@@ -8,7 +8,7 @@ namespace Diploma_Final_Project_1
 {
     public partial class Doctor_Home : Form
     {
-        public Doctor_Home()
+        public Doctor_Home(String UserID)
         {
             InitializeComponent();
             Color customC = ColorTranslator.FromHtml("#9083D5 ");
@@ -35,10 +35,12 @@ namespace Diploma_Final_Project_1
             linkLabel11.LinkColor = customC;
 
             menuStrip1.BackColor = customC;
-                      
 
 
-       
+            this.UserID = UserID;
+
+
+
 
             this.AutoScaleMode = AutoScaleMode.Dpi;
 
@@ -101,6 +103,9 @@ namespace Diploma_Final_Project_1
             form2.Show();
         }
         private List<Control> previousControls = new List<Control>();
+
+        public string UserID { get; private set; }
+
         private void SaveCurrentControls()
         {
             // Save the existing controls in the GroupBox to the list
@@ -122,9 +127,28 @@ namespace Diploma_Final_Project_1
                
             }
         }
-       
+        private void LoadUserProfile()
+        {
 
-       
+            
+
+                Employee_User_Profile form2 = new Employee_User_Profile(UserID);
+                // Remove borders and make the form a child control
+                form2.TopLevel = false;
+                form2.FormBorderStyle = FormBorderStyle.None;
+                form2.Dock = DockStyle.Fill;
+
+                // Add the form to the GroupBox
+                groupBoxloc.Controls.Clear();  // Optionally clear previous controls
+                groupBoxloc.Controls.Add(form2);
+
+                // Show the form inside the GroupBox
+                form2.Show();
+                
+            
+        }
+
+
 
         private void btn_userProfile_Click(object sender, EventArgs e)
         {
@@ -203,7 +227,7 @@ namespace Diploma_Final_Project_1
 
         private void groupBox2_Enter(object sender, EventArgs e)
         {
-
+            LoadUserProfile();
         }
 
         private void btn_userProfile_Click_1(object sender, EventArgs e)

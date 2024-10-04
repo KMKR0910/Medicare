@@ -42,7 +42,7 @@ namespace Diploma_Final_Project_1
                     SqlConnection con = new SqlConnection(cs);
                     con.Open();
                     string UserID = this.txt_username.Text;
-                    string userType="";
+                    string userType = "";
                     string sql = "";
                     if (UserID.StartsWith("DOC", StringComparison.OrdinalIgnoreCase))
                     {
@@ -96,87 +96,72 @@ namespace Diploma_Final_Project_1
                     SqlCommand com = new SqlCommand(sql, con);
 
 
-                    com.Parameters.AddWithValue("@username", this.txt_username.Text);
+                    com.Parameters.AddWithValue("@userid", this.txt_username.Text);
                     com.Parameters.AddWithValue("@password", this.txt_password.Text);
 
 
                     SqlDataReader dr = com.ExecuteReader();
 
-                   
+
 
                     if (dr.Read() == true)
                     {
-                        dr.Close();
-
-                        string sql2 = "select [Postion] from tbl_Internal_User WHERE [User ID]=@username ";
-                        SqlCommand com2 = new SqlCommand(sql2, con);
-
-                        com2.Parameters.AddWithValue("@username", this.txt_username.Text);
-
-                        SqlDataReader dr2 = com2.ExecuteReader();
-                        
-
-
-                        if (dr2.Read()==true)
+                        if (userType == "Doctor")
                         {
-                            string postion = dr2["Postion"] != DBNull.Value ? dr2["Postion"].ToString() : string.Empty;
-
-
-                            if (postion == "Doctor")
-                            {
-                                Doctor_Home m1 = new Doctor_Home();
-                                m1.Show();
-                                this.Hide();
-                            }
-                            else if (postion == "Admin")
-                            {
-                                Admin_Home m1 = new Admin_Home();
-                                m1.Show();
-                                this.Hide();
-                            }
-                            else if(postion == "Medical Centre Assistant")
-                            {
-                                Med_home m1 = new Med_home();
-                                m1.Show();
-                                this.Hide();
-                            }
-                            else if(postion == "Pharamacists")
-                            {
-                                Pha_Home m1 = new Pha_Home();
-                                m1.Show();
-                                this.Hide();
-                            }
-                            else if(postion == "Laboratary Assistant")
-                            {
-                                Lab_Home m1 = new Lab_Home();
-                                m1.Show();
-                                this.Hide();
-                            }
-
+                            Doctor_Home m1 = new Doctor_Home(UserID);
+                            m1.Show();
+                            this.Hide();
+                        }
+                        else if (userType == "Admin")
+                        {
+                            Admin_Home m1 = new Admin_Home(UserID);
+                            m1.Show();
+                            this.Hide();
+                        }
+                        else if (userType == "Medical Centre Assistant")
+                        {
+                            Med_home m1 = new Med_home();
+                            m1.Show();
+                            this.Hide();
+                        }
+                        else if (userType == "Pharamacists")
+                        {
+                            Pha_Home m1 = new Pha_Home();
+                            m1.Show();
+                            this.Hide();
+                        }
+                        else if (userType == "Laboratary Assistant")
+                        {
+                            Lab_Home m1 = new Lab_Home();
+                            m1.Show();
+                            this.Hide();
                         }
 
-                        else
-                        {
+                    }
 
-                            MessageBox.Show("Invalid User Name or Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else
+                    {
 
-                            this.txt_password.Clear();
+                        MessageBox.Show("Invalid User Name or Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-
-                        }       //disconnect from sql server 
-                        con.Close();
+                        this.txt_password.Clear();
 
 
-                     }
-                    
+                    }       //disconnect from sql server 
+                    con.Close();
+
+
+
+
+
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        }
 
+        }
         private void Main_Dashboard_Load(object sender, EventArgs e)
         {
             this.txt_password.PasswordChar = '*';

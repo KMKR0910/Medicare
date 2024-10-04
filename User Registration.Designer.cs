@@ -91,6 +91,11 @@ namespace Diploma_Final_Project_1
             // 
             this.numericUpDown_salary.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown_salary.Location = new System.Drawing.Point(318, 884);
+            this.numericUpDown_salary.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
             this.numericUpDown_salary.Name = "numericUpDown_salary";
             this.numericUpDown_salary.Size = new System.Drawing.Size(328, 38);
             this.numericUpDown_salary.TabIndex = 49;
@@ -99,6 +104,7 @@ namespace Diploma_Final_Project_1
             // dateTimePicker_DOB
             // 
             this.dateTimePicker_DOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker_DOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker_DOB.Location = new System.Drawing.Point(326, 597);
             this.dateTimePicker_DOB.Name = "dateTimePicker_DOB";
             this.dateTimePicker_DOB.Size = new System.Drawing.Size(329, 38);
