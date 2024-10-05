@@ -51,7 +51,7 @@ namespace Diploma_Final_Project_1
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(44, 443);
+            this.label4.Location = new System.Drawing.Point(691, 547);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(213, 42);
             this.label4.TabIndex = 95;
@@ -60,7 +60,7 @@ namespace Diploma_Final_Project_1
             // txt_d_name
             // 
             this.txt_d_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_d_name.Location = new System.Drawing.Point(432, 108);
+            this.txt_d_name.Location = new System.Drawing.Point(1079, 212);
             this.txt_d_name.Name = "txt_d_name";
             this.txt_d_name.Size = new System.Drawing.Size(372, 44);
             this.txt_d_name.TabIndex = 93;
@@ -69,9 +69,9 @@ namespace Diploma_Final_Project_1
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(44, 105);
+            this.label3.Location = new System.Drawing.Point(691, 209);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(416, 84);
+            this.label3.Size = new System.Drawing.Size(208, 42);
             this.label3.TabIndex = 91;
             this.label3.Text = "Drug Name";
             // 
@@ -79,9 +79,9 @@ namespace Diploma_Final_Project_1
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(44, 231);
+            this.label2.Location = new System.Drawing.Point(691, 335);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(370, 84);
+            this.label2.Size = new System.Drawing.Size(185, 42);
             this.label2.TabIndex = 90;
             this.label2.Text = "Pack Size";
             // 
@@ -89,7 +89,7 @@ namespace Diploma_Final_Project_1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(44, 345);
+            this.label1.Location = new System.Drawing.Point(691, 449);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(194, 42);
             this.label1.TabIndex = 89;
@@ -98,7 +98,7 @@ namespace Diploma_Final_Project_1
             // txt_pack_size
             // 
             this.txt_pack_size.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_pack_size.Location = new System.Drawing.Point(432, 231);
+            this.txt_pack_size.Location = new System.Drawing.Point(1079, 335);
             this.txt_pack_size.Name = "txt_pack_size";
             this.txt_pack_size.Size = new System.Drawing.Size(372, 44);
             this.txt_pack_size.TabIndex = 96;
@@ -107,7 +107,7 @@ namespace Diploma_Final_Project_1
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(44, 549);
+            this.label5.Location = new System.Drawing.Point(691, 653);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(157, 42);
             this.label5.TabIndex = 97;
@@ -115,7 +115,7 @@ namespace Diploma_Final_Project_1
             // 
             // elementHost1
             // 
-            this.elementHost1.Location = new System.Drawing.Point(1010, 612);
+            this.elementHost1.Location = new System.Drawing.Point(1657, 716);
             this.elementHost1.Name = "elementHost1";
             this.elementHost1.Size = new System.Drawing.Size(200, 100);
             this.elementHost1.TabIndex = 98;
@@ -125,7 +125,7 @@ namespace Diploma_Final_Project_1
             // numericUpDown_price
             // 
             this.numericUpDown_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown_price.Location = new System.Drawing.Point(420, 349);
+            this.numericUpDown_price.Location = new System.Drawing.Point(1067, 453);
             this.numericUpDown_price.Name = "numericUpDown_price";
             this.numericUpDown_price.Size = new System.Drawing.Size(236, 44);
             this.numericUpDown_price.TabIndex = 99;
@@ -133,7 +133,7 @@ namespace Diploma_Final_Project_1
             // dateTimePicker_exp
             // 
             this.dateTimePicker_exp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker_exp.Location = new System.Drawing.Point(432, 465);
+            this.dateTimePicker_exp.Location = new System.Drawing.Point(1079, 569);
             this.dateTimePicker_exp.Name = "dateTimePicker_exp";
             this.dateTimePicker_exp.Size = new System.Drawing.Size(706, 44);
             this.dateTimePicker_exp.TabIndex = 100;
@@ -141,7 +141,7 @@ namespace Diploma_Final_Project_1
             // numericUpDown_quantity
             // 
             this.numericUpDown_quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown_quantity.Location = new System.Drawing.Point(432, 553);
+            this.numericUpDown_quantity.Location = new System.Drawing.Point(1079, 657);
             this.numericUpDown_quantity.Name = "numericUpDown_quantity";
             this.numericUpDown_quantity.Size = new System.Drawing.Size(224, 44);
             this.numericUpDown_quantity.TabIndex = 101;
@@ -149,7 +149,7 @@ namespace Diploma_Final_Project_1
             // btn_cancel
             // 
             this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.Location = new System.Drawing.Point(1033, 743);
+            this.btn_cancel.Location = new System.Drawing.Point(1680, 847);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(236, 104);
             this.btn_cancel.TabIndex = 103;
@@ -160,7 +160,7 @@ namespace Diploma_Final_Project_1
             // btn_add
             // 
             this.btn_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add.Location = new System.Drawing.Point(22, 743);
+            this.btn_add.Location = new System.Drawing.Point(669, 847);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(236, 104);
             this.btn_add.TabIndex = 102;
@@ -171,7 +171,7 @@ namespace Diploma_Final_Project_1
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(567, 743);
+            this.button1.Location = new System.Drawing.Point(1214, 847);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(236, 104);
             this.button1.TabIndex = 104;
@@ -183,7 +183,7 @@ namespace Diploma_Final_Project_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1361, 992);
+            this.ClientSize = new System.Drawing.Size(2427, 1449);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_add);

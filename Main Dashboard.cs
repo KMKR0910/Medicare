@@ -124,9 +124,9 @@ namespace Diploma_Final_Project_1
                             m1.Show();
                             this.Hide();
                         }
-                        else if (userType == "Pharamacists")
+                        else if (userType == "Pharmacists")
                         {
-                            Pha_Home m1 = new Pha_Home();
+                            Pha_Home m1 = new Pha_Home(UserID);
                             m1.Show();
                             this.Hide();
                         }
