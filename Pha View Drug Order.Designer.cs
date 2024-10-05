@@ -48,6 +48,7 @@ namespace Diploma_Final_Project_1
             this.dataGridView_orders.RowTemplate.Height = 33;
             this.dataGridView_orders.Size = new System.Drawing.Size(1124, 994);
             this.dataGridView_orders.TabIndex = 124;
+            this.dataGridView_orders.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_orders_CellContentClick_1);
             // 
             // dataGridView_items
             // 
@@ -90,6 +91,7 @@ namespace Diploma_Final_Project_1
             this.Controls.Add(this.groupBox1);
             this.Name = "Pha_View_Drug_Order";
             this.Text = "Pha_View_Drug_Order";
+            this.Load += new System.EventHandler(this.Pha_View_Drug_Order_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_orders)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_items)).EndInit();
             this.groupBox2.ResumeLayout(false);

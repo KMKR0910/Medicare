@@ -174,6 +174,32 @@ namespace Diploma_Final_Project_1
             form2.Show();
         }
 
-       
+        private void groupBox_Home_Enter(object sender, EventArgs e)
+        {
+            RestoreHomeControls();
+        }
+
+        private void groupBox_UserProfile_Enter(object sender, EventArgs e)
+        {
+            
+
+
+
+                Employee_User_Profile form2 = new Employee_User_Profile(UserID);
+                // Remove borders and make the form a child control
+                form2.TopLevel = false;
+                form2.FormBorderStyle = FormBorderStyle.None;
+                form2.Dock = DockStyle.Fill;
+
+                // Add the form to the GroupBox
+                groupBoxloc.Controls.Clear();  // Optionally clear previous controls
+                groupBoxloc.Controls.Add(form2);
+
+                // Show the form inside the GroupBox
+                form2.Show();
+
+
+           
+        }
     }
 }

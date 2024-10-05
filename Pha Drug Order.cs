@@ -17,6 +17,14 @@ namespace Diploma_Final_Project_1
         public Pha_Drug_Order()
         {
             InitializeComponent();
+            Color customC = ColorTranslator.FromHtml("#9083D5 ");
+            btn_search.BackColor = customC;
+            btn_add.BackColor = customC;
+
+            btn_clear.BackColor = customC;
+            btn_remove.BackColor = customC;
+            btn_order.BackColor = customC;
+
         }
         string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
 

@@ -35,8 +35,6 @@ namespace Diploma_Final_Project_1
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.prescriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addDrugPrescriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addLabPrescriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.doctorSessionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.view_doctor_sessionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.add_doctor_sessionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -154,9 +152,9 @@ namespace Diploma_Final_Project_1
             this.homeToolStripMenuItem,
             this.prescriptionToolStripMenuItem,
             this.doctorSessionsToolStripMenuItem,
-            this.financeToolStripMenuItem,
             this.drugInventoryToolStripMenuItem,
-            this.drugOrderToolStripMenuItem});
+            this.drugOrderToolStripMenuItem,
+            this.financeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(1, 4, 0, 4);
@@ -166,24 +164,9 @@ namespace Diploma_Final_Project_1
             // 
             // prescriptionToolStripMenuItem
             // 
-            this.prescriptionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addDrugPrescriptionToolStripMenuItem,
-            this.addLabPrescriptionToolStripMenuItem});
             this.prescriptionToolStripMenuItem.Name = "prescriptionToolStripMenuItem";
             this.prescriptionToolStripMenuItem.Size = new System.Drawing.Size(237, 54);
             this.prescriptionToolStripMenuItem.Text = "Prescription";
-            // 
-            // addDrugPrescriptionToolStripMenuItem
-            // 
-            this.addDrugPrescriptionToolStripMenuItem.Name = "addDrugPrescriptionToolStripMenuItem";
-            this.addDrugPrescriptionToolStripMenuItem.Size = new System.Drawing.Size(528, 58);
-            this.addDrugPrescriptionToolStripMenuItem.Text = "Add Drug Prescription";
-            // 
-            // addLabPrescriptionToolStripMenuItem
-            // 
-            this.addLabPrescriptionToolStripMenuItem.Name = "addLabPrescriptionToolStripMenuItem";
-            this.addLabPrescriptionToolStripMenuItem.Size = new System.Drawing.Size(528, 58);
-            this.addLabPrescriptionToolStripMenuItem.Text = "Add Lab Prescription";
             // 
             // doctorSessionsToolStripMenuItem
             // 
@@ -692,6 +675,7 @@ namespace Diploma_Final_Project_1
             this.groupBox_UserProfile.Size = new System.Drawing.Size(560, 369);
             this.groupBox_UserProfile.TabIndex = 10;
             this.groupBox_UserProfile.TabStop = false;
+            this.groupBox_UserProfile.Enter += new System.EventHandler(this.groupBox_UserProfile_Enter);
             // 
             // pictureBox2
             // 
@@ -725,6 +709,7 @@ namespace Diploma_Final_Project_1
             this.groupBox_Home.Size = new System.Drawing.Size(557, 375);
             this.groupBox_Home.TabIndex = 5;
             this.groupBox_Home.TabStop = false;
+            this.groupBox_Home.Enter += new System.EventHandler(this.groupBox_Home_Enter);
             // 
             // pictureBox1
             // 
@@ -797,8 +782,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem prescriptionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addDrugPrescriptionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addLabPrescriptionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem doctorSessionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem view_doctor_sessionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem add_doctor_sessionToolStripMenuItem;

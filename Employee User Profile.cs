@@ -264,7 +264,7 @@ namespace Diploma_Final_Project_1
 
             }
 
-            if (userType == "Pharamacists")
+            if (userType == "Pharmacists")
             {
                 sql = @"SELECT *
                  FROM [tbl_Pharamacists] WHERE [Pharamacists_ID] =@userid";
@@ -376,7 +376,7 @@ namespace Diploma_Final_Project_1
 
                 }
 
-                if (userType == "Pharamacists")
+                if (userType == "Pharmacists")
                 {
                     sql = @"UPDATE  [tbl_Pharamacists] SET [User Password]=@newPWD WHERE[Pharamacists_ID]=@ID";
 

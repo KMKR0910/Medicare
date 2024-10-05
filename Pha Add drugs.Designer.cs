@@ -36,13 +36,12 @@ namespace Diploma_Final_Project_1
             this.label1 = new System.Windows.Forms.Label();
             this.txt_pack_size = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
             this.numericUpDown_price = new System.Windows.Forms.NumericUpDown();
             this.dateTimePicker_exp = new System.Windows.Forms.DateTimePicker();
             this.numericUpDown_quantity = new System.Windows.Forms.NumericUpDown();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_clear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_price)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_quantity)).BeginInit();
             this.SuspendLayout();
@@ -113,15 +112,6 @@ namespace Diploma_Final_Project_1
             this.label5.TabIndex = 97;
             this.label5.Text = "Quantity";
             // 
-            // elementHost1
-            // 
-            this.elementHost1.Location = new System.Drawing.Point(1657, 716);
-            this.elementHost1.Name = "elementHost1";
-            this.elementHost1.Size = new System.Drawing.Size(200, 100);
-            this.elementHost1.TabIndex = 98;
-            this.elementHost1.Text = "elementHost1";
-            this.elementHost1.Child = null;
-            // 
             // numericUpDown_price
             // 
             this.numericUpDown_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -168,29 +158,28 @@ namespace Diploma_Final_Project_1
             this.btn_add.UseVisualStyleBackColor = true;
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
-            // button1
+            // btn_clear
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1214, 847);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(236, 104);
-            this.button1.TabIndex = 104;
-            this.button1.Text = "Clear";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_clear.Location = new System.Drawing.Point(1214, 847);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(236, 104);
+            this.btn_clear.TabIndex = 104;
+            this.btn_clear.Text = "Clear";
+            this.btn_clear.UseVisualStyleBackColor = true;
+            this.btn_clear.Click += new System.EventHandler(this.button1_Click);
             // 
             // Pha_Add_drugs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2427, 1449);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.numericUpDown_quantity);
             this.Controls.Add(this.dateTimePicker_exp);
             this.Controls.Add(this.numericUpDown_price);
-            this.Controls.Add(this.elementHost1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txt_pack_size);
             this.Controls.Add(this.label4);
@@ -217,12 +206,11 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_pack_size;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Integration.ElementHost elementHost1;
         private System.Windows.Forms.NumericUpDown numericUpDown_price;
         private System.Windows.Forms.DateTimePicker dateTimePicker_exp;
         private System.Windows.Forms.NumericUpDown numericUpDown_quantity;
         private System.Windows.Forms.Button btn_cancel;
         private System.Windows.Forms.Button btn_add;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_clear;
     }
 }

@@ -16,6 +16,12 @@ namespace Diploma_Final_Project_1
         public Pha_Add_drugs()
         {
             InitializeComponent();
+            Color customC = ColorTranslator.FromHtml("#9083D5 ");
+            btn_add.BackColor = customC;
+            btn_cancel.BackColor = customC;
+            btn_clear.BackColor = customC;
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
