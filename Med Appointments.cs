@@ -23,8 +23,11 @@ namespace Diploma_Final_Project_1
         public Med_Appointments()
         {
             InitializeComponent();
-            
-            
+            Color customC = ColorTranslator.FromHtml("#9083D5 ");
+            btn_complete.BackColor = customC;
+      
+
+
         }
 
         private void Med_Appointments_Load(object sender, EventArgs e)
@@ -276,6 +279,16 @@ namespace Diploma_Final_Project_1
             {
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_appointmentNumber_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

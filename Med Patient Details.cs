@@ -17,6 +17,12 @@ namespace Diploma_Final_Project_1
         {
             InitializeComponent();
             DisableFields();
+            Color customC = ColorTranslator.FromHtml("#9083D5 ");
+            btn_search.BackColor = customC;
+            btn_save.BackColor = customC;
+
+            btn_edit.BackColor = customC;
+            btn_cancel.BackColor = customC;
         }
 
         private void Med_Patient_Details_Load(object sender, EventArgs e)
@@ -275,6 +281,76 @@ namespace Diploma_Final_Project_1
         private void dataGridView_Diagnose_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox5_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
+
+            try
+            {
+
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+
+
+                string sql = "SELECT *  FROM [tbl_patient_info] WHERE [Contact Number] = @number ";
+                SqlCommand com1 = new SqlCommand(sql, con);
+                com1.Parameters.AddWithValue("@number", this.txt_search.Text);
+                SqlDataAdapter dap = new SqlDataAdapter(com1);
+                DataSet ds = new DataSet();
+                dap.Fill(ds);
+
+
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+
+                    DataRow rows = ds.Tables[0].Rows[0];
+
+
+                    this.txt_Name.Text = rows["Name"].ToString();
+                    this.txt_address.Text = rows["Address"].ToString();
+                    this.dateTimePicker_DOB.Text = rows["DOB"].ToString();
+                    this.txt_contact.Text = rows["Contact Number"].ToString();
+                    this.txt_email.Text = rows["email"].ToString();
+                    this.comboBox_gender.Text = rows["Gender"].ToString();
+
+                    // Parse the DOB field to a DateTime object
+                    DateTime dob = DateTime.Parse(rows["DOB"].ToString());
+
+                    // Call the method to calculate the patient's age and display it
+                    CalculateAge(dob);
+
+                }
+                //disconnect from sql server 
+                con.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

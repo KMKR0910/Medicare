@@ -73,7 +73,7 @@ namespace Diploma_Final_Project_1
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(26, 617);
+            this.label6.Location = new System.Drawing.Point(23, 617);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(289, 42);
             this.label6.TabIndex = 55;
@@ -86,19 +86,20 @@ namespace Diploma_Final_Project_1
             this.dataGridView_LabReport.Name = "dataGridView_LabReport";
             this.dataGridView_LabReport.RowHeadersWidth = 82;
             this.dataGridView_LabReport.RowTemplate.Height = 33;
-            this.dataGridView_LabReport.Size = new System.Drawing.Size(907, 193);
+            this.dataGridView_LabReport.Size = new System.Drawing.Size(1276, 193);
             this.dataGridView_LabReport.TabIndex = 2;
             // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.dataGridView_LabReport);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(791, 948);
+            this.groupBox5.Location = new System.Drawing.Point(1062, 1115);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(972, 256);
+            this.groupBox5.Size = new System.Drawing.Size(1332, 256);
             this.groupBox5.TabIndex = 60;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Lab Report Details";
+            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
             // 
             // dataGridView_M_Certificate
             // 
@@ -107,19 +108,20 @@ namespace Diploma_Final_Project_1
             this.dataGridView_M_Certificate.Name = "dataGridView_M_Certificate";
             this.dataGridView_M_Certificate.RowHeadersWidth = 82;
             this.dataGridView_M_Certificate.RowTemplate.Height = 33;
-            this.dataGridView_M_Certificate.Size = new System.Drawing.Size(919, 193);
+            this.dataGridView_M_Certificate.Size = new System.Drawing.Size(1288, 193);
             this.dataGridView_M_Certificate.TabIndex = 2;
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.dataGridView_M_Certificate);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(791, 651);
+            this.groupBox4.Location = new System.Drawing.Point(1062, 791);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(972, 256);
+            this.groupBox4.Size = new System.Drawing.Size(1332, 256);
             this.groupBox4.TabIndex = 59;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Medical Certificate Details";
+            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
             // dataGridView_Prescription
             // 
@@ -128,31 +130,33 @@ namespace Diploma_Final_Project_1
             this.dataGridView_Prescription.Name = "dataGridView_Prescription";
             this.dataGridView_Prescription.RowHeadersWidth = 82;
             this.dataGridView_Prescription.RowTemplate.Height = 33;
-            this.dataGridView_Prescription.Size = new System.Drawing.Size(919, 193);
+            this.dataGridView_Prescription.Size = new System.Drawing.Size(1288, 193);
             this.dataGridView_Prescription.TabIndex = 2;
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dataGridView_Prescription);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(791, 360);
+            this.groupBox3.Location = new System.Drawing.Point(1062, 460);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(972, 256);
+            this.groupBox3.Size = new System.Drawing.Size(1332, 256);
             this.groupBox3.TabIndex = 58;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Prescrpition Details";
             this.groupBox3.UseCompatibleTextRendering = true;
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dataGridView_Diagnose);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(791, 75);
+            this.groupBox2.Location = new System.Drawing.Point(1062, 93);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(972, 256);
+            this.groupBox2.Size = new System.Drawing.Size(1332, 256);
             this.groupBox2.TabIndex = 57;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Diagnose Details";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // dataGridView_Diagnose
             // 
@@ -161,22 +165,22 @@ namespace Diploma_Final_Project_1
             this.dataGridView_Diagnose.Name = "dataGridView_Diagnose";
             this.dataGridView_Diagnose.RowHeadersWidth = 82;
             this.dataGridView_Diagnose.RowTemplate.Height = 33;
-            this.dataGridView_Diagnose.Size = new System.Drawing.Size(919, 193);
+            this.dataGridView_Diagnose.Size = new System.Drawing.Size(1288, 193);
             this.dataGridView_Diagnose.TabIndex = 2;
             this.dataGridView_Diagnose.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Diagnose_CellContentClick);
             // 
             // txt_age
             // 
-            this.txt_age.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_age.Location = new System.Drawing.Point(304, 465);
+            this.txt_age.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_age.Location = new System.Drawing.Point(382, 461);
             this.txt_age.Name = "txt_age";
-            this.txt_age.Size = new System.Drawing.Size(146, 38);
+            this.txt_age.Size = new System.Drawing.Size(146, 44);
             this.txt_age.TabIndex = 54;
             // 
             // dateTimePicker_DOB
             // 
-            this.dateTimePicker_DOB.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker_DOB.Location = new System.Drawing.Point(315, 371);
+            this.dateTimePicker_DOB.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker_DOB.Location = new System.Drawing.Point(393, 367);
             this.dateTimePicker_DOB.Name = "dateTimePicker_DOB";
             this.dateTimePicker_DOB.Size = new System.Drawing.Size(317, 44);
             this.dateTimePicker_DOB.TabIndex = 53;
@@ -203,16 +207,16 @@ namespace Diploma_Final_Project_1
             // 
             // txt_Name
             // 
-            this.txt_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Name.Location = new System.Drawing.Point(304, 116);
+            this.txt_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Name.Location = new System.Drawing.Point(382, 112);
             this.txt_Name.Name = "txt_Name";
-            this.txt_Name.Size = new System.Drawing.Size(328, 38);
+            this.txt_Name.Size = new System.Drawing.Size(328, 44);
             this.txt_Name.TabIndex = 50;
             // 
             // txt_address
             // 
-            this.txt_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_address.Location = new System.Drawing.Point(304, 191);
+            this.txt_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_address.Location = new System.Drawing.Point(382, 187);
             this.txt_address.Multiline = true;
             this.txt_address.Name = "txt_address";
             this.txt_address.Size = new System.Drawing.Size(328, 141);
@@ -260,7 +264,7 @@ namespace Diploma_Final_Project_1
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(49, 301);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(679, 1010);
+            this.groupBox1.Size = new System.Drawing.Size(959, 1059);
             this.groupBox1.TabIndex = 56;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Patient\'s Detail";
@@ -272,7 +276,7 @@ namespace Diploma_Final_Project_1
             "Male",
             "Female",
             "Other"});
-            this.comboBox_gender.Location = new System.Drawing.Point(307, 550);
+            this.comboBox_gender.Location = new System.Drawing.Point(385, 546);
             this.comboBox_gender.Name = "comboBox_gender";
             this.comboBox_gender.Size = new System.Drawing.Size(272, 45);
             this.comboBox_gender.TabIndex = 88;
@@ -290,19 +294,20 @@ namespace Diploma_Final_Project_1
             // btn_cancel
             // 
             this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.Location = new System.Drawing.Point(503, 846);
+            this.btn_cancel.Location = new System.Drawing.Point(648, 846);
             this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(153, 90);
+            this.btn_cancel.Size = new System.Drawing.Size(170, 90);
             this.btn_cancel.TabIndex = 86;
             this.btn_cancel.Text = "Cancel";
             this.btn_cancel.UseVisualStyleBackColor = true;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // btn_save
             // 
             this.btn_save.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_save.Location = new System.Drawing.Point(275, 846);
+            this.btn_save.Location = new System.Drawing.Point(350, 846);
             this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(142, 90);
+            this.btn_save.Size = new System.Drawing.Size(166, 90);
             this.btn_save.TabIndex = 85;
             this.btn_save.Text = "Save";
             this.btn_save.UseVisualStyleBackColor = true;
@@ -321,10 +326,10 @@ namespace Diploma_Final_Project_1
             // 
             // txt_email
             // 
-            this.txt_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_email.Location = new System.Drawing.Point(307, 702);
+            this.txt_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_email.Location = new System.Drawing.Point(385, 698);
             this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(328, 38);
+            this.txt_email.Size = new System.Drawing.Size(328, 44);
             this.txt_email.TabIndex = 58;
             // 
             // label7
@@ -339,10 +344,10 @@ namespace Diploma_Final_Project_1
             // 
             // txt_contact
             // 
-            this.txt_contact.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_contact.Location = new System.Drawing.Point(307, 621);
+            this.txt_contact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_contact.Location = new System.Drawing.Point(385, 617);
             this.txt_contact.Name = "txt_contact";
-            this.txt_contact.Size = new System.Drawing.Size(328, 38);
+            this.txt_contact.Size = new System.Drawing.Size(328, 44);
             this.txt_contact.TabIndex = 56;
             // 
             // label5
@@ -378,7 +383,7 @@ namespace Diploma_Final_Project_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1863, 1393);
+            this.ClientSize = new System.Drawing.Size(2427, 1449);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.txt_search);
             this.Controls.Add(this.groupBox5);

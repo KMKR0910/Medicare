@@ -120,7 +120,7 @@ namespace Diploma_Final_Project_1
                         }
                         else if (userType == "Medical Centre Assistant")
                         {
-                            Med_home m1 = new Med_home();
+                            Med_Home1 m1 = new Med_Home1(UserID);
                             m1.Show();
                             this.Hide();
                         }
