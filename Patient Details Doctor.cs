@@ -16,7 +16,10 @@ namespace Diploma_Final_Project_1
         public Patient_Details_Doctor()
         {
             InitializeComponent();
-           
+            Color customC = ColorTranslator.FromHtml("#9083D5 ");
+            btn_search.BackColor = customC;
+            
+
         }
        
         public int CalculateAge(DateTime dob)
@@ -37,25 +40,9 @@ namespace Diploma_Final_Project_1
             return age;
         }
       
-        private void label4_Click(object sender, EventArgs e)
-        {
+      
 
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void Patient_Details_Doctor_Load(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void btn_search_Click(object sender, EventArgs e)
         {
@@ -211,6 +198,11 @@ namespace Diploma_Final_Project_1
             {
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void Patient_Details_Doctor_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

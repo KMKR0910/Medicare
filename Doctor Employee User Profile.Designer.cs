@@ -69,7 +69,7 @@ namespace Diploma_Final_Project_1
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(32, 692);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1170, 555);
+            this.groupBox1.Size = new System.Drawing.Size(2357, 555);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Update Salary Details";
@@ -77,9 +77,9 @@ namespace Diploma_Final_Project_1
             // btn_cancel
             // 
             this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.Location = new System.Drawing.Point(886, 418);
+            this.btn_cancel.Location = new System.Drawing.Point(1372, 407);
             this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(153, 90);
+            this.btn_cancel.Size = new System.Drawing.Size(224, 90);
             this.btn_cancel.TabIndex = 89;
             this.btn_cancel.Text = "Cancel";
             this.btn_cancel.UseVisualStyleBackColor = true;
@@ -88,9 +88,9 @@ namespace Diploma_Final_Project_1
             // btn_save
             // 
             this.btn_save.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_save.Location = new System.Drawing.Point(495, 418);
+            this.btn_save.Location = new System.Drawing.Point(778, 407);
             this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(142, 90);
+            this.btn_save.Size = new System.Drawing.Size(224, 90);
             this.btn_save.TabIndex = 88;
             this.btn_save.Text = "Save";
             this.btn_save.UseVisualStyleBackColor = true;
@@ -101,7 +101,7 @@ namespace Diploma_Final_Project_1
             this.btn_edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_edit.Location = new System.Drawing.Point(96, 418);
             this.btn_edit.Name = "btn_edit";
-            this.btn_edit.Size = new System.Drawing.Size(173, 90);
+            this.btn_edit.Size = new System.Drawing.Size(224, 90);
             this.btn_edit.TabIndex = 87;
             this.btn_edit.Text = "Edit";
             this.btn_edit.UseVisualStyleBackColor = true;
@@ -109,26 +109,26 @@ namespace Diploma_Final_Project_1
             // 
             // txt_Postion
             // 
-            this.txt_Postion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Postion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Postion.Location = new System.Drawing.Point(345, 136);
             this.txt_Postion.Name = "txt_Postion";
-            this.txt_Postion.Size = new System.Drawing.Size(328, 38);
+            this.txt_Postion.Size = new System.Drawing.Size(519, 44);
             this.txt_Postion.TabIndex = 81;
             // 
             // txt_name
             // 
-            this.txt_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_name.Location = new System.Drawing.Point(345, 221);
             this.txt_name.Name = "txt_name";
-            this.txt_name.Size = new System.Drawing.Size(179, 38);
+            this.txt_name.Size = new System.Drawing.Size(519, 44);
             this.txt_name.TabIndex = 80;
             // 
             // txt_salary
             // 
-            this.txt_salary.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_salary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_salary.Location = new System.Drawing.Point(347, 320);
             this.txt_salary.Name = "txt_salary";
-            this.txt_salary.Size = new System.Drawing.Size(326, 38);
+            this.txt_salary.Size = new System.Drawing.Size(326, 44);
             this.txt_salary.TabIndex = 79;
             // 
             // label6

@@ -25,6 +25,10 @@ namespace Diploma_Final_Project_1
             btn_edit.BackColor = customC;
             btn_clear.BackColor = customC;
             btn_save.BackColor = customC;
+            btn_reset.BackColor = customC;
+
+            btn_clear2.BackColor = customC;
+
 
         }
         string sql = "";

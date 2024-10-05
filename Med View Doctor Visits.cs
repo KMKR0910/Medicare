@@ -16,6 +16,10 @@ namespace Diploma_Final_Project_1
         public Med_View_Doctor_Visits()
         {
             InitializeComponent();
+            Color customC = ColorTranslator.FromHtml("#9083D5 ");
+            btn_cancel.BackColor = customC;
+            btn_delete.BackColor = customC;
+            btn_save.BackColor = customC;
         }
 
         private void Med_View_Doctor_Visits_Load(object sender, EventArgs e)

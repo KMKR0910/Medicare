@@ -136,5 +136,12 @@ namespace Diploma_Final_Project_1
         {
             LoadUserProfile();
         }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Main_Dashboard form2 = new Main_Dashboard();
+            form2.Show();
+            this.Hide();
+        }
     }
 }

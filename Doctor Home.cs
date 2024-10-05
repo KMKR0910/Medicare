@@ -17,7 +17,7 @@ namespace Diploma_Final_Project_1
 
             btn_appoinments.BackColor = customC;
             btn_patients.BackColor = customC;
-            btn_prescription.BackColor = customC;
+            btn_doctor_session.BackColor = customC;
             btn_diaganosisData.BackColor = customC;
             btn_drugInventory.BackColor = customC;
             btn_employee.BackColor = customC;
@@ -65,6 +65,23 @@ namespace Diploma_Final_Project_1
             // Show the form inside the GroupBox
             form2.Show();
         }
+        private void LoadDoctorSession()
+        {
+            //Create an instance of Form2
+            Med_View_Doctor_Visits form2 = new Med_View_Doctor_Visits();
+
+            // Remove borders and make the form a child control
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.Dock = DockStyle.Fill;
+
+            // Add the form to the GroupBox
+            groupBoxloc.Controls.Clear();  // Optionally clear previous controls
+            groupBoxloc.Controls.Add(form2);
+
+            // Show the form inside the GroupBox
+            form2.Show();
+        }
         private void LoadAppoinment()
         
             {
@@ -85,7 +102,7 @@ namespace Diploma_Final_Project_1
         }
         private void LoadPatient()
         {
-            SaveCurrentControls();
+            
             //Create an instance of Form2
             Patient_Details_Doctor form2 = new Patient_Details_Doctor();
 
@@ -233,6 +250,11 @@ namespace Diploma_Final_Project_1
         private void btn_userProfile_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void groupBox_doctor_session_Enter(object sender, EventArgs e)
+        {
+            LoadDoctorSession();
         }
     }
 }

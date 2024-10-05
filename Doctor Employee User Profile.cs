@@ -18,7 +18,14 @@ namespace Diploma_Final_Project_1
         {
             InitializeComponent();
             DisableFields();
+            Color customC = ColorTranslator.FromHtml("#9083D5 ");
+            btn_cancel.BackColor = customC;
+            btn_edit.BackColor = customC;
+            btn_save.BackColor = customC;
+
         }
+        string cellValue;
+        string userType;
 
         private void DisableFields()
         {
@@ -42,20 +49,74 @@ namespace Diploma_Final_Project_1
         {
             EnableFields();
         }
+        public void GetUserType()
+        {
+            if (cellValue.StartsWith("DOC", StringComparison.OrdinalIgnoreCase))
+            {
+                userType = "Doctor";
+            }
+            if (cellValue.StartsWith("MED", StringComparison.OrdinalIgnoreCase))
+            {
+                userType = "Medical Centre Assistant";
+            }
+            if (cellValue.StartsWith("PHA", StringComparison.OrdinalIgnoreCase))
+            {
+                userType = "Pharmacists";
+            }
+            if (cellValue.StartsWith("LAB", StringComparison.OrdinalIgnoreCase))
+            {
+                userType = "Laboratory Assistant";
+            }
+            if (cellValue.StartsWith("ADM", StringComparison.OrdinalIgnoreCase))
+            {
+                userType = "Admin";
+            }
+        }
 
         private void btn_save_Click(object sender, EventArgs e)
         {
-            try { 
+            try {
+                string sql = "";
             string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
 
 
             // save user details
             SqlConnection con1 = new SqlConnection(cs);
             con1.Open();
+                GetUserType();
+
+                
+
+                if (userType == "Medical Centre Assistant")
+                {
+
+                    sql = @"UPDATE [tbl_Medical_Centre_Assistant] SET SET Salary =@salary WHERE  [First Name]=@Fname";
 
 
 
-            string sql = "UPDATE  tbl_Internal_User SET Salary =@salary WHERE  [First Name]=@Fname";
+                }
+
+                if (userType == "Pharamacists")
+                {
+                    sql = @"UPDATE  [tbl_Pharamacists] SET Salary =@salary WHERE  [First Name]=@Fname";
+
+
+                }
+
+                if (userType == "Laboratary Assistant")
+                {
+                    sql = @"UPDATE  [tbl_Lab_Assistant] SET Salary =@salary WHERE  [First Name]=@Fname";
+
+
+                }
+                if (userType == "Admin")
+                {
+                    sql = @"UPDATE  [tbl_Admin] SET Salary =@salary WHERE  [First Name]=@Fname";
+
+
+
+                }
+
 
             SqlCommand com = new SqlCommand(sql, con1);
 
@@ -101,13 +162,22 @@ namespace Diploma_Final_Project_1
 
 
 
-
                 string sql = @"
-                 SELECT [Lab-Assistant_ID] AS UserID , [First Name],[Last Name]
+               
+               
+                 SELECT [Lab-Assistant_ID] AS UserID , [First Name],[Last Name],[Email Address],[ContactNumber],[DOB],[Address],Salary
                  FROM [tbl_Lab_Assistant]
                 UNION
-                  SELECT  [Doctor ID] AS UserID , [First Name],[Last Name]
-                 FROM [tbl_doctor]";
+                 
+                  SELECT  [Med_Assistant_ID] AS UserID , [First Name],[Last Name],[Email Address],[ContactNumber],[DOB],[Address],Salary
+                 FROM [tbl_Medical_Centre_Assistant]
+                    UNION
+                  SELECT  [Pharamacists_ID] AS UserID , [First Name],[Last Name],[Email Address],[ContactNumber],[DOB],[Address],Salary
+                 FROM [tbl_Pharamacists]
+                    UNION
+                  SELECT  [Admin_ID] AS UserID , [First Name],[Last Name],[Email Address],[ContactNumber],[DOB],[Address],Salary
+                 FROM [tbl_Admin]"
+               ;
                 SqlCommand com = new SqlCommand(sql, con);
 
 
@@ -151,11 +221,13 @@ namespace Diploma_Final_Project_1
                 DataGridViewRow row = dataGridView_Employees.Rows[e.RowIndex];
 
                 // Assuming you want the data from the first column (index 0)
-                string cellValue = row.Cells[4].Value.ToString();
-                string cellValue2 = row.Cells[2].Value.ToString();
+                 cellValue = row.Cells[0].Value.ToString();
+                GetUserType();
+
+                string cellValue2 = row.Cells[1].Value.ToString();
 
                 // Set the value to the TextBox
-                txt_Postion.Text = cellValue;
+                txt_Postion.Text = userType;
                 txt_name.Text = cellValue2;
 
             }
