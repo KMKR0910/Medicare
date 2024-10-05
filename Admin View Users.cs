@@ -17,7 +17,14 @@ namespace Diploma_Final_Project_1
         public Admin_View_Users()
         {
             InitializeComponent();
-            
+            Color customC = ColorTranslator.FromHtml("#9083D5 ");
+            btn_clear.BackColor = customC;
+            btn_Clear1.BackColor = customC;
+            btn_Delete.BackColor = customC;
+            btn_reset.BackColor = customC;
+            btn_search.BackColor = customC;
+            btn_Update.BackColor = customC;
+
         }
         string userType;
         

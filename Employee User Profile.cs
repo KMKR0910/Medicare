@@ -237,6 +237,7 @@ namespace Diploma_Final_Project_1
 
         private void txt_userID_TextChanged(object sender, EventArgs e)
         {
+            string address; 
             string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
             // save user details
             SqlConnection con1 = new SqlConnection(cs);
@@ -297,15 +298,32 @@ namespace Diploma_Final_Project_1
 
                 this.txt_F_name.Text = rows["First Name"].ToString();
                 this.txt_L_Name.Text = rows["Last Name"].ToString();
-                this.txt_address_HNO.Text = rows["House No"].ToString();
-                this.txt_address_StreetName.Text = rows["Street Name"].ToString();
-                this.txt_address_city.Text = rows["City"].ToString();
+                address = rows["Address"].ToString();
+             
                 this.dateTimePicker_DOB.Text = rows["DOB"].ToString();
                 this.txt_email.Text = rows["Email Address"].ToString();
                 this.txt_contact.Text = rows["ContactNumber"].ToString();
                 this.txt_qulifications.Text = rows["Qualifications"].ToString();
 
+                string[] addressParts = address.Split(',');
+                if (addressParts.Length == 3)
+                {
+                    // Trim and ensure no empty parts
+                    string houseNo = addressParts[0].Trim();
+                    string streetName = addressParts[1].Trim();
+                    string city = addressParts[2].Trim();
 
+                    if (!string.IsNullOrEmpty(houseNo) && !string.IsNullOrEmpty(streetName) && !string.IsNullOrEmpty(city))
+                    {
+                        txt_address_HNO.Text = houseNo;          // House Number
+                        txt_address_StreetName.Text = streetName; // Street Name
+                        txt_address_city.Text = city;            // City
+                    }
+                    else
+                    {
+                        MessageBox.Show("Address contains empty parts. Please check the address entry in the database.");
+                    }
+                }
 
 
 

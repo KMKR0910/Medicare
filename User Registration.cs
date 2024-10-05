@@ -16,6 +16,10 @@ namespace Diploma_Final_Project_1
         public User_Registration()
         {
             InitializeComponent();
+            Color customC = ColorTranslator.FromHtml("#9083D5 ");
+            btn_cancel.BackColor = customC;
+            btn_clear.BackColor = customC;
+            btn_save.BackColor = customC;
         }
         string userType;
         string UserID1;
