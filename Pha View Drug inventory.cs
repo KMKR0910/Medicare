@@ -181,5 +181,11 @@ namespace Diploma_Final_Project_1
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btn_genarate_Click(object sender, EventArgs e)
+        {
+            Report_Gen_Drug_Inventory r1 = new Report_Gen_Drug_Inventory();
+            r1.Show();
+        }
     }
 }

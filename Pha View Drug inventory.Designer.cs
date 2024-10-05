@@ -47,6 +47,7 @@ namespace Diploma_Final_Project_1
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.btn_genarate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_quantity)).BeginInit();
@@ -94,6 +95,7 @@ namespace Diploma_Final_Project_1
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_genarate);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btn_update);
@@ -136,7 +138,7 @@ namespace Diploma_Final_Project_1
             // btn_update
             // 
             this.btn_update.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_update.Location = new System.Drawing.Point(453, 561);
+            this.btn_update.Location = new System.Drawing.Point(534, 561);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(236, 104);
             this.btn_update.TabIndex = 112;
@@ -242,6 +244,17 @@ namespace Diploma_Final_Project_1
             this.label6.TabIndex = 102;
             this.label6.Text = "Drug Price";
             // 
+            // btn_genarate
+            // 
+            this.btn_genarate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_genarate.Location = new System.Drawing.Point(53, 561);
+            this.btn_genarate.Name = "btn_genarate";
+            this.btn_genarate.Size = new System.Drawing.Size(273, 104);
+            this.btn_genarate.TabIndex = 115;
+            this.btn_genarate.Text = "Genarate Report";
+            this.btn_genarate.UseVisualStyleBackColor = true;
+            this.btn_genarate.Click += new System.EventHandler(this.btn_genarate_Click);
+            // 
             // Pha_View_Drug_inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -285,5 +298,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_update;
+        private System.Windows.Forms.Button btn_genarate;
     }
 }
