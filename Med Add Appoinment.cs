@@ -19,7 +19,14 @@ namespace Diploma_Final_Project_1
         public Med_Add_Appoinment()
         {
             InitializeComponent();
+            Color customC = ColorTranslator.FromHtml("#9083D5 ");
+            btn_check.BackColor = customC;
+            btn_add.BackColor = customC;
+
+            btn_cancel.BackColor = customC;
+            brn_delete.BackColor = customC;
         }
+    
         string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
 
         

@@ -96,6 +96,8 @@ namespace Diploma_Final_Project_1
             this.financeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addExpensesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewExpensesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addPatientPaymentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewPatientPaymentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox_employee.SuspendLayout();
             this.groupBox_Diagnose.SuspendLayout();
             this.groupBox_Patients.SuspendLayout();
@@ -740,6 +742,7 @@ namespace Diploma_Final_Project_1
             this.addLabPrescriptionToolStripMenuItem.Name = "addLabPrescriptionToolStripMenuItem";
             this.addLabPrescriptionToolStripMenuItem.Size = new System.Drawing.Size(528, 58);
             this.addLabPrescriptionToolStripMenuItem.Text = "Add Lab Prescription";
+            this.addLabPrescriptionToolStripMenuItem.Click += new System.EventHandler(this.addLabPrescriptionToolStripMenuItem_Click);
             // 
             // addAppoinmentToolStripMenuItem
             // 
@@ -766,7 +769,9 @@ namespace Diploma_Final_Project_1
             // 
             this.financeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addExpensesToolStripMenuItem,
-            this.viewExpensesToolStripMenuItem});
+            this.viewExpensesToolStripMenuItem,
+            this.addPatientPaymentsToolStripMenuItem,
+            this.viewPatientPaymentsToolStripMenuItem});
             this.financeToolStripMenuItem.Name = "financeToolStripMenuItem";
             this.financeToolStripMenuItem.Size = new System.Drawing.Size(166, 54);
             this.financeToolStripMenuItem.Text = "Finance";
@@ -783,6 +788,21 @@ namespace Diploma_Final_Project_1
             this.viewExpensesToolStripMenuItem.Name = "viewExpensesToolStripMenuItem";
             this.viewExpensesToolStripMenuItem.Size = new System.Drawing.Size(400, 58);
             this.viewExpensesToolStripMenuItem.Text = "View Expenses";
+            this.viewExpensesToolStripMenuItem.Click += new System.EventHandler(this.viewExpensesToolStripMenuItem_Click);
+            // 
+            // addPatientPaymentsToolStripMenuItem
+            // 
+            this.addPatientPaymentsToolStripMenuItem.Name = "addPatientPaymentsToolStripMenuItem";
+            this.addPatientPaymentsToolStripMenuItem.Size = new System.Drawing.Size(533, 58);
+            this.addPatientPaymentsToolStripMenuItem.Text = "Add Patient Payments";
+            this.addPatientPaymentsToolStripMenuItem.Click += new System.EventHandler(this.addPatientPaymentsToolStripMenuItem_Click);
+            // 
+            // viewPatientPaymentsToolStripMenuItem
+            // 
+            this.viewPatientPaymentsToolStripMenuItem.Name = "viewPatientPaymentsToolStripMenuItem";
+            this.viewPatientPaymentsToolStripMenuItem.Size = new System.Drawing.Size(533, 58);
+            this.viewPatientPaymentsToolStripMenuItem.Text = "View Patient Payments";
+            this.viewPatientPaymentsToolStripMenuItem.Click += new System.EventHandler(this.viewPatientPaymentsToolStripMenuItem_Click);
             // 
             // Med_Home1
             // 
@@ -892,5 +912,7 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.ToolStripMenuItem financeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addExpensesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewExpensesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addPatientPaymentsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewPatientPaymentsToolStripMenuItem;
     }
 }

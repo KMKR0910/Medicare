@@ -16,14 +16,20 @@ namespace Diploma_Final_Project_1
         public Med_View_expenses()
         {
             InitializeComponent();
+             Color customC = ColorTranslator.FromHtml("#9083D5 ");
+            btn_search.BackColor = customC;
+            btn_clear.BackColor = customC;
 
-
+            btn_delete.BackColor = customC;
+            btn_save.BackColor = customC;
         }
 
-        private void Med_View_expenses_Load(object sender, EventArgs e)
-        {
 
-        }
+        
+
+    private void Med_View_expenses_Load(object sender, EventArgs e)
+    {
+    }
 
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
         {

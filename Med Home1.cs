@@ -326,7 +326,66 @@ namespace Diploma_Final_Project_1
 
 
         }
+        private void LoadViewPatientPayments()
+        {
 
+
+
+            Med_view_patient_payments form2 = new Med_view_patient_payments();
+            // Remove borders and make the form a child control
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.Dock = DockStyle.Fill;
+
+            // Add the form to the GroupBox
+            groupBoxloc.Controls.Clear();  // Optionally clear previous controls
+            groupBoxloc.Controls.Add(form2);
+
+            // Show the form inside the GroupBox
+            form2.Show();
+
+
+        }
+        private void LoadAddPatientPayement()
+        {
+
+
+
+            Med_Add_Patient_Payement form2 = new Med_Add_Patient_Payement();
+            // Remove borders and make the form a child control
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.Dock = DockStyle.Fill;
+
+            // Add the form to the GroupBox
+            groupBoxloc.Controls.Clear();  // Optionally clear previous controls
+            groupBoxloc.Controls.Add(form2);
+
+            // Show the form inside the GroupBox
+            form2.Show();
+
+
+        }
+        private void LoadEditAppoinment()
+        {
+
+
+
+            Med_Edit_Appoinment form2 = new Med_Edit_Appoinment();
+            // Remove borders and make the form a child control
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.Dock = DockStyle.Fill;
+
+            // Add the form to the GroupBox
+            groupBoxloc.Controls.Clear();  // Optionally clear previous controls
+            groupBoxloc.Controls.Add(form2);
+
+            // Show the form inside the GroupBox
+            form2.Show();
+
+
+        }
 
 
 
@@ -353,8 +412,7 @@ namespace Diploma_Final_Project_1
 
         private void appoinmentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            LoadAppoinments();
-
+            
         }
 
         private void patientsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -399,7 +457,7 @@ namespace Diploma_Final_Project_1
 
         private void diagnosisToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            LoadViewDiagnose();
+            
         }
 
         private void view_DiagnoseToolStripMenuItem_Click(object sender, EventArgs e)
@@ -454,12 +512,32 @@ namespace Diploma_Final_Project_1
 
         private void editAppoinmentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            LoadViewAppoinment();
+            LoadEditAppoinment();
         }
 
         private void addExpensesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            LoadAddExpenses();
+        }
 
+        private void viewExpensesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadViewExpenses();
+        }
+
+        private void addPatientPaymentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadAddPatientPayement();
+        }
+
+        private void viewPatientPaymentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadViewPatientPayments();
+        }
+
+        private void addLabPrescriptionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadAddLabPrescription();
         }
     }
 }

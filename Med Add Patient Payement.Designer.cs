@@ -45,13 +45,15 @@ namespace Diploma_Final_Project_1
             this.txt_patient = new System.Windows.Forms.TextBox();
             this.txt_pay_type = new System.Windows.Forms.TextBox();
             this.txt_paymnet_number = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCost)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_search
             // 
             this.btn_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_search.Location = new System.Drawing.Point(816, 22);
+            this.btn_search.Location = new System.Drawing.Point(815, 49);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(216, 55);
             this.btn_search.TabIndex = 67;
@@ -62,7 +64,7 @@ namespace Diploma_Final_Project_1
             // txt_search
             // 
             this.txt_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_search.Location = new System.Drawing.Point(363, 28);
+            this.txt_search.Location = new System.Drawing.Point(362, 55);
             this.txt_search.Name = "txt_search";
             this.txt_search.Size = new System.Drawing.Size(372, 44);
             this.txt_search.TabIndex = 68;
@@ -72,17 +74,18 @@ namespace Diploma_Final_Project_1
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(37, 28);
+            this.label5.Location = new System.Drawing.Point(36, 55);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(263, 42);
             this.label5.TabIndex = 69;
             this.label5.Text = "Search Patient";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(58, 241);
+            this.label3.Location = new System.Drawing.Point(116, 423);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(259, 42);
             this.label3.TabIndex = 72;
@@ -91,7 +94,7 @@ namespace Diploma_Final_Project_1
             // txt_date
             // 
             this.txt_date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_date.Location = new System.Drawing.Point(446, 337);
+            this.txt_date.Location = new System.Drawing.Point(504, 519);
             this.txt_date.Name = "txt_date";
             this.txt_date.Size = new System.Drawing.Size(372, 44);
             this.txt_date.TabIndex = 75;
@@ -100,7 +103,7 @@ namespace Diploma_Final_Project_1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(58, 334);
+            this.label1.Location = new System.Drawing.Point(116, 516);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 42);
             this.label1.TabIndex = 74;
@@ -110,7 +113,7 @@ namespace Diploma_Final_Project_1
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(58, 432);
+            this.label2.Location = new System.Drawing.Point(116, 614);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(188, 42);
             this.label2.TabIndex = 76;
@@ -120,7 +123,7 @@ namespace Diploma_Final_Project_1
             // numericUpDownCost
             // 
             this.numericUpDownCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDownCost.Location = new System.Drawing.Point(446, 445);
+            this.numericUpDownCost.Location = new System.Drawing.Point(504, 627);
             this.numericUpDownCost.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -134,7 +137,7 @@ namespace Diploma_Final_Project_1
             // btn_cancel
             // 
             this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.Location = new System.Drawing.Point(1212, 612);
+            this.btn_cancel.Location = new System.Drawing.Point(449, 1270);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(216, 90);
             this.btn_cancel.TabIndex = 89;
@@ -144,7 +147,7 @@ namespace Diploma_Final_Project_1
             // btn_clear
             // 
             this.btn_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_clear.Location = new System.Drawing.Point(472, 612);
+            this.btn_clear.Location = new System.Drawing.Point(441, 922);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(216, 90);
             this.btn_clear.TabIndex = 88;
@@ -155,7 +158,7 @@ namespace Diploma_Final_Project_1
             // btn_add
             // 
             this.btn_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add.Location = new System.Drawing.Point(55, 612);
+            this.btn_add.Location = new System.Drawing.Point(441, 777);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(216, 90);
             this.btn_add.TabIndex = 87;
@@ -166,9 +169,9 @@ namespace Diploma_Final_Project_1
             // btn_genarate
             // 
             this.btn_genarate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_genarate.Location = new System.Drawing.Point(867, 612);
+            this.btn_genarate.Location = new System.Drawing.Point(453, 1090);
             this.btn_genarate.Name = "btn_genarate";
-            this.btn_genarate.Size = new System.Drawing.Size(216, 90);
+            this.btn_genarate.Size = new System.Drawing.Size(212, 90);
             this.btn_genarate.TabIndex = 90;
             this.btn_genarate.Text = "Genarate";
             this.btn_genarate.UseVisualStyleBackColor = true;
@@ -177,7 +180,7 @@ namespace Diploma_Final_Project_1
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(58, 119);
+            this.label4.Location = new System.Drawing.Point(116, 301);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(243, 42);
             this.label4.TabIndex = 91;
@@ -187,7 +190,7 @@ namespace Diploma_Final_Project_1
             // txt_patient
             // 
             this.txt_patient.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_patient.Location = new System.Drawing.Point(446, 122);
+            this.txt_patient.Location = new System.Drawing.Point(504, 304);
             this.txt_patient.Name = "txt_patient";
             this.txt_patient.Size = new System.Drawing.Size(372, 44);
             this.txt_patient.TabIndex = 92;
@@ -195,7 +198,7 @@ namespace Diploma_Final_Project_1
             // txt_pay_type
             // 
             this.txt_pay_type.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_pay_type.Location = new System.Drawing.Point(446, 244);
+            this.txt_pay_type.Location = new System.Drawing.Point(504, 426);
             this.txt_pay_type.Name = "txt_pay_type";
             this.txt_pay_type.Size = new System.Drawing.Size(372, 44);
             this.txt_pay_type.TabIndex = 73;
@@ -203,16 +206,29 @@ namespace Diploma_Final_Project_1
             // txt_paymnet_number
             // 
             this.txt_paymnet_number.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_paymnet_number.Location = new System.Drawing.Point(1089, 33);
+            this.txt_paymnet_number.Location = new System.Drawing.Point(1088, 60);
             this.txt_paymnet_number.Name = "txt_paymnet_number";
             this.txt_paymnet_number.Size = new System.Drawing.Size(372, 44);
             this.txt_paymnet_number.TabIndex = 93;
+            this.txt_paymnet_number.TextChanged += new System.EventHandler(this.txt_paymnet_number_TextChanged);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(1197, 286);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 82;
+            this.dataGridView1.RowTemplate.Height = 33;
+            this.dataGridView1.Size = new System.Drawing.Size(1064, 1074);
+            this.dataGridView1.TabIndex = 94;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Med_Add_Patient_Payement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1494, 857);
+            this.ClientSize = new System.Drawing.Size(2427, 1449);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txt_paymnet_number);
             this.Controls.Add(this.txt_patient);
             this.Controls.Add(this.label4);
@@ -233,6 +249,7 @@ namespace Diploma_Final_Project_1
             this.Text = "Med_Add_Patient_Payement";
             this.Load += new System.EventHandler(this.Med_Add_Patient_Payement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCost)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,5 +273,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.TextBox txt_patient;
         private System.Windows.Forms.TextBox txt_pay_type;
         private System.Windows.Forms.TextBox txt_paymnet_number;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

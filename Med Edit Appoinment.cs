@@ -16,6 +16,12 @@ namespace Diploma_Final_Project_1
         public Med_Edit_Appoinment()
         {
             InitializeComponent();
+            Color customC = ColorTranslator.FromHtml("#9083D5 ");
+            btn_search.BackColor = customC;
+            btn_cancel.BackColor = customC;
+
+            btn_save.BackColor = customC;
+            btn_delete.BackColor = customC;
         }
 
         private void Med_Edit_Appoinment_Load(object sender, EventArgs e)
