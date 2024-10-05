@@ -16,6 +16,14 @@ namespace Diploma_Final_Project_1
         public Med_Add_Prescription()
         {
             InitializeComponent();
+            Color customC = ColorTranslator.FromHtml("#9083D5 ");
+            btn_search.BackColor = customC;
+            btn_add.BackColor = customC;
+
+            btn_cancel.BackColor = customC;
+            btn_delete.BackColor = customC;
+        
+           
         }
 
 

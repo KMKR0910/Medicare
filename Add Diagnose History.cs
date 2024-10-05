@@ -18,6 +18,12 @@ namespace Diploma_Final_Project_1
         public Add_Diagnose_History()
         {
             InitializeComponent();
+            Color customC = ColorTranslator.FromHtml("#9083D5 ");
+            btn_search.BackColor = customC;
+            btn_delete.BackColor = customC;
+
+            btn_add.BackColor = customC;
+            btn_update.BackColor = customC;
         }
         private string GenerateUserID()
         {

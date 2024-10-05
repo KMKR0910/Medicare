@@ -20,11 +20,9 @@ namespace Diploma_Final_Project_1
         {
             InitializeComponent();
         }
-        public void GenearateConnection()
-        {
-            string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
+        string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
 
-        }
+        
         private void label5_Click(object sender, EventArgs e)
         {
 
@@ -141,12 +139,48 @@ namespace Diploma_Final_Project_1
 
         private void Med_Add_Appoinment_Load(object sender, EventArgs e)
         {
-            string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
 
 
-            SqlConnection con = new SqlConnection(cs);
+            
 
-            con.Open();
+            try
+            {
+
+
+
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+
+
+
+
+
+                string sql = @"
+                SELECT a.[time], a.[Appoinment Number], p.Name, a.[status]
+            FROM [tbl_appoinment] a
+            JOIN tbl_patient_info p ON a.[Patient ID] = p.[Patient ID]
+            
+            WHERE a.[Date] = @date"
+;
+                SqlCommand com = new SqlCommand(sql, con);
+
+                com.Parameters.AddWithValue("@date", DateTime.Now.Date);
+
+
+
+                SqlDataAdapter dap = new SqlDataAdapter(com);
+                DataSet ds = new DataSet();
+                dap.Fill(ds);
+
+                this.dataGridView_appointment.DataSource = ds.Tables[0];
+
+
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             /*
             // Create an instance of the AppointmentGenerator
             AppointmentGenerator appointmentGenerator = new AppointmentGenerator(con);
@@ -206,6 +240,8 @@ namespace Diploma_Final_Project_1
                 return appointmentCount + 1;  // Increment count for the new appointment
             }
         }*/
+
+
 
         private void txt_contact_TextChanged(object sender, EventArgs e)
         {

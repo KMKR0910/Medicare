@@ -232,7 +232,7 @@ namespace Diploma_Final_Project_1
             this.dataGridView_appointment.Name = "dataGridView_appointment";
             this.dataGridView_appointment.RowHeadersWidth = 82;
             this.dataGridView_appointment.RowTemplate.Height = 33;
-            this.dataGridView_appointment.Size = new System.Drawing.Size(1361, 476);
+            this.dataGridView_appointment.Size = new System.Drawing.Size(1166, 476);
             this.dataGridView_appointment.TabIndex = 81;
             this.dataGridView_appointment.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_appointment_CellContentClick);
             // 

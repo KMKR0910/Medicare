@@ -292,6 +292,7 @@ namespace Diploma_Final_Project_1
             this.label5.Size = new System.Drawing.Size(263, 42);
             this.label5.TabIndex = 55;
             this.label5.Text = "Search Patient";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // txt_search
             // 
@@ -300,6 +301,7 @@ namespace Diploma_Final_Project_1
             this.txt_search.Name = "txt_search";
             this.txt_search.Size = new System.Drawing.Size(471, 44);
             this.txt_search.TabIndex = 55;
+            this.txt_search.TextChanged += new System.EventHandler(this.txt_search_TextChanged);
             // 
             // btn_search
             // 

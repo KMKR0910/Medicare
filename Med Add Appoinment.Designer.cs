@@ -43,12 +43,14 @@ namespace Diploma_Final_Project_1
             this.txt_contact = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btn_check = new System.Windows.Forms.Button();
+            this.dataGridView_appointment = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_appointment)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePicker_date
             // 
             this.dateTimePicker_date.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker_date.Location = new System.Drawing.Point(524, 243);
+            this.dateTimePicker_date.Location = new System.Drawing.Point(497, 311);
             this.dateTimePicker_date.Name = "dateTimePicker_date";
             this.dateTimePicker_date.Size = new System.Drawing.Size(396, 31);
             this.dateTimePicker_date.TabIndex = 95;
@@ -56,7 +58,7 @@ namespace Diploma_Final_Project_1
             // txt_time
             // 
             this.txt_time.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_time.Location = new System.Drawing.Point(622, 624);
+            this.txt_time.Location = new System.Drawing.Point(595, 692);
             this.txt_time.Name = "txt_time";
             this.txt_time.Size = new System.Drawing.Size(240, 44);
             this.txt_time.TabIndex = 94;
@@ -65,9 +67,9 @@ namespace Diploma_Final_Project_1
             // btn_cancel
             // 
             this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.Location = new System.Drawing.Point(444, 956);
+            this.btn_cancel.Location = new System.Drawing.Point(417, 1157);
             this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(216, 55);
+            this.btn_cancel.Size = new System.Drawing.Size(216, 75);
             this.btn_cancel.TabIndex = 93;
             this.btn_cancel.Text = "Cancel";
             this.btn_cancel.UseVisualStyleBackColor = true;
@@ -76,9 +78,9 @@ namespace Diploma_Final_Project_1
             // brn_delete
             // 
             this.brn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.brn_delete.Location = new System.Drawing.Point(444, 857);
+            this.brn_delete.Location = new System.Drawing.Point(417, 1037);
             this.brn_delete.Name = "brn_delete";
-            this.brn_delete.Size = new System.Drawing.Size(216, 55);
+            this.brn_delete.Size = new System.Drawing.Size(216, 68);
             this.brn_delete.TabIndex = 92;
             this.brn_delete.Text = "Delete";
             this.brn_delete.UseVisualStyleBackColor = true;
@@ -87,9 +89,9 @@ namespace Diploma_Final_Project_1
             // btn_add
             // 
             this.btn_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add.Location = new System.Drawing.Point(444, 758);
+            this.btn_add.Location = new System.Drawing.Point(417, 903);
             this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(216, 55);
+            this.btn_add.Size = new System.Drawing.Size(216, 73);
             this.btn_add.TabIndex = 91;
             this.btn_add.Text = "Add";
             this.btn_add.UseVisualStyleBackColor = true;
@@ -99,7 +101,7 @@ namespace Diploma_Final_Project_1
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(94, 232);
+            this.label2.Location = new System.Drawing.Point(67, 300);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 42);
             this.label2.TabIndex = 90;
@@ -110,7 +112,7 @@ namespace Diploma_Final_Project_1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(107, 608);
+            this.label1.Location = new System.Drawing.Point(80, 676);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 42);
             this.label1.TabIndex = 89;
@@ -120,7 +122,7 @@ namespace Diploma_Final_Project_1
             // txt_patient_name
             // 
             this.txt_patient_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_patient_name.Location = new System.Drawing.Point(524, 145);
+            this.txt_patient_name.Location = new System.Drawing.Point(497, 213);
             this.txt_patient_name.Name = "txt_patient_name";
             this.txt_patient_name.Size = new System.Drawing.Size(372, 44);
             this.txt_patient_name.TabIndex = 88;
@@ -129,7 +131,7 @@ namespace Diploma_Final_Project_1
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(94, 142);
+            this.label3.Location = new System.Drawing.Point(67, 210);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(243, 42);
             this.label3.TabIndex = 87;
@@ -138,7 +140,7 @@ namespace Diploma_Final_Project_1
             // txt_AppoinmentNumber
             // 
             this.txt_AppoinmentNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_AppoinmentNumber.Location = new System.Drawing.Point(622, 515);
+            this.txt_AppoinmentNumber.Location = new System.Drawing.Point(595, 583);
             this.txt_AppoinmentNumber.Name = "txt_AppoinmentNumber";
             this.txt_AppoinmentNumber.Size = new System.Drawing.Size(232, 44);
             this.txt_AppoinmentNumber.TabIndex = 85;
@@ -148,7 +150,7 @@ namespace Diploma_Final_Project_1
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(107, 515);
+            this.label5.Location = new System.Drawing.Point(80, 583);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(359, 42);
             this.label5.TabIndex = 86;
@@ -159,7 +161,7 @@ namespace Diploma_Final_Project_1
             // 
             this.txt_contact.AcceptsTab = true;
             this.txt_contact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_contact.Location = new System.Drawing.Point(524, 73);
+            this.txt_contact.Location = new System.Drawing.Point(497, 137);
             this.txt_contact.Name = "txt_contact";
             this.txt_contact.Size = new System.Drawing.Size(372, 44);
             this.txt_contact.TabIndex = 97;
@@ -169,7 +171,7 @@ namespace Diploma_Final_Project_1
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(94, 70);
+            this.label4.Location = new System.Drawing.Point(67, 134);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(415, 42);
             this.label4.TabIndex = 96;
@@ -178,7 +180,7 @@ namespace Diploma_Final_Project_1
             // btn_check
             // 
             this.btn_check.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_check.Location = new System.Drawing.Point(444, 365);
+            this.btn_check.Location = new System.Drawing.Point(417, 433);
             this.btn_check.Name = "btn_check";
             this.btn_check.Size = new System.Drawing.Size(216, 55);
             this.btn_check.TabIndex = 98;
@@ -186,11 +188,22 @@ namespace Diploma_Final_Project_1
             this.btn_check.UseVisualStyleBackColor = true;
             this.btn_check.Click += new System.EventHandler(this.btn_check_Click);
             // 
+            // dataGridView_appointment
+            // 
+            this.dataGridView_appointment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_appointment.Location = new System.Drawing.Point(1011, 134);
+            this.dataGridView_appointment.Name = "dataGridView_appointment";
+            this.dataGridView_appointment.RowHeadersWidth = 82;
+            this.dataGridView_appointment.RowTemplate.Height = 33;
+            this.dataGridView_appointment.Size = new System.Drawing.Size(1332, 1145);
+            this.dataGridView_appointment.TabIndex = 99;
+            // 
             // Med_Add_Appoinment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1066, 1292);
+            this.ClientSize = new System.Drawing.Size(2427, 1449);
+            this.Controls.Add(this.dataGridView_appointment);
             this.Controls.Add(this.btn_check);
             this.Controls.Add(this.txt_contact);
             this.Controls.Add(this.label4);
@@ -208,6 +221,7 @@ namespace Diploma_Final_Project_1
             this.Name = "Med_Add_Appoinment";
             this.Text = "Med_Add_Appoinment";
             this.Load += new System.EventHandler(this.Med_Add_Appoinment_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_appointment)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,5 +243,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.TextBox txt_contact;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btn_check;
+        private System.Windows.Forms.DataGridView dataGridView_appointment;
     }
 }

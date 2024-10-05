@@ -185,6 +185,12 @@
     <Compile Include="Doctor User Profile.Designer.cs">
       <DependentUpon>Doctor User Profile.cs</DependentUpon>
     </Compile>
+    <Compile Include="Doctor View Diagnose Histroy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor View Diagnose Histroy.Designer.cs">
+      <DependentUpon>Doctor View Diagnose Histroy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Doctor Visit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -393,6 +399,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Doctor User Profile.resx">
       <DependentUpon>Doctor User Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor View Diagnose Histroy.resx">
+      <DependentUpon>Doctor View Diagnose Histroy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Doctor Visit.resx">
       <DependentUpon>Doctor Visit.cs</DependentUpon>

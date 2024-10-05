@@ -16,6 +16,31 @@ namespace Diploma_Final_Project_1
         {
             InitializeComponent();
             this.UserID = UserID;
+
+            Color customC = ColorTranslator.FromHtml("#9083D5 ");
+            btn_home.BackColor = customC;
+            btn_userProfile.BackColor = customC;
+
+            btn_appoinments.BackColor = customC;
+            btn_patients.BackColor = customC;
+            btn_doctor_session.BackColor = customC;
+            btn_diaganosisData.BackColor = customC;
+            btn_drugInventory.BackColor = customC;
+            btn_employee.BackColor = customC;
+            btn_finance.BackColor = customC;
+            linkLabel1.LinkColor = customC;
+            linkLabel2.LinkColor = customC;
+            linkLabel3.LinkColor = customC;
+            linkLabel4.LinkColor = customC;
+            linkLabel5.LinkColor = customC;
+            linkLabel6.LinkColor = customC;
+            linkLabel7.LinkColor = customC;
+            linkLabel8.LinkColor = customC;
+            linkLabel9.LinkColor = customC;
+            linkLabel10.LinkColor = customC;
+            linkLabel11.LinkColor = customC;
+
+            menuStrip1.BackColor = customC;
         }
 
         public string UserID { get; private set; }
@@ -126,7 +151,7 @@ namespace Diploma_Final_Project_1
 
 
 
-            Med_Patient_Details form2 = new Med_Patient_Details();
+             Doctor_Visit form2 = new Doctor_Visit();
             // Remove borders and make the form a child control
             form2.TopLevel = false;
             form2.FormBorderStyle = FormBorderStyle.None;
@@ -141,6 +166,168 @@ namespace Diploma_Final_Project_1
 
 
         }
+        private void LoadViewDiagnose()
+        {
+
+
+
+            Doctor_View_Diagnose_Histroy form2 = new Doctor_View_Diagnose_Histroy();
+            // Remove borders and make the form a child control
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.Dock = DockStyle.Fill;
+
+            // Add the form to the GroupBox
+            groupBoxloc.Controls.Clear();  // Optionally clear previous controls
+            groupBoxloc.Controls.Add(form2);
+
+            // Show the form inside the GroupBox
+            form2.Show();
+
+
+        }
+        private void LoadAddDiagnose()
+        {
+
+
+
+            Add_Diagnose_History form2 = new Add_Diagnose_History();
+            // Remove borders and make the form a child control
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.Dock = DockStyle.Fill;
+
+            // Add the form to the GroupBox
+            groupBoxloc.Controls.Clear();  // Optionally clear previous controls
+            groupBoxloc.Controls.Add(form2);
+
+            // Show the form inside the GroupBox
+            form2.Show();
+
+
+        }
+        private void LoadDrugPrescription()
+        {
+
+
+
+            Med_Add_Prescription form2 = new Med_Add_Prescription();
+            // Remove borders and make the form a child control
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.Dock = DockStyle.Fill;
+
+            // Add the form to the GroupBox
+            groupBoxloc.Controls.Clear();  // Optionally clear previous controls
+            groupBoxloc.Controls.Add(form2);
+
+            // Show the form inside the GroupBox
+            form2.Show();
+
+
+        }
+        private void LoadAddLabPrescription()
+        {
+
+
+
+            Med_Add_Lab_Prescription form2 = new Med_Add_Lab_Prescription();
+            // Remove borders and make the form a child control
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.Dock = DockStyle.Fill;
+
+            // Add the form to the GroupBox
+            groupBoxloc.Controls.Clear();  // Optionally clear previous controls
+            groupBoxloc.Controls.Add(form2);
+
+            // Show the form inside the GroupBox
+            form2.Show();
+
+
+        }
+        private void LoadAddAppoinments()
+        {
+
+
+
+            Med_Add_Appoinment form2 = new Med_Add_Appoinment();
+            // Remove borders and make the form a child control
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.Dock = DockStyle.Fill;
+
+            // Add the form to the GroupBox
+            groupBoxloc.Controls.Clear();  // Optionally clear previous controls
+            groupBoxloc.Controls.Add(form2);
+
+            // Show the form inside the GroupBox
+            form2.Show();
+
+
+        }
+        private void LoadViewAppoinment()
+        {
+
+
+
+            Med_Appointments form2 = new Med_Appointments();
+            // Remove borders and make the form a child control
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.Dock = DockStyle.Fill;
+
+            // Add the form to the GroupBox
+            groupBoxloc.Controls.Clear();  // Optionally clear previous controls
+            groupBoxloc.Controls.Add(form2);
+
+            // Show the form inside the GroupBox
+            form2.Show();
+
+
+        }
+        private void LoadAddExpenses()
+        {
+
+
+
+            Med_Add_expenses form2 = new Med_Add_expenses();
+            // Remove borders and make the form a child control
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.Dock = DockStyle.Fill;
+
+            // Add the form to the GroupBox
+            groupBoxloc.Controls.Clear();  // Optionally clear previous controls
+            groupBoxloc.Controls.Add(form2);
+
+            // Show the form inside the GroupBox
+            form2.Show();
+
+
+        }
+        private void LoadViewExpenses()
+        {
+
+
+
+            Med_View_expenses form2 = new Med_View_expenses();
+            // Remove borders and make the form a child control
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.Dock = DockStyle.Fill;
+
+            // Add the form to the GroupBox
+            groupBoxloc.Controls.Clear();  // Optionally clear previous controls
+            groupBoxloc.Controls.Add(form2);
+
+            // Show the form inside the GroupBox
+            form2.Show();
+
+
+        }
+
+
 
 
 
@@ -203,6 +390,76 @@ namespace Diploma_Final_Project_1
         private void edit_doctor_sessionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LoadViewDoctorSession();
+        }
+
+        private void groupBox_Diagnose_Enter(object sender, EventArgs e)
+        {
+            LoadViewDiagnose();
+        }
+
+        private void diagnosisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadViewDiagnose();
+        }
+
+        private void view_DiagnoseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadViewDiagnose();
+        }
+
+        private void edit_DiagnoseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadViewDiagnose();
+        }
+
+        private void add_DiagnoseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadAddDiagnose();
+        }
+
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RestoreHomeControls();
+        }
+
+        private void groupBox_doctor_session_Enter(object sender, EventArgs e)
+        {
+            LoadViewDoctorSession();
+        }
+
+        private void addDrugPrescriptionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadDrugPrescription();
+        }
+
+        private void groupBox_employee_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBoxloc_Enter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void addAppoinmentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadAddAppoinments();
+        }
+
+        private void viewAppoinemnetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadViewAppoinment();
+        }
+
+        private void editAppoinmentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadViewAppoinment();
+        }
+
+        private void addExpensesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

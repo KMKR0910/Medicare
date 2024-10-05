@@ -73,6 +73,7 @@ namespace Diploma_Final_Project_1
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Update Salary Details";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btn_cancel
             // 
@@ -114,6 +115,7 @@ namespace Diploma_Final_Project_1
             this.txt_Postion.Name = "txt_Postion";
             this.txt_Postion.Size = new System.Drawing.Size(519, 44);
             this.txt_Postion.TabIndex = 81;
+            this.txt_Postion.TextChanged += new System.EventHandler(this.txt_Postion_TextChanged);
             // 
             // txt_name
             // 
@@ -122,6 +124,7 @@ namespace Diploma_Final_Project_1
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(519, 44);
             this.txt_name.TabIndex = 80;
+            this.txt_name.TextChanged += new System.EventHandler(this.txt_name_TextChanged);
             // 
             // txt_salary
             // 
@@ -130,6 +133,7 @@ namespace Diploma_Final_Project_1
             this.txt_salary.Name = "txt_salary";
             this.txt_salary.Size = new System.Drawing.Size(326, 44);
             this.txt_salary.TabIndex = 79;
+            this.txt_salary.TextChanged += new System.EventHandler(this.txt_salary_TextChanged);
             // 
             // label6
             // 
@@ -140,6 +144,7 @@ namespace Diploma_Final_Project_1
             this.label6.Size = new System.Drawing.Size(209, 42);
             this.label6.TabIndex = 78;
             this.label6.Text = "New Salary";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label4
             // 
@@ -150,6 +155,7 @@ namespace Diploma_Final_Project_1
             this.label4.Size = new System.Drawing.Size(117, 42);
             this.label4.TabIndex = 77;
             this.label4.Text = "Name";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label1
             // 
@@ -160,6 +166,7 @@ namespace Diploma_Final_Project_1
             this.label1.Size = new System.Drawing.Size(143, 42);
             this.label1.TabIndex = 76;
             this.label1.Text = "Postion";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Doctor_Employee_User_Profile
             // 

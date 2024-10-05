@@ -248,7 +248,7 @@ namespace Diploma_Final_Project_1
 
 
 
-                string sql = "UPDATE [tbl_patient_info] SET [Name]=@name, [Address]=@address, [DOB]=@dob,  [Contact Number]=@number1 ,[Email]=@email ,[Gender]=@gender WHERE [Contact Number]=@number,";
+                string sql = "UPDATE [tbl_patient_info] SET [Name]=@name, [Address]=@address, [DOB]=@dob,  [Contact Number]=@number1 ,[Email]=@email ,[Gender]=@gender WHERE [Contact Number]=@number";
 
                 SqlCommand com = new SqlCommand(sql, con1);
                 com.Parameters.AddWithValue("@number", this.txt_search.Text);

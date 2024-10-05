@@ -16,6 +16,8 @@ namespace Diploma_Final_Project_1
         public Med_View_expenses()
         {
             InitializeComponent();
+
+
         }
 
         private void Med_View_expenses_Load(object sender, EventArgs e)

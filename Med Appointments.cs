@@ -258,7 +258,7 @@ namespace Diploma_Final_Project_1
                 SqlCommand com = new SqlCommand(sql, con1);
 
                 com.Parameters.AddWithValue("@name", this.txt_name.Text);
-                com.Parameters.AddWithValue("@status1", status2);
+                com.Parameters.AddWithValue("@status1", status1);
                 com.Parameters.AddWithValue("@number", this.txt_appointmentNumber.Text);
 
 

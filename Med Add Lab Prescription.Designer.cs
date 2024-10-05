@@ -52,17 +52,17 @@ namespace Diploma_Final_Project_1
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(119, 813);
+            this.dataGridView1.Location = new System.Drawing.Point(1199, 353);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(1432, 370);
+            this.dataGridView1.Size = new System.Drawing.Size(1194, 670);
             this.dataGridView1.TabIndex = 110;
             // 
             // txt_date
             // 
             this.txt_date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_date.Location = new System.Drawing.Point(1265, 12);
+            this.txt_date.Location = new System.Drawing.Point(2021, 18);
             this.txt_date.Name = "txt_date";
             this.txt_date.Size = new System.Drawing.Size(372, 44);
             this.txt_date.TabIndex = 109;
@@ -70,7 +70,7 @@ namespace Diploma_Final_Project_1
             // txt_patient_ID
             // 
             this.txt_patient_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_patient_ID.Location = new System.Drawing.Point(1265, 95);
+            this.txt_patient_ID.Location = new System.Drawing.Point(2021, 101);
             this.txt_patient_ID.Name = "txt_patient_ID";
             this.txt_patient_ID.Size = new System.Drawing.Size(372, 44);
             this.txt_patient_ID.TabIndex = 108;
@@ -78,7 +78,7 @@ namespace Diploma_Final_Project_1
             // btn_cancel
             // 
             this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.Location = new System.Drawing.Point(1335, 1258);
+            this.btn_cancel.Location = new System.Drawing.Point(889, 1165);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(216, 90);
             this.btn_cancel.TabIndex = 105;
@@ -88,7 +88,7 @@ namespace Diploma_Final_Project_1
             // btn_delete
             // 
             this.btn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete.Location = new System.Drawing.Point(659, 1258);
+            this.btn_delete.Location = new System.Drawing.Point(471, 1165);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(216, 90);
             this.btn_delete.TabIndex = 104;
@@ -98,7 +98,7 @@ namespace Diploma_Final_Project_1
             // btn_add
             // 
             this.btn_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add.Location = new System.Drawing.Point(29, 1258);
+            this.btn_add.Location = new System.Drawing.Point(29, 1165);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(216, 90);
             this.btn_add.TabIndex = 103;
@@ -117,10 +117,10 @@ namespace Diploma_Final_Project_1
             // txt_description
             // 
             this.txt_description.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_description.Location = new System.Drawing.Point(405, 625);
+            this.txt_description.Location = new System.Drawing.Point(410, 714);
             this.txt_description.Multiline = true;
             this.txt_description.Name = "txt_description";
-            this.txt_description.Size = new System.Drawing.Size(711, 84);
+            this.txt_description.Size = new System.Drawing.Size(711, 290);
             this.txt_description.TabIndex = 100;
             // 
             // label3
@@ -129,7 +129,7 @@ namespace Diploma_Final_Project_1
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(22, 249);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(612, 84);
+            this.label3.Size = new System.Drawing.Size(306, 42);
             this.label3.TabIndex = 99;
             this.label3.Text = "Lab Test Number";
             // 
@@ -137,9 +137,9 @@ namespace Diploma_Final_Project_1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 636);
+            this.label1.Location = new System.Drawing.Point(27, 725);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(410, 84);
+            this.label1.Size = new System.Drawing.Size(205, 42);
             this.label1.TabIndex = 97;
             this.label1.Text = "Description";
             // 
@@ -215,7 +215,7 @@ namespace Diploma_Final_Project_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1837, 1416);
+            this.ClientSize = new System.Drawing.Size(2427, 1449);
             this.Controls.Add(this.comboBox_type);
             this.Controls.Add(this.txt_price);
             this.Controls.Add(this.label7);

@@ -30,31 +30,22 @@ namespace Diploma_Final_Project_1
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Med_Home1));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.btn_drugInventory = new System.Windows.Forms.Button();
             this.groupBox_employee = new System.Windows.Forms.GroupBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.btn_employee = new System.Windows.Forms.Button();
             this.groupBox_Diagnose = new System.Windows.Forms.GroupBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.btn_diaganosisData = new System.Windows.Forms.Button();
             this.groupBox_Patients = new System.Windows.Forms.GroupBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btn_patients = new System.Windows.Forms.Button();
             this.groupBox_Appoinments = new System.Windows.Forms.GroupBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btn_appoinments = new System.Windows.Forms.Button();
             this.groupBox_doctor_session = new System.Windows.Forms.GroupBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.btn_doctor_session = new System.Windows.Forms.Button();
             this.groupBox_UserProfile = new System.Windows.Forms.GroupBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btn_userProfile = new System.Windows.Forms.Button();
             this.groupBox_inventrory = new System.Windows.Forms.GroupBox();
             this.groupBox_Home = new System.Windows.Forms.GroupBox();
             this.btn_home = new System.Windows.Forms.Button();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.appoinmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label3 = new System.Windows.Forms.Label();
@@ -85,50 +76,48 @@ namespace Diploma_Final_Project_1
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.view_DiagnoseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.add_DiagnoseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.edit_DiagnoseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addDrugPrescriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addLabPrescriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addAppoinmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewAppoinemnetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editAppoinmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.financeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addExpensesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewExpensesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox_employee.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.groupBox_Diagnose.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.groupBox_Patients.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.groupBox_Appoinments.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.groupBox_doctor_session.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.groupBox_UserProfile.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox_inventrory.SuspendLayout();
             this.groupBox_Home.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.groupBoxloc.SuspendLayout();
             this.groupBox_finance.SuspendLayout();
             this.groupBox10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(116, 36);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(321, 193);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::Diploma_Final_Project_1.Properties.Resources.medical_record_line_icon_patient_diagnosis_report_linear_pictogram_health_information_on_clipboard_outline_icon_hospital_note_diagnostic_document_editable_stroke_isolated_illustration_vector1;
-            this.pictureBox8.Location = new System.Drawing.Point(141, 44);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(251, 142);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 3;
-            this.pictureBox8.TabStop = false;
             // 
             // btn_drugInventory
             // 
@@ -151,16 +140,7 @@ namespace Diploma_Final_Project_1
             this.groupBox_employee.Size = new System.Drawing.Size(560, 370);
             this.groupBox_employee.TabIndex = 13;
             this.groupBox_employee.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::Diploma_Final_Project_1.Properties.Resources._360_F_372435911_7Nq7sVzcNRRYFLQ1iZzQVgRLgXL5C839;
-            this.pictureBox9.Location = new System.Drawing.Point(159, 59);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(251, 142);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 3;
-            this.pictureBox9.TabStop = false;
+            this.groupBox_employee.Enter += new System.EventHandler(this.groupBox_employee_Enter);
             // 
             // btn_employee
             // 
@@ -183,16 +163,7 @@ namespace Diploma_Final_Project_1
             this.groupBox_Diagnose.Size = new System.Drawing.Size(605, 351);
             this.groupBox_Diagnose.TabIndex = 6;
             this.groupBox_Diagnose.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::Diploma_Final_Project_1.Properties.Resources.medical_record_line_icon_patient_diagnosis_report_linear_pictogram_health_information_on_clipboard_outline_icon_hospital_note_diagnostic_document_editable_stroke_isolated_illustration_vector;
-            this.pictureBox7.Location = new System.Drawing.Point(182, 50);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(251, 142);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 3;
-            this.pictureBox7.TabStop = false;
+            this.groupBox_Diagnose.Enter += new System.EventHandler(this.groupBox_Diagnose_Enter);
             // 
             // btn_diaganosisData
             // 
@@ -217,16 +188,6 @@ namespace Diploma_Final_Project_1
             this.groupBox_Patients.TabStop = false;
             this.groupBox_Patients.Enter += new System.EventHandler(this.groupBox_Patients_Enter);
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::Diploma_Final_Project_1.Properties.Resources._4883268_200;
-            this.pictureBox5.Location = new System.Drawing.Point(141, 49);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(251, 142);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 2;
-            this.pictureBox5.TabStop = false;
-            // 
             // btn_patients
             // 
             this.btn_patients.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
@@ -250,16 +211,6 @@ namespace Diploma_Final_Project_1
             this.groupBox_Appoinments.TabStop = false;
             this.groupBox_Appoinments.Enter += new System.EventHandler(this.groupBox_Appoinments_Enter);
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Diploma_Final_Project_1.Properties.Resources.images__2_;
-            this.pictureBox4.Location = new System.Drawing.Point(182, 49);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(251, 142);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
-            // 
             // btn_appoinments
             // 
             this.btn_appoinments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
@@ -281,16 +232,7 @@ namespace Diploma_Final_Project_1
             this.groupBox_doctor_session.Size = new System.Drawing.Size(560, 371);
             this.groupBox_doctor_session.TabIndex = 9;
             this.groupBox_doctor_session.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::Diploma_Final_Project_1.Properties.Resources.images__3_;
-            this.pictureBox6.Location = new System.Drawing.Point(159, 49);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(251, 142);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 2;
-            this.pictureBox6.TabStop = false;
+            this.groupBox_doctor_session.Enter += new System.EventHandler(this.groupBox_doctor_session_Enter);
             // 
             // btn_doctor_session
             // 
@@ -314,16 +256,6 @@ namespace Diploma_Final_Project_1
             this.groupBox_UserProfile.TabIndex = 10;
             this.groupBox_UserProfile.TabStop = false;
             this.groupBox_UserProfile.Enter += new System.EventHandler(this.groupBox_UserProfile_Enter);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Diploma_Final_Project_1.Properties.Resources._3682281;
-            this.pictureBox2.Location = new System.Drawing.Point(139, 37);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(321, 190);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
             // 
             // btn_userProfile
             // 
@@ -372,18 +304,12 @@ namespace Diploma_Final_Project_1
             this.btn_home.Text = "Home";
             this.btn_home.UseVisualStyleBackColor = false;
             // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = global::Diploma_Final_Project_1.Properties.Resources.images__4_;
-            this.pictureBox10.Location = new System.Drawing.Point(182, 59);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(251, 142);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 3;
-            this.pictureBox10.TabStop = false;
-            // 
             // appoinmentToolStripMenuItem
             // 
+            this.appoinmentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addAppoinmentToolStripMenuItem,
+            this.viewAppoinemnetToolStripMenuItem,
+            this.editAppoinmentToolStripMenuItem});
             this.appoinmentToolStripMenuItem.Name = "appoinmentToolStripMenuItem";
             this.appoinmentToolStripMenuItem.Size = new System.Drawing.Size(247, 54);
             this.appoinmentToolStripMenuItem.Text = "Appoinment";
@@ -461,6 +387,7 @@ namespace Diploma_Final_Project_1
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
             this.homeToolStripMenuItem.Size = new System.Drawing.Size(141, 54);
             this.homeToolStripMenuItem.Text = "Home";
+            this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
             // 
             // menuStrip1
             // 
@@ -475,7 +402,8 @@ namespace Diploma_Final_Project_1
             this.appoinmentToolStripMenuItem,
             this.diagnosisToolStripMenuItem,
             this.prescriptionToolStripMenuItem,
-            this.doctorSessionsToolStripMenuItem});
+            this.doctorSessionsToolStripMenuItem,
+            this.financeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(1, 4, 0, 4);
@@ -492,12 +420,20 @@ namespace Diploma_Final_Project_1
             // 
             // diagnosisToolStripMenuItem
             // 
+            this.diagnosisToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.view_DiagnoseToolStripMenuItem,
+            this.add_DiagnoseToolStripMenuItem,
+            this.edit_DiagnoseToolStripMenuItem});
             this.diagnosisToolStripMenuItem.Name = "diagnosisToolStripMenuItem";
             this.diagnosisToolStripMenuItem.Size = new System.Drawing.Size(202, 54);
             this.diagnosisToolStripMenuItem.Text = "Diagnosis";
+            this.diagnosisToolStripMenuItem.Click += new System.EventHandler(this.diagnosisToolStripMenuItem_Click);
             // 
             // prescriptionToolStripMenuItem
             // 
+            this.prescriptionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addDrugPrescriptionToolStripMenuItem,
+            this.addLabPrescriptionToolStripMenuItem});
             this.prescriptionToolStripMenuItem.Name = "prescriptionToolStripMenuItem";
             this.prescriptionToolStripMenuItem.Size = new System.Drawing.Size(237, 54);
             this.prescriptionToolStripMenuItem.Text = "Prescription";
@@ -516,22 +452,22 @@ namespace Diploma_Final_Project_1
             // view_doctor_sessionToolStripMenuItem
             // 
             this.view_doctor_sessionToolStripMenuItem.Name = "view_doctor_sessionToolStripMenuItem";
-            this.view_doctor_sessionToolStripMenuItem.Size = new System.Drawing.Size(359, 58);
-            this.view_doctor_sessionToolStripMenuItem.Text = "View ";
+            this.view_doctor_sessionToolStripMenuItem.Size = new System.Drawing.Size(513, 58);
+            this.view_doctor_sessionToolStripMenuItem.Text = "View Doctor Sessions";
             this.view_doctor_sessionToolStripMenuItem.Click += new System.EventHandler(this.view_doctor_sessionToolStripMenuItem_Click);
             // 
             // add_doctor_sessionToolStripMenuItem
             // 
             this.add_doctor_sessionToolStripMenuItem.Name = "add_doctor_sessionToolStripMenuItem";
-            this.add_doctor_sessionToolStripMenuItem.Size = new System.Drawing.Size(359, 58);
-            this.add_doctor_sessionToolStripMenuItem.Text = "Add";
+            this.add_doctor_sessionToolStripMenuItem.Size = new System.Drawing.Size(513, 58);
+            this.add_doctor_sessionToolStripMenuItem.Text = "Add Doctor Sessions";
             this.add_doctor_sessionToolStripMenuItem.Click += new System.EventHandler(this.add_doctor_sessionToolStripMenuItem_Click);
             // 
             // edit_doctor_sessionToolStripMenuItem
             // 
             this.edit_doctor_sessionToolStripMenuItem.Name = "edit_doctor_sessionToolStripMenuItem";
-            this.edit_doctor_sessionToolStripMenuItem.Size = new System.Drawing.Size(359, 58);
-            this.edit_doctor_sessionToolStripMenuItem.Text = "Edit";
+            this.edit_doctor_sessionToolStripMenuItem.Size = new System.Drawing.Size(513, 58);
+            this.edit_doctor_sessionToolStripMenuItem.Text = "Edit Doctor Sessions";
             this.edit_doctor_sessionToolStripMenuItem.Click += new System.EventHandler(this.edit_doctor_sessionToolStripMenuItem_Click);
             // 
             // linkLabel8
@@ -591,6 +527,7 @@ namespace Diploma_Final_Project_1
             this.groupBoxloc.Size = new System.Drawing.Size(2427, 1449);
             this.groupBoxloc.TabIndex = 10;
             this.groupBoxloc.TabStop = false;
+            this.groupBoxloc.Enter += new System.EventHandler(this.groupBoxloc_Enter);
             // 
             // groupBox_finance
             // 
@@ -678,6 +615,175 @@ namespace Diploma_Final_Project_1
             this.groupBox10.TabIndex = 9;
             this.groupBox10.TabStop = false;
             // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::Diploma_Final_Project_1.Properties.Resources.images__4_;
+            this.pictureBox10.Location = new System.Drawing.Point(182, 59);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(251, 142);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 3;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::Diploma_Final_Project_1.Properties.Resources.medical_record_line_icon_patient_diagnosis_report_linear_pictogram_health_information_on_clipboard_outline_icon_hospital_note_diagnostic_document_editable_stroke_isolated_illustration_vector1;
+            this.pictureBox8.Location = new System.Drawing.Point(141, 44);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(251, 142);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 3;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::Diploma_Final_Project_1.Properties.Resources._360_F_372435911_7Nq7sVzcNRRYFLQ1iZzQVgRLgXL5C839;
+            this.pictureBox9.Location = new System.Drawing.Point(159, 59);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(251, 142);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 3;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::Diploma_Final_Project_1.Properties.Resources.medical_record_line_icon_patient_diagnosis_report_linear_pictogram_health_information_on_clipboard_outline_icon_hospital_note_diagnostic_document_editable_stroke_isolated_illustration_vector;
+            this.pictureBox7.Location = new System.Drawing.Point(182, 50);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(251, 142);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 3;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::Diploma_Final_Project_1.Properties.Resources._4883268_200;
+            this.pictureBox5.Location = new System.Drawing.Point(141, 49);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(251, 142);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 2;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Diploma_Final_Project_1.Properties.Resources.images__2_;
+            this.pictureBox4.Location = new System.Drawing.Point(182, 49);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(251, 142);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Diploma_Final_Project_1.Properties.Resources.images__3_;
+            this.pictureBox6.Location = new System.Drawing.Point(159, 49);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(251, 142);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 2;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Diploma_Final_Project_1.Properties.Resources._3682281;
+            this.pictureBox2.Location = new System.Drawing.Point(139, 37);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(321, 190);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(116, 36);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(321, 193);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // view_DiagnoseToolStripMenuItem
+            // 
+            this.view_DiagnoseToolStripMenuItem.Name = "view_DiagnoseToolStripMenuItem";
+            this.view_DiagnoseToolStripMenuItem.Size = new System.Drawing.Size(359, 58);
+            this.view_DiagnoseToolStripMenuItem.Text = "View";
+            this.view_DiagnoseToolStripMenuItem.Click += new System.EventHandler(this.view_DiagnoseToolStripMenuItem_Click);
+            // 
+            // add_DiagnoseToolStripMenuItem
+            // 
+            this.add_DiagnoseToolStripMenuItem.Name = "add_DiagnoseToolStripMenuItem";
+            this.add_DiagnoseToolStripMenuItem.Size = new System.Drawing.Size(359, 58);
+            this.add_DiagnoseToolStripMenuItem.Text = "Add";
+            this.add_DiagnoseToolStripMenuItem.Click += new System.EventHandler(this.add_DiagnoseToolStripMenuItem_Click);
+            // 
+            // edit_DiagnoseToolStripMenuItem
+            // 
+            this.edit_DiagnoseToolStripMenuItem.Name = "edit_DiagnoseToolStripMenuItem";
+            this.edit_DiagnoseToolStripMenuItem.Size = new System.Drawing.Size(359, 58);
+            this.edit_DiagnoseToolStripMenuItem.Text = "Edit";
+            this.edit_DiagnoseToolStripMenuItem.Click += new System.EventHandler(this.edit_DiagnoseToolStripMenuItem_Click);
+            // 
+            // addDrugPrescriptionToolStripMenuItem
+            // 
+            this.addDrugPrescriptionToolStripMenuItem.Name = "addDrugPrescriptionToolStripMenuItem";
+            this.addDrugPrescriptionToolStripMenuItem.Size = new System.Drawing.Size(528, 58);
+            this.addDrugPrescriptionToolStripMenuItem.Text = "Add Drug Prescription";
+            this.addDrugPrescriptionToolStripMenuItem.Click += new System.EventHandler(this.addDrugPrescriptionToolStripMenuItem_Click);
+            // 
+            // addLabPrescriptionToolStripMenuItem
+            // 
+            this.addLabPrescriptionToolStripMenuItem.Name = "addLabPrescriptionToolStripMenuItem";
+            this.addLabPrescriptionToolStripMenuItem.Size = new System.Drawing.Size(528, 58);
+            this.addLabPrescriptionToolStripMenuItem.Text = "Add Lab Prescription";
+            // 
+            // addAppoinmentToolStripMenuItem
+            // 
+            this.addAppoinmentToolStripMenuItem.Name = "addAppoinmentToolStripMenuItem";
+            this.addAppoinmentToolStripMenuItem.Size = new System.Drawing.Size(475, 58);
+            this.addAppoinmentToolStripMenuItem.Text = "Add Appoinment";
+            this.addAppoinmentToolStripMenuItem.Click += new System.EventHandler(this.addAppoinmentToolStripMenuItem_Click);
+            // 
+            // viewAppoinemnetToolStripMenuItem
+            // 
+            this.viewAppoinemnetToolStripMenuItem.Name = "viewAppoinemnetToolStripMenuItem";
+            this.viewAppoinemnetToolStripMenuItem.Size = new System.Drawing.Size(475, 58);
+            this.viewAppoinemnetToolStripMenuItem.Text = "View Appoinemnet";
+            this.viewAppoinemnetToolStripMenuItem.Click += new System.EventHandler(this.viewAppoinemnetToolStripMenuItem_Click);
+            // 
+            // editAppoinmentToolStripMenuItem
+            // 
+            this.editAppoinmentToolStripMenuItem.Name = "editAppoinmentToolStripMenuItem";
+            this.editAppoinmentToolStripMenuItem.Size = new System.Drawing.Size(475, 58);
+            this.editAppoinmentToolStripMenuItem.Text = "Edit Appoinment";
+            this.editAppoinmentToolStripMenuItem.Click += new System.EventHandler(this.editAppoinmentToolStripMenuItem_Click);
+            // 
+            // financeToolStripMenuItem
+            // 
+            this.financeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addExpensesToolStripMenuItem,
+            this.viewExpensesToolStripMenuItem});
+            this.financeToolStripMenuItem.Name = "financeToolStripMenuItem";
+            this.financeToolStripMenuItem.Size = new System.Drawing.Size(166, 54);
+            this.financeToolStripMenuItem.Text = "Finance";
+            // 
+            // addExpensesToolStripMenuItem
+            // 
+            this.addExpensesToolStripMenuItem.Name = "addExpensesToolStripMenuItem";
+            this.addExpensesToolStripMenuItem.Size = new System.Drawing.Size(400, 58);
+            this.addExpensesToolStripMenuItem.Text = "Add Expenses";
+            this.addExpensesToolStripMenuItem.Click += new System.EventHandler(this.addExpensesToolStripMenuItem_Click);
+            // 
+            // viewExpensesToolStripMenuItem
+            // 
+            this.viewExpensesToolStripMenuItem.Name = "viewExpensesToolStripMenuItem";
+            this.viewExpensesToolStripMenuItem.Size = new System.Drawing.Size(400, 58);
+            this.viewExpensesToolStripMenuItem.Text = "View Expenses";
+            // 
             // Med_Home1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -688,30 +794,31 @@ namespace Diploma_Final_Project_1
             this.Controls.Add(this.groupBox10);
             this.Name = "Med_Home1";
             this.Text = "Med_Home1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Med_Home1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.groupBox_employee.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.groupBox_Diagnose.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.groupBox_Patients.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.groupBox_Appoinments.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.groupBox_doctor_session.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.groupBox_UserProfile.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox_inventrory.ResumeLayout(false);
             this.groupBox_Home.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBoxloc.ResumeLayout(false);
             this.groupBox_finance.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -774,5 +881,16 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.ToolStripMenuItem view_doctor_sessionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem add_doctor_sessionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem edit_doctor_sessionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem view_DiagnoseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem add_DiagnoseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem edit_DiagnoseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addDrugPrescriptionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addLabPrescriptionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addAppoinmentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewAppoinemnetToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editAppoinmentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem financeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addExpensesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewExpensesToolStripMenuItem;
     }
 }
