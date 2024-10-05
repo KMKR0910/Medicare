@@ -191,6 +191,12 @@
     <Compile Include="Doctor View Diagnose Histroy.Designer.cs">
       <DependentUpon>Doctor View Diagnose Histroy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Doctor View Drug Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor View Drug Order.Designer.cs">
+      <DependentUpon>Doctor View Drug Order.cs</DependentUpon>
+    </Compile>
     <Compile Include="Doctor Visit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -335,6 +341,12 @@
     <Compile Include="Pha Add drugs.Designer.cs">
       <DependentUpon>Pha Add drugs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pha Drug Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pha Drug Order.Designer.cs">
+      <DependentUpon>Pha Drug Order.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pha Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -346,6 +358,12 @@
     </Compile>
     <Compile Include="Pha View Drug inventory.Designer.cs">
       <DependentUpon>Pha View Drug inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pha View Drug Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pha View Drug Order.Designer.cs">
+      <DependentUpon>Pha View Drug Order.cs</DependentUpon>
     </Compile>
     <Compile Include="Phar Prescription.cs">
       <SubType>Form</SubType>
@@ -402,6 +420,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Doctor View Diagnose Histroy.resx">
       <DependentUpon>Doctor View Diagnose Histroy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor View Drug Order.resx">
+      <DependentUpon>Doctor View Drug Order.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Doctor Visit.resx">
       <DependentUpon>Doctor Visit.cs</DependentUpon>
@@ -472,11 +493,17 @@
     <EmbeddedResource Include="Pha Add drugs.resx">
       <DependentUpon>Pha Add drugs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pha Drug Order.resx">
+      <DependentUpon>Pha Drug Order.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pha Home.resx">
       <DependentUpon>Pha Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pha View Drug inventory.resx">
       <DependentUpon>Pha View Drug inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pha View Drug Order.resx">
+      <DependentUpon>Pha View Drug Order.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Phar Prescription.resx">
       <DependentUpon>Phar Prescription.cs</DependentUpon>
