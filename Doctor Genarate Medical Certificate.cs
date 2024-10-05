@@ -114,6 +114,46 @@ namespace Diploma_Final_Project_1
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+            try
+            {
+
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+
+
+                string sql = "SELECT MAX ([MC_ID]) FROM [tbl_M_certificate]";
+                SqlCommand com = new SqlCommand(sql, con); //This creates a SQL command object (com) with the query (sql) and an established connection (con)
+
+                SqlDataReader dr = com.ExecuteReader();
+                if (dr.Read())
+                {
+
+                    // when you have a blank value of the first coloumn in current row you should tyep this code
+                    if (dr.GetValue(0).ToString() == "")
+                    {
+                        this.txt_MCID.Text = "1"; //if have a blank sapace in item code must 1
+                    }
+                    else
+                    {
+                        this.txt_MCID.Text = (Convert.ToInt32(dr.GetValue(0).ToString()) + 1).ToString();// if there is a value in item code
+                    }
+                }
+                else
+                {
+                    this.txt_MCID.Text = "1"; // if there is no any filled rows in table
+                }
+
+
+
+                con.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
         }
 
         private void btn_save_Click(object sender, EventArgs e)
@@ -231,5 +271,12 @@ namespace Diploma_Final_Project_1
 
         }
 
+        private void btn_genarate_Click(object sender, EventArgs e)
+        {
+            string MC_ID = txt_MCID.ToString();
+
+            Report_Gen_M_Certificate f1 = new Report_Gen_M_Certificate(MC_ID);
+            f1.ShowDialog();
+        }
     }
 }

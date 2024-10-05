@@ -57,6 +57,8 @@ namespace Diploma_Final_Project_1
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView_Diagnose = new System.Windows.Forms.DataGridView();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txt_MCID = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -205,6 +207,8 @@ namespace Diploma_Final_Project_1
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txt_MCID);
+            this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.btn_cancel);
             this.groupBox2.Controls.Add(this.btn_save);
             this.groupBox2.Controls.Add(this.btn_genarate);
@@ -255,6 +259,7 @@ namespace Diploma_Final_Project_1
             this.btn_genarate.TabIndex = 61;
             this.btn_genarate.Text = "Genarate";
             this.btn_genarate.UseVisualStyleBackColor = true;
+            this.btn_genarate.Click += new System.EventHandler(this.btn_genarate_Click);
             // 
             // txt_description
             // 
@@ -350,6 +355,24 @@ namespace Diploma_Final_Project_1
             this.dataGridView_Diagnose.Size = new System.Drawing.Size(919, 256);
             this.dataGridView_Diagnose.TabIndex = 2;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(80, 66);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(122, 42);
+            this.label11.TabIndex = 64;
+            this.label11.Text = "MC ID";
+            // 
+            // txt_MCID
+            // 
+            this.txt_MCID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_MCID.Location = new System.Drawing.Point(330, 66);
+            this.txt_MCID.Name = "txt_MCID";
+            this.txt_MCID.Size = new System.Drawing.Size(328, 38);
+            this.txt_MCID.TabIndex = 65;
+            // 
             // Doctor_Genarate_Medical_Certificate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -405,5 +428,7 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dataGridView_Diagnose;
+        private System.Windows.Forms.TextBox txt_MCID;
+        private System.Windows.Forms.Label label11;
     }
 }

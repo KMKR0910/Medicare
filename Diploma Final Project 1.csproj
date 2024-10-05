@@ -33,6 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\MaterialSkin.2.2.3.1\lib\net461\MaterialSkin.dll</HintPath>
     </Reference>
@@ -116,6 +121,7 @@
       <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -148,6 +154,12 @@
     </Compile>
     <Compile Include="Admin View Users.Designer.cs">
       <DependentUpon>Admin View Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReports_Gen_M_Certificate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReports_Gen_M_Certificate.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="doc test 1.cs">
       <SubType>Form</SubType>
@@ -373,6 +385,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report_Gen_M_Certificate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_Gen_M_Certificate.Designer.cs">
+      <DependentUpon>Report_Gen_M_Certificate.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Registration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -399,6 +417,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin View Users.resx">
       <DependentUpon>Admin View Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReports_Gen_M_Certificate.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReports_Gen_M_Certificate.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="doc test 1.resx">
       <DependentUpon>doc test 1.cs</DependentUpon>
@@ -521,6 +543,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report_Gen_M_Certificate.resx">
+      <DependentUpon>Report_Gen_M_Certificate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User Registration.resx">
       <DependentUpon>User Registration.cs</DependentUpon>
     </EmbeddedResource>
@@ -555,6 +580,9 @@
     <None Include="Resources\4883268-200.png" />
     <None Include="Resources\images %282%29.png" />
     <None Include="Resources\3682281.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

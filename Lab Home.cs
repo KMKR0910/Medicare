@@ -23,8 +23,6 @@ namespace Diploma_Final_Project_1
             btn_home.BackColor = customC;
             btn_userProfile.BackColor = customC;
 
-            btn_appoinments.BackColor = customC;
-            btn_patients.BackColor = customC;
             btn_doctor_session.BackColor = customC;
             btn_LabTests.BackColor = customC;
             btn_prescription.BackColor = customC;
