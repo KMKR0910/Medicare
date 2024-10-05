@@ -37,13 +37,13 @@ namespace Diploma_Final_Project_1
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_description = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_add = new System.Windows.Forms.Button();
             this.btn_search = new System.Windows.Forms.Button();
             this.txt_search = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView_lab_tests = new System.Windows.Forms.DataGridView();
-            this.btn_add = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txt_description = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_price)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_lab_tests)).BeginInit();
@@ -108,7 +108,7 @@ namespace Diploma_Final_Project_1
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(58, 50);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(400, 84);
+            this.label3.Size = new System.Drawing.Size(200, 42);
             this.label3.TabIndex = 104;
             this.label3.Text = "Test Name";
             // 
@@ -118,7 +118,7 @@ namespace Diploma_Final_Project_1
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(58, 209);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(352, 84);
+            this.label6.Size = new System.Drawing.Size(176, 42);
             this.label6.TabIndex = 102;
             this.label6.Text = "Tes Price";
             // 
@@ -134,11 +134,41 @@ namespace Diploma_Final_Project_1
             this.groupBox1.Controls.Add(this.txt_test_name);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Location = new System.Drawing.Point(55, 682);
+            this.groupBox1.Location = new System.Drawing.Point(609, 641);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1363, 769);
             this.groupBox1.TabIndex = 75;
             this.groupBox1.TabStop = false;
+            // 
+            // txt_description
+            // 
+            this.txt_description.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_description.Location = new System.Drawing.Point(446, 366);
+            this.txt_description.Multiline = true;
+            this.txt_description.Name = "txt_description";
+            this.txt_description.Size = new System.Drawing.Size(851, 114);
+            this.txt_description.TabIndex = 117;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(58, 368);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(205, 42);
+            this.label1.TabIndex = 116;
+            this.label1.Text = "Description";
+            // 
+            // btn_add
+            // 
+            this.btn_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add.Location = new System.Drawing.Point(37, 589);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(236, 104);
+            this.btn_add.TabIndex = 115;
+            this.btn_add.Text = "Add New";
+            this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // btn_search
             // 
@@ -175,45 +205,15 @@ namespace Diploma_Final_Project_1
             this.dataGridView_lab_tests.Name = "dataGridView_lab_tests";
             this.dataGridView_lab_tests.RowHeadersWidth = 82;
             this.dataGridView_lab_tests.RowTemplate.Height = 33;
-            this.dataGridView_lab_tests.Size = new System.Drawing.Size(1377, 477);
+            this.dataGridView_lab_tests.Size = new System.Drawing.Size(2329, 477);
             this.dataGridView_lab_tests.TabIndex = 71;
             this.dataGridView_lab_tests.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_lab_tests_CellContentClick);
-            // 
-            // btn_add
-            // 
-            this.btn_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add.Location = new System.Drawing.Point(37, 589);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(236, 104);
-            this.btn_add.TabIndex = 115;
-            this.btn_add.Text = "Add New";
-            this.btn_add.UseVisualStyleBackColor = true;
-            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(58, 368);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(410, 84);
-            this.label1.TabIndex = 116;
-            this.label1.Text = "Description";
-            // 
-            // txt_description
-            // 
-            this.txt_description.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_description.Location = new System.Drawing.Point(446, 366);
-            this.txt_description.Multiline = true;
-            this.txt_description.Name = "txt_description";
-            this.txt_description.Size = new System.Drawing.Size(851, 114);
-            this.txt_description.TabIndex = 117;
             // 
             // Lab_view_lab_test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1648, 1454);
+            this.ClientSize = new System.Drawing.Size(2427, 1451);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.txt_search);

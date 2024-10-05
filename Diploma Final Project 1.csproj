@@ -436,6 +436,9 @@
     <EmbeddedResource Include="Lab Add lab tests.resx">
       <DependentUpon>Lab Add lab tests.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Lab Home.resx">
+      <DependentUpon>Lab Home.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lab Prescription.resx">
       <DependentUpon>Lab Prescription.cs</DependentUpon>
     </EmbeddedResource>
