@@ -28,7 +28,6 @@ namespace Diploma_Final_Project_1
             btn_doctor_session.BackColor = customC;
             btn_LabTests.BackColor = customC;
             btn_prescription.BackColor = customC;
-            btn_employee.BackColor = customC;
             btn_finance.BackColor = customC;
             linkLabel1.LinkColor = customC;
             linkLabel2.LinkColor = customC;
@@ -44,7 +43,28 @@ namespace Diploma_Final_Project_1
 
             menuStrip1.BackColor = customC;
         }
+        private List<Control> previousControls = new List<Control>();
+        private void SaveCurrentControls()
+        {
+            // Save the existing controls in the GroupBox to the list
+            previousControls.Clear();
+            foreach (Control ctrl in groupBoxloc.Controls)
+            {
+                previousControls.Add(ctrl);
+            }
+        }
+        private void RestoreHomeControls()
+        {
+            // Clear the current controls in the GroupBox
+            groupBoxloc.Controls.Clear();
 
+            // Add the previously saved controls back into the GroupBox
+            foreach (Control ctrl in previousControls)
+            {
+                groupBoxloc.Controls.Add(ctrl);
+
+            }
+        }
         private void laboratoryTestsToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -94,6 +114,21 @@ namespace Diploma_Final_Project_1
         {
             prescriptionToolStripMenuItem_Click(this, EventArgs.Empty);
 
+        }
+
+        private void groupBox_employee_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Lab_Home_Load(object sender, EventArgs e)
+        {
+            SaveCurrentControls();
+        }
+
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RestoreHomeControls();
         }
     }
 }

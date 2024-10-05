@@ -259,5 +259,35 @@ namespace Diploma_Final_Project_1
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void txt_contact_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_age_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_address_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_Name_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_date_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

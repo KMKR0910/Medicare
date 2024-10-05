@@ -34,11 +34,6 @@ namespace Diploma_Final_Project_1
             this.label1 = new System.Windows.Forms.Label();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.patientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.appoinmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addAppoinmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewAppoinemnetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editAppoinmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.prescriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.doctorSessionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.view_doctor_sessionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,22 +62,13 @@ namespace Diploma_Final_Project_1
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.btn_patients = new System.Windows.Forms.Button();
-            this.groupBox_Patients = new System.Windows.Forms.GroupBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.btn_LabTests = new System.Windows.Forms.Button();
             this.groupBox_lab_test = new System.Windows.Forms.GroupBox();
             this.groupBox_prescription = new System.Windows.Forms.GroupBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.btn_prescription = new System.Windows.Forms.Button();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.btn_employee = new System.Windows.Forms.Button();
-            this.groupBox_employee = new System.Windows.Forms.GroupBox();
             this.groupBoxloc = new System.Windows.Forms.GroupBox();
-            this.groupBox_Appoinments = new System.Windows.Forms.GroupBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.btn_appoinments = new System.Windows.Forms.Button();
             this.groupBox_doctor_session = new System.Windows.Forms.GroupBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.btn_doctor_session = new System.Windows.Forms.Button();
@@ -96,17 +82,11 @@ namespace Diploma_Final_Project_1
             this.groupBox_finance.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.groupBox10.SuspendLayout();
-            this.groupBox_Patients.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.groupBox_lab_test.SuspendLayout();
             this.groupBox_prescription.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            this.groupBox_employee.SuspendLayout();
             this.groupBoxloc.SuspendLayout();
-            this.groupBox_Appoinments.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.groupBox_doctor_session.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.groupBox_UserProfile.SuspendLayout();
@@ -140,6 +120,7 @@ namespace Diploma_Final_Project_1
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
             this.homeToolStripMenuItem.Size = new System.Drawing.Size(141, 54);
             this.homeToolStripMenuItem.Text = "Home";
+            this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
             // 
             // menuStrip1
             // 
@@ -149,8 +130,6 @@ namespace Diploma_Final_Project_1
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
-            this.patientsToolStripMenuItem,
-            this.appoinmentToolStripMenuItem,
             this.prescriptionToolStripMenuItem,
             this.doctorSessionsToolStripMenuItem,
             this.financeToolStripMenuItem,
@@ -161,40 +140,6 @@ namespace Diploma_Final_Project_1
             this.menuStrip1.Size = new System.Drawing.Size(2877, 62);
             this.menuStrip1.TabIndex = 11;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // patientsToolStripMenuItem
-            // 
-            this.patientsToolStripMenuItem.Name = "patientsToolStripMenuItem";
-            this.patientsToolStripMenuItem.Size = new System.Drawing.Size(172, 54);
-            this.patientsToolStripMenuItem.Text = "Patients";
-            // 
-            // appoinmentToolStripMenuItem
-            // 
-            this.appoinmentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addAppoinmentToolStripMenuItem,
-            this.viewAppoinemnetToolStripMenuItem,
-            this.editAppoinmentToolStripMenuItem});
-            this.appoinmentToolStripMenuItem.Name = "appoinmentToolStripMenuItem";
-            this.appoinmentToolStripMenuItem.Size = new System.Drawing.Size(247, 54);
-            this.appoinmentToolStripMenuItem.Text = "Appoinment";
-            // 
-            // addAppoinmentToolStripMenuItem
-            // 
-            this.addAppoinmentToolStripMenuItem.Name = "addAppoinmentToolStripMenuItem";
-            this.addAppoinmentToolStripMenuItem.Size = new System.Drawing.Size(475, 58);
-            this.addAppoinmentToolStripMenuItem.Text = "Add Appoinment";
-            // 
-            // viewAppoinemnetToolStripMenuItem
-            // 
-            this.viewAppoinemnetToolStripMenuItem.Name = "viewAppoinemnetToolStripMenuItem";
-            this.viewAppoinemnetToolStripMenuItem.Size = new System.Drawing.Size(475, 58);
-            this.viewAppoinemnetToolStripMenuItem.Text = "View Appoinemnet";
-            // 
-            // editAppoinmentToolStripMenuItem
-            // 
-            this.editAppoinmentToolStripMenuItem.Name = "editAppoinmentToolStripMenuItem";
-            this.editAppoinmentToolStripMenuItem.Size = new System.Drawing.Size(475, 58);
-            this.editAppoinmentToolStripMenuItem.Text = "Edit Appoinment";
             // 
             // prescriptionToolStripMenuItem
             // 
@@ -277,9 +222,9 @@ namespace Diploma_Final_Project_1
             // 
             this.groupBox_finance.Controls.Add(this.pictureBox10);
             this.groupBox_finance.Controls.Add(this.btn_finance);
-            this.groupBox_finance.Location = new System.Drawing.Point(1656, 967);
+            this.groupBox_finance.Location = new System.Drawing.Point(1669, 739);
             this.groupBox_finance.Name = "groupBox_finance";
-            this.groupBox_finance.Size = new System.Drawing.Size(605, 370);
+            this.groupBox_finance.Size = new System.Drawing.Size(620, 372);
             this.groupBox_finance.TabIndex = 11;
             this.groupBox_finance.TabStop = false;
             // 
@@ -449,38 +394,6 @@ namespace Diploma_Final_Project_1
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Appoinments";
             // 
-            // btn_patients
-            // 
-            this.btn_patients.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.btn_patients.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_patients.ForeColor = System.Drawing.Color.White;
-            this.btn_patients.Location = new System.Drawing.Point(116, 239);
-            this.btn_patients.Name = "btn_patients";
-            this.btn_patients.Size = new System.Drawing.Size(321, 110);
-            this.btn_patients.TabIndex = 1;
-            this.btn_patients.Text = "Patients";
-            this.btn_patients.UseVisualStyleBackColor = false;
-            // 
-            // groupBox_Patients
-            // 
-            this.groupBox_Patients.Controls.Add(this.pictureBox5);
-            this.groupBox_Patients.Controls.Add(this.btn_patients);
-            this.groupBox_Patients.Location = new System.Drawing.Point(186, 516);
-            this.groupBox_Patients.Name = "groupBox_Patients";
-            this.groupBox_Patients.Size = new System.Drawing.Size(557, 371);
-            this.groupBox_Patients.TabIndex = 7;
-            this.groupBox_Patients.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::Diploma_Final_Project_1.Properties.Resources._4883268_200;
-            this.pictureBox5.Location = new System.Drawing.Point(141, 49);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(251, 142);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 2;
-            this.pictureBox5.TabStop = false;
-            // 
             // pictureBox7
             // 
             this.pictureBox7.Image = global::Diploma_Final_Project_1.Properties.Resources.medical_record_line_icon_patient_diagnosis_report_linear_pictogram_health_information_on_clipboard_outline_icon_hospital_note_diagnostic_document_editable_stroke_isolated_illustration_vector;
@@ -507,7 +420,7 @@ namespace Diploma_Final_Project_1
             // 
             this.groupBox_lab_test.Controls.Add(this.pictureBox7);
             this.groupBox_lab_test.Controls.Add(this.btn_LabTests);
-            this.groupBox_lab_test.Location = new System.Drawing.Point(1656, 515);
+            this.groupBox_lab_test.Location = new System.Drawing.Point(1669, 93);
             this.groupBox_lab_test.Name = "groupBox_lab_test";
             this.groupBox_lab_test.Size = new System.Drawing.Size(605, 351);
             this.groupBox_lab_test.TabIndex = 6;
@@ -518,7 +431,7 @@ namespace Diploma_Final_Project_1
             // 
             this.groupBox_prescription.Controls.Add(this.pictureBox8);
             this.groupBox_prescription.Controls.Add(this.btn_prescription);
-            this.groupBox_prescription.Location = new System.Drawing.Point(186, 967);
+            this.groupBox_prescription.Location = new System.Drawing.Point(200, 721);
             this.groupBox_prescription.Name = "groupBox_prescription";
             this.groupBox_prescription.Size = new System.Drawing.Size(543, 381);
             this.groupBox_prescription.TabIndex = 12;
@@ -547,47 +460,12 @@ namespace Diploma_Final_Project_1
             this.btn_prescription.Text = "Prescription";
             this.btn_prescription.UseVisualStyleBackColor = false;
             // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::Diploma_Final_Project_1.Properties.Resources._360_F_372435911_7Nq7sVzcNRRYFLQ1iZzQVgRLgXL5C839;
-            this.pictureBox9.Location = new System.Drawing.Point(159, 59);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(251, 142);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 3;
-            this.pictureBox9.TabStop = false;
-            // 
-            // btn_employee
-            // 
-            this.btn_employee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.btn_employee.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_employee.ForeColor = System.Drawing.Color.White;
-            this.btn_employee.Location = new System.Drawing.Point(139, 248);
-            this.btn_employee.Name = "btn_employee";
-            this.btn_employee.Size = new System.Drawing.Size(321, 110);
-            this.btn_employee.TabIndex = 1;
-            this.btn_employee.Text = "Employees";
-            this.btn_employee.UseVisualStyleBackColor = false;
-            // 
-            // groupBox_employee
-            // 
-            this.groupBox_employee.Controls.Add(this.pictureBox9);
-            this.groupBox_employee.Controls.Add(this.btn_employee);
-            this.groupBox_employee.Location = new System.Drawing.Point(905, 967);
-            this.groupBox_employee.Name = "groupBox_employee";
-            this.groupBox_employee.Size = new System.Drawing.Size(560, 370);
-            this.groupBox_employee.TabIndex = 13;
-            this.groupBox_employee.TabStop = false;
-            // 
             // groupBoxloc
             // 
             this.groupBoxloc.BackColor = System.Drawing.Color.White;
             this.groupBoxloc.Controls.Add(this.groupBox_finance);
             this.groupBoxloc.Controls.Add(this.groupBox_prescription);
-            this.groupBoxloc.Controls.Add(this.groupBox_employee);
             this.groupBoxloc.Controls.Add(this.groupBox_lab_test);
-            this.groupBoxloc.Controls.Add(this.groupBox_Patients);
-            this.groupBoxloc.Controls.Add(this.groupBox_Appoinments);
             this.groupBoxloc.Controls.Add(this.groupBox_doctor_session);
             this.groupBoxloc.Controls.Add(this.groupBox_UserProfile);
             this.groupBoxloc.Controls.Add(this.groupBox_Home);
@@ -597,43 +475,11 @@ namespace Diploma_Final_Project_1
             this.groupBoxloc.TabIndex = 13;
             this.groupBoxloc.TabStop = false;
             // 
-            // groupBox_Appoinments
-            // 
-            this.groupBox_Appoinments.Controls.Add(this.pictureBox4);
-            this.groupBox_Appoinments.Controls.Add(this.btn_appoinments);
-            this.groupBox_Appoinments.Location = new System.Drawing.Point(1656, 75);
-            this.groupBox_Appoinments.Name = "groupBox_Appoinments";
-            this.groupBox_Appoinments.Size = new System.Drawing.Size(605, 373);
-            this.groupBox_Appoinments.TabIndex = 8;
-            this.groupBox_Appoinments.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Diploma_Final_Project_1.Properties.Resources.images__2_;
-            this.pictureBox4.Location = new System.Drawing.Point(182, 49);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(251, 142);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
-            // 
-            // btn_appoinments
-            // 
-            this.btn_appoinments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.btn_appoinments.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_appoinments.ForeColor = System.Drawing.Color.White;
-            this.btn_appoinments.Location = new System.Drawing.Point(150, 241);
-            this.btn_appoinments.Name = "btn_appoinments";
-            this.btn_appoinments.Size = new System.Drawing.Size(321, 110);
-            this.btn_appoinments.TabIndex = 1;
-            this.btn_appoinments.Text = "Appoinments";
-            this.btn_appoinments.UseVisualStyleBackColor = false;
-            // 
             // groupBox_doctor_session
             // 
             this.groupBox_doctor_session.Controls.Add(this.pictureBox6);
             this.groupBox_doctor_session.Controls.Add(this.btn_doctor_session);
-            this.groupBox_doctor_session.Location = new System.Drawing.Point(905, 516);
+            this.groupBox_doctor_session.Location = new System.Drawing.Point(915, 721);
             this.groupBox_doctor_session.Name = "groupBox_doctor_session";
             this.groupBox_doctor_session.Size = new System.Drawing.Size(560, 371);
             this.groupBox_doctor_session.TabIndex = 9;
@@ -740,23 +586,18 @@ namespace Diploma_Final_Project_1
             this.Name = "Lab_Home";
             this.Text = "Lab_Home";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Lab_Home_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox_finance.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
-            this.groupBox_Patients.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.groupBox_lab_test.ResumeLayout(false);
             this.groupBox_prescription.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            this.groupBox_employee.ResumeLayout(false);
             this.groupBoxloc.ResumeLayout(false);
-            this.groupBox_Appoinments.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.groupBox_doctor_session.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.groupBox_UserProfile.ResumeLayout(false);
@@ -773,11 +614,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem patientsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem appoinmentToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addAppoinmentToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewAppoinemnetToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editAppoinmentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem doctorSessionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem view_doctor_sessionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem add_doctor_sessionToolStripMenuItem;
@@ -804,22 +640,13 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Button btn_patients;
-        private System.Windows.Forms.GroupBox groupBox_Patients;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Button btn_LabTests;
         private System.Windows.Forms.GroupBox groupBox_lab_test;
         private System.Windows.Forms.GroupBox groupBox_prescription;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Button btn_prescription;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.Button btn_employee;
-        private System.Windows.Forms.GroupBox groupBox_employee;
         private System.Windows.Forms.GroupBox groupBoxloc;
-        private System.Windows.Forms.GroupBox groupBox_Appoinments;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button btn_appoinments;
         private System.Windows.Forms.GroupBox groupBox_doctor_session;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Button btn_doctor_session;
