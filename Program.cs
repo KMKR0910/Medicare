@@ -17,7 +17,7 @@ namespace Diploma_Final_Project_1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             
-            Application.Run(new Pha_View_Drug_inventory ());
+            Application.Run(new Med_Patient_Register ());
         }
     }
 }
