@@ -85,7 +85,7 @@ namespace Diploma_Final_Project_1
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(216, 90);
             this.btn_cancel.TabIndex = 121;
-            this.btn_cancel.Text = "Cancel";
+            this.btn_cancel.Text = "Clear";
             this.btn_cancel.UseVisualStyleBackColor = true;
             // 
             // btn_delete
@@ -107,6 +107,7 @@ namespace Diploma_Final_Project_1
             this.btn_save.TabIndex = 119;
             this.btn_save.Text = "Save";
             this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // dateTimePicker3
             // 

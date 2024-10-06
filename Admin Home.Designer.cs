@@ -32,8 +32,12 @@ namespace Diploma_Final_Project_1
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_Home));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.UserRegisterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.userRegistrationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.patientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sytemMainatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.appoinmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,7 +63,6 @@ namespace Diploma_Final_Project_1
             this.linkLabel_backup = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox_Main.SuspendLayout();
             this.groupBox_Users.SuspendLayout();
@@ -98,10 +101,24 @@ namespace Diploma_Final_Project_1
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.logoutToolStripMenuItem});
+            this.logoutToolStripMenuItem,
+            this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(97, 54);
             this.fileToolStripMenuItem.Text = "File";
+            // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(280, 58);
+            this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(280, 58);
+            this.exitToolStripMenuItem.Text = "Exit";
             // 
             // homeToolStripMenuItem
             // 
@@ -112,10 +129,27 @@ namespace Diploma_Final_Project_1
             // 
             // UserRegisterToolStripMenuItem
             // 
+            this.UserRegisterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.userRegistrationToolStripMenuItem,
+            this.manageUsersToolStripMenuItem});
             this.UserRegisterToolStripMenuItem.Name = "UserRegisterToolStripMenuItem";
-            this.UserRegisterToolStripMenuItem.Size = new System.Drawing.Size(322, 54);
-            this.UserRegisterToolStripMenuItem.Text = "User Registration";
+            this.UserRegisterToolStripMenuItem.Size = new System.Drawing.Size(131, 54);
+            this.UserRegisterToolStripMenuItem.Text = "Users";
             this.UserRegisterToolStripMenuItem.Click += new System.EventHandler(this.UserRegisterToolStripMenuItem_Click);
+            // 
+            // userRegistrationToolStripMenuItem
+            // 
+            this.userRegistrationToolStripMenuItem.Name = "userRegistrationToolStripMenuItem";
+            this.userRegistrationToolStripMenuItem.Size = new System.Drawing.Size(443, 58);
+            this.userRegistrationToolStripMenuItem.Text = "User Registration";
+            this.userRegistrationToolStripMenuItem.Click += new System.EventHandler(this.userRegistrationToolStripMenuItem_Click);
+            // 
+            // manageUsersToolStripMenuItem
+            // 
+            this.manageUsersToolStripMenuItem.Name = "manageUsersToolStripMenuItem";
+            this.manageUsersToolStripMenuItem.Size = new System.Drawing.Size(443, 58);
+            this.manageUsersToolStripMenuItem.Text = "Manage Users";
+            this.manageUsersToolStripMenuItem.Click += new System.EventHandler(this.manageUsersToolStripMenuItem_Click);
             // 
             // patientsToolStripMenuItem
             // 
@@ -366,13 +400,6 @@ namespace Diploma_Final_Project_1
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Add Users";
             // 
-            // logoutToolStripMenuItem
-            // 
-            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(359, 58);
-            this.logoutToolStripMenuItem.Text = "Logout";
-            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
-            // 
             // Admin_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -436,5 +463,8 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Button btn_employee;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem userRegistrationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manageUsersToolStripMenuItem;
     }
 }

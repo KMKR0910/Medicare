@@ -289,22 +289,22 @@ namespace Diploma_Final_Project_1
 
                     if (userType == "Medical Centre Assistant")
                     {
-                        sql = "SELECT [Address] FROM  [tbl_Medical_Centre_Assistant] WHERE [Med_Assistant_ID] = @userid";
+                        sql = "SELECT [Address],[Qualifications]  FROM  [tbl_Medical_Centre_Assistant] WHERE [Med_Assistant_ID] = @userid";
                     }
 
                     if (userType == "Pharmacists")
                     {
-                        sql = "SELECT [Address] FROM [tbl_Pharamacists] WHERE [Pharamacists_ID] = @userid";
+                        sql = "SELECT [Address] ,[Qualifications] FROM [tbl_Pharamacists] WHERE [Pharamacists_ID] = @userid";
                     }
 
                     if (userType == "Laboratory Assistant")
                     {
-                        sql = "SELECT [Address] FROM  [tbl_Lab_Assistant] WHERE [Lab-Assistant_ID] = @userid";
+                        sql = "SELECT [Address] ,[Qualifications] FROM  [tbl_Lab_Assistant] WHERE [Lab-Assistant_ID] = @userid";
                     }
 
                     if (userType == "Admin")
                     {
-                        sql = "SELECT [Address] FROM [tbl_Admin] WHERE [Admin_ID] = @userid";
+                        sql = "SELECT [Address] ,[Qualifications] FROM [tbl_Admin] WHERE [Admin_ID] = @userid";
                     }
                     SqlCommand com = new SqlCommand(sql, con);
 
@@ -346,7 +346,7 @@ namespace Diploma_Final_Project_1
                     txt_email.Text = cellValue3;
                     txt_contact.Text = cellValue4;
 
-                    dateTimePicker_DOB.Text = cellValue5;
+                    dateTimePicker_DOB.Value = DateTime.Parse(cellValue5);
 
                 }
             }

@@ -32,12 +32,17 @@ namespace Diploma_Final_Project_1
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Doctor_Home));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.patientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.appoinmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.diagnosisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.prescriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.financeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.drugInventoryReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewDrugInventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewDrugInventoryReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
@@ -81,6 +86,49 @@ namespace Diploma_Final_Project_1
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_home = new System.Windows.Forms.Button();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.groupBox_finance = new System.Windows.Forms.GroupBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox_inventrory = new System.Windows.Forms.GroupBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.groupBox_employee = new System.Windows.Forms.GroupBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.groupBox_Diagnose = new System.Windows.Forms.GroupBox();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.groupBox_Patients = new System.Windows.Forms.GroupBox();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.groupBox_Appoinments = new System.Windows.Forms.GroupBox();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.groupBox_UserProfile = new System.Windows.Forms.GroupBox();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.button8 = new System.Windows.Forms.Button();
+            this.groupBox_Home = new System.Windows.Forms.GroupBox();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.button9 = new System.Windows.Forms.Button();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.linkLabel12 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel13 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel14 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel15 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel16 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel17 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel18 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel19 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel20 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel21 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel22 = new System.Windows.Forms.LinkLabel();
             this.menuStrip1.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBoxloc.SuspendLayout();
@@ -102,6 +150,26 @@ namespace Diploma_Final_Project_1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox5.SuspendLayout();
+            this.groupBox_finance.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.groupBox_inventrory.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            this.groupBox_employee.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            this.groupBox_Diagnose.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            this.groupBox_Patients.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            this.groupBox_Appoinments.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            this.groupBox11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            this.groupBox_UserProfile.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            this.groupBox_Home.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            this.groupBox12.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -111,18 +179,35 @@ namespace Diploma_Final_Project_1
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
             this.homeToolStripMenuItem,
             this.employeeToolStripMenuItem,
             this.patientsToolStripMenuItem,
             this.appoinmentToolStripMenuItem,
             this.diagnosisToolStripMenuItem,
-            this.prescriptionToolStripMenuItem});
+            this.financeToolStripMenuItem,
+            this.drugInventoryReportToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(1, 4, 0, 4);
             this.menuStrip1.Size = new System.Drawing.Size(2883, 62);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.logoutToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(97, 54);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(280, 58);
+            this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // homeToolStripMenuItem
             // 
@@ -158,11 +243,33 @@ namespace Diploma_Final_Project_1
             this.diagnosisToolStripMenuItem.Size = new System.Drawing.Size(202, 54);
             this.diagnosisToolStripMenuItem.Text = "Diagnosis";
             // 
-            // prescriptionToolStripMenuItem
+            // financeToolStripMenuItem
             // 
-            this.prescriptionToolStripMenuItem.Name = "prescriptionToolStripMenuItem";
-            this.prescriptionToolStripMenuItem.Size = new System.Drawing.Size(237, 54);
-            this.prescriptionToolStripMenuItem.Text = "Prescription";
+            this.financeToolStripMenuItem.Name = "financeToolStripMenuItem";
+            this.financeToolStripMenuItem.Size = new System.Drawing.Size(166, 54);
+            this.financeToolStripMenuItem.Text = "Finance";
+            // 
+            // drugInventoryReportToolStripMenuItem
+            // 
+            this.drugInventoryReportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewDrugInventoryToolStripMenuItem,
+            this.viewDrugInventoryReportToolStripMenuItem});
+            this.drugInventoryReportToolStripMenuItem.Name = "drugInventoryReportToolStripMenuItem";
+            this.drugInventoryReportToolStripMenuItem.Size = new System.Drawing.Size(299, 54);
+            this.drugInventoryReportToolStripMenuItem.Text = "Drug Inventory ";
+            this.drugInventoryReportToolStripMenuItem.Click += new System.EventHandler(this.drugInventoryReportToolStripMenuItem_Click);
+            // 
+            // viewDrugInventoryToolStripMenuItem
+            // 
+            this.viewDrugInventoryToolStripMenuItem.Name = "viewDrugInventoryToolStripMenuItem";
+            this.viewDrugInventoryToolStripMenuItem.Size = new System.Drawing.Size(618, 58);
+            this.viewDrugInventoryToolStripMenuItem.Text = "View Drug Inventory";
+            // 
+            // viewDrugInventoryReportToolStripMenuItem
+            // 
+            this.viewDrugInventoryReportToolStripMenuItem.Name = "viewDrugInventoryReportToolStripMenuItem";
+            this.viewDrugInventoryReportToolStripMenuItem.Size = new System.Drawing.Size(618, 58);
+            this.viewDrugInventoryReportToolStripMenuItem.Text = "View Drug Inventory Report";
             // 
             // linkLabel1
             // 
@@ -386,6 +493,7 @@ namespace Diploma_Final_Project_1
             this.groupBox8.Size = new System.Drawing.Size(543, 381);
             this.groupBox8.TabIndex = 12;
             this.groupBox8.TabStop = false;
+            this.groupBox8.Enter += new System.EventHandler(this.groupBox8_Enter);
             // 
             // pictureBox8
             // 
@@ -406,7 +514,7 @@ namespace Diploma_Final_Project_1
             this.btn_drugInventory.Name = "btn_drugInventory";
             this.btn_drugInventory.Size = new System.Drawing.Size(321, 110);
             this.btn_drugInventory.TabIndex = 1;
-            this.btn_drugInventory.Text = "Drug Inventory";
+            this.btn_drugInventory.Text = "Drug Inventory ";
             this.btn_drugInventory.UseVisualStyleBackColor = false;
             // 
             // groupBox9
@@ -644,6 +752,480 @@ namespace Diploma_Final_Project_1
             this.btn_home.Text = "Home";
             this.btn_home.UseVisualStyleBackColor = false;
             // 
+            // groupBox5
+            // 
+            this.groupBox5.BackColor = System.Drawing.Color.White;
+            this.groupBox5.Controls.Add(this.groupBox_finance);
+            this.groupBox5.Controls.Add(this.groupBox_inventrory);
+            this.groupBox5.Controls.Add(this.groupBox_employee);
+            this.groupBox5.Controls.Add(this.groupBox_Diagnose);
+            this.groupBox5.Controls.Add(this.groupBox_Patients);
+            this.groupBox5.Controls.Add(this.groupBox_Appoinments);
+            this.groupBox5.Controls.Add(this.groupBox11);
+            this.groupBox5.Controls.Add(this.groupBox_UserProfile);
+            this.groupBox5.Controls.Add(this.groupBox_Home);
+            this.groupBox5.Location = new System.Drawing.Point(0, 76);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(2427, 1449);
+            this.groupBox5.TabIndex = 11;
+            this.groupBox5.TabStop = false;
+            // 
+            // groupBox_finance
+            // 
+            this.groupBox_finance.Controls.Add(this.pictureBox3);
+            this.groupBox_finance.Controls.Add(this.button1);
+            this.groupBox_finance.Location = new System.Drawing.Point(1656, 967);
+            this.groupBox_finance.Name = "groupBox_finance";
+            this.groupBox_finance.Size = new System.Drawing.Size(605, 370);
+            this.groupBox_finance.TabIndex = 11;
+            this.groupBox_finance.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Diploma_Final_Project_1.Properties.Resources.images__4_;
+            this.pictureBox3.Location = new System.Drawing.Point(182, 59);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(251, 142);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(162, 238);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(321, 110);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Finance";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // groupBox_inventrory
+            // 
+            this.groupBox_inventrory.Controls.Add(this.pictureBox11);
+            this.groupBox_inventrory.Controls.Add(this.button2);
+            this.groupBox_inventrory.Location = new System.Drawing.Point(186, 967);
+            this.groupBox_inventrory.Name = "groupBox_inventrory";
+            this.groupBox_inventrory.Size = new System.Drawing.Size(543, 381);
+            this.groupBox_inventrory.TabIndex = 12;
+            this.groupBox_inventrory.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = global::Diploma_Final_Project_1.Properties.Resources.medical_record_line_icon_patient_diagnosis_report_linear_pictogram_health_information_on_clipboard_outline_icon_hospital_note_diagnostic_document_editable_stroke_isolated_illustration_vector1;
+            this.pictureBox11.Location = new System.Drawing.Point(141, 44);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(251, 142);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 3;
+            this.pictureBox11.TabStop = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(116, 248);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(321, 110);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Drug Inventory";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // groupBox_employee
+            // 
+            this.groupBox_employee.Controls.Add(this.pictureBox12);
+            this.groupBox_employee.Controls.Add(this.button3);
+            this.groupBox_employee.Location = new System.Drawing.Point(905, 967);
+            this.groupBox_employee.Name = "groupBox_employee";
+            this.groupBox_employee.Size = new System.Drawing.Size(560, 370);
+            this.groupBox_employee.TabIndex = 13;
+            this.groupBox_employee.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = global::Diploma_Final_Project_1.Properties.Resources._360_F_372435911_7Nq7sVzcNRRYFLQ1iZzQVgRLgXL5C839;
+            this.pictureBox12.Location = new System.Drawing.Point(159, 59);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(251, 142);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 3;
+            this.pictureBox12.TabStop = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(139, 248);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(321, 110);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Employees";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // groupBox_Diagnose
+            // 
+            this.groupBox_Diagnose.Controls.Add(this.pictureBox13);
+            this.groupBox_Diagnose.Controls.Add(this.button4);
+            this.groupBox_Diagnose.Location = new System.Drawing.Point(1656, 515);
+            this.groupBox_Diagnose.Name = "groupBox_Diagnose";
+            this.groupBox_Diagnose.Size = new System.Drawing.Size(605, 351);
+            this.groupBox_Diagnose.TabIndex = 6;
+            this.groupBox_Diagnose.TabStop = false;
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Image = global::Diploma_Final_Project_1.Properties.Resources.medical_record_line_icon_patient_diagnosis_report_linear_pictogram_health_information_on_clipboard_outline_icon_hospital_note_diagnostic_document_editable_stroke_isolated_illustration_vector;
+            this.pictureBox13.Location = new System.Drawing.Point(182, 50);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(251, 142);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox13.TabIndex = 3;
+            this.pictureBox13.TabStop = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(150, 239);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(321, 110);
+            this.button4.TabIndex = 1;
+            this.button4.Text = "Diagnosis Data";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // groupBox_Patients
+            // 
+            this.groupBox_Patients.Controls.Add(this.pictureBox14);
+            this.groupBox_Patients.Controls.Add(this.button5);
+            this.groupBox_Patients.Location = new System.Drawing.Point(186, 516);
+            this.groupBox_Patients.Name = "groupBox_Patients";
+            this.groupBox_Patients.Size = new System.Drawing.Size(557, 371);
+            this.groupBox_Patients.TabIndex = 7;
+            this.groupBox_Patients.TabStop = false;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.Image = global::Diploma_Final_Project_1.Properties.Resources._4883268_200;
+            this.pictureBox14.Location = new System.Drawing.Point(141, 49);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(251, 142);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox14.TabIndex = 2;
+            this.pictureBox14.TabStop = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(116, 239);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(321, 110);
+            this.button5.TabIndex = 1;
+            this.button5.Text = "Patients";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // groupBox_Appoinments
+            // 
+            this.groupBox_Appoinments.Controls.Add(this.pictureBox15);
+            this.groupBox_Appoinments.Controls.Add(this.button6);
+            this.groupBox_Appoinments.Location = new System.Drawing.Point(1656, 75);
+            this.groupBox_Appoinments.Name = "groupBox_Appoinments";
+            this.groupBox_Appoinments.Size = new System.Drawing.Size(605, 373);
+            this.groupBox_Appoinments.TabIndex = 8;
+            this.groupBox_Appoinments.TabStop = false;
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.Image = global::Diploma_Final_Project_1.Properties.Resources.images__2_;
+            this.pictureBox15.Location = new System.Drawing.Point(182, 49);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(251, 142);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox15.TabIndex = 3;
+            this.pictureBox15.TabStop = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.button6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(150, 241);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(321, 110);
+            this.button6.TabIndex = 1;
+            this.button6.Text = "Appoinments";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.pictureBox16);
+            this.groupBox11.Controls.Add(this.button7);
+            this.groupBox11.Location = new System.Drawing.Point(905, 516);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(560, 371);
+            this.groupBox11.TabIndex = 9;
+            this.groupBox11.TabStop = false;
+            // 
+            // pictureBox16
+            // 
+            this.pictureBox16.Image = global::Diploma_Final_Project_1.Properties.Resources.images__3_;
+            this.pictureBox16.Location = new System.Drawing.Point(159, 49);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(251, 142);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox16.TabIndex = 2;
+            this.pictureBox16.TabStop = false;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.button7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Location = new System.Drawing.Point(139, 238);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(321, 110);
+            this.button7.TabIndex = 1;
+            this.button7.Text = "Doctor Sessions";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // groupBox_UserProfile
+            // 
+            this.groupBox_UserProfile.Controls.Add(this.pictureBox17);
+            this.groupBox_UserProfile.Controls.Add(this.button8);
+            this.groupBox_UserProfile.Location = new System.Drawing.Point(905, 75);
+            this.groupBox_UserProfile.Name = "groupBox_UserProfile";
+            this.groupBox_UserProfile.Size = new System.Drawing.Size(560, 369);
+            this.groupBox_UserProfile.TabIndex = 10;
+            this.groupBox_UserProfile.TabStop = false;
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.Image = global::Diploma_Final_Project_1.Properties.Resources._3682281;
+            this.pictureBox17.Location = new System.Drawing.Point(139, 37);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(321, 190);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox17.TabIndex = 2;
+            this.pictureBox17.TabStop = false;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.button8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Location = new System.Drawing.Point(139, 241);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(321, 110);
+            this.button8.TabIndex = 1;
+            this.button8.Text = "User Profile";
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // groupBox_Home
+            // 
+            this.groupBox_Home.Controls.Add(this.pictureBox18);
+            this.groupBox_Home.Controls.Add(this.button9);
+            this.groupBox_Home.ForeColor = System.Drawing.Color.Transparent;
+            this.groupBox_Home.Location = new System.Drawing.Point(186, 69);
+            this.groupBox_Home.Name = "groupBox_Home";
+            this.groupBox_Home.Size = new System.Drawing.Size(557, 375);
+            this.groupBox_Home.TabIndex = 5;
+            this.groupBox_Home.TabStop = false;
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
+            this.pictureBox18.Location = new System.Drawing.Point(116, 36);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(321, 193);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox18.TabIndex = 1;
+            this.pictureBox18.TabStop = false;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.White;
+            this.button9.Location = new System.Drawing.Point(116, 247);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(321, 110);
+            this.button9.TabIndex = 0;
+            this.button9.Text = "Home";
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.BackColor = System.Drawing.Color.White;
+            this.groupBox12.Controls.Add(this.label4);
+            this.groupBox12.Controls.Add(this.label5);
+            this.groupBox12.Controls.Add(this.label6);
+            this.groupBox12.Controls.Add(this.linkLabel12);
+            this.groupBox12.Controls.Add(this.linkLabel13);
+            this.groupBox12.Controls.Add(this.linkLabel14);
+            this.groupBox12.Controls.Add(this.linkLabel15);
+            this.groupBox12.Controls.Add(this.linkLabel16);
+            this.groupBox12.Controls.Add(this.linkLabel17);
+            this.groupBox12.Controls.Add(this.linkLabel18);
+            this.groupBox12.Controls.Add(this.linkLabel19);
+            this.groupBox12.Controls.Add(this.linkLabel20);
+            this.groupBox12.Controls.Add(this.linkLabel21);
+            this.groupBox12.Controls.Add(this.linkLabel22);
+            this.groupBox12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox12.Location = new System.Drawing.Point(2448, 76);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(423, 1449);
+            this.groupBox12.TabIndex = 12;
+            this.groupBox12.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(134, 897);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(254, 45);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Account Details";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(134, 510);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(236, 45);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Patient Details";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(154, 20);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(190, 45);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Quick Links";
+            // 
+            // linkLabel12
+            // 
+            this.linkLabel12.AutoSize = true;
+            this.linkLabel12.Location = new System.Drawing.Point(38, 1246);
+            this.linkLabel12.Name = "linkLabel12";
+            this.linkLabel12.Size = new System.Drawing.Size(324, 45);
+            this.linkLabel12.TabIndex = 10;
+            this.linkLabel12.TabStop = true;
+            this.linkLabel12.Text = "Due Pay tax Reports";
+            // 
+            // linkLabel13
+            // 
+            this.linkLabel13.AutoSize = true;
+            this.linkLabel13.Location = new System.Drawing.Point(37, 1076);
+            this.linkLabel13.Name = "linkLabel13";
+            this.linkLabel13.Size = new System.Drawing.Size(278, 45);
+            this.linkLabel13.TabIndex = 9;
+            this.linkLabel13.TabStop = true;
+            this.linkLabel13.Text = "Patient Payments";
+            // 
+            // linkLabel14
+            // 
+            this.linkLabel14.AutoSize = true;
+            this.linkLabel14.Location = new System.Drawing.Point(38, 1166);
+            this.linkLabel14.Name = "linkLabel14";
+            this.linkLabel14.Size = new System.Drawing.Size(256, 45);
+            this.linkLabel14.TabIndex = 8;
+            this.linkLabel14.TabStop = true;
+            this.linkLabel14.Text = "Income Reports";
+            // 
+            // linkLabel15
+            // 
+            this.linkLabel15.AutoSize = true;
+            this.linkLabel15.Location = new System.Drawing.Point(37, 987);
+            this.linkLabel15.Name = "linkLabel15";
+            this.linkLabel15.Size = new System.Drawing.Size(249, 45);
+            this.linkLabel15.TabIndex = 7;
+            this.linkLabel15.TabStop = true;
+            this.linkLabel15.Text = "Drug Payments";
+            // 
+            // linkLabel16
+            // 
+            this.linkLabel16.AutoSize = true;
+            this.linkLabel16.Location = new System.Drawing.Point(37, 677);
+            this.linkLabel16.Name = "linkLabel16";
+            this.linkLabel16.Size = new System.Drawing.Size(199, 45);
+            this.linkLabel16.TabIndex = 6;
+            this.linkLabel16.TabStop = true;
+            this.linkLabel16.Text = "Patients List";
+            // 
+            // linkLabel17
+            // 
+            this.linkLabel17.AutoSize = true;
+            this.linkLabel17.Location = new System.Drawing.Point(32, 600);
+            this.linkLabel17.Name = "linkLabel17";
+            this.linkLabel17.Size = new System.Drawing.Size(328, 45);
+            this.linkLabel17.TabIndex = 5;
+            this.linkLabel17.TabStop = true;
+            this.linkLabel17.Text = "Patients Information";
+            // 
+            // linkLabel18
+            // 
+            this.linkLabel18.AutoSize = true;
+            this.linkLabel18.Location = new System.Drawing.Point(32, 390);
+            this.linkLabel18.Name = "linkLabel18";
+            this.linkLabel18.Size = new System.Drawing.Size(312, 45);
+            this.linkLabel18.TabIndex = 4;
+            this.linkLabel18.TabStop = true;
+            this.linkLabel18.Text = "Edit Diagnosis Data";
+            // 
+            // linkLabel19
+            // 
+            this.linkLabel19.AutoSize = true;
+            this.linkLabel19.Location = new System.Drawing.Point(31, 310);
+            this.linkLabel19.Name = "linkLabel19";
+            this.linkLabel19.Size = new System.Drawing.Size(339, 45);
+            this.linkLabel19.TabIndex = 3;
+            this.linkLabel19.TabStop = true;
+            this.linkLabel19.Text = "New Diaganosis Data";
+            // 
+            // linkLabel20
+            // 
+            this.linkLabel20.AutoSize = true;
+            this.linkLabel20.Location = new System.Drawing.Point(31, 228);
+            this.linkLabel20.Name = "linkLabel20";
+            this.linkLabel20.Size = new System.Drawing.Size(392, 45);
+            this.linkLabel20.TabIndex = 2;
+            this.linkLabel20.TabStop = true;
+            this.linkLabel20.Text = "New Medical Certificates";
+            // 
+            // linkLabel21
+            // 
+            this.linkLabel21.AutoSize = true;
+            this.linkLabel21.Location = new System.Drawing.Point(31, 154);
+            this.linkLabel21.Name = "linkLabel21";
+            this.linkLabel21.Size = new System.Drawing.Size(321, 45);
+            this.linkLabel21.TabIndex = 1;
+            this.linkLabel21.TabStop = true;
+            this.linkLabel21.Text = "New Doctor Session";
+            // 
+            // linkLabel22
+            // 
+            this.linkLabel22.AutoSize = true;
+            this.linkLabel22.Location = new System.Drawing.Point(31, 85);
+            this.linkLabel22.Name = "linkLabel22";
+            this.linkLabel22.Size = new System.Drawing.Size(222, 45);
+            this.linkLabel22.TabIndex = 0;
+            this.linkLabel22.TabStop = true;
+            this.linkLabel22.Text = "Appoinments";
+            // 
             // Doctor_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -651,8 +1233,8 @@ namespace Diploma_Final_Project_1
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(2883, 1512);
-            this.Controls.Add(this.groupBoxloc);
-            this.Controls.Add(this.groupBox10);
+            this.Controls.Add(this.groupBox12);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Doctor_Home";
@@ -682,6 +1264,27 @@ namespace Diploma_Final_Project_1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox_finance.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.groupBox_inventrory.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            this.groupBox_employee.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            this.groupBox_Diagnose.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            this.groupBox_Patients.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            this.groupBox_Appoinments.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            this.groupBox11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            this.groupBox_UserProfile.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            this.groupBox_Home.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -695,7 +1298,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.ToolStripMenuItem patientsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem appoinmentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem diagnosisToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem prescriptionToolStripMenuItem;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel3;
@@ -713,31 +1315,80 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.GroupBox groupBoxloc;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Button btn_finance;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Button btn_drugInventory;
         private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Button btn_employee;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Button btn_diaganosisData;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button btn_patients;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button btn_appoinments;
         private System.Windows.Forms.GroupBox groupBox_doctor_session;
-        private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Button btn_doctor_session;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btn_userProfile;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btn_home;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem financeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem drugInventoryReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewDrugInventoryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewDrugInventoryReportToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox groupBox_finance;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox_inventrory;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.GroupBox groupBox_employee;
+        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.GroupBox groupBox_Diagnose;
+        private System.Windows.Forms.PictureBox pictureBox13;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.GroupBox groupBox_Patients;
+        private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.GroupBox groupBox_Appoinments;
+        private System.Windows.Forms.PictureBox pictureBox15;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.PictureBox pictureBox16;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.GroupBox groupBox_UserProfile;
+        private System.Windows.Forms.PictureBox pictureBox17;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.GroupBox groupBox_Home;
+        private System.Windows.Forms.PictureBox pictureBox18;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.LinkLabel linkLabel12;
+        private System.Windows.Forms.LinkLabel linkLabel13;
+        private System.Windows.Forms.LinkLabel linkLabel14;
+        private System.Windows.Forms.LinkLabel linkLabel15;
+        private System.Windows.Forms.LinkLabel linkLabel16;
+        private System.Windows.Forms.LinkLabel linkLabel17;
+        private System.Windows.Forms.LinkLabel linkLabel18;
+        private System.Windows.Forms.LinkLabel linkLabel19;
+        private System.Windows.Forms.LinkLabel linkLabel20;
+        private System.Windows.Forms.LinkLabel linkLabel21;
+        private System.Windows.Forms.LinkLabel linkLabel22;
     }
 }

@@ -21,7 +21,7 @@ namespace Diploma_Final_Project_1
             btn_delete.BackColor = customC;
             btn_save.BackColor = customC;
         }
-
+        string date;
         private void Med_View_Doctor_Visits_Load(object sender, EventArgs e)
         {
             string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
@@ -83,8 +83,8 @@ namespace Diploma_Final_Project_1
                 string sql = @"
            SELECT 
         [SessionDate],
-          MIN([StartTime]) AS StartTime,
-        MAX([EndTime]) AS EndTime   
+          [StartTime] ,
+        [EndTime]  
          FROM [DoctorSessions]
          WHERE [SessionDate] = @date";
                 ;
@@ -117,12 +117,50 @@ namespace Diploma_Final_Project_1
                 DataGridViewRow row = dataGridView_visits.Rows[e.RowIndex];
 
                 // Assuming you want the data from the first column (index 0)
-                string cellValue = row.Cells[4].Value.ToString();
+                date = row.Cells[0].Value.ToString();
+                string cellValue = row.Cells[1].Value.ToString();
                 string cellValue2 = row.Cells[2].Value.ToString();
 
                 // Set the value to the TextBox
                 dateTimePicker2.Text = cellValue;
                 dateTimePicker3.Text = cellValue2;
+            }
+        }
+
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
+
+            try
+            {
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+
+
+                string query = "UPDATE [DoctorSessions] SET [StartTime]=@starttime,[EndTime] =@endtime WHERE [SessionDate]=@date ([Test_Type], [Rep_status],[Test_Price],[Patient_ID],[Lab_test_number]) " +
+                               "VALUES (@type, @status, @Price, @patientID,@number)";
+                SqlCommand cmd = new SqlCommand(query, con);
+
+                cmd.Parameters.AddWithValue("@starttime", dateTimePicker2.Text);
+                cmd.Parameters.AddWithValue("@endtime", dateTimePicker3.Text);
+                cmd.Parameters.AddWithValue("@date", date);
+             
+
+
+                int ret = cmd.ExecuteNonQuery();
+                if (ret > 0)
+                {
+                    MessageBox.Show("Added successfully");
+                   
+
+                }
+
+                con.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

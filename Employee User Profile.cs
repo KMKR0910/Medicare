@@ -87,55 +87,7 @@ namespace Diploma_Final_Project_1
                 userType = "Admin";
             }
         }
-        private void ResetPassword()
-        {
-            try
-            {
-                string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
-                // save user details
-                SqlConnection con1 = new SqlConnection(cs);
-                con1.Open();
-
-
-
-                string sql = "UPDATE  tbl_Internal_User SET [User Password]=@userpwd WHERE  [User ID]=@userid";
-                SqlCommand com = new SqlCommand(sql, con1);
-
-
-                com.Parameters.AddWithValue("@userid", this.txt_userID.Text);
-                com.Parameters.AddWithValue("@userpwd", this.txt_pwd1.Text);
-                com.Parameters.AddWithValue("@userpwd2", this.txt_pwd2.Text);
-
-                if (this.txt_pwd1.Text == this.txt_pwd2.Text)
-                {
-
-                    int ret1 = com.ExecuteNonQuery();
-                    if (ret1 == 1)
-                    {
-                        MessageBox.Show("Retrive Password successfully.", "Information");
-
-
-
-                    }
-
-
-
-                }
-                else
-                {
-                    MessageBox.Show("Passwords does not match.", "Information");
-
-                    this.txt_pwd1.Clear();
-                    this.txt_pwd2.Clear();
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-        }
+        
 
         private void Employee_User_Profile_Load(object sender, EventArgs e)
         {
@@ -147,11 +99,19 @@ namespace Diploma_Final_Project_1
         {
             EnableFields();
         }
+        
 
         private void btn_save_Click(object sender, EventArgs e)
         {
+            
             try
             {
+                string v1 = txt_address_HNO.Text;
+                string v2 = txt_address_StreetName.Text;
+                string v3 = txt_address_city.Text;
+
+                string address = v1 + " , " + v2 + " , " + v3;
+                string sql = ""; 
                 /*
 
                 string email = this.txt_email.Text;
@@ -178,14 +138,49 @@ namespace Diploma_Final_Project_1
                 // save user details
                 SqlConnection con1 = new SqlConnection(cs);
                 con1.Open();
+                GetUserType();
+
+                if (userType == "Doctor")
+                {
+                    sql = "UPDATE [tbl_doctor] SET  [First Name]=@Fname, [Last Name]=@Lname, Address=@address, DOB=@DOB, " +
+         "[Email Address]=@email, Qualifications=@qualification, ContactNumber=@number WHERE [Doctor ID]=@userid";
+
+
+                }
+
+                if (userType == "Medical Centre Assistant")
+                {
+                    sql = "UPDATE [tbl_Medical_Centre_Assistant] SET [First Name]=@Fname, [Last Name]=@Lname, [Address]=@address, DOB=@DOB, " +
+        "[Email Address]=@email, Qualifications=@qualification, ContactNumber=@number WHERE [Med_Assistant_ID]=@userid";
+
+
+                }
+
+                if (userType == "Pharamacists")
+                {
+                    sql = "UPDATE tbl_Pharamacists SET [First Name]=@Fname, [Last Name]=@Lname, [Address]=@address, DOB=@DOB, " +
+        "[Email Address]=@email, Qualifications=@qualification, ContactNumber=@number WHERE Pharamacists_ID=@userid";
+
+
+                }
+
+                if (userType == "Laboratary Assistant")
+                {
+                    sql = "UPDATE [tbl_Lab_Assistant] SET [First Name]=@Fname, [Last Name]=@Lname, [Address]=@address, DOB=@DOB, " +
+       "[Email Address]=@email,  Qualifications=@qualification, ContactNumber=@number WHERE [Lab-Assistant_ID]=@userid";
+
+
+                }
+                if (userType == "Admin")
+                {
+                    sql = "UPDATE [tbl_Admin] SET [First Name]=@Fname, [Last Name]=@Lname, [Address]=@address, DOB=@DOB, " +
+      "[Email Address]=@email, Qualifications=@qualification, ContactNumber=@number WHERE [Admin_ID]=@userid";
+
+
+                }
 
 
 
-                string sql = "UPDATE  tbl_Internal_User SET [First Name]=@Fname,[Last Name]=@Lname WHERE  [User ID]=@userid";
-
-                /*
-                string sql = "UPDATE  tbl_Internal_User SET ([User ID],[User Password],[First Name],[Last Name],Postion,[House No],[Street Name],City,DOB,[Email Address],Salary,Qualifications)" +
-                        "VALUES (@userid,@userpwd,@Fname,@Lname,@postion,@houseNO,@streetName,@city,@DOB,@email,@salary,@qualification)";*/
                 SqlCommand com = new SqlCommand(sql, con1);
 
                 com.Parameters.AddWithValue("@userid", this.txt_userID.Text);
@@ -193,25 +188,16 @@ namespace Diploma_Final_Project_1
                 com.Parameters.AddWithValue("@Fname", this.txt_F_name.Text);
                 com.Parameters.AddWithValue("@Lname", this.txt_L_Name.Text);
 
-                /*com.Parameters.AddWithValue("@houseNO", this.txt_address_HNO.Text);
-                com.Parameters.AddWithValue("@streetName", this.txt_address_StreetName.Text);
-                com.Parameters.AddWithValue("@city", this.txt_address_city.Text);
+                com.Parameters.AddWithValue("@address", address);
+                
                 com.Parameters.AddWithValue("@DOB", this.dateTimePicker_DOB.Text);
                 com.Parameters.AddWithValue("@email", this.txt_email.Text);
-                com.Parameters.AddWithValue("@salary", this.numericUpDown_salary.Text);
-                com.Parameters.AddWithValue("@qualification", this.txt_qulifications.Text)
-                com.Parameters.AddWithValue("@userpwd", this.txt_userpwd.Text);/*/
+                com.Parameters.AddWithValue("@number", this.txt_contact.Text);
 
-                if(txt_pwd2.Text == "desired_value")
-                {
-                    ResetPassword();
-                }
-                else
-                {
-                    MessageBox.Show("Use22Updated", "Information");
+                com.Parameters.AddWithValue("@qualification", this.txt_qulifications.Text);
+               
 
-                }
-
+               
                 int ret = com.ExecuteNonQuery();
                     if (ret == 1)
                     {

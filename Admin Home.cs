@@ -143,5 +143,15 @@ namespace Diploma_Final_Project_1
             form2.Show();
             this.Hide();
         }
+
+        private void userRegistrationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadUserRegister();
+        }
+
+        private void manageUsersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            groupBox_Users_Enter(this, EventArgs.Empty);
+        }
     }
 }

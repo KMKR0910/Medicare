@@ -86,7 +86,7 @@ namespace Diploma_Final_Project_1
         
             {
             //Create an instance of Form2
-            Doctor_Appointment form2 = new Doctor_Appointment();
+            Doctor_Appoinments1 form2 = new Doctor_Appoinments1();
 
             // Remove borders and make the form a child control
             form2.TopLevel = false;
@@ -170,30 +170,6 @@ namespace Diploma_Final_Project_1
         private void btn_userProfile_Click(object sender, EventArgs e)
         {
 
-            string postion = "Doctor";
-            string cs = "Data Source=ASUS; Initial Catalog = Diploma Final Project DB1; Integrated Security=True";
-
-            SqlConnection con = new SqlConnection(cs);
-            con.Open();
-
-            string sql = "select [User ID] from tbl_Internal_User WHERE [Postion]=@postion";
-            SqlCommand com = new SqlCommand(sql, con);
-            com.Parameters.AddWithValue("@postion", postion);
-
-            var userId = com.ExecuteScalar()?.ToString();  // Fetch the first column of the first row
-
-            if (userId != null)
-            {
-                Employee_User_Profile profileForm = new Employee_User_Profile(userId);
-                profileForm.Show();
-            }
-            else
-            {
-                MessageBox.Show("No user found with the specified position.");
-            }
-
-
-            
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -255,6 +231,68 @@ namespace Diploma_Final_Project_1
         private void groupBox_doctor_session_Enter(object sender, EventArgs e)
         {
             LoadDoctorSession();
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Main_Dashboard form2 = new Main_Dashboard();
+            form2.Show();
+            this.Hide();
+        }
+
+        private void groupBox8_Enter(object sender, EventArgs e)
+        {
+
+            //Create an instance of Form2
+            Doctor_View_Drug_Inventory form2 = new Doctor_View_Drug_Inventory();
+
+            // Remove borders and make the form a child control
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.Dock = DockStyle.Fill;
+
+            // Add the form to the GroupBox
+            groupBoxloc.Controls.Clear();  // Optionally clear previous controls
+            groupBoxloc.Controls.Add(form2);
+
+            // Show the form inside the GroupBox
+            form2.Show();
+        }
+
+        private void drugInventoryReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void viewDrugInventoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            groupBox8_Enter(this, EventArgs.Empty);
+
+        }
+
+        private void viewDrugInventoryReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Report_Gen_Drug_Inventory r1 = new Report_Gen_Drug_Inventory();
+            r1.Show();
+        }
+
+        private void genarateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Create an instance of Form2
+            Doctor_Genarate_Medical_Certificate  form2 = new Doctor_Genarate_Medical_Certificate();
+
+            // Remove borders and make the form a child control
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.Dock = DockStyle.Fill;
+
+            // Add the form to the GroupBox
+            groupBoxloc.Controls.Clear();  // Optionally clear previous controls
+            groupBoxloc.Controls.Add(form2);
+
+            // Show the form inside the GroupBox
+            form2.Show();
+
         }
     }
 }
