@@ -130,7 +130,7 @@ namespace Diploma_Final_Project_1
                             m1.Show();
                             this.Hide();
                         }
-                        else if (userType == "Laboratary Assistant")
+                        else if (userType == "Laboratory Assistant")
                         {
                             Lab_Home m1 = new Lab_Home(UserID);
                             m1.Show();
