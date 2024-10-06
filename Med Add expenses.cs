@@ -57,7 +57,7 @@ namespace Diploma_Final_Project_1
                 int ret = com.ExecuteNonQuery();
                 if (ret == 1)
                 {
-                    MessageBox.Show("Updated", "Information");
+                    MessageBox.Show("Added", "Information");
                 }
 
 

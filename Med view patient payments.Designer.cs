@@ -44,6 +44,9 @@ namespace Diploma_Final_Project_1
             this.btn_update = new System.Windows.Forms.Button();
             this.dateTimePicker_start = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker_end = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCost)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -52,11 +55,11 @@ namespace Diploma_Final_Project_1
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(38, 204);
+            this.dataGridView1.Location = new System.Drawing.Point(487, 196);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(1395, 509);
+            this.dataGridView1.Size = new System.Drawing.Size(1593, 616);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -144,9 +147,9 @@ namespace Diploma_Final_Project_1
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txt_pay_type);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(30, 740);
+            this.groupBox1.Location = new System.Drawing.Point(676, 818);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1288, 570);
+            this.groupBox1.Size = new System.Drawing.Size(1288, 619);
             this.groupBox1.TabIndex = 101;
             this.groupBox1.TabStop = false;
             // 
@@ -162,7 +165,7 @@ namespace Diploma_Final_Project_1
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(904, 451);
+            this.button1.Location = new System.Drawing.Point(924, 516);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(216, 90);
             this.button1.TabIndex = 103;
@@ -172,7 +175,7 @@ namespace Diploma_Final_Project_1
             // btn_delete
             // 
             this.btn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete.Location = new System.Drawing.Point(463, 442);
+            this.btn_delete.Location = new System.Drawing.Point(482, 516);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(216, 90);
             this.btn_delete.TabIndex = 102;
@@ -182,7 +185,7 @@ namespace Diploma_Final_Project_1
             // btn_update
             // 
             this.btn_update.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_update.Location = new System.Drawing.Point(46, 442);
+            this.btn_update.Location = new System.Drawing.Point(60, 516);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(216, 90);
             this.btn_update.TabIndex = 101;
@@ -193,25 +196,63 @@ namespace Diploma_Final_Project_1
             // dateTimePicker_start
             // 
             this.dateTimePicker_start.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker_start.Location = new System.Drawing.Point(38, 65);
+            this.dateTimePicker_start.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker_start.Location = new System.Drawing.Point(947, 124);
             this.dateTimePicker_start.Name = "dateTimePicker_start";
-            this.dateTimePicker_start.Size = new System.Drawing.Size(583, 44);
+            this.dateTimePicker_start.Size = new System.Drawing.Size(246, 44);
             this.dateTimePicker_start.TabIndex = 102;
             // 
             // dateTimePicker_end
             // 
             this.dateTimePicker_end.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker_end.Location = new System.Drawing.Point(850, 65);
+            this.dateTimePicker_end.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker_end.Location = new System.Drawing.Point(1494, 124);
             this.dateTimePicker_end.Name = "dateTimePicker_end";
-            this.dateTimePicker_end.Size = new System.Drawing.Size(583, 44);
+            this.dateTimePicker_end.Size = new System.Drawing.Size(240, 44);
             this.dateTimePicker_end.TabIndex = 103;
             this.dateTimePicker_end.ValueChanged += new System.EventHandler(this.dateTimePicker_end_ValueChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(538, 67);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(273, 42);
+            this.label5.TabIndex = 105;
+            this.label5.Text = "Select Duration";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(993, 67);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(185, 42);
+            this.label6.TabIndex = 106;
+            this.label6.Text = "Start Date";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(1522, 67);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(174, 42);
+            this.label7.TabIndex = 107;
+            this.label7.Text = "End Date";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Med_view_patient_payments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1497, 1322);
+            this.ClientSize = new System.Drawing.Size(2427, 1449);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.dateTimePicker_end);
             this.Controls.Add(this.dateTimePicker_start);
             this.Controls.Add(this.groupBox1);
@@ -224,6 +265,7 @@ namespace Diploma_Final_Project_1
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -244,5 +286,8 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.DateTimePicker dateTimePicker_start;
         private System.Windows.Forms.DateTimePicker dateTimePicker_end;
         private System.Windows.Forms.DateTimePicker dateTimePicker_date;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }

@@ -46,7 +46,7 @@ namespace Diploma_Final_Project_1
             // btn_clear
             // 
             this.btn_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_clear.Location = new System.Drawing.Point(1057, 996);
+            this.btn_clear.Location = new System.Drawing.Point(1106, 987);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(222, 118);
             this.btn_clear.TabIndex = 73;

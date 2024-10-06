@@ -143,6 +143,42 @@ namespace Diploma_Final_Project_1
             {
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            try
+            {
+
+
+
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+
+
+
+
+
+                string sql = @"
+            SELECT p.Name, td.Patient_pay_ID,td.[Payment Type], td.[Total_Cost] ,td.[Date] 
+            FROM [tbl_Patient_Payment] td
+            INNER JOIN tbl_patient_info p ON td.[patirnt_ID] = p.[Patient ID]
+            WHERE p.[Contact Number] = @name ";
+                SqlCommand com = new SqlCommand(sql, con);
+
+                com.Parameters.AddWithValue("@name", this.txt_search.Text);
+
+
+
+                SqlDataAdapter dap = new SqlDataAdapter(com);
+                DataSet ds = new DataSet();
+                dap.Fill(ds);
+
+                this.dataGridView1.DataSource = ds.Tables[0];
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
             private void btn_search_Click(object sender, EventArgs e)
@@ -151,6 +187,9 @@ namespace Diploma_Final_Project_1
 
             try
             {
+                DateTime currentDate = DateTime.Now.Date;
+                this.txt_date.Text = currentDate.ToString("yyyy-MM-dd");  // Converts DateTime to string in "YYYY-MM-DD" format
+
 
                 SqlConnection con = new SqlConnection(cs);
                 con.Open();
@@ -180,7 +219,7 @@ namespace Diploma_Final_Project_1
                 }
 
                 con.Close();
-                this.txt_date.Text = currentDate;
+                
                 this.txt_pay_type.Text = PH_payment_Type;
 
             }
@@ -207,7 +246,7 @@ namespace Diploma_Final_Project_1
             WHERE p.[Contact Number] = @name ";
                 SqlCommand com = new SqlCommand(sql, con);
 
-                com.Parameters.AddWithValue("@name", this.txt_patient.Text);
+                com.Parameters.AddWithValue("@name", this.txt_search.Text);
               
 
 

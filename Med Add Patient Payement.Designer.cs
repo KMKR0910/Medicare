@@ -37,7 +37,6 @@ namespace Diploma_Final_Project_1
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.numericUpDownCost = new System.Windows.Forms.NumericUpDown();
-            this.btn_cancel = new System.Windows.Forms.Button();
             this.btn_clear = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
             this.btn_genarate = new System.Windows.Forms.Button();
@@ -134,20 +133,10 @@ namespace Diploma_Final_Project_1
             this.numericUpDownCost.TabIndex = 78;
             this.numericUpDownCost.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
-            // btn_cancel
-            // 
-            this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.Location = new System.Drawing.Point(449, 1270);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(216, 90);
-            this.btn_cancel.TabIndex = 89;
-            this.btn_cancel.Text = "Cancel";
-            this.btn_cancel.UseVisualStyleBackColor = true;
-            // 
             // btn_clear
             // 
             this.btn_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_clear.Location = new System.Drawing.Point(441, 922);
+            this.btn_clear.Location = new System.Drawing.Point(441, 940);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(216, 90);
             this.btn_clear.TabIndex = 88;
@@ -169,11 +158,11 @@ namespace Diploma_Final_Project_1
             // btn_genarate
             // 
             this.btn_genarate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_genarate.Location = new System.Drawing.Point(453, 1090);
+            this.btn_genarate.Location = new System.Drawing.Point(441, 1092);
             this.btn_genarate.Name = "btn_genarate";
-            this.btn_genarate.Size = new System.Drawing.Size(212, 90);
+            this.btn_genarate.Size = new System.Drawing.Size(212, 129);
             this.btn_genarate.TabIndex = 90;
-            this.btn_genarate.Text = "Genarate";
+            this.btn_genarate.Text = "Genarate Bil Invoice";
             this.btn_genarate.UseVisualStyleBackColor = true;
             // 
             // label4
@@ -233,7 +222,6 @@ namespace Diploma_Final_Project_1
             this.Controls.Add(this.txt_patient);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btn_genarate);
-            this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.numericUpDownCost);
@@ -265,7 +253,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown numericUpDownCost;
-        private System.Windows.Forms.Button btn_cancel;
         private System.Windows.Forms.Button btn_clear;
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.Button btn_genarate;
