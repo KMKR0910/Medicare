@@ -25,8 +25,7 @@ namespace Diploma_Final_Project_1
             btn_patients.BackColor = customC;
             btn_doctor_session.BackColor = customC;
             btn_diaganosisData.BackColor = customC;
-            btn_drugInventory.BackColor = customC;
-            btn_employee.BackColor = customC;
+          
             btn_finance.BackColor = customC;
             linkLabel1.LinkColor = customC;
             linkLabel2.LinkColor = customC;
@@ -733,6 +732,14 @@ namespace Diploma_Final_Project_1
         private void pictureBox10_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Main_Dashboard form2 = new Main_Dashboard();
+            form2.Show();
+            this.Hide();
         }
     }
 }

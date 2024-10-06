@@ -409,6 +409,12 @@
     <Compile Include="Patient Details Doctor.Designer.cs">
       <DependentUpon>Patient Details Doctor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pha Add Drug Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pha Add Drug Payment.Designer.cs">
+      <DependentUpon>Pha Add Drug Payment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pha Add drugs.cs">
       <SubType>Form</SubType>
     </Compile>

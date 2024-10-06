@@ -34,6 +34,7 @@ namespace Diploma_Final_Project_1
             this.txt_search = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_genarate = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
@@ -47,7 +48,6 @@ namespace Diploma_Final_Project_1
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.btn_genarate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_quantity)).BeginInit();
@@ -115,6 +115,17 @@ namespace Diploma_Final_Project_1
             this.groupBox1.TabIndex = 70;
             this.groupBox1.TabStop = false;
             // 
+            // btn_genarate
+            // 
+            this.btn_genarate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_genarate.Location = new System.Drawing.Point(53, 561);
+            this.btn_genarate.Name = "btn_genarate";
+            this.btn_genarate.Size = new System.Drawing.Size(306, 104);
+            this.btn_genarate.TabIndex = 115;
+            this.btn_genarate.Text = "Genarate Report";
+            this.btn_genarate.UseVisualStyleBackColor = true;
+            this.btn_genarate.Click += new System.EventHandler(this.btn_genarate_Click);
+            // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -150,6 +161,11 @@ namespace Diploma_Final_Project_1
             // 
             this.numericUpDown_quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown_quantity.Location = new System.Drawing.Point(1039, 365);
+            this.numericUpDown_quantity.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
             this.numericUpDown_quantity.Name = "numericUpDown_quantity";
             this.numericUpDown_quantity.Size = new System.Drawing.Size(224, 44);
             this.numericUpDown_quantity.TabIndex = 111;
@@ -243,17 +259,6 @@ namespace Diploma_Final_Project_1
             this.label6.Size = new System.Drawing.Size(194, 42);
             this.label6.TabIndex = 102;
             this.label6.Text = "Drug Price";
-            // 
-            // btn_genarate
-            // 
-            this.btn_genarate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_genarate.Location = new System.Drawing.Point(53, 561);
-            this.btn_genarate.Name = "btn_genarate";
-            this.btn_genarate.Size = new System.Drawing.Size(273, 104);
-            this.btn_genarate.TabIndex = 115;
-            this.btn_genarate.Text = "Genarate Report";
-            this.btn_genarate.UseVisualStyleBackColor = true;
-            this.btn_genarate.Click += new System.EventHandler(this.btn_genarate_Click);
             // 
             // Pha_View_Drug_inventory
             // 

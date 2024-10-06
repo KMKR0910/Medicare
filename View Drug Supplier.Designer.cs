@@ -66,7 +66,7 @@ namespace Diploma_Final_Project_1
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(51, 592);
+            this.groupBox1.Location = new System.Drawing.Point(689, 598);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1169, 750);
             this.groupBox1.TabIndex = 3;
@@ -78,7 +78,7 @@ namespace Diploma_Final_Project_1
             this.btn_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_add.Location = new System.Drawing.Point(71, 632);
             this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(173, 90);
+            this.btn_add.Size = new System.Drawing.Size(194, 90);
             this.btn_add.TabIndex = 94;
             this.btn_add.Text = "Add New";
             this.btn_add.UseVisualStyleBackColor = true;
@@ -211,11 +211,11 @@ namespace Diploma_Final_Project_1
             // dataGridView_drug_supplier
             // 
             this.dataGridView_drug_supplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_drug_supplier.Location = new System.Drawing.Point(53, 42);
+            this.dataGridView_drug_supplier.Location = new System.Drawing.Point(462, 44);
             this.dataGridView_drug_supplier.Name = "dataGridView_drug_supplier";
             this.dataGridView_drug_supplier.RowHeadersWidth = 82;
             this.dataGridView_drug_supplier.RowTemplate.Height = 33;
-            this.dataGridView_drug_supplier.Size = new System.Drawing.Size(1168, 491);
+            this.dataGridView_drug_supplier.Size = new System.Drawing.Size(1619, 513);
             this.dataGridView_drug_supplier.TabIndex = 2;
             this.dataGridView_drug_supplier.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_drug_supplier_CellContentClick);
             // 
@@ -223,7 +223,7 @@ namespace Diploma_Final_Project_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1326, 1417);
+            this.ClientSize = new System.Drawing.Size(2427, 1449);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView_drug_supplier);
             this.Name = "View_Drug_Supplier";

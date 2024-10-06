@@ -23,10 +23,12 @@ namespace Diploma_Final_Project_1
 
             btn_prescription.BackColor = customC;
             btn_patients.BackColor = customC;
-            btn_doctor_session.BackColor = customC;
+        
             btn_diaganosisData.BackColor = customC;
             btn_drugInventory.BackColor = customC;
-          
+            btn_drugOrder.BackColor = customC;
+
+
             btn_finance.BackColor = customC;
             linkLabel1.LinkColor = customC;
             linkLabel2.LinkColor = customC;
@@ -200,6 +202,41 @@ namespace Diploma_Final_Project_1
 
 
            
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Main_Dashboard form2 = new Main_Dashboard();
+            form2.Show();
+            this.Hide();
+        }
+
+        private void groupBox_prescription_Enter(object sender, EventArgs e)
+        {
+            groupBox_Patients_Enter(this, EventArgs.Empty);
+        }
+
+        private void groupBox_Diagnose_Enter(object sender, EventArgs e)
+        {
+            View_Drug_Supplier form2 = new View_Drug_Supplier();
+            // Remove borders and make the form a child control
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.Dock = DockStyle.Fill;
+
+            // Add the form to the GroupBox
+            groupBoxloc.Controls.Clear();  // Optionally clear previous controls
+            groupBoxloc.Controls.Add(form2);
+
+            // Show the form inside the GroupBox
+            form2.Show();
+        }
+
+        private void viewPrescriptionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            groupBox_Patients_Enter(this, EventArgs.Empty);
         }
     }
 }

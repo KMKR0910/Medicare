@@ -37,6 +37,8 @@ namespace Diploma_Final_Project_1
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_clear = new System.Windows.Forms.Button();
+            this.btn_remove = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
             this.dataGridView_Items = new System.Windows.Forms.DataGridView();
             this.btn_search = new System.Windows.Forms.Button();
@@ -45,8 +47,6 @@ namespace Diploma_Final_Project_1
             this.label4 = new System.Windows.Forms.Label();
             this.txt_name = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.btn_remove = new System.Windows.Forms.Button();
-            this.btn_clear = new System.Windows.Forms.Button();
             this.btn_order = new System.Windows.Forms.Button();
             this.txt_order_Id = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_quantity)).BeginInit();
@@ -142,6 +142,26 @@ namespace Diploma_Final_Project_1
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add Order";
             // 
+            // btn_clear
+            // 
+            this.btn_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_clear.Location = new System.Drawing.Point(637, 633);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(236, 104);
+            this.btn_clear.TabIndex = 124;
+            this.btn_clear.Text = "Clear";
+            this.btn_clear.UseVisualStyleBackColor = true;
+            // 
+            // btn_remove
+            // 
+            this.btn_remove.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_remove.Location = new System.Drawing.Point(338, 633);
+            this.btn_remove.Name = "btn_remove";
+            this.btn_remove.Size = new System.Drawing.Size(236, 104);
+            this.btn_remove.TabIndex = 123;
+            this.btn_remove.Text = "Remove";
+            this.btn_remove.UseVisualStyleBackColor = true;
+            // 
             // btn_add
             // 
             this.btn_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -196,7 +216,7 @@ namespace Diploma_Final_Project_1
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(96, 138);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(574, 84);
+            this.label4.Size = new System.Drawing.Size(287, 42);
             this.label4.TabIndex = 126;
             this.label4.Text = "Company Name";
             // 
@@ -214,29 +234,9 @@ namespace Diploma_Final_Project_1
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(96, 214);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(528, 84);
+            this.label5.Size = new System.Drawing.Size(264, 42);
             this.label5.TabIndex = 123;
             this.label5.Text = "Supplier Name";
-            // 
-            // btn_remove
-            // 
-            this.btn_remove.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_remove.Location = new System.Drawing.Point(338, 633);
-            this.btn_remove.Name = "btn_remove";
-            this.btn_remove.Size = new System.Drawing.Size(236, 104);
-            this.btn_remove.TabIndex = 123;
-            this.btn_remove.Text = "Remove";
-            this.btn_remove.UseVisualStyleBackColor = true;
-            // 
-            // btn_clear
-            // 
-            this.btn_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_clear.Location = new System.Drawing.Point(644, 622);
-            this.btn_clear.Name = "btn_clear";
-            this.btn_clear.Size = new System.Drawing.Size(236, 104);
-            this.btn_clear.TabIndex = 124;
-            this.btn_clear.Text = "Clear";
-            this.btn_clear.UseVisualStyleBackColor = true;
             // 
             // btn_order
             // 
