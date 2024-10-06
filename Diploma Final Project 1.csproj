@@ -605,6 +605,9 @@
     <EmbeddedResource Include="Patient Details Doctor.resx">
       <DependentUpon>Patient Details Doctor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pha Add Drug Payment.resx">
+      <DependentUpon>Pha Add Drug Payment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pha Add drugs.resx">
       <DependentUpon>Pha Add drugs.cs</DependentUpon>
     </EmbeddedResource>
