@@ -24,6 +24,7 @@ namespace Diploma_Final_Project_1
             btn_cancel.BackColor = customC;
             btn_delete.BackColor = customC;
         }
+        string prescriptionNumber;
         string status = "Not Collected";
         private string GenerateLabTestNumber(string patientId)
         {
@@ -85,15 +86,16 @@ namespace Diploma_Final_Project_1
                 con.Open();
 
 
-                string query = "INSERT INTO [tbl_Lab_Test_Report] ([Test_Type], [Rep_status],[Test_Price],[Patient_ID],[Lab_test_number]) " +
-                               "VALUES (@type, @status, @Price, @patientID,@number)";
+                string query = "INSERT INTO [tbl_Lab_Test_Report] ([Test_Type], [Rep_status],[Test_Price],[Patient_ID],[Lab_test_number],[Description]) " +
+                               "VALUES (@type, @status, @Price, @patientID,@number,@description)";
                 SqlCommand cmd = new SqlCommand(query, con);
 
                 cmd.Parameters.AddWithValue("@type", comboBox_type.Text);
                 cmd.Parameters.AddWithValue("@status", status);
                 cmd.Parameters.AddWithValue("@Price", txt_price.Text);
                 cmd.Parameters.AddWithValue("@patientID", txt_patient_ID.Text);
-                cmd.Parameters.AddWithValue("@number", txt_lab_test_number.Text);
+                cmd.Parameters.AddWithValue("@number", prescriptionNumber);
+                cmd.Parameters.AddWithValue("@description", this.txt_description.Text);
 
 
                 int ret = cmd.ExecuteNonQuery();
@@ -121,11 +123,11 @@ namespace Diploma_Final_Project_1
 
                 con.Open();
 
-                string query = "SELECT * FROM [tbl_Lab_Test_Report] WHERE [Lab_test_number] = @number";
+                string query = "SELECT [Test_Type],[Rep_status],[Test_Price],[Patient_ID] ,[Description] FROM [tbl_Lab_Test_Report] WHERE [Lab_test_number] = @number";
                 using (SqlCommand cmd1 = new SqlCommand(query, con))
                 {
                     // Add parameter to the command
-                    cmd1.Parameters.AddWithValue("@number", txt_lab_test_number.Text);
+                    cmd1.Parameters.AddWithValue("@number", prescriptionNumber);
 
                     // Create SqlDataAdapter and SqlCommandBuilder
                     SqlDataAdapter sda = new SqlDataAdapter(cmd1);
@@ -155,6 +157,8 @@ namespace Diploma_Final_Project_1
 
             try
             {
+                DateTime currentDate = DateTime.Now.Date;
+                this.txt_date.Text = currentDate.ToString("yyyy-MM-dd");
 
                 SqlConnection con = new SqlConnection(cs);
                 con.Open();
@@ -196,15 +200,95 @@ namespace Diploma_Final_Project_1
                 if (!string.IsNullOrEmpty(patientId))
                 {
                     // Generate the prescription number
-                    string prescriptionNumber = GenerateLabTestNumber(patientId);
+                    prescriptionNumber = GenerateLabTestNumber(patientId);
 
                     // Display the generated prescription number
-                    this.txt_lab_test_number.Text = prescriptionNumber;
+                    string lastThreeDigits = prescriptionNumber.Substring(prescriptionNumber.Length - 3);
+                    this.txt_lab_test_number.Text = lastThreeDigits;
                 }
                 else
                 {
                     MessageBox.Show("Please enter a valid Patient ID");
                 }
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                // Get the current row
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+
+                // Assuming you want the data from the first column (index 0)
+                string cellValue = row.Cells[0].Value.ToString();
+                string cellValue2 = row.Cells[2].Value.ToString();
+                string cellValue3 = row.Cells[4].Value.ToString();
+             
+
+
+                // Set the value to the TextBox
+                comboBox_type.Text = cellValue;
+                txt_price.Text = cellValue2;
+                txt_description.Text = cellValue3;
+                
+
+
+
+            }
+        }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
+
+
+                SqlConnection con1 = new SqlConnection(cs);
+                con1.Open();
+
+
+                string sql = "DELETE  " +
+                             "FROM [tbl_Lab_Test_Report] " +
+
+                             "WHERE [Lab_test_number]= @number ";
+
+                SqlCommand com = new SqlCommand(sql, con1);
+
+                com.Parameters.AddWithValue("@number", prescriptionNumber);
+
+
+                int ret = com.ExecuteNonQuery();
+                if (ret > 0)
+                {
+                    MessageBox.Show("Prescription Deleted", "Information");
+                    string query = "SELECT [Test_Type],[Rep_status],[Test_Price],[Patient_ID] ,[Description] FROM [tbl_Lab_Test_Report] WHERE [Lab_test_number] = @number";
+                    using (SqlCommand cmd1 = new SqlCommand(query, con1))
+                    {
+                        // Add parameter to the command
+                        cmd1.Parameters.AddWithValue("@number", prescriptionNumber);
+
+                        // Create SqlDataAdapter and SqlCommandBuilder
+                        SqlDataAdapter sda = new SqlDataAdapter(cmd1);
+                        SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+
+                        // Fill the DataSet
+                        DataSet ds = new DataSet();
+                        sda.Fill(ds);
+
+                        // Set the DataSource of the DataGridView
+                        dataGridView1.DataSource = ds.Tables[0];
+                    }
+
+                }
+
+
+                con1.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

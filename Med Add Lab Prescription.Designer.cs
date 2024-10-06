@@ -58,6 +58,7 @@ namespace Diploma_Final_Project_1
             this.dataGridView1.RowTemplate.Height = 33;
             this.dataGridView1.Size = new System.Drawing.Size(1194, 670);
             this.dataGridView1.TabIndex = 110;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // txt_date
             // 
@@ -82,7 +83,7 @@ namespace Diploma_Final_Project_1
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(216, 90);
             this.btn_cancel.TabIndex = 105;
-            this.btn_cancel.Text = "Cancel";
+            this.btn_cancel.Text = "Clear";
             this.btn_cancel.UseVisualStyleBackColor = true;
             // 
             // btn_delete
@@ -94,6 +95,7 @@ namespace Diploma_Final_Project_1
             this.btn_delete.TabIndex = 104;
             this.btn_delete.Text = "Delete";
             this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_add
             // 

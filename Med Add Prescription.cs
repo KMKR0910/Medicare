@@ -25,7 +25,7 @@ namespace Diploma_Final_Project_1
         
            
         }
-
+        string prescriptionNumber;
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -44,7 +44,7 @@ namespace Diploma_Final_Project_1
                 con.Open();
 
 
-                SqlCommand cmd = new SqlCommand("Insert Into tbl_prescript Values('" + txt_patient_ID.Text + "','" + txt_medicine.Text + "','" + txt_dosage.Text + "','" + txt_duration.Text + "','" + txt_date.Text + "','" + txt_prescripton_number.Text + "')", con);
+                SqlCommand cmd = new SqlCommand("Insert Into tbl_prescript Values('" + txt_patient_ID.Text + "','" + txt_medicine.Text + "','" + txt_dosage.Text + "','" + txt_duration.Text + "','" + txt_date.Text + "','" + prescriptionNumber + "')", con);
                 cmd.ExecuteNonQuery();
                 con.Close();
                 MessageBox.Show("added successfully");
@@ -52,11 +52,11 @@ namespace Diploma_Final_Project_1
             SqlConnection con1 = new SqlConnection(cs);
             con1.Open();
 
-            string query = "SELECT * FROM tbl_prescript WHERE PrescriptionNumber = @number";
+            string query = "SELECT  [patientid],[Medicine],[Dosage],[Duration]FROM tbl_prescript WHERE PrescriptionNumber = @number";
             using (SqlCommand cmd1 = new SqlCommand(query, con1))
             {
                 // Add parameter to the command
-                cmd1.Parameters.AddWithValue("@number", txt_prescripton_number.Text);
+                cmd1.Parameters.AddWithValue("@number", prescriptionNumber);
 
                 // Create SqlDataAdapter and SqlCommandBuilder
                 SqlDataAdapter sda = new SqlDataAdapter(cmd1);
@@ -93,6 +93,9 @@ namespace Diploma_Final_Project_1
 
             try
             {
+                DateTime currentDate = DateTime.Now.Date;
+                this.txt_date.Text = currentDate.ToString("yyyy-MM-dd");  // Converts DateTime to string in "YYYY-MM-DD" format
+
 
                 SqlConnection con = new SqlConnection(cs);
                 con.Open();
@@ -134,10 +137,11 @@ namespace Diploma_Final_Project_1
                 if (!string.IsNullOrEmpty(patientId))
                 {
                     // Generate the prescription number
-                    string prescriptionNumber = GeneratePrescriptionNumber(patientId);
+                   prescriptionNumber = GeneratePrescriptionNumber(patientId);
 
                     // Display the generated prescription number
-                    this.txt_prescripton_number.Text= prescriptionNumber;
+                    string lastThreeDigits = prescriptionNumber.Substring(prescriptionNumber.Length - 3);
+                    this.txt_prescripton_number.Text= lastThreeDigits;
                 }
                 else
                 {
@@ -203,16 +207,14 @@ namespace Diploma_Final_Project_1
                 string cellValue2 = row.Cells[1].Value.ToString();
                 string cellValue3 = row.Cells[2].Value.ToString();
                 string cellValue4 = row.Cells[3].Value.ToString();
-                string cellValue5 = row.Cells[4].Value.ToString();
-                string cellValue6 = row.Cells[5].Value.ToString();
+              
 
                 // Set the value to the TextBox
                 txt_patient_ID.Text = cellValue;
                 txt_medicine.Text = cellValue2;
                 txt_dosage.Text = cellValue3;
                 txt_duration.Text = cellValue4;
-                txt_date.Text = cellValue5;
-                txt_prescripton_number.Text = cellValue6;
+               
 
 
             }
@@ -220,7 +222,55 @@ namespace Diploma_Final_Project_1
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
 
+
+                SqlConnection con1 = new SqlConnection(cs);
+                con1.Open();
+
+
+                string sql = "DELETE  " +
+                             "FROM [tbl_prescript] " +
+
+                             "WHERE [PrescriptionNumber] = @number ";
+
+                SqlCommand com = new SqlCommand(sql, con1);
+
+                com.Parameters.AddWithValue("@number", prescriptionNumber);
+                
+
+                int ret = com.ExecuteNonQuery();
+                if (ret >0)
+                {
+                    MessageBox.Show("Prescription Deleted", "Information");
+                    string query = "SELECT  [patientid],[Medicine],[Dosage],[Duration]FROM tbl_prescript WHERE PrescriptionNumber = @number";
+                    using (SqlCommand cmd1 = new SqlCommand(query, con1))
+                    {
+                        // Add parameter to the command
+                        cmd1.Parameters.AddWithValue("@number", prescriptionNumber);
+
+                        // Create SqlDataAdapter and SqlCommandBuilder
+                        SqlDataAdapter sda = new SqlDataAdapter(cmd1);
+                        SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+
+                        // Fill the DataSet
+                        DataSet ds = new DataSet();
+                        sda.Fill(ds);
+
+                        // Set the DataSource of the DataGridView
+                        dataGridView1.DataSource = ds.Tables[0];
+                    }
+                }
+            
+        
+                con1.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

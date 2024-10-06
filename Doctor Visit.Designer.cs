@@ -46,7 +46,6 @@ namespace Diploma_Final_Project_1
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.btn_save = new System.Windows.Forms.Button();
-            this.btn_cancel = new System.Windows.Forms.Button();
             this.btn_clear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -229,24 +228,14 @@ namespace Diploma_Final_Project_1
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(216, 90);
             this.btn_save.TabIndex = 115;
-            this.btn_save.Text = "Save";
+            this.btn_save.Text = "Add";
             this.btn_save.UseVisualStyleBackColor = true;
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
-            // 
-            // btn_cancel
-            // 
-            this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.Location = new System.Drawing.Point(1520, 1157);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(216, 90);
-            this.btn_cancel.TabIndex = 117;
-            this.btn_cancel.Text = "Cancel";
-            this.btn_cancel.UseVisualStyleBackColor = true;
             // 
             // btn_clear
             // 
             this.btn_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_clear.Location = new System.Drawing.Point(1116, 1157);
+            this.btn_clear.Location = new System.Drawing.Point(1465, 1146);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(216, 90);
             this.btn_clear.TabIndex = 118;
@@ -259,7 +248,6 @@ namespace Diploma_Final_Project_1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2427, 1449);
             this.Controls.Add(this.btn_clear);
-            this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.dateTimePicker3);
             this.Controls.Add(this.dateTimePicker2);
@@ -304,7 +292,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.Button btn_save;
-        private System.Windows.Forms.Button btn_cancel;
         private System.Windows.Forms.Button btn_clear;
     }
 }

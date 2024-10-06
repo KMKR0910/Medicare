@@ -164,7 +164,7 @@ namespace Diploma_Final_Project_1
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(216, 90);
             this.btn_cancel.TabIndex = 86;
-            this.btn_cancel.Text = "Cancel";
+            this.btn_cancel.Text = "Clear";
             this.btn_cancel.UseVisualStyleBackColor = true;
             // 
             // label4

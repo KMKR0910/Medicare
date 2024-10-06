@@ -105,14 +105,13 @@ namespace Diploma_Final_Project_1
             {
 
 
-                try
-                {
+                
 
                     SqlDataReader reader = com.ExecuteReader();
 
                     if (reader.HasRows)
                     {
-                        // Room(s) available
+                       
                         txt_medication.Items.Clear(); // Clear previous results
 
                         while (reader.Read())
@@ -124,16 +123,10 @@ namespace Diploma_Final_Project_1
                         }
                     }
 
-                    else
-                    {
-                        MessageBox.Show("No available rooms of this type.");
-                    }
+                    
                     con.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("An error occurred: " + ex.Message);
-                }
+                
+               
                 try
                 {
 
@@ -167,6 +160,39 @@ namespace Diploma_Final_Project_1
                     con.Close();
 
 
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                try
+                {
+
+
+
+                    SqlConnection con1 = new SqlConnection(cs);
+                    con1.Open();
+
+
+
+
+
+                    string sql1 = @"
+                 SELECT DiagnosNumber,Date, Description ,Medications, Allergies
+                 FROM tbl_diagnostic_data";
+                    SqlCommand com1 = new SqlCommand(sql1, con1);
+
+
+
+
+                    SqlDataAdapter dap = new SqlDataAdapter(com1);
+                    DataSet ds = new DataSet();
+                    dap.Fill(ds);
+
+                    this.dataGridView1.DataSource = ds.Tables[0];
+
+
+                    con1.Close();
                 }
                 catch (Exception ex)
                 {
@@ -250,8 +276,8 @@ namespace Diploma_Final_Project_1
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
 
                 // Assuming you want the data from the first column (index 0)
-                string cellValue = row.Cells[2].Value.ToString();
-                string cellValue2 = row.Cells[4].Value.ToString();
+                string cellValue = row.Cells[4].Value.ToString();
+                string cellValue2 = row.Cells[2].Value.ToString();
 
                 // Set the value to the TextBox
                 
@@ -273,12 +299,12 @@ namespace Diploma_Final_Project_1
 
 
 
-                SqlCommand cmd = new SqlCommand("UPDATE tbl_diagnostic_data SET Description = @description, Allergies = @allergies WHERE Name = @name ", con); 
+                SqlCommand cmd = new SqlCommand("UPDATE tbl_diagnostic_data SET [Description] = @description, Allergies = @allergies WHERE Name = @name ", con); 
                 cmd.ExecuteNonQuery();
 
                
                 cmd.Parameters.AddWithValue("@description", txt_description.Text);
-                
+                cmd.Parameters.AddWithValue("@name", txt_patient_name.Text);
                 cmd.Parameters.AddWithValue("@allergies", txt_allergies.Text);
 
                 con.Close();

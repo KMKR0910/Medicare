@@ -172,6 +172,7 @@ namespace Diploma_Final_Project_1
             }
 
             loadAppointment();
+            Med_Appointments_Load(null, EventArgs.Empty);
         }
         private void loadAppointment()
         {
@@ -270,6 +271,7 @@ namespace Diploma_Final_Project_1
                 {
                     MessageBox.Show("Updated", "Information");
                     loadAppointment();
+                    Med_Appointments_Load(null, EventArgs.Empty);
                 }
                
                 

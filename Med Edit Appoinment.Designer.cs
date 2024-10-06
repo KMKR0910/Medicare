@@ -113,19 +113,19 @@ namespace Diploma_Final_Project_1
             // btn_cancel
             // 
             this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.Location = new System.Drawing.Point(1150, 1013);
+            this.btn_cancel.Location = new System.Drawing.Point(1150, 1061);
             this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(216, 55);
+            this.btn_cancel.Size = new System.Drawing.Size(216, 100);
             this.btn_cancel.TabIndex = 81;
-            this.btn_cancel.Text = "Cancel";
+            this.btn_cancel.Text = "Clear";
             this.btn_cancel.UseVisualStyleBackColor = true;
             // 
             // btn_delete
             // 
             this.btn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete.Location = new System.Drawing.Point(1150, 914);
+            this.btn_delete.Location = new System.Drawing.Point(1150, 893);
             this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(216, 55);
+            this.btn_delete.Size = new System.Drawing.Size(216, 96);
             this.btn_delete.TabIndex = 80;
             this.btn_delete.Text = "Delete";
             this.btn_delete.UseVisualStyleBackColor = true;
@@ -134,9 +134,9 @@ namespace Diploma_Final_Project_1
             // btn_save
             // 
             this.btn_save.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_save.Location = new System.Drawing.Point(1150, 815);
+            this.btn_save.Location = new System.Drawing.Point(1150, 732);
             this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(216, 55);
+            this.btn_save.Size = new System.Drawing.Size(216, 96);
             this.btn_save.TabIndex = 79;
             this.btn_save.Text = "Save";
             this.btn_save.UseVisualStyleBackColor = true;

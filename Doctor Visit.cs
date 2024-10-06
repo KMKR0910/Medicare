@@ -142,9 +142,14 @@ namespace Diploma_Final_Project_1
                         cmd.Parameters.AddWithValue("@startTime", startTime);
                         cmd.Parameters.AddWithValue("@endTime", endTime);
                         cmd.Parameters.AddWithValue("@appointmentNumber", appointmentNumber);
-                        cmd.Parameters.AddWithValue("@status",true);
+                        cmd.Parameters.AddWithValue("@status", true);
 
-                        cmd.ExecuteNonQuery();
+
+                        int ret = cmd.ExecuteNonQuery();
+                        if (ret > 0)
+                        {
+                            MessageBox.Show("Added Succesfully", "Information");
+                        }
                     }
                 }
             }
