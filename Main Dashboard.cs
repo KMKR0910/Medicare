@@ -178,5 +178,10 @@ namespace Diploma_Final_Project_1
                 this.txt_password.PasswordChar = '*'; // Mask password
             }
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

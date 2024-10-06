@@ -115,13 +115,8 @@ namespace Diploma_Final_Project_1
             this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.button9 = new System.Windows.Forms.Button();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.linkLabel12 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel13 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel14 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel15 = new System.Windows.Forms.LinkLabel();
             this.linkLabel16 = new System.Windows.Forms.LinkLabel();
             this.linkLabel17 = new System.Windows.Forms.LinkLabel();
             this.linkLabel18 = new System.Windows.Forms.LinkLabel();
@@ -242,12 +237,14 @@ namespace Diploma_Final_Project_1
             this.diagnosisToolStripMenuItem.Name = "diagnosisToolStripMenuItem";
             this.diagnosisToolStripMenuItem.Size = new System.Drawing.Size(202, 54);
             this.diagnosisToolStripMenuItem.Text = "Diagnosis";
+            this.diagnosisToolStripMenuItem.Click += new System.EventHandler(this.diagnosisToolStripMenuItem_Click);
             // 
             // financeToolStripMenuItem
             // 
             this.financeToolStripMenuItem.Name = "financeToolStripMenuItem";
             this.financeToolStripMenuItem.Size = new System.Drawing.Size(166, 54);
             this.financeToolStripMenuItem.Text = "Finance";
+            this.financeToolStripMenuItem.Click += new System.EventHandler(this.financeToolStripMenuItem_Click);
             // 
             // drugInventoryReportToolStripMenuItem
             // 
@@ -264,12 +261,14 @@ namespace Diploma_Final_Project_1
             this.viewDrugInventoryToolStripMenuItem.Name = "viewDrugInventoryToolStripMenuItem";
             this.viewDrugInventoryToolStripMenuItem.Size = new System.Drawing.Size(618, 58);
             this.viewDrugInventoryToolStripMenuItem.Text = "View Drug Inventory";
+            this.viewDrugInventoryToolStripMenuItem.Click += new System.EventHandler(this.viewDrugInventoryToolStripMenuItem_Click_1);
             // 
             // viewDrugInventoryReportToolStripMenuItem
             // 
             this.viewDrugInventoryReportToolStripMenuItem.Name = "viewDrugInventoryReportToolStripMenuItem";
             this.viewDrugInventoryReportToolStripMenuItem.Size = new System.Drawing.Size(618, 58);
             this.viewDrugInventoryReportToolStripMenuItem.Text = "View Drug Inventory Report";
+            this.viewDrugInventoryReportToolStripMenuItem.Click += new System.EventHandler(this.viewDrugInventoryReportToolStripMenuItem_Click_1);
             // 
             // linkLabel1
             // 
@@ -811,6 +810,7 @@ namespace Diploma_Final_Project_1
             this.groupBox_inventrory.Size = new System.Drawing.Size(543, 381);
             this.groupBox_inventrory.TabIndex = 12;
             this.groupBox_inventrory.TabStop = false;
+            this.groupBox_inventrory.Enter += new System.EventHandler(this.groupBox_inventrory_Enter);
             // 
             // pictureBox11
             // 
@@ -843,6 +843,7 @@ namespace Diploma_Final_Project_1
             this.groupBox_employee.Size = new System.Drawing.Size(560, 370);
             this.groupBox_employee.TabIndex = 13;
             this.groupBox_employee.TabStop = false;
+            this.groupBox_employee.Enter += new System.EventHandler(this.groupBox_employee_Enter);
             // 
             // pictureBox12
             // 
@@ -907,6 +908,7 @@ namespace Diploma_Final_Project_1
             this.groupBox_Patients.Size = new System.Drawing.Size(557, 371);
             this.groupBox_Patients.TabIndex = 7;
             this.groupBox_Patients.TabStop = false;
+            this.groupBox_Patients.Enter += new System.EventHandler(this.groupBox_Patients_Enter);
             // 
             // pictureBox14
             // 
@@ -939,6 +941,7 @@ namespace Diploma_Final_Project_1
             this.groupBox_Appoinments.Size = new System.Drawing.Size(605, 373);
             this.groupBox_Appoinments.TabIndex = 8;
             this.groupBox_Appoinments.TabStop = false;
+            this.groupBox_Appoinments.Enter += new System.EventHandler(this.groupBox_Appoinments_Enter);
             // 
             // pictureBox15
             // 
@@ -971,6 +974,7 @@ namespace Diploma_Final_Project_1
             this.groupBox11.Size = new System.Drawing.Size(560, 371);
             this.groupBox11.TabIndex = 9;
             this.groupBox11.TabStop = false;
+            this.groupBox11.Enter += new System.EventHandler(this.groupBox11_Enter);
             // 
             // pictureBox16
             // 
@@ -1003,6 +1007,7 @@ namespace Diploma_Final_Project_1
             this.groupBox_UserProfile.Size = new System.Drawing.Size(560, 369);
             this.groupBox_UserProfile.TabIndex = 10;
             this.groupBox_UserProfile.TabStop = false;
+            this.groupBox_UserProfile.Enter += new System.EventHandler(this.groupBox_UserProfile_Enter);
             // 
             // pictureBox17
             // 
@@ -1036,6 +1041,7 @@ namespace Diploma_Final_Project_1
             this.groupBox_Home.Size = new System.Drawing.Size(557, 375);
             this.groupBox_Home.TabIndex = 5;
             this.groupBox_Home.TabStop = false;
+            this.groupBox_Home.Enter += new System.EventHandler(this.groupBox_Home_Enter);
             // 
             // pictureBox18
             // 
@@ -1065,13 +1071,8 @@ namespace Diploma_Final_Project_1
             // groupBox12
             // 
             this.groupBox12.BackColor = System.Drawing.Color.White;
-            this.groupBox12.Controls.Add(this.label4);
             this.groupBox12.Controls.Add(this.label5);
             this.groupBox12.Controls.Add(this.label6);
-            this.groupBox12.Controls.Add(this.linkLabel12);
-            this.groupBox12.Controls.Add(this.linkLabel13);
-            this.groupBox12.Controls.Add(this.linkLabel14);
-            this.groupBox12.Controls.Add(this.linkLabel15);
             this.groupBox12.Controls.Add(this.linkLabel16);
             this.groupBox12.Controls.Add(this.linkLabel17);
             this.groupBox12.Controls.Add(this.linkLabel18);
@@ -1085,16 +1086,6 @@ namespace Diploma_Final_Project_1
             this.groupBox12.Size = new System.Drawing.Size(423, 1449);
             this.groupBox12.TabIndex = 12;
             this.groupBox12.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(134, 897);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(254, 45);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Account Details";
             // 
             // label5
             // 
@@ -1115,46 +1106,6 @@ namespace Diploma_Final_Project_1
             this.label6.Size = new System.Drawing.Size(190, 45);
             this.label6.TabIndex = 11;
             this.label6.Text = "Quick Links";
-            // 
-            // linkLabel12
-            // 
-            this.linkLabel12.AutoSize = true;
-            this.linkLabel12.Location = new System.Drawing.Point(38, 1246);
-            this.linkLabel12.Name = "linkLabel12";
-            this.linkLabel12.Size = new System.Drawing.Size(324, 45);
-            this.linkLabel12.TabIndex = 10;
-            this.linkLabel12.TabStop = true;
-            this.linkLabel12.Text = "Due Pay tax Reports";
-            // 
-            // linkLabel13
-            // 
-            this.linkLabel13.AutoSize = true;
-            this.linkLabel13.Location = new System.Drawing.Point(37, 1076);
-            this.linkLabel13.Name = "linkLabel13";
-            this.linkLabel13.Size = new System.Drawing.Size(278, 45);
-            this.linkLabel13.TabIndex = 9;
-            this.linkLabel13.TabStop = true;
-            this.linkLabel13.Text = "Patient Payments";
-            // 
-            // linkLabel14
-            // 
-            this.linkLabel14.AutoSize = true;
-            this.linkLabel14.Location = new System.Drawing.Point(38, 1166);
-            this.linkLabel14.Name = "linkLabel14";
-            this.linkLabel14.Size = new System.Drawing.Size(256, 45);
-            this.linkLabel14.TabIndex = 8;
-            this.linkLabel14.TabStop = true;
-            this.linkLabel14.Text = "Income Reports";
-            // 
-            // linkLabel15
-            // 
-            this.linkLabel15.AutoSize = true;
-            this.linkLabel15.Location = new System.Drawing.Point(37, 987);
-            this.linkLabel15.Name = "linkLabel15";
-            this.linkLabel15.Size = new System.Drawing.Size(249, 45);
-            this.linkLabel15.TabIndex = 7;
-            this.linkLabel15.TabStop = true;
-            this.linkLabel15.Text = "Drug Payments";
             // 
             // linkLabel16
             // 
@@ -1376,13 +1327,8 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.PictureBox pictureBox18;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.GroupBox groupBox12;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.LinkLabel linkLabel12;
-        private System.Windows.Forms.LinkLabel linkLabel13;
-        private System.Windows.Forms.LinkLabel linkLabel14;
-        private System.Windows.Forms.LinkLabel linkLabel15;
         private System.Windows.Forms.LinkLabel linkLabel16;
         private System.Windows.Forms.LinkLabel linkLabel17;
         private System.Windows.Forms.LinkLabel linkLabel18;

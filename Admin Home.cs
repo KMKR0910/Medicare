@@ -23,14 +23,13 @@ namespace Diploma_Final_Project_1
             btn_home.BackColor = customC;
             btn_userProfile.BackColor = customC;
 
-            btn_appoinments.BackColor = customC;
+           
           
             btn_employee.BackColor = customC;
            
             linkLabel1.LinkColor = customC;
             linkLabel2.LinkColor = customC;
-            linkLabel_backup.LinkColor = customC;
-            linkLabel_restore.LinkColor = customC;
+            linkLabel3.LinkColor = customC;
 
 
             menuStrip1.BackColor = customC;
@@ -152,6 +151,26 @@ namespace Diploma_Final_Project_1
         private void manageUsersToolStripMenuItem_Click(object sender, EventArgs e)
         {
             groupBox_Users_Enter(this, EventArgs.Empty);
+        }
+
+        private void userProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            groupBox_UserProfile_Enter(this, EventArgs.Empty);
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            LoadUserRegister();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            groupBox_Users_Enter(this, EventArgs.Empty);
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            LoadUserProfile();
         }
     }
 }

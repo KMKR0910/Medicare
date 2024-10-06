@@ -12,27 +12,24 @@ namespace Diploma_Final_Project_1
         {
             InitializeComponent();
             Color customC = ColorTranslator.FromHtml("#9083D5 ");
-                btn_home.BackColor = customC;
-            btn_userProfile.BackColor = customC;
+                button1.BackColor = customC;
+            button2.BackColor = customC;
 
-            btn_appoinments.BackColor = customC;
-            btn_patients.BackColor = customC;
-            btn_doctor_session.BackColor = customC;
-            btn_diaganosisData.BackColor = customC;
-            btn_drugInventory.BackColor = customC;
-            btn_employee.BackColor = customC;
-            btn_finance.BackColor = customC;
-            linkLabel1.LinkColor = customC;
-            linkLabel2.LinkColor = customC;
-            linkLabel3.LinkColor = customC;
-            linkLabel4.LinkColor = customC;
-            linkLabel5.LinkColor = customC;
-            linkLabel6.LinkColor = customC;
-            linkLabel7.LinkColor = customC;
-            linkLabel8.LinkColor = customC;
-            linkLabel9.LinkColor = customC;
-            linkLabel10.LinkColor = customC;
-            linkLabel11.LinkColor = customC;
+            button3.BackColor = customC;
+            button4.BackColor = customC;
+            button5.BackColor = customC;
+            button6.BackColor = customC;
+            button7.BackColor = customC;
+            button8.BackColor = customC;
+            button9.BackColor = customC;
+            linkLabel22.LinkColor = customC;
+            linkLabel21.LinkColor = customC;
+            linkLabel20.LinkColor = customC;
+            linkLabel19.LinkColor = customC;
+            linkLabel18.LinkColor = customC;
+            linkLabel17.LinkColor = customC;
+            linkLabel16.LinkColor = customC;
+         
 
             menuStrip1.BackColor = customC;
 
@@ -292,6 +289,77 @@ namespace Diploma_Final_Project_1
 
             // Show the form inside the GroupBox
             form2.Show();
+
+        }
+
+        private void groupBox_Home_Enter(object sender, EventArgs e)
+        {
+            RestoreHomeControls();
+        }
+
+        private void groupBox_UserProfile_Enter(object sender, EventArgs e)
+        {
+            LoadUserProfile();
+        }
+
+        private void groupBox_Appoinments_Enter(object sender, EventArgs e)
+        {
+            LoadAppoinment();
+        }
+
+        private void groupBox_Patients_Enter(object sender, EventArgs e)
+        {
+            LoadPatient();
+        }
+
+        private void groupBox11_Enter(object sender, EventArgs e)
+        {
+            LoadDoctorSession();
+        }
+
+        private void groupBox_inventrory_Enter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void viewDrugInventoryToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
+            //Create an instance of Form2
+            Doctor_View_Drug_Inventory form2 = new Doctor_View_Drug_Inventory();
+
+            // Remove borders and make the form a child control
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.Dock = DockStyle.Fill;
+
+            // Add the form to the GroupBox
+            groupBoxloc.Controls.Clear();  // Optionally clear previous controls
+            groupBoxloc.Controls.Add(form2);
+
+            // Show the form inside the GroupBox
+            form2.Show();
+        }
+
+        private void viewDrugInventoryReportToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
+            Report_Gen_Drug_Inventory r1 = new Report_Gen_Drug_Inventory();
+            r1.Show();
+        }
+
+        private void groupBox_employee_Enter(object sender, EventArgs e)
+        {
+            LoadEmployeeInGroupBox1();
+        }
+
+        private void diagnosisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void financeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
         }
     }
