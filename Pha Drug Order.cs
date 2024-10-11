@@ -253,5 +253,10 @@ namespace Diploma_Final_Project_1
             }
             ResetItemId();
         }
+
+        private void dataGridView_Items_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

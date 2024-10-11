@@ -53,7 +53,7 @@ namespace Diploma_Final_Project_1
             // 
             this.txt_today.AcceptsTab = true;
             this.txt_today.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_today.Location = new System.Drawing.Point(1885, 38);
+            this.txt_today.Location = new System.Drawing.Point(1985, 38);
             this.txt_today.Name = "txt_today";
             this.txt_today.Size = new System.Drawing.Size(372, 44);
             this.txt_today.TabIndex = 101;
@@ -62,7 +62,7 @@ namespace Diploma_Final_Project_1
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1747, 40);
+            this.label4.Location = new System.Drawing.Point(1807, 40);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(97, 42);
             this.label4.TabIndex = 100;
@@ -92,12 +92,11 @@ namespace Diploma_Final_Project_1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(834, 312);
+            this.label1.Location = new System.Drawing.Point(816, 311);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(199, 42);
             this.label1.TabIndex = 103;
             this.label1.Text = "Select Day";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // checkBox1
             // 
@@ -109,7 +108,6 @@ namespace Diploma_Final_Project_1
             this.checkBox1.TabIndex = 104;
             this.checkBox1.Text = "Monday";
             this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // checkBox2
             // 
@@ -121,7 +119,6 @@ namespace Diploma_Final_Project_1
             this.checkBox2.TabIndex = 105;
             this.checkBox2.Text = "Tuesday";
             this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // checkBox3
             // 
@@ -133,7 +130,6 @@ namespace Diploma_Final_Project_1
             this.checkBox3.TabIndex = 106;
             this.checkBox3.Text = "Wednesday";
             this.checkBox3.UseVisualStyleBackColor = true;
-            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
             // checkBox4
             // 
@@ -145,7 +141,6 @@ namespace Diploma_Final_Project_1
             this.checkBox4.TabIndex = 107;
             this.checkBox4.Text = "Sunday";
             this.checkBox4.UseVisualStyleBackColor = true;
-            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
             // checkBox5
             // 
@@ -157,7 +152,6 @@ namespace Diploma_Final_Project_1
             this.checkBox5.TabIndex = 108;
             this.checkBox5.Text = "Thursday";
             this.checkBox5.UseVisualStyleBackColor = true;
-            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
             // 
             // checkBox6
             // 
@@ -169,7 +163,6 @@ namespace Diploma_Final_Project_1
             this.checkBox6.TabIndex = 109;
             this.checkBox6.Text = "Friday";
             this.checkBox6.UseVisualStyleBackColor = true;
-            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
             // 
             // checkBox7
             // 
@@ -181,7 +174,6 @@ namespace Diploma_Final_Project_1
             this.checkBox7.TabIndex = 110;
             this.checkBox7.Text = "Saturday";
             this.checkBox7.UseVisualStyleBackColor = true;
-            this.checkBox7.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged);
             // 
             // label2
             // 

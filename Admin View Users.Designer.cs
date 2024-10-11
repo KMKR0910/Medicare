@@ -408,7 +408,7 @@ namespace Diploma_Final_Project_1
             // 
             // dataGridView_view_users
             // 
-            this.dataGridView_view_users.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_view_users.ColumnHeadersHeight = 46;
             this.dataGridView_view_users.Location = new System.Drawing.Point(1069, 169);
             this.dataGridView_view_users.Name = "dataGridView_view_users";
             this.dataGridView_view_users.RowHeadersWidth = 82;

@@ -16,6 +16,8 @@ namespace Diploma_Final_Project_1
         string appointmentID;
         string lastThreeDigits;
         string status = "Pending";
+        string SessionStatus1 = "Booked";
+        string SessionStatus2 = "Avaliable";
         public Med_Add_Appoinment()
         {
             InitializeComponent();
@@ -23,15 +25,17 @@ namespace Diploma_Final_Project_1
             btn_check.BackColor = customC;
             btn_add.BackColor = customC;
 
-            btn_cancel.BackColor = customC;
-            brn_delete.BackColor = customC;
+            btn_clear.BackColor = customC;
+            btn_delete.BackColor = customC;
         }
-    
+
         string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
 
-        
-        private void label5_Click(object sender, EventArgs e)
+        private void getAppoinmentID()
         {
+            SqlConnection con = new SqlConnection(cs);
+            con.Open();
+            string sql = "SELECT [Appoinment_ID] FROM [tbl_appoinment] WHERE [Contact Number] = @number";
 
         }
 
@@ -39,7 +43,6 @@ namespace Diploma_Final_Project_1
         {
             try
             {
-                string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
 
                 // save user details
                 SqlConnection con1 = new SqlConnection(cs);
@@ -61,7 +64,7 @@ namespace Diploma_Final_Project_1
                     SqlCommand com = new SqlCommand(sql, con1);
 
 
-                    com.Parameters.AddWithValue("@date", this.dateTimePicker_date.Value);
+                    com.Parameters.AddWithValue("@date", this.dateTimePicker_date.Value.Date);
                     com.Parameters.AddWithValue("@time", this.txt_time.Text);
                     com.Parameters.AddWithValue("@number", this.txt_AppoinmentNumber.Text);
                     com.Parameters.AddWithValue("@id", patientId);
@@ -80,25 +83,25 @@ namespace Diploma_Final_Project_1
                     {
                         MessageBox.Show("Appoinment Updated", "Information");
                     }
+
                    
 
-
-                    string sql1 = "UPDATE [DoctorSessions] SET [AppointmentStatus] = @status WHERE  [AppointmentNumber]=@number  ";
+                    string sql1 = "UPDATE [DoctorSessions] SET [AppointmentStatus] = @status WHERE  [AppointmentNumber]=@number AND  [SessionDate]=@date";
                     SqlCommand com1 = new SqlCommand(sql1, con1);
 
-
-                    com1.Parameters.AddWithValue("@status", false);
+                    com1.Parameters.AddWithValue("@date", this.dateTimePicker_date.Value.Date);
+                    com1.Parameters.AddWithValue("@status", SessionStatus1);
                     com1.Parameters.AddWithValue("@number", this.txt_AppoinmentNumber.Text);
                     int ret1 = com1.ExecuteNonQuery();
-                  
+
                     con1.Close();
 
 
                     this.txt_time.Clear();
                     this.txt_AppoinmentNumber.Clear();
-                    this.txt_patient_name.Clear();
-                    this.txt_contact.Clear();
-
+                   
+                    
+                   
                 }
             }
             catch (Exception ex)
@@ -111,7 +114,6 @@ namespace Diploma_Final_Project_1
         {
             try
             {
-                string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
 
 
                 SqlConnection con1 = new SqlConnection(cs);
@@ -131,10 +133,19 @@ namespace Diploma_Final_Project_1
                 com.Parameters.AddWithValue("@number", this.txt_AppoinmentNumber.Text);
 
 
+                string sql1 = "UPDATE [DoctorSessions] SET [AppointmentStatus] = @status WHERE  [AppointmentNumber]=@number AND  [SessionDate]=@date";
+                SqlCommand com1 = new SqlCommand(sql1, con1);
+
+                com1.Parameters.AddWithValue("@date", this.dateTimePicker_date.Value.Date);
+                com1.Parameters.AddWithValue("@status", SessionStatus2);
+                com1.Parameters.AddWithValue("@number", this.txt_AppoinmentNumber.Text);
+               
+
+
                 int ret = com.ExecuteNonQuery();
-                if (ret == 1)
+                if (ret >0 )
                 {
-                    MessageBox.Show("Appoinment Deleted", "Information");
+                    MessageBox.Show("Appoinment Deleted and Session Updated", "Information");
                 }
                 con1.Close();
             }
@@ -148,7 +159,7 @@ namespace Diploma_Final_Project_1
         {
 
 
-            
+
 
             try
             {
@@ -163,7 +174,7 @@ namespace Diploma_Final_Project_1
 
 
                 string sql = @"
-                SELECT a.[time], a.[Appoinment Number], p.Name, a.[status]
+                SELECT a.[Appoinment Number], a.[time] AS Time ,  p.Name AS PatientName , a.[status] AS AppoinmentStatus
             FROM [tbl_appoinment] a
             JOIN tbl_patient_info p ON a.[Patient ID] = p.[Patient ID]
             
@@ -252,7 +263,6 @@ namespace Diploma_Final_Project_1
 
         private void txt_contact_TextChanged(object sender, EventArgs e)
         {
-            string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
 
             string sql = "SELECT [Name] FROM tbl_patient_info WHERE [Contact Number]=@number";
 
@@ -298,73 +308,64 @@ namespace Diploma_Final_Project_1
             }
         }
 
-        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_AppoinmentNumber_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_time_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_cancel_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btn_check_Click(object sender, EventArgs e)
         {
-            string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
-
-
-            SqlConnection con1 = new SqlConnection(cs);
-            con1.Open();
-
-            string sql = "SELECT [AppointmentNumber],[StartTime] FROM [DoctorSessions] WHERE [SessionDate]= @date AND [AppointmentStatus] = 1";
-
-            SqlCommand cmd = new SqlCommand(sql, con1);
-            cmd.Parameters.AddWithValue("@date", dateTimePicker_date.Value.Date);
-
-            SqlDataAdapter dap = new SqlDataAdapter(cmd);
-            DataSet ds = new DataSet();
-            dap.Fill(ds);
-
-
-            if (ds.Tables[0].Rows.Count > 0)
+            try
             {
+                SqlConnection con1 = new SqlConnection(cs);
+                con1.Open();
 
-                DataRow rows = ds.Tables[0].Rows[0];
+                string sql = "SELECT [AppointmentNumber],[StartTime],[EndTime] ,[AppointmentStatus]FROM [DoctorSessions] WHERE [SessionDate]= @date AND [AppointmentStatus] = @status";
+
+                SqlCommand cmd = new SqlCommand(sql, con1);
+                cmd.Parameters.AddWithValue("@date", dateTimePicker_date.Value.Date);
+                cmd.Parameters.AddWithValue("@status", SessionStatus2);
 
 
-                this.txt_AppoinmentNumber.Text = rows["AppointmentNumber"].ToString();
+                SqlDataAdapter dap = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                dap.Fill(ds);
 
-                this.txt_time.Text = rows["StartTime"].ToString();
 
 
+                this.dataGridView_appointment.DataSource = ds.Tables[0];
+
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+
+
+                    this.dataGridView_appointment.DataSource = ds.Tables[0];
+
+                }
+                else
+                {
+                    MessageBox.Show("No Appoinments avaliable for this day");
+                }
+                con1.Close();
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("No Appoinment numbers avaliable for this day");
+                MessageBox.Show("An error occurred : " + ex.Message);
             }
-            con1.Close();
+        }
+
+        private void dataGridView_appointment_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                // Get the current row
+                DataGridViewRow row = dataGridView_appointment.Rows[e.RowIndex];
+
+                // Assuming you want the data from the first column (index 0)
+                string cellValue = row.Cells[0].Value.ToString();
+                string cellValue2 = row.Cells[1].Value.ToString();
+
+                // Set the value to the TextBox
+                txt_AppoinmentNumber.Text = cellValue;
+                txt_time.Text = cellValue2;
+            }
         }
     }
 }

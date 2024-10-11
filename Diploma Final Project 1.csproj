@@ -235,6 +235,12 @@
     <Compile Include="Doctor Home.Designer.cs">
       <DependentUpon>Doctor Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="Doctor Home1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor Home1.Designer.cs">
+      <DependentUpon>Doctor Home1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Doctor User Profile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -517,6 +523,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Doctor Home.resx">
       <DependentUpon>Doctor Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor Home1.resx">
+      <DependentUpon>Doctor Home1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Doctor User Profile.resx">
       <DependentUpon>Doctor User Profile.cs</DependentUpon>

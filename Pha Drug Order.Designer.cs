@@ -182,6 +182,7 @@ namespace Diploma_Final_Project_1
             this.dataGridView_Items.RowTemplate.Height = 33;
             this.dataGridView_Items.Size = new System.Drawing.Size(1380, 760);
             this.dataGridView_Items.TabIndex = 123;
+            this.dataGridView_Items.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Items_CellContentClick);
             // 
             // btn_search
             // 

@@ -21,7 +21,8 @@ namespace Diploma_Final_Project_1
             InitializeComponent();
             
         }
-      
+        string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
+
 
 
         private void Doctor_Visit_Load(object sender, EventArgs e)
@@ -129,8 +130,8 @@ namespace Diploma_Final_Project_1
         {
             try
             {
-                string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
-
+                int ret;
+                string status = "Avaliable";
                 using (SqlConnection conn = new SqlConnection(cs))
                 {
                     conn.Open();
@@ -142,15 +143,16 @@ namespace Diploma_Final_Project_1
                         cmd.Parameters.AddWithValue("@startTime", startTime);
                         cmd.Parameters.AddWithValue("@endTime", endTime);
                         cmd.Parameters.AddWithValue("@appointmentNumber", appointmentNumber);
-                        cmd.Parameters.AddWithValue("@status", true);
+                        cmd.Parameters.AddWithValue("@status", status);
 
 
-                        int ret = cmd.ExecuteNonQuery();
-                        if (ret > 0)
-                        {
-                            MessageBox.Show("Added Succesfully", "Information");
-                        }
+                         ret = cmd.ExecuteNonQuery();
+                        
                     }
+                  
+                    
+                       
+                   
                 }
             }
             catch (Exception ex)
@@ -159,45 +161,7 @@ namespace Diploma_Final_Project_1
             }
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox6_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox5_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox4_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox7_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
     }
 

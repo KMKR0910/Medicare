@@ -161,5 +161,10 @@ namespace Diploma_Final_Project_1
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void txt_appoinment_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

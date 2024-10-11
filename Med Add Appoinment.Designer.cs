@@ -31,8 +31,7 @@ namespace Diploma_Final_Project_1
         {
             this.dateTimePicker_date = new System.Windows.Forms.DateTimePicker();
             this.txt_time = new System.Windows.Forms.TextBox();
-            this.btn_cancel = new System.Windows.Forms.Button();
-            this.brn_delete = new System.Windows.Forms.Button();
+            this.btn_clear = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -62,29 +61,16 @@ namespace Diploma_Final_Project_1
             this.txt_time.Name = "txt_time";
             this.txt_time.Size = new System.Drawing.Size(240, 44);
             this.txt_time.TabIndex = 94;
-            this.txt_time.TextChanged += new System.EventHandler(this.txt_time_TextChanged);
             // 
-            // btn_cancel
+            // btn_clear
             // 
-            this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.Location = new System.Drawing.Point(417, 1157);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(216, 75);
-            this.btn_cancel.TabIndex = 93;
-            this.btn_cancel.Text = "Cancel";
-            this.btn_cancel.UseVisualStyleBackColor = true;
-            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
-            // 
-            // brn_delete
-            // 
-            this.brn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.brn_delete.Location = new System.Drawing.Point(417, 1037);
-            this.brn_delete.Name = "brn_delete";
-            this.brn_delete.Size = new System.Drawing.Size(216, 68);
-            this.brn_delete.TabIndex = 92;
-            this.brn_delete.Text = "Delete";
-            this.brn_delete.UseVisualStyleBackColor = true;
-            this.brn_delete.Click += new System.EventHandler(this.brn_delete_Click);
+            this.btn_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_clear.Location = new System.Drawing.Point(417, 1157);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(216, 75);
+            this.btn_clear.TabIndex = 93;
+            this.btn_clear.Text = "Clear";
+            this.btn_clear.UseVisualStyleBackColor = true;
             // 
             // btn_add
             // 
@@ -106,7 +92,6 @@ namespace Diploma_Final_Project_1
             this.label2.Size = new System.Drawing.Size(97, 42);
             this.label2.TabIndex = 90;
             this.label2.Text = "Date";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -117,7 +102,6 @@ namespace Diploma_Final_Project_1
             this.label1.Size = new System.Drawing.Size(100, 42);
             this.label1.TabIndex = 89;
             this.label1.Text = "Time";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txt_patient_name
             // 
@@ -144,7 +128,6 @@ namespace Diploma_Final_Project_1
             this.txt_AppoinmentNumber.Name = "txt_AppoinmentNumber";
             this.txt_AppoinmentNumber.Size = new System.Drawing.Size(232, 44);
             this.txt_AppoinmentNumber.TabIndex = 85;
-            this.txt_AppoinmentNumber.TextChanged += new System.EventHandler(this.txt_AppoinmentNumber_TextChanged);
             // 
             // label5
             // 
@@ -155,7 +138,6 @@ namespace Diploma_Final_Project_1
             this.label5.Size = new System.Drawing.Size(359, 42);
             this.label5.TabIndex = 86;
             this.label5.Text = "Appoinment Number";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // txt_contact
             // 
@@ -197,6 +179,7 @@ namespace Diploma_Final_Project_1
             this.dataGridView_appointment.RowTemplate.Height = 33;
             this.dataGridView_appointment.Size = new System.Drawing.Size(1332, 1145);
             this.dataGridView_appointment.TabIndex = 99;
+            this.dataGridView_appointment.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_appointment_CellContentClick);
             // 
             // Med_Add_Appoinment
             // 
@@ -209,8 +192,7 @@ namespace Diploma_Final_Project_1
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dateTimePicker_date);
             this.Controls.Add(this.txt_time);
-            this.Controls.Add(this.btn_cancel);
-            this.Controls.Add(this.brn_delete);
+            this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -231,8 +213,7 @@ namespace Diploma_Final_Project_1
 
         private System.Windows.Forms.DateTimePicker dateTimePicker_date;
         private System.Windows.Forms.TextBox txt_time;
-        private System.Windows.Forms.Button btn_cancel;
-        private System.Windows.Forms.Button brn_delete;
+        private System.Windows.Forms.Button btn_clear;
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
