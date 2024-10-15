@@ -161,6 +161,7 @@ namespace Diploma_Final_Project_1
             this.btn_remove.TabIndex = 123;
             this.btn_remove.Text = "Remove";
             this.btn_remove.UseVisualStyleBackColor = true;
+            this.btn_remove.Click += new System.EventHandler(this.btn_remove_Click);
             // 
             // btn_add
             // 

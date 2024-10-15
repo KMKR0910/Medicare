@@ -23,6 +23,8 @@ namespace Diploma_Final_Project_1
             btn_save.BackColor = customC;
             btn_delete.BackColor = customC;
         }
+        string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
+        string SessionStatus2 = "Avaliable";
 
         private void Med_Edit_Appoinment_Load(object sender, EventArgs e)
         {
@@ -31,7 +33,6 @@ namespace Diploma_Final_Project_1
 
         private void btn_search_Click(object sender, EventArgs e)
         {
-            string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
 
             try
             {
@@ -44,7 +45,8 @@ namespace Diploma_Final_Project_1
                FROM tbl_appoinment app
                JOIN [tbl_patient_info] pat 
                ON app.[Patient ID] = pat.[Patient ID]
-               WHERE app.[Appoinment Number] = @appoinmentnumber"; SqlCommand com1 = new SqlCommand(sql, con);
+               WHERE app.[Appoinment Number] = @appoinmentnumber AND " ; 
+                SqlCommand com1 = new SqlCommand(sql, con);
                 com1.Parameters.AddWithValue("@appoinmentnumber", this.txt_appoinment.Text);
                 SqlDataAdapter dap = new SqlDataAdapter(com1);
                 DataSet ds = new DataSet();
@@ -165,6 +167,48 @@ namespace Diploma_Final_Project_1
         private void txt_appoinment_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dateTimePicker_date_ValueChanged(object sender, EventArgs e)
+        {
+
+            try
+            {
+                SqlConnection con1 = new SqlConnection(cs);
+                con1.Open();
+
+                string sql = "SELECT [AppointmentNumber],[StartTime],[EndTime] ,[AppointmentStatus]FROM [DoctorSessions] WHERE [SessionDate]= @date AND [AppointmentStatus] = @status";
+
+                SqlCommand cmd = new SqlCommand(sql, con1);
+                cmd.Parameters.AddWithValue("@date", dateTimePicker_date.Value.Date);
+                cmd.Parameters.AddWithValue("@status", SessionStatus2);
+
+
+                SqlDataAdapter dap = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                dap.Fill(ds);
+
+
+
+                this.dataGridView_appointment.DataSource = ds.Tables[0];
+
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+
+
+                    this.dataGridView_appointment.DataSource = ds.Tables[0];
+
+                }
+                else
+                {
+                    MessageBox.Show("No Appoinments avaliable for this day");
+                }
+                con1.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message);
+            }
         }
     }
 }

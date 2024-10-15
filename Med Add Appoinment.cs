@@ -26,18 +26,11 @@ namespace Diploma_Final_Project_1
             btn_add.BackColor = customC;
 
             btn_clear.BackColor = customC;
-            btn_delete.BackColor = customC;
         }
 
         string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
 
-        private void getAppoinmentID()
-        {
-            SqlConnection con = new SqlConnection(cs);
-            con.Open();
-            string sql = "SELECT [Appoinment_ID] FROM [tbl_appoinment] WHERE [Contact Number] = @number";
-
-        }
+       
 
         private void btn_save_Click(object sender, EventArgs e)
         {
@@ -52,11 +45,10 @@ namespace Diploma_Final_Project_1
                 selectCmd.Parameters.AddWithValue("@number", this.txt_contact.Text);
 
                 // Execute the query and retrieve the Patient_ID
-                object result = selectCmd.ExecuteScalar();
-                if (result != null)
+                object patientId = selectCmd.ExecuteScalar();
+                if (patientId != null)
                 {
-                    int patientId = Convert.ToInt32(result);
-
+                  
 
 
                     string sql = "INSERT INTO tbl_appoinment ([Patient ID],Date,time,[Appoinment Number],[status])" +
