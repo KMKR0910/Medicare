@@ -235,5 +235,27 @@ namespace Diploma_Final_Project_1
 
             groupBox_Patients_Enter(this, EventArgs.Empty);
         }
+
+        private void addPatientPaymentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addDrugPaymentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Pha_Add_Drug_Payment form2 = new Pha_Add_Drug_Payment();
+            // Remove borders and make the form a child control
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.Dock = DockStyle.Fill;
+
+            // Add the form to the GroupBox
+            groupBoxloc.Controls.Clear();  // Optionally clear previous controls
+            groupBoxloc.Controls.Add(form2);
+
+            // Show the form inside the GroupBox
+            form2.Show();
+
+        }
     }
 }

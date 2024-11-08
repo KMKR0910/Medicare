@@ -271,6 +271,12 @@
     <Compile Include="Doctor View Lab Tests.Designer.cs">
       <DependentUpon>Doctor View Lab Tests.cs</DependentUpon>
     </Compile>
+    <Compile Include="Doctor View Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor View Supplier.Designer.cs">
+      <DependentUpon>Doctor View Supplier.cs</DependentUpon>
+    </Compile>
     <Compile Include="Doctor Visit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -451,6 +457,12 @@
     <Compile Include="Pha View Drug Order.Designer.cs">
       <DependentUpon>Pha View Drug Order.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pha View drug types.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pha View drug types.Designer.cs">
+      <DependentUpon>Pha View drug types.cs</DependentUpon>
+    </Compile>
     <Compile Include="Phar Prescription.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -542,6 +554,9 @@
     <EmbeddedResource Include="Doctor View Lab Tests.resx">
       <DependentUpon>Doctor View Lab Tests.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Doctor View Supplier.resx">
+      <DependentUpon>Doctor View Supplier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Doctor Visit.resx">
       <DependentUpon>Doctor Visit.cs</DependentUpon>
     </EmbeddedResource>
@@ -631,6 +646,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pha View Drug Order.resx">
       <DependentUpon>Pha View Drug Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pha View drug types.resx">
+      <DependentUpon>Pha View drug types.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Phar Prescription.resx">
       <DependentUpon>Phar Prescription.cs</DependentUpon>

@@ -90,6 +90,7 @@ namespace Diploma_Final_Project_1
             this.medicalCertificateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.laborataryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewLabTestPricelistsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.drugSupplierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -698,7 +699,8 @@ namespace Diploma_Final_Project_1
             this.financeToolStripMenuItem,
             this.drugInventoryReportToolStripMenuItem,
             this.medicalCertificateToolStripMenuItem,
-            this.laborataryToolStripMenuItem});
+            this.laborataryToolStripMenuItem,
+            this.drugSupplierToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(1, 4, 0, 4);
@@ -727,6 +729,13 @@ namespace Diploma_Final_Project_1
             this.viewLabTestPricelistsToolStripMenuItem.Size = new System.Drawing.Size(534, 58);
             this.viewLabTestPricelistsToolStripMenuItem.Text = "View Lab Test Pricelists";
             this.viewLabTestPricelistsToolStripMenuItem.Click += new System.EventHandler(this.viewLabTestPricelistsToolStripMenuItem_Click);
+            // 
+            // drugSupplierToolStripMenuItem
+            // 
+            this.drugSupplierToolStripMenuItem.Name = "drugSupplierToolStripMenuItem";
+            this.drugSupplierToolStripMenuItem.Size = new System.Drawing.Size(285, 54);
+            this.drugSupplierToolStripMenuItem.Text = "Drug Suppliers";
+            this.drugSupplierToolStripMenuItem.Click += new System.EventHandler(this.drugSupplierToolStripMenuItem_Click);
             // 
             // Doctor_Home1
             // 
@@ -830,5 +839,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.ToolStripMenuItem medicalCertificateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem laborataryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewLabTestPricelistsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem drugSupplierToolStripMenuItem;
     }
 }

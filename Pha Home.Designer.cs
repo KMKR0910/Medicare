@@ -46,16 +46,15 @@ namespace Diploma_Final_Project_1
             this.viewDrugOrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addDrugOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.financeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addExpensesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewExpensesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addPatientPaymentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewPatientPaymentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox_finance = new System.Windows.Forms.GroupBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.btn_finance = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel8 = new System.Windows.Forms.LinkLabel();
             this.linkLabel6 = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -81,9 +80,7 @@ namespace Diploma_Final_Project_1
             this.groupBox_Home = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_home = new System.Windows.Forms.Button();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
+            this.addDrugPaymentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox_finance.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -238,37 +235,10 @@ namespace Diploma_Final_Project_1
             // financeToolStripMenuItem
             // 
             this.financeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addExpensesToolStripMenuItem,
-            this.viewExpensesToolStripMenuItem,
-            this.addPatientPaymentsToolStripMenuItem,
-            this.viewPatientPaymentsToolStripMenuItem});
+            this.addDrugPaymentsToolStripMenuItem});
             this.financeToolStripMenuItem.Name = "financeToolStripMenuItem";
             this.financeToolStripMenuItem.Size = new System.Drawing.Size(166, 54);
             this.financeToolStripMenuItem.Text = "Finance";
-            // 
-            // addExpensesToolStripMenuItem
-            // 
-            this.addExpensesToolStripMenuItem.Name = "addExpensesToolStripMenuItem";
-            this.addExpensesToolStripMenuItem.Size = new System.Drawing.Size(533, 58);
-            this.addExpensesToolStripMenuItem.Text = "Add Expenses";
-            // 
-            // viewExpensesToolStripMenuItem
-            // 
-            this.viewExpensesToolStripMenuItem.Name = "viewExpensesToolStripMenuItem";
-            this.viewExpensesToolStripMenuItem.Size = new System.Drawing.Size(533, 58);
-            this.viewExpensesToolStripMenuItem.Text = "View Expenses";
-            // 
-            // addPatientPaymentsToolStripMenuItem
-            // 
-            this.addPatientPaymentsToolStripMenuItem.Name = "addPatientPaymentsToolStripMenuItem";
-            this.addPatientPaymentsToolStripMenuItem.Size = new System.Drawing.Size(533, 58);
-            this.addPatientPaymentsToolStripMenuItem.Text = "Add Patient Payments";
-            // 
-            // viewPatientPaymentsToolStripMenuItem
-            // 
-            this.viewPatientPaymentsToolStripMenuItem.Name = "viewPatientPaymentsToolStripMenuItem";
-            this.viewPatientPaymentsToolStripMenuItem.Size = new System.Drawing.Size(533, 58);
-            this.viewPatientPaymentsToolStripMenuItem.Text = "View Patient Payments";
             // 
             // groupBox_finance
             // 
@@ -331,6 +301,36 @@ namespace Diploma_Final_Project_1
             this.groupBox10.TabIndex = 12;
             this.groupBox10.TabStop = false;
             // 
+            // linkLabel4
+            // 
+            this.linkLabel4.AutoSize = true;
+            this.linkLabel4.Location = new System.Drawing.Point(31, 346);
+            this.linkLabel4.Name = "linkLabel4";
+            this.linkLabel4.Size = new System.Drawing.Size(327, 45);
+            this.linkLabel4.TabIndex = 16;
+            this.linkLabel4.TabStop = true;
+            this.linkLabel4.Text = "View drug inventory";
+            // 
+            // linkLabel3
+            // 
+            this.linkLabel3.AutoSize = true;
+            this.linkLabel3.Location = new System.Drawing.Point(36, 263);
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.Size = new System.Drawing.Size(183, 45);
+            this.linkLabel3.TabIndex = 15;
+            this.linkLabel3.TabStop = true;
+            this.linkLabel3.Text = "New drugs";
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(31, 175);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(334, 45);
+            this.linkLabel2.TabIndex = 14;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Supplier Information";
+            // 
             // linkLabel8
             // 
             this.linkLabel8.AutoSize = true;
@@ -356,7 +356,7 @@ namespace Diploma_Final_Project_1
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Location = new System.Drawing.Point(31, 85);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(412, 90);
+            this.linkLabel1.Size = new System.Drawing.Size(206, 45);
             this.linkLabel1.TabIndex = 0;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Drug Orders";
@@ -613,35 +613,12 @@ namespace Diploma_Final_Project_1
             this.btn_home.Text = "Home";
             this.btn_home.UseVisualStyleBackColor = false;
             // 
-            // linkLabel2
+            // addDrugPaymentsToolStripMenuItem
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(31, 175);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(668, 90);
-            this.linkLabel2.TabIndex = 14;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Supplier Information";
-            // 
-            // linkLabel3
-            // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Location = new System.Drawing.Point(36, 263);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(366, 90);
-            this.linkLabel3.TabIndex = 15;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "New drugs";
-            // 
-            // linkLabel4
-            // 
-            this.linkLabel4.AutoSize = true;
-            this.linkLabel4.Location = new System.Drawing.Point(31, 346);
-            this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(327, 45);
-            this.linkLabel4.TabIndex = 16;
-            this.linkLabel4.TabStop = true;
-            this.linkLabel4.Text = "View drug inventory";
+            this.addDrugPaymentsToolStripMenuItem.Name = "addDrugPaymentsToolStripMenuItem";
+            this.addDrugPaymentsToolStripMenuItem.Size = new System.Drawing.Size(491, 58);
+            this.addDrugPaymentsToolStripMenuItem.Text = "Add Drug Payments";
+            this.addDrugPaymentsToolStripMenuItem.Click += new System.EventHandler(this.addDrugPaymentsToolStripMenuItem_Click);
             // 
             // Pha_Home
             // 
@@ -689,10 +666,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem prescriptionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem financeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addExpensesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewExpensesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addPatientPaymentsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewPatientPaymentsToolStripMenuItem;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.GroupBox groupBox_finance;
         private System.Windows.Forms.PictureBox pictureBox10;
@@ -737,5 +710,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.LinkLabel linkLabel4;
         private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.ToolStripMenuItem addDrugPaymentsToolStripMenuItem;
     }
 }
