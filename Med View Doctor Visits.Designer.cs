@@ -151,6 +151,7 @@ namespace Diploma_Final_Project_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2427, 1449);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dateTimePicker1);

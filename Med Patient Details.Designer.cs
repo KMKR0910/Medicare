@@ -294,18 +294,18 @@ namespace Diploma_Final_Project_1
             // btn_cancel
             // 
             this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.Location = new System.Drawing.Point(648, 846);
+            this.btn_cancel.Location = new System.Drawing.Point(666, 846);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(170, 90);
             this.btn_cancel.TabIndex = 86;
-            this.btn_cancel.Text = "Cancel";
+            this.btn_cancel.Text = "Delete";
             this.btn_cancel.UseVisualStyleBackColor = true;
             this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // btn_save
             // 
             this.btn_save.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_save.Location = new System.Drawing.Point(350, 846);
+            this.btn_save.Location = new System.Drawing.Point(345, 846);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(166, 90);
             this.btn_save.TabIndex = 85;
@@ -383,6 +383,7 @@ namespace Diploma_Final_Project_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2427, 1449);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.txt_search);

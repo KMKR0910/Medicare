@@ -17,6 +17,12 @@ namespace Diploma_Final_Project_1
         public Doctor_View_Diagnose_Histroy()
         {
             InitializeComponent();
+            Color customC = ColorTranslator.FromHtml("#9083D5 ");
+            btn_cancel.BackColor = customC;
+            btn_clear.BackColor = customC;
+            btn_save.BackColor = customC;
+
+            btn_search.BackColor = customC;
         }
         string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
         string cellValue;
@@ -177,6 +183,11 @@ namespace Diploma_Final_Project_1
             {
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void Doctor_View_Diagnose_Histroy_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

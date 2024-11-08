@@ -34,6 +34,7 @@ namespace Diploma_Final_Project_1
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.prescriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewPrescriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.doctorSessionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.view_doctor_sessionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.financeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,11 +55,11 @@ namespace Diploma_Final_Project_1
             this.btn_LabTests = new System.Windows.Forms.Button();
             this.groupBox_lab_test = new System.Windows.Forms.GroupBox();
             this.groupBox_prescription = new System.Windows.Forms.GroupBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.btn_prescription = new System.Windows.Forms.Button();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.groupBoxloc = new System.Windows.Forms.GroupBox();
             this.groupBox_doctor_session = new System.Windows.Forms.GroupBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.btn_doctor_session = new System.Windows.Forms.Button();
             this.groupBox_UserProfile = new System.Windows.Forms.GroupBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -66,7 +67,6 @@ namespace Diploma_Final_Project_1
             this.groupBox_Home = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_home = new System.Windows.Forms.Button();
-            this.viewPrescriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox_finance.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -74,10 +74,10 @@ namespace Diploma_Final_Project_1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.groupBox_lab_test.SuspendLayout();
             this.groupBox_prescription.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.groupBoxloc.SuspendLayout();
             this.groupBox_doctor_session.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.groupBox_UserProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox_Home.SuspendLayout();
@@ -128,6 +128,12 @@ namespace Diploma_Final_Project_1
             this.prescriptionToolStripMenuItem.Size = new System.Drawing.Size(237, 54);
             this.prescriptionToolStripMenuItem.Text = "Prescription";
             this.prescriptionToolStripMenuItem.Click += new System.EventHandler(this.prescriptionToolStripMenuItem_Click);
+            // 
+            // viewPrescriptionToolStripMenuItem
+            // 
+            this.viewPrescriptionToolStripMenuItem.Name = "viewPrescriptionToolStripMenuItem";
+            this.viewPrescriptionToolStripMenuItem.Size = new System.Drawing.Size(446, 58);
+            this.viewPrescriptionToolStripMenuItem.Text = "View Prescription";
             // 
             // doctorSessionsToolStripMenuItem
             // 
@@ -195,6 +201,7 @@ namespace Diploma_Final_Project_1
             this.groupBox_finance.Size = new System.Drawing.Size(620, 372);
             this.groupBox_finance.TabIndex = 11;
             this.groupBox_finance.TabStop = false;
+            this.groupBox_finance.Enter += new System.EventHandler(this.groupBox_finance_Enter);
             // 
             // pictureBox10
             // 
@@ -306,16 +313,6 @@ namespace Diploma_Final_Project_1
             this.groupBox_prescription.TabStop = false;
             this.groupBox_prescription.Enter += new System.EventHandler(this.groupBox_prescription_Enter);
             // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::Diploma_Final_Project_1.Properties.Resources.medical_record_line_icon_patient_diagnosis_report_linear_pictogram_health_information_on_clipboard_outline_icon_hospital_note_diagnostic_document_editable_stroke_isolated_illustration_vector1;
-            this.pictureBox8.Location = new System.Drawing.Point(158, 60);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(251, 142);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 3;
-            this.pictureBox8.TabStop = false;
-            // 
             // btn_prescription
             // 
             this.btn_prescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
@@ -327,6 +324,26 @@ namespace Diploma_Final_Project_1
             this.btn_prescription.TabIndex = 1;
             this.btn_prescription.Text = "Prescription";
             this.btn_prescription.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Diploma_Final_Project_1.Properties.Resources.images__3_;
+            this.pictureBox6.Location = new System.Drawing.Point(150, 69);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(251, 142);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 2;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::Diploma_Final_Project_1.Properties.Resources.medical_record_line_icon_patient_diagnosis_report_linear_pictogram_health_information_on_clipboard_outline_icon_hospital_note_diagnostic_document_editable_stroke_isolated_illustration_vector1;
+            this.pictureBox8.Location = new System.Drawing.Point(158, 60);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(251, 142);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 3;
+            this.pictureBox8.TabStop = false;
             // 
             // groupBoxloc
             // 
@@ -352,16 +369,7 @@ namespace Diploma_Final_Project_1
             this.groupBox_doctor_session.Size = new System.Drawing.Size(560, 371);
             this.groupBox_doctor_session.TabIndex = 9;
             this.groupBox_doctor_session.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::Diploma_Final_Project_1.Properties.Resources.images__3_;
-            this.pictureBox6.Location = new System.Drawing.Point(150, 69);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(251, 142);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 2;
-            this.pictureBox6.TabStop = false;
+            this.groupBox_doctor_session.Enter += new System.EventHandler(this.groupBox_doctor_session_Enter);
             // 
             // btn_doctor_session
             // 
@@ -384,6 +392,7 @@ namespace Diploma_Final_Project_1
             this.groupBox_UserProfile.Size = new System.Drawing.Size(560, 369);
             this.groupBox_UserProfile.TabIndex = 10;
             this.groupBox_UserProfile.TabStop = false;
+            this.groupBox_UserProfile.Enter += new System.EventHandler(this.groupBox_UserProfile_Enter);
             // 
             // pictureBox2
             // 
@@ -443,22 +452,17 @@ namespace Diploma_Final_Project_1
             this.btn_home.Text = "Home";
             this.btn_home.UseVisualStyleBackColor = false;
             // 
-            // viewPrescriptionToolStripMenuItem
-            // 
-            this.viewPrescriptionToolStripMenuItem.Name = "viewPrescriptionToolStripMenuItem";
-            this.viewPrescriptionToolStripMenuItem.Size = new System.Drawing.Size(446, 58);
-            this.viewPrescriptionToolStripMenuItem.Text = "View Prescription";
-            // 
             // Lab_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2877, 1583);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBox10);
             this.Controls.Add(this.groupBoxloc);
             this.Name = "Lab_Home";
-            this.Text = "Lab_Home";
+            this.Text = "Laboratory Assistant";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Lab_Home_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -470,10 +474,10 @@ namespace Diploma_Final_Project_1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.groupBox_lab_test.ResumeLayout(false);
             this.groupBox_prescription.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.groupBoxloc.ResumeLayout(false);
             this.groupBox_doctor_session.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.groupBox_UserProfile.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox_Home.ResumeLayout(false);

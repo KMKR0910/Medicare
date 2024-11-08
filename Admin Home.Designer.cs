@@ -42,6 +42,7 @@ namespace Diploma_Final_Project_1
             this.appoinmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.diagnosisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.prescriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.userProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox_Main = new System.Windows.Forms.GroupBox();
             this.groupBox_Users = new System.Windows.Forms.GroupBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -52,12 +53,6 @@ namespace Diploma_Final_Project_1
             this.groupBox_Home = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_home = new System.Windows.Forms.Button();
-            this.userProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.menuStrip1.SuspendLayout();
             this.groupBox_Main.SuspendLayout();
             this.groupBox_Users.SuspendLayout();
@@ -66,7 +61,6 @@ namespace Diploma_Final_Project_1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox_Home.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox10.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -164,6 +158,13 @@ namespace Diploma_Final_Project_1
             this.prescriptionToolStripMenuItem.Name = "prescriptionToolStripMenuItem";
             this.prescriptionToolStripMenuItem.Size = new System.Drawing.Size(20, 54);
             // 
+            // userProfileToolStripMenuItem
+            // 
+            this.userProfileToolStripMenuItem.Name = "userProfileToolStripMenuItem";
+            this.userProfileToolStripMenuItem.Size = new System.Drawing.Size(230, 54);
+            this.userProfileToolStripMenuItem.Text = "User Profile";
+            this.userProfileToolStripMenuItem.Click += new System.EventHandler(this.userProfileToolStripMenuItem_Click);
+            // 
             // groupBox_Main
             // 
             this.groupBox_Main.BackColor = System.Drawing.Color.White;
@@ -175,6 +176,7 @@ namespace Diploma_Final_Project_1
             this.groupBox_Main.Size = new System.Drawing.Size(2427, 1449);
             this.groupBox_Main.TabIndex = 8;
             this.groupBox_Main.TabStop = false;
+            this.groupBox_Main.Enter += new System.EventHandler(this.groupBox_Main_Enter);
             // 
             // groupBox_Users
             // 
@@ -278,77 +280,12 @@ namespace Diploma_Final_Project_1
             this.btn_home.Text = "Home";
             this.btn_home.UseVisualStyleBackColor = false;
             // 
-            // userProfileToolStripMenuItem
-            // 
-            this.userProfileToolStripMenuItem.Name = "userProfileToolStripMenuItem";
-            this.userProfileToolStripMenuItem.Size = new System.Drawing.Size(230, 54);
-            this.userProfileToolStripMenuItem.Text = "User Profile";
-            this.userProfileToolStripMenuItem.Click += new System.EventHandler(this.userProfileToolStripMenuItem_Click);
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(41, 204);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(173, 45);
-            this.linkLabel1.TabIndex = 0;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Add Users";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(41, 305);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(219, 45);
-            this.linkLabel2.TabIndex = 1;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Update Users";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(154, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 45);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Quick Links";
-            // 
-            // groupBox10
-            // 
-            this.groupBox10.BackColor = System.Drawing.Color.White;
-            this.groupBox10.Controls.Add(this.linkLabel3);
-            this.groupBox10.Controls.Add(this.label1);
-            this.groupBox10.Controls.Add(this.linkLabel2);
-            this.groupBox10.Controls.Add(this.linkLabel1);
-            this.groupBox10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox10.Location = new System.Drawing.Point(2459, 79);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(423, 1449);
-            this.groupBox10.TabIndex = 9;
-            this.groupBox10.TabStop = false;
-            // 
-            // linkLabel3
-            // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Location = new System.Drawing.Point(41, 408);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(404, 90);
-            this.linkLabel3.TabIndex = 12;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "View Profile";
-            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
-            // 
             // Admin_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2909, 1583);
-            this.Controls.Add(this.groupBox10);
             this.Controls.Add(this.groupBox_Main);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Admin_Home";
@@ -364,8 +301,6 @@ namespace Diploma_Final_Project_1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox_Home.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox10.ResumeLayout(false);
-            this.groupBox10.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -396,10 +331,5 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.ToolStripMenuItem userRegistrationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageUsersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem userProfileToolStripMenuItem;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.LinkLabel linkLabel3;
     }
 }

@@ -39,19 +39,19 @@ namespace Diploma_Final_Project_1
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView_appointment = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_status = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txt_name = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView_appointment = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_appointment)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_appointment)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePicker_AP_date
@@ -158,33 +158,13 @@ namespace Diploma_Final_Project_1
             this.label2.TabIndex = 80;
             this.label2.Text = "Total Appointments";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(38, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(387, 42);
-            this.label1.TabIndex = 82;
-            this.label1.Text = "Today\'s Appointments";
-            // 
-            // dataGridView_appointment
-            // 
-            this.dataGridView_appointment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_appointment.Location = new System.Drawing.Point(22, 122);
-            this.dataGridView_appointment.Name = "dataGridView_appointment";
-            this.dataGridView_appointment.RowHeadersWidth = 82;
-            this.dataGridView_appointment.RowTemplate.Height = 33;
-            this.dataGridView_appointment.Size = new System.Drawing.Size(1166, 476);
-            this.dataGridView_appointment.TabIndex = 81;
-            this.dataGridView_appointment.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_appointment_CellContentClick);
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txt_status);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txt_name);
             this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(45, 672);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1131, 499);
@@ -228,10 +208,32 @@ namespace Diploma_Final_Project_1
             this.label6.TabIndex = 83;
             this.label6.Text = "Patient Name";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(38, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(387, 42);
+            this.label1.TabIndex = 82;
+            this.label1.Text = "Today\'s Appointments";
+            // 
+            // dataGridView_appointment
+            // 
+            this.dataGridView_appointment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_appointment.Location = new System.Drawing.Point(22, 122);
+            this.dataGridView_appointment.Name = "dataGridView_appointment";
+            this.dataGridView_appointment.RowHeadersWidth = 82;
+            this.dataGridView_appointment.RowTemplate.Height = 33;
+            this.dataGridView_appointment.Size = new System.Drawing.Size(1166, 476);
+            this.dataGridView_appointment.TabIndex = 81;
+            this.dataGridView_appointment.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_appointment_CellContentClick);
+            // 
             // Doctor_Appoinments1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2427, 1449);
             this.Controls.Add(this.dateTimePicker_AP_date);
             this.Controls.Add(this.splitContainer1);
@@ -244,9 +246,9 @@ namespace Diploma_Final_Project_1
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_appointment)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_appointment)).EndInit();
             this.ResumeLayout(false);
 
         }

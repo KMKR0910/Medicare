@@ -34,14 +34,11 @@ namespace Diploma_Final_Project_1
             linkLabel2.LinkColor = customC;
             linkLabel3.LinkColor = customC;
             linkLabel4.LinkColor = customC;
-            linkLabel5.LinkColor = customC;
+            
             linkLabel6.LinkColor = customC;
-            linkLabel7.LinkColor = customC;
+           
             linkLabel8.LinkColor = customC;
-            linkLabel9.LinkColor = customC;
-            linkLabel10.LinkColor = customC;
-            linkLabel11.LinkColor = customC;
-
+          
             menuStrip1.BackColor = customC;
         }
 

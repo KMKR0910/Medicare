@@ -53,13 +53,13 @@ namespace Diploma_Final_Project_1
             this.btn_edit = new System.Windows.Forms.Button();
             this.btn_clear = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_clear2 = new System.Windows.Forms.Button();
+            this.btn_reset = new System.Windows.Forms.Button();
             this.txt_pwd2 = new System.Windows.Forms.TextBox();
             this.txt_pwd1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.txt_userID = new System.Windows.Forms.TextBox();
-            this.btn_clear2 = new System.Windows.Forms.Button();
-            this.btn_reset = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -294,6 +294,27 @@ namespace Diploma_Final_Project_1
             this.groupBox1.Text = "Reset Password";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // btn_clear2
+            // 
+            this.btn_clear2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_clear2.Location = new System.Drawing.Point(987, 200);
+            this.btn_clear2.Name = "btn_clear2";
+            this.btn_clear2.Size = new System.Drawing.Size(308, 90);
+            this.btn_clear2.TabIndex = 122;
+            this.btn_clear2.Text = "Clear";
+            this.btn_clear2.UseVisualStyleBackColor = true;
+            // 
+            // btn_reset
+            // 
+            this.btn_reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_reset.Location = new System.Drawing.Point(194, 200);
+            this.btn_reset.Name = "btn_reset";
+            this.btn_reset.Size = new System.Drawing.Size(308, 90);
+            this.btn_reset.TabIndex = 121;
+            this.btn_reset.Text = "Reset Password";
+            this.btn_reset.UseVisualStyleBackColor = true;
+            this.btn_reset.Click += new System.EventHandler(this.btn_reset_Click);
+            // 
             // txt_pwd2
             // 
             this.txt_pwd2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -342,31 +363,11 @@ namespace Diploma_Final_Project_1
             this.txt_userID.TabIndex = 87;
             this.txt_userID.TextChanged += new System.EventHandler(this.txt_userID_TextChanged);
             // 
-            // btn_clear2
-            // 
-            this.btn_clear2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_clear2.Location = new System.Drawing.Point(987, 200);
-            this.btn_clear2.Name = "btn_clear2";
-            this.btn_clear2.Size = new System.Drawing.Size(308, 90);
-            this.btn_clear2.TabIndex = 122;
-            this.btn_clear2.Text = "Clear";
-            this.btn_clear2.UseVisualStyleBackColor = true;
-            // 
-            // btn_reset
-            // 
-            this.btn_reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_reset.Location = new System.Drawing.Point(194, 200);
-            this.btn_reset.Name = "btn_reset";
-            this.btn_reset.Size = new System.Drawing.Size(308, 90);
-            this.btn_reset.TabIndex = 121;
-            this.btn_reset.Text = "Reset Password";
-            this.btn_reset.UseVisualStyleBackColor = true;
-            this.btn_reset.Click += new System.EventHandler(this.btn_reset_Click);
-            // 
             // Employee_User_Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2427, 1449);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txt_userID);

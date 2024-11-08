@@ -64,6 +64,10 @@ namespace Diploma_Final_Project_1
             this.label12 = new System.Windows.Forms.Label();
             this.txt_userID = new System.Windows.Forms.TextBox();
             this.dataGridView_view_users = new System.Windows.Forms.DataGridView();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_view_users)).BeginInit();
@@ -120,6 +124,7 @@ namespace Diploma_Final_Project_1
             this.btn_clear.TabIndex = 119;
             this.btn_clear.Text = "Clear";
             this.btn_clear.UseVisualStyleBackColor = true;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // btn_reset
             // 
@@ -151,6 +156,7 @@ namespace Diploma_Final_Project_1
             this.btn_Clear1.TabIndex = 110;
             this.btn_Clear1.Text = "Clear";
             this.btn_Clear1.UseVisualStyleBackColor = true;
+            this.btn_Clear1.Click += new System.EventHandler(this.btn_Clear1_Click);
             // 
             // btn_Delete
             // 
@@ -417,11 +423,59 @@ namespace Diploma_Final_Project_1
             this.dataGridView_view_users.TabIndex = 117;
             this.dataGridView_view_users.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_view_users_CellContentClick);
             // 
+            // linkLabel3
+            // 
+            this.linkLabel3.AutoSize = true;
+            this.linkLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel3.Location = new System.Drawing.Point(2574, 432);
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.Size = new System.Drawing.Size(202, 45);
+            this.linkLabel3.TabIndex = 121;
+            this.linkLabel3.TabStop = true;
+            this.linkLabel3.Text = "View Profile";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(2574, 90);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(190, 45);
+            this.label10.TabIndex = 120;
+            this.label10.Text = "Quick Links";
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel2.Location = new System.Drawing.Point(2574, 329);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(219, 45);
+            this.linkLabel2.TabIndex = 119;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Update Users";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Location = new System.Drawing.Point(2574, 228);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(173, 45);
+            this.linkLabel1.TabIndex = 118;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Add Users";
+            // 
             // Admin_View_Users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2427, 1449);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(2871, 1449);
+            this.Controls.Add(this.linkLabel3);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.linkLabel2);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.dataGridView_view_users);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.txt_userID);
@@ -498,5 +552,9 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.Button btn_clear;
         private System.Windows.Forms.Button btn_reset;
         private System.Windows.Forms.DataGridView dataGridView_view_users;
+        private System.Windows.Forms.LinkLabel linkLabel3;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

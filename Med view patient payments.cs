@@ -17,6 +17,12 @@ namespace Diploma_Final_Project_1
         public Med_view_patient_payments()
         {
             InitializeComponent();
+            Color customC = ColorTranslator.FromHtml("#9083D5 ");
+            btn_delete.BackColor = customC;
+            btn_update.BackColor = customC;
+            btn_clear.BackColor = customC;
+
+
         }
         string PID;
         string cellValue;

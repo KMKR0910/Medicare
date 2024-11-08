@@ -17,6 +17,8 @@ namespace Diploma_Final_Project_1
         public Phar_Prescription()
         {
             InitializeComponent();
+            Color customC = ColorTranslator.FromHtml("#9083D5 ");
+            btn_search.BackColor = customC;
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)

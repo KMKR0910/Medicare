@@ -108,7 +108,7 @@ namespace Diploma_Final_Project_1
                     {
                         if (userType == "Doctor")
                         {
-                            Doctor_Home m1 = new Doctor_Home(UserID);
+                            Doctor_Home1 m1 = new Doctor_Home1(UserID);
                             m1.Show();
                             this.Hide();
                         }

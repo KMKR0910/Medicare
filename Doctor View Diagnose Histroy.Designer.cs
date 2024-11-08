@@ -30,6 +30,8 @@ namespace Diploma_Final_Project_1
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_description = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
             this.btn_clear = new System.Windows.Forms.Button();
@@ -42,8 +44,6 @@ namespace Diploma_Final_Project_1
             this.dataGridView_diagnose = new System.Windows.Forms.DataGridView();
             this.btn_search = new System.Windows.Forms.Button();
             this.txt_search = new System.Windows.Forms.TextBox();
-            this.txt_description = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_diagnose)).BeginInit();
             this.SuspendLayout();
@@ -68,6 +68,25 @@ namespace Diploma_Final_Project_1
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Update Details";
+            // 
+            // txt_description
+            // 
+            this.txt_description.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_description.Location = new System.Drawing.Point(1362, 66);
+            this.txt_description.Multiline = true;
+            this.txt_description.Name = "txt_description";
+            this.txt_description.Size = new System.Drawing.Size(680, 175);
+            this.txt_description.TabIndex = 91;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(1082, 60);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(205, 42);
+            this.label2.TabIndex = 90;
+            this.label2.Text = "Description";
             // 
             // btn_cancel
             // 
@@ -186,29 +205,11 @@ namespace Diploma_Final_Project_1
             this.txt_search.Size = new System.Drawing.Size(471, 44);
             this.txt_search.TabIndex = 57;
             // 
-            // txt_description
-            // 
-            this.txt_description.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_description.Location = new System.Drawing.Point(1362, 66);
-            this.txt_description.Multiline = true;
-            this.txt_description.Name = "txt_description";
-            this.txt_description.Size = new System.Drawing.Size(680, 175);
-            this.txt_description.TabIndex = 91;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1082, 60);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(205, 42);
-            this.label2.TabIndex = 90;
-            this.label2.Text = "Description";
-            // 
             // Doctor_View_Diagnose_Histroy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2427, 1449);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.txt_search);
@@ -216,6 +217,7 @@ namespace Diploma_Final_Project_1
             this.Controls.Add(this.dataGridView_diagnose);
             this.Name = "Doctor_View_Diagnose_Histroy";
             this.Text = "Doctor_View_Diagnose_Histroy";
+            this.Load += new System.EventHandler(this.Doctor_View_Diagnose_Histroy_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_diagnose)).EndInit();

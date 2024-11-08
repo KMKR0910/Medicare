@@ -164,7 +164,7 @@ namespace Diploma_Final_Project_1
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(195, 426);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(600, 84);
+            this.label3.Size = new System.Drawing.Size(300, 42);
             this.label3.TabIndex = 98;
             this.label3.Text = "Payment Method";
             // 
@@ -193,7 +193,7 @@ namespace Diploma_Final_Project_1
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(115, 58);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(568, 84);
+            this.label5.Size = new System.Drawing.Size(284, 42);
             this.label5.TabIndex = 97;
             this.label5.Text = "Search Supplier";
             // 
@@ -213,6 +213,7 @@ namespace Diploma_Final_Project_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2427, 1449);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dataGridView1);
@@ -232,6 +233,7 @@ namespace Diploma_Final_Project_1
             this.Controls.Add(this.label5);
             this.Name = "Pha_Add_Drug_Payment";
             this.Text = "Pha_Add_Drug_Payment";
+            this.Load += new System.EventHandler(this.Pha_Add_Drug_Payment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCost)).EndInit();
             this.ResumeLayout(false);

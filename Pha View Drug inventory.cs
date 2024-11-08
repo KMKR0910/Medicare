@@ -16,6 +16,14 @@ namespace Diploma_Final_Project_1
         public Pha_View_Drug_inventory()
         {
             InitializeComponent();
+
+            Color customC = ColorTranslator.FromHtml("#9083D5 ");
+            btn_genarate.BackColor = customC;
+            btn_search.BackColor = customC;
+            button2.BackColor = customC;
+            btn_update.BackColor = customC;
+            button1.BackColor = customC;
+
         }
         string drugID;
 

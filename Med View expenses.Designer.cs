@@ -38,6 +38,7 @@ namespace Diploma_Final_Project_1
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_clear = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
             this.comboBox_payment_method = new System.Windows.Forms.ComboBox();
@@ -50,7 +51,6 @@ namespace Diploma_Final_Project_1
             this.label7 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
-            this.btn_clear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -158,6 +158,16 @@ namespace Diploma_Final_Project_1
             this.groupBox1.Size = new System.Drawing.Size(1079, 1074);
             this.groupBox1.TabIndex = 78;
             this.groupBox1.TabStop = false;
+            // 
+            // btn_clear
+            // 
+            this.btn_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_clear.Location = new System.Drawing.Point(813, 566);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(260, 118);
+            this.btn_clear.TabIndex = 84;
+            this.btn_clear.Text = "Clear";
+            this.btn_clear.UseVisualStyleBackColor = true;
             // 
             // btn_delete
             // 
@@ -280,20 +290,11 @@ namespace Diploma_Final_Project_1
             this.label8.TabIndex = 72;
             this.label8.Text = "Date";
             // 
-            // btn_clear
-            // 
-            this.btn_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_clear.Location = new System.Drawing.Point(813, 566);
-            this.btn_clear.Name = "btn_clear";
-            this.btn_clear.Size = new System.Drawing.Size(260, 118);
-            this.btn_clear.TabIndex = 84;
-            this.btn_clear.Text = "Clear";
-            this.btn_clear.UseVisualStyleBackColor = true;
-            // 
             // Med_View_expenses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2427, 1449);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label3);

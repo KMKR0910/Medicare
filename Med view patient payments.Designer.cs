@@ -39,7 +39,7 @@ namespace Diploma_Final_Project_1
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker_date = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_clear = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
             this.dateTimePicker_start = new System.Windows.Forms.DateTimePicker();
@@ -137,7 +137,7 @@ namespace Diploma_Final_Project_1
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dateTimePicker_date);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btn_clear);
             this.groupBox1.Controls.Add(this.btn_delete);
             this.groupBox1.Controls.Add(this.btn_update);
             this.groupBox1.Controls.Add(this.txt_patient);
@@ -162,15 +162,15 @@ namespace Diploma_Final_Project_1
             this.dateTimePicker_date.TabIndex = 104;
             this.dateTimePicker_date.ValueChanged += new System.EventHandler(this.dateTimePicker_date_ValueChanged);
             // 
-            // button1
+            // btn_clear
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(924, 516);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(216, 90);
-            this.button1.TabIndex = 103;
-            this.button1.Text = "Cancel";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_clear.Location = new System.Drawing.Point(924, 516);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(216, 90);
+            this.btn_clear.TabIndex = 103;
+            this.btn_clear.Text = "Clear";
+            this.btn_clear.UseVisualStyleBackColor = true;
             // 
             // btn_delete
             // 
@@ -249,6 +249,7 @@ namespace Diploma_Final_Project_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2427, 1449);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -280,7 +281,7 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.TextBox txt_pay_type;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_clear;
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.DateTimePicker dateTimePicker_start;

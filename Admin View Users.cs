@@ -24,6 +24,7 @@ namespace Diploma_Final_Project_1
             btn_reset.BackColor = customC;
             btn_search.BackColor = customC;
             btn_Update.BackColor = customC;
+           
 
         }
         string userType;
@@ -32,61 +33,69 @@ namespace Diploma_Final_Project_1
 
         private void btn_search_Click(object sender, EventArgs e)
         {
-            
+
             try
             {
-                string sql = "";
 
-                userType = this.combobox_user.SelectedItem.ToString();
-                string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
-                SqlConnection con = new SqlConnection(cs);
-
-                con.Open();
-                if (userType == "Doctor")
+                if (string.IsNullOrEmpty(this.combobox_user.Text))
                 {
-                    sql = @"
+                    MessageBox.Show("Select User Type", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    string sql = "";
+
+                    userType = this.combobox_user.SelectedItem.ToString();
+                    string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
+                    SqlConnection con = new SqlConnection(cs);
+
+                    con.Open();
+                    if (userType == "Doctor")
+                    {
+                        sql = @"
                 SELECT  [Doctor ID] AS UserID , [First Name],[Last Name],[Email Address],[ContactNumber],[DOB]
                  FROM [tbl_doctor]";
 
-                }
+                    }
 
-                if (userType == "Medical Centre Assistant")
-                {
-                    sql = @"SELECT  [Med_Assistant_ID] AS UserID , [First Name],[Last Name],[Email Address],[ContactNumber],[DOB]
+                    if (userType == "Medical Centre Assistant")
+                    {
+                        sql = @"SELECT  [Med_Assistant_ID] AS UserID , [First Name],[Last Name],[Email Address],[ContactNumber],[DOB]
                  FROM [tbl_Medical_Centre_Assistant]";
 
-                }
+                    }
 
-                if (userType == "Pharamacists")
-                {
-                    sql = @"[Pharamacists_ID] AS UserID , [First Name],[Last Name],[Email Address],[ContactNumber],[DOB]
+                    if (userType == "Pharamacists")
+                    {
+                        sql = @"[Pharamacists_ID] AS UserID , [First Name],[Last Name],[Email Address],[ContactNumber],[DOB]
                  FROM [tbl_Pharamacists]";
 
-                }
+                    }
 
-                if (userType == "Laboratary Assistant")
-                {
-                    sql = @" SELECT [Lab-Assistant_ID] AS UserID , [First Name],[Last Name],[Email Address],[ContactNumber],[DOB]
+                    if (userType == "Laboratary Assistant")
+                    {
+                        sql = @" SELECT [Lab-Assistant_ID] AS UserID , [First Name],[Last Name],[Email Address],[ContactNumber],[DOB]
                  FROM [tbl_Lab_Assistant]";
-                }
-                if (userType == "Admin")
-                {
-                    sql = @" SELECT  [Admin_ID] AS UserID , [First Name],[Last Name],[Email Address],[ContactNumber],[DOB]
+                    }
+                    if (userType == "Admin")
+                    {
+                        sql = @" SELECT  [Admin_ID] AS UserID , [First Name],[Last Name],[Email Address],[ContactNumber],[DOB]
                  FROM [tbl_Admin]";
 
+                    }
+                    SqlCommand com = new SqlCommand(sql, con);
+
+
+                    SqlDataAdapter dap = new SqlDataAdapter(com);
+                    DataSet ds = new DataSet();
+                    dap.Fill(ds);
+
+                    this.dataGridView_view_users.DataSource = ds.Tables[0];
+                    //disconnect from sql server 
+                    con.Close();
+
+
                 }
-                SqlCommand com = new SqlCommand(sql, con);
-
-
-                SqlDataAdapter dap = new SqlDataAdapter(com);
-                DataSet ds = new DataSet();
-                dap.Fill(ds);
-
-                this.dataGridView_view_users.DataSource = ds.Tables[0];
-                //disconnect from sql server 
-                con.Close();
-
-
             }
             catch (Exception ex)
             {
@@ -152,78 +161,89 @@ namespace Diploma_Final_Project_1
 
 
             {
-                string v1 = txt_address_HNO.Text;
-                string v2 = txt_address_StreetName.Text;
-                string v3 = txt_address_city.Text;
 
-                string address = v1 + " , " + v2 + " ," + v3;
-                string sql = "";
-
-                string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
-
-
-                SqlConnection con = new SqlConnection(cs);
-                con.Open();
-
-                if (userType == "Doctor")
-                {
-                    sql = "UPDATE [tbl_doctor] SET  [First Name] = @Fname, [Last Name] = @Lname, " +
-                          "Address = @address, DOB = @DOB, [Email Address] = @email, Qualifications = @qualification, " +
-                          "ContactNumber = @number WHERE [Doctor ID] = @userid";
-                }
-                if (userType == "Medical Centre Assistant")
-                {
-                    sql = "UPDATE [tbl_Medical_Centre_Assistant] SET  [First Name] = @Fname, " +
-                          "[Last Name] = @Lname, [Address] = @address, DOB = @DOB, [Email Address] = @email, Salary = @salary, " +
-                          "Qualifications = @qualification, ContactNumber = @number WHERE [Med_Assistant_ID] = @userid";
-                }
-                if (userType == "Pharmacists")
-                {
-                    sql = "UPDATE [tbl_Pharamacists] SET  [First Name] = @Fname, " +
-                          "[Last Name] = @Lname, [Address] = @address, DOB = @DOB, [Email Address] = @email, Salary = @salary, " +
-                          "Qualifications = @qualification, ContactNumber = @number WHERE [Pharamacists_ID] = @userid";
-                }
-                if (userType == "Laboratory Assistant")
-                {
-                    sql = "UPDATE [tbl_Lab_Assistant] SET [First Name] = @Fname, " +
-                          "[Last Name] = @Lname, [Address] = @address, DOB = @DOB, [Email Address] = @email, Salary = @salary, " +
-                          "Qualifications = @qualification, ContactNumber = @number WHERE [Lab-Assistant_ID] = @userid";
-                }
-                if (userType == "Admin")
-                {
-                    sql = "UPDATE [tbl_Admin] SET [First Name] = @Fname, [Last Name] = @Lname, " +
-                          "[Address] = @address, DOB = @DOB, [Email Address] = @email, Salary = @salary, ContactNumber = @number " +
-                          "WHERE [Admin_ID] = @userid";
-                }
-
-                SqlCommand com = new SqlCommand(sql, con);
-
-                com.Parameters.AddWithValue("@userid", this.txt_userID.Text);
+                //validation part
                 
-                com.Parameters.AddWithValue("@Fname", this.txt_F_name.Text);
-                com.Parameters.AddWithValue("@Lname", this.txt_L_Name.Text);
 
-
-                com.Parameters.AddWithValue("@address", address);
-                com.Parameters.AddWithValue("@DOB", this.dateTimePicker_DOB.Value);
-                com.Parameters.AddWithValue("@email", this.txt_email.Text);
-               
-                com.Parameters.AddWithValue("@qualification", this.txt_qulifications.Text);
-                com.Parameters.AddWithValue("@number", this.txt_contact.Text);
-
-
-
-
-
-
-
-
-                int ret = com.ExecuteNonQuery();
-                if (ret == 1)
+                if (string.IsNullOrEmpty(this.txt_F_name.Text) || string.IsNullOrEmpty(this.txt_L_Name.Text) || string.IsNullOrEmpty(this.txt_email.Text) || string.IsNullOrEmpty(this.txt_address_HNO.Text) || string.IsNullOrEmpty(this.txt_address_StreetName.Text) || string.IsNullOrEmpty(this.txt_address_city.Text) || string.IsNullOrEmpty(this.dateTimePicker_DOB.Text) || string.IsNullOrEmpty(this.txt_contact.Text) || string.IsNullOrEmpty(this.txt_qulifications.Text))
                 {
-                    MessageBox.Show("User Updated", "Information");
+                    MessageBox.Show("All Field must be filled", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else
+                {
+                    string v1 = txt_address_HNO.Text;
+                    string v2 = txt_address_StreetName.Text;
+                    string v3 = txt_address_city.Text;
 
+                    string address = v1 + " , " + v2 + " ," + v3;
+                    string sql = "";
+
+                    string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
+
+
+                    SqlConnection con = new SqlConnection(cs);
+                    con.Open();
+
+                    if (userType == "Doctor")
+                    {
+                        sql = "UPDATE [tbl_doctor] SET  [First Name] = @Fname, [Last Name] = @Lname, " +
+                              "Address = @address, DOB = @DOB, [Email Address] = @email, Qualifications = @qualification, " +
+                              "ContactNumber = @number WHERE [Doctor ID] = @userid";
+                    }
+                    if (userType == "Medical Centre Assistant")
+                    {
+                        sql = "UPDATE [tbl_Medical_Centre_Assistant] SET  [First Name] = @Fname, " +
+                              "[Last Name] = @Lname, [Address] = @address, DOB = @DOB, [Email Address] = @email, Salary = @salary, " +
+                              "Qualifications = @qualification, ContactNumber = @number WHERE [Med_Assistant_ID] = @userid";
+                    }
+                    if (userType == "Pharmacists")
+                    {
+                        sql = "UPDATE [tbl_Pharamacists] SET  [First Name] = @Fname, " +
+                              "[Last Name] = @Lname, [Address] = @address, DOB = @DOB, [Email Address] = @email, Salary = @salary, " +
+                              "Qualifications = @qualification, ContactNumber = @number WHERE [Pharamacists_ID] = @userid";
+                    }
+                    if (userType == "Laboratory Assistant")
+                    {
+                        sql = "UPDATE [tbl_Lab_Assistant] SET [First Name] = @Fname, " +
+                              "[Last Name] = @Lname, [Address] = @address, DOB = @DOB, [Email Address] = @email, Salary = @salary, " +
+                              "Qualifications = @qualification, ContactNumber = @number WHERE [Lab-Assistant_ID] = @userid";
+                    }
+                    if (userType == "Admin")
+                    {
+                        sql = "UPDATE [tbl_Admin] SET [First Name] = @Fname, [Last Name] = @Lname, " +
+                              "[Address] = @address, DOB = @DOB, [Email Address] = @email, Salary = @salary, ContactNumber = @number " +
+                              "WHERE [Admin_ID] = @userid";
+                    }
+
+                    SqlCommand com = new SqlCommand(sql, con);
+
+                    com.Parameters.AddWithValue("@userid", this.txt_userID.Text);
+
+                    com.Parameters.AddWithValue("@Fname", this.txt_F_name.Text);
+                    com.Parameters.AddWithValue("@Lname", this.txt_L_Name.Text);
+
+
+                    com.Parameters.AddWithValue("@address", address);
+                    com.Parameters.AddWithValue("@DOB", this.dateTimePicker_DOB.Value);
+                    com.Parameters.AddWithValue("@email", this.txt_email.Text);
+
+                    com.Parameters.AddWithValue("@qualification", this.txt_qulifications.Text);
+                    com.Parameters.AddWithValue("@number", this.txt_contact.Text);
+
+
+
+
+
+
+
+
+                    int ret = com.ExecuteNonQuery();
+                    if (ret == 1)
+                    {
+                        MessageBox.Show("User Updated", "Information");
+                    }
+
+                }
             }
             catch (Exception ex)
             {
@@ -363,83 +383,96 @@ namespace Diploma_Final_Project_1
         {
             try
             {
-                string sql = "";
-                userType = this.combobox_user.SelectedItem.ToString();
-
-                string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
-
-
-                // save user details
-                SqlConnection con1 = new SqlConnection(cs);
-                con1.Open();
-               
-
-
-                if (userType == "Doctor")
+                string password = txt_pwd1.Text;
+                if (string.IsNullOrEmpty(this.txt_pwd1.Text) || string.IsNullOrEmpty(this.txt_pwd2.Text))
                 {
-                    sql = @"UPDATE [tbl_doctor]  SET [User Password]=@newPWD WHERE [Doctor ID] =@ID";
-              
-
+                    MessageBox.Show("All Field must be filled", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (password.Length < 4)
+                {
+                    MessageBox.Show("Password must be 4 characters", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
-                if (userType == "Medical Centre Assistant")
+                else
                 {
+                    string sql = "";
+                    userType = this.combobox_user.SelectedItem.ToString();
 
-                    sql = @"UPDATE [tbl_Medical_Centre_Assistant] SET [User Password]=@newPWD WHERE[Med_Assistant_ID] =@ID";
-
-                   
-
-                }
-
-                if (userType == "Pharamacists")
-                {
-                    sql = @"UPDATE  [tbl_Pharamacists] SET [User Password]=@newPWD WHERE[Pharamacists_ID]=@ID";
+                    string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
 
 
-                }
 
-                if (userType == "Laboratary Assistant")
-                {
-                    sql = @"UPDATE  [tbl_Lab_Assistant] SET [User Password]=@newPWD WHERE [Lab-Assistant_ID] =@ID";
-
-                  
-                }
-                if (userType == "Admin")
-                {
-                    sql = @"UPDATE  [tbl_Admin] SET [User Password]=@newPWD WHERE [Admin_ID] =@ID";
-
-                   
-
-                }
+                    SqlConnection con1 = new SqlConnection(cs);
+                    con1.Open();
 
 
-                SqlCommand com = new SqlCommand(sql, con1);
 
-                com.Parameters.AddWithValue("@ID", this.txt_userID.Text);
-                com.Parameters.AddWithValue("@newPWD", this.txt_pwd1.Text);
-
-              if (this.txt_pwd1.Text == this.txt_pwd2.Text)
-                {
-
-                    int ret = com.ExecuteNonQuery();
-                    if (ret == 1)
+                    if (userType == "Doctor")
                     {
-                        MessageBox.Show("Reset Password successfully", "Information");
-                        
+                        sql = @"UPDATE [tbl_doctor]  SET [User Password]=@newPWD WHERE [Doctor ID] =@ID";
+
 
                     }
 
+                    if (userType == "Medical Centre Assistant")
+                    {
+
+                        sql = @"UPDATE [tbl_Medical_Centre_Assistant] SET [User Password]=@newPWD WHERE[Med_Assistant_ID] =@ID";
+
+
+
+                    }
+
+                    if (userType == "Pharamacists")
+                    {
+                        sql = @"UPDATE  [tbl_Pharamacists] SET [User Password]=@newPWD WHERE[Pharamacists_ID]=@ID";
+
+
+                    }
+
+                    if (userType == "Laboratary Assistant")
+                    {
+                        sql = @"UPDATE  [tbl_Lab_Assistant] SET [User Password]=@newPWD WHERE [Lab-Assistant_ID] =@ID";
+
+
+                    }
+                    if (userType == "Admin")
+                    {
+                        sql = @"UPDATE  [tbl_Admin] SET [User Password]=@newPWD WHERE [Admin_ID] =@ID";
+
+
+
+                    }
+
+
+                    SqlCommand com = new SqlCommand(sql, con1);
+
+                    com.Parameters.AddWithValue("@ID", this.txt_userID.Text);
+                    com.Parameters.AddWithValue("@newPWD", this.txt_pwd1.Text);
+
+                    if (this.txt_pwd1.Text == this.txt_pwd2.Text)
+                    {
+
+                        int ret = com.ExecuteNonQuery();
+                        if (ret == 1)
+                        {
+                            MessageBox.Show("Reset Password successfully", "Information");
+
+
+                        }
+
+                    }
+
+
+
+
+
+
+
+
+
+                    con1.Close();
                 }
-
-
-
-
-
-
-
-
-
-                con1.Close();
             }
             catch (Exception ex)
             {
@@ -454,7 +487,7 @@ namespace Diploma_Final_Project_1
                 string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
 
                 string sql = "";
-                // save user details
+           
                 SqlConnection con = new SqlConnection(cs);
                 con.Open();
 
@@ -507,5 +540,44 @@ namespace Diploma_Final_Project_1
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btn_Clear1_Click(object sender, EventArgs e)
+        {
+            this.txt_F_name.Clear();
+            this.txt_L_Name.Clear();
+            this.txt_address_HNO.Clear();
+            this.txt_address_city.Clear();
+            this.txt_address_StreetName.Clear();
+            this.dateTimePicker_DOB.CustomFormat = " ";
+            this.dateTimePicker_DOB.Format = DateTimePickerFormat.Custom;
+            this.txt_email.Clear();
+            this.txt_contact.Clear();
+          
+            this.txt_qulifications.Clear();
+       
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            this.txt_pwd1.Clear();
+            this.txt_pwd2.Clear();
+        }
+       /* private void LoadUserRegister()
+        {
+            //Create an instance of Form2
+            User_Registration form2 = new User_Registration();
+
+            // Remove borders and make the form a child control
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.Dock = DockStyle.Fill;
+
+            // Add the form to the GroupBox
+            groupBox_Main.Controls.Clear();  // Optionally clear previous controls
+            groupBox_Main.Controls.Add(form2);
+
+            // Show the form inside the GroupBox
+            form2.Show();
+        }*/
     }
 }

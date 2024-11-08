@@ -19,6 +19,11 @@ namespace Diploma_Final_Project_1
         public Med_Add_expenses()
         {
             InitializeComponent();
+            Color customC = ColorTranslator.FromHtml("#9083D5 ");
+            btn_add.BackColor = customC;
+           
+
+            btn_clear.BackColor = customC;
         }
 
         private void btn_add_Click(object sender, EventArgs e)

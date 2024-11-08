@@ -16,6 +16,12 @@ namespace Diploma_Final_Project_1
         public Lab_view_lab_test()
         {
             InitializeComponent();
+            Color customC = ColorTranslator.FromHtml("#9083D5 ");
+            btn_add.BackColor = customC;
+            btn_update.BackColor = customC;
+            btn_search.BackColor = customC;
+            button1.BackColor = customC;
+            button2.BackColor = customC;
         }
         string TestID;
         private void btn_search_Click(object sender, EventArgs e)

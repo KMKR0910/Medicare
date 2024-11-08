@@ -17,6 +17,14 @@ namespace Diploma_Final_Project_1
         public Lab_Prescription()
         {
             InitializeComponent();
+            Color customC = ColorTranslator.FromHtml("#9083D5 ");
+            btn_collected.BackColor = customC;
+            btn_print.BackColor = customC;
+            btn_search.BackColor = customC;
+            btn_view_report.BackColor = customC;
+            btn_report_relesed.BackColor = customC;
+
+
         }
         string status = "Collected";
         string status2 = "Report Relesed";

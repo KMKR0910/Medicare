@@ -16,6 +16,10 @@ namespace Diploma_Final_Project_1
         public Pha_Add_Drug_Payment()
         {
             InitializeComponent();
+            Color customC = ColorTranslator.FromHtml("#9083D5 ");
+            btn_add.BackColor = customC;
+            btn_clear.BackColor = customC;
+            btn_genarate.BackColor = customC;
         }
         String supplierID;
 
@@ -100,6 +104,11 @@ namespace Diploma_Final_Project_1
         {
             DateTime currentDate = DateTime.Now.Date;
             this.txt_date.Text = currentDate.ToString("yyyy-MM-dd");
+        }
+
+        private void Pha_Add_Drug_Payment_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

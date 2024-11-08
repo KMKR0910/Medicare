@@ -86,7 +86,7 @@ namespace Diploma_Final_Project_1
         private void prescriptionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Create an instance of Form2
-            Lab_view_lab_test form2 = new Lab_view_lab_test();
+            Lab_Prescription form2 = new Lab_Prescription();
 
             // Remove borders and make the form a child control
             form2.TopLevel = false;
@@ -100,6 +100,37 @@ namespace Diploma_Final_Project_1
             // Show the form inside the GroupBox
             form2.Show();
         }
+        private void LoadUserProfile()
+        {
+            Employee_User_Profile form2 = new Employee_User_Profile(UserID);
+            // Remove borders and make the form a child control
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.Dock = DockStyle.Fill;
+
+            // Add the form to the GroupBox
+            groupBoxloc.Controls.Clear();  // Optionally clear previous controls
+            groupBoxloc.Controls.Add(form2);
+
+            // Show the form inside the GroupBox
+            form2.Show();
+        }
+        private void LoadDoctorSessions()
+        {
+            Doctor_Visit form2 = new Doctor_Visit();
+            // Remove borders and make the form a child control
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.Dock = DockStyle.Fill;
+
+            // Add the form to the GroupBox
+            groupBoxloc.Controls.Clear();  // Optionally clear previous controls
+            groupBoxloc.Controls.Add(form2);
+
+            // Show the form inside the GroupBox
+            form2.Show();
+        }
+
 
         private void groupBox_prescription_Enter(object sender, EventArgs e)
         {
@@ -123,6 +154,21 @@ namespace Diploma_Final_Project_1
         }
 
         private void view_doctor_sessionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox_UserProfile_Enter(object sender, EventArgs e)
+        {
+            LoadUserProfile();
+        }
+
+        private void groupBox_doctor_session_Enter(object sender, EventArgs e)
+        {
+            LoadDoctorSessions();
+        }
+
+        private void groupBox_finance_Enter(object sender, EventArgs e)
         {
 
         }

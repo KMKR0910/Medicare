@@ -22,6 +22,11 @@ namespace Diploma_Final_Project_1
         public Med_Add_Patient_Payement()
         {
             InitializeComponent();
+            Color customC = ColorTranslator.FromHtml("#9083D5 ");
+            btn_add.BackColor = customC;
+            btn_genarate.BackColor = customC;
+            btn_search.BackColor = customC;
+            btn_clear.BackColor = customC;
         }
 
 

@@ -27,9 +27,9 @@ namespace Diploma_Final_Project_1
           
             btn_employee.BackColor = customC;
            
-            linkLabel1.LinkColor = customC;
-            linkLabel2.LinkColor = customC;
-            linkLabel3.LinkColor = customC;
+            //linkLabel1.LinkColor = customC;
+            //linkLabel2.LinkColor = customC;
+            //linkLabel3.LinkColor = customC;
 
 
             menuStrip1.BackColor = customC;
@@ -171,6 +171,11 @@ namespace Diploma_Final_Project_1
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             LoadUserProfile();
+        }
+
+        private void groupBox_Main_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

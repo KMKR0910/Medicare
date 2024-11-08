@@ -226,7 +226,7 @@ namespace Diploma_Final_Project_1
             this.btn_print.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_print.Location = new System.Drawing.Point(1133, 552);
             this.btn_print.Name = "btn_print";
-            this.btn_print.Size = new System.Drawing.Size(236, 104);
+            this.btn_print.Size = new System.Drawing.Size(236, 145);
             this.btn_print.TabIndex = 119;
             this.btn_print.Text = "Print";
             this.btn_print.UseVisualStyleBackColor = true;
@@ -236,7 +236,7 @@ namespace Diploma_Final_Project_1
             this.btn_view_report.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_view_report.Location = new System.Drawing.Point(797, 552);
             this.btn_view_report.Name = "btn_view_report";
-            this.btn_view_report.Size = new System.Drawing.Size(236, 104);
+            this.btn_view_report.Size = new System.Drawing.Size(236, 145);
             this.btn_view_report.TabIndex = 118;
             this.btn_view_report.Text = "View Report";
             this.btn_view_report.UseVisualStyleBackColor = true;
@@ -246,7 +246,7 @@ namespace Diploma_Final_Project_1
             this.btn_report_relesed.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_report_relesed.Location = new System.Drawing.Point(455, 552);
             this.btn_report_relesed.Name = "btn_report_relesed";
-            this.btn_report_relesed.Size = new System.Drawing.Size(236, 104);
+            this.btn_report_relesed.Size = new System.Drawing.Size(236, 145);
             this.btn_report_relesed.TabIndex = 117;
             this.btn_report_relesed.Text = "Report Relesed";
             this.btn_report_relesed.UseVisualStyleBackColor = true;
@@ -277,7 +277,7 @@ namespace Diploma_Final_Project_1
             this.btn_collected.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_collected.Location = new System.Drawing.Point(126, 552);
             this.btn_collected.Name = "btn_collected";
-            this.btn_collected.Size = new System.Drawing.Size(236, 104);
+            this.btn_collected.Size = new System.Drawing.Size(236, 145);
             this.btn_collected.TabIndex = 113;
             this.btn_collected.Text = "Blood Collected";
             this.btn_collected.UseVisualStyleBackColor = true;
@@ -385,6 +385,7 @@ namespace Diploma_Final_Project_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2427, 1451);
             this.Controls.Add(this.txt_date);
             this.Controls.Add(this.groupBox2);
