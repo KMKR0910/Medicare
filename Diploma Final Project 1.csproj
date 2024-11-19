@@ -199,6 +199,12 @@
       <DependentUpon>CrystalReport_Drug_inventory.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CrystalReport_Gen_Income.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport_Gen_Income.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="doc test 1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -529,6 +535,10 @@
     <EmbeddedResource Include="CrystalReport_Drug_inventory.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport_Drug_inventory.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport_Gen_Income.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport_Gen_Income.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="doc test 1.resx">
       <DependentUpon>doc test 1.cs</DependentUpon>
