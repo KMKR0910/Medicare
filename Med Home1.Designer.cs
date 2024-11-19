@@ -86,10 +86,11 @@ namespace Diploma_Final_Project_1
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
             this.linkLabel10 = new System.Windows.Forms.LinkLabel();
             this.linkLabel9 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.incomStatementsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox_Diagnose.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.groupBox_Patients.SuspendLayout();
@@ -530,7 +531,8 @@ namespace Diploma_Final_Project_1
             this.addExpensesToolStripMenuItem,
             this.viewExpensesToolStripMenuItem,
             this.addPatientPaymentsToolStripMenuItem,
-            this.viewPatientPaymentsToolStripMenuItem});
+            this.viewPatientPaymentsToolStripMenuItem,
+            this.incomStatementsToolStripMenuItem});
             this.financeToolStripMenuItem.Name = "financeToolStripMenuItem";
             this.financeToolStripMenuItem.Size = new System.Drawing.Size(166, 54);
             this.financeToolStripMenuItem.Text = "Finance";
@@ -636,7 +638,7 @@ namespace Diploma_Final_Project_1
             this.linkLabel4.AutoSize = true;
             this.linkLabel4.Location = new System.Drawing.Point(32, 231);
             this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(598, 90);
+            this.linkLabel4.Size = new System.Drawing.Size(299, 45);
             this.linkLabel4.TabIndex = 3;
             this.linkLabel4.TabStop = true;
             this.linkLabel4.Text = "New Appoinments";
@@ -647,7 +649,7 @@ namespace Diploma_Final_Project_1
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Location = new System.Drawing.Point(31, 154);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(642, 90);
+            this.linkLabel2.Size = new System.Drawing.Size(321, 45);
             this.linkLabel2.TabIndex = 1;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "New Doctor Session";
@@ -685,6 +687,16 @@ namespace Diploma_Final_Project_1
             this.groupBox10.TabStop = false;
             this.groupBox10.Enter += new System.EventHandler(this.groupBox10_Enter);
             // 
+            // linkLabel3
+            // 
+            this.linkLabel3.AutoSize = true;
+            this.linkLabel3.Location = new System.Drawing.Point(36, 521);
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.Size = new System.Drawing.Size(330, 45);
+            this.linkLabel3.TabIndex = 18;
+            this.linkLabel3.TabStop = true;
+            this.linkLabel3.Text = "Patients Registration";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -715,15 +727,12 @@ namespace Diploma_Final_Project_1
             this.linkLabel9.TabStop = true;
             this.linkLabel9.Text = "Finance Reports";
             // 
-            // linkLabel3
+            // incomStatementsToolStripMenuItem
             // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Location = new System.Drawing.Point(36, 521);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(330, 45);
-            this.linkLabel3.TabIndex = 18;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Patients Registration";
+            this.incomStatementsToolStripMenuItem.Name = "incomStatementsToolStripMenuItem";
+            this.incomStatementsToolStripMenuItem.Size = new System.Drawing.Size(533, 58);
+            this.incomStatementsToolStripMenuItem.Text = "Income Statements";
+            this.incomStatementsToolStripMenuItem.Click += new System.EventHandler(this.incomStatementsToolStripMenuItem_Click);
             // 
             // Med_Home1
             // 
@@ -824,5 +833,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.LinkLabel linkLabel10;
         private System.Windows.Forms.LinkLabel linkLabel9;
+        private System.Windows.Forms.ToolStripMenuItem incomStatementsToolStripMenuItem;
     }
 }

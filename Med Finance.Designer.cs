@@ -30,75 +30,126 @@ namespace Diploma_Final_Project_1
         private void InitializeComponent()
         {
             this.btn_income_report = new System.Windows.Forms.Button();
-            this.btn_add_expenses = new System.Windows.Forms.Button();
-            this.btn_viewExpenses = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_P_payments = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBox_category = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker_end = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker_start = new System.Windows.Forms.DateTimePicker();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_income_report
             // 
             this.btn_income_report.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_income_report.Location = new System.Drawing.Point(35, 84);
+            this.btn_income_report.Location = new System.Drawing.Point(484, 493);
             this.btn_income_report.Name = "btn_income_report";
             this.btn_income_report.Size = new System.Drawing.Size(260, 118);
             this.btn_income_report.TabIndex = 0;
-            this.btn_income_report.Text = "Income Report";
+            this.btn_income_report.Text = "Genarate Report";
             this.btn_income_report.UseVisualStyleBackColor = true;
-            // 
-            // btn_add_expenses
-            // 
-            this.btn_add_expenses.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add_expenses.Location = new System.Drawing.Point(35, 208);
-            this.btn_add_expenses.Name = "btn_add_expenses";
-            this.btn_add_expenses.Size = new System.Drawing.Size(260, 118);
-            this.btn_add_expenses.TabIndex = 1;
-            this.btn_add_expenses.Text = "Add Expenses";
-            this.btn_add_expenses.UseVisualStyleBackColor = true;
-            this.btn_add_expenses.Click += new System.EventHandler(this.btn_add_expenses_Click);
-            // 
-            // btn_viewExpenses
-            // 
-            this.btn_viewExpenses.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_viewExpenses.Location = new System.Drawing.Point(35, 332);
-            this.btn_viewExpenses.Name = "btn_viewExpenses";
-            this.btn_viewExpenses.Size = new System.Drawing.Size(260, 118);
-            this.btn_viewExpenses.TabIndex = 2;
-            this.btn_viewExpenses.Text = "View Expenses";
-            this.btn_viewExpenses.UseVisualStyleBackColor = true;
-            this.btn_viewExpenses.Click += new System.EventHandler(this.btn_viewExpenses_Click);
+            this.btn_income_report.Click += new System.EventHandler(this.btn_income_report_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Location = new System.Drawing.Point(301, 84);
+            this.groupBox1.Location = new System.Drawing.Point(35, 73);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1437, 1274);
-            this.groupBox1.TabIndex = 3;
+            this.groupBox1.Size = new System.Drawing.Size(1206, 1196);
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
             // 
-            // btn_P_payments
+            // groupBox2
             // 
-            this.btn_P_payments.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_P_payments.Location = new System.Drawing.Point(35, 456);
-            this.btn_P_payments.Name = "btn_P_payments";
-            this.btn_P_payments.Size = new System.Drawing.Size(260, 118);
-            this.btn_P_payments.TabIndex = 4;
-            this.btn_P_payments.Text = "View Patient Payments";
-            this.btn_P_payments.UseVisualStyleBackColor = true;
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.comboBox_category);
+            this.groupBox2.Controls.Add(this.dateTimePicker_end);
+            this.groupBox2.Controls.Add(this.dateTimePicker_start);
+            this.groupBox2.Controls.Add(this.btn_income_report);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(1235, 94);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1206, 1196);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Income Statement";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(30, 86);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(185, 42);
+            this.label3.TabIndex = 83;
+            this.label3.Text = "Start Date";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(499, 86);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(174, 42);
+            this.label2.TabIndex = 82;
+            this.label2.Text = "End Date";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(30, 162);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(170, 42);
+            this.label5.TabIndex = 81;
+            this.label5.Text = "Category";
+            // 
+            // comboBox_category
+            // 
+            this.comboBox_category.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_category.FormattingEnabled = true;
+            this.comboBox_category.Items.AddRange(new object[] {
+            "Rent",
+            "Salary"});
+            this.comboBox_category.Location = new System.Drawing.Point(234, 171);
+            this.comboBox_category.Name = "comboBox_category";
+            this.comboBox_category.Size = new System.Drawing.Size(328, 45);
+            this.comboBox_category.TabIndex = 80;
+            // 
+            // dateTimePicker_end
+            // 
+            this.dateTimePicker_end.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker_end.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker_end.Location = new System.Drawing.Point(739, 86);
+            this.dateTimePicker_end.Name = "dateTimePicker_end";
+            this.dateTimePicker_end.Size = new System.Drawing.Size(220, 44);
+            this.dateTimePicker_end.TabIndex = 79;
+            // 
+            // dateTimePicker_start
+            // 
+            this.dateTimePicker_start.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker_start.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker_start.Location = new System.Drawing.Point(244, 86);
+            this.dateTimePicker_start.Name = "dateTimePicker_start";
+            this.dateTimePicker_start.Size = new System.Drawing.Size(249, 44);
+            this.dateTimePicker_start.TabIndex = 78;
             // 
             // Med_Finance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1738, 1378);
-            this.Controls.Add(this.btn_P_payments);
+            this.ClientSize = new System.Drawing.Size(2453, 1520);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btn_viewExpenses);
-            this.Controls.Add(this.btn_add_expenses);
-            this.Controls.Add(this.btn_income_report);
             this.Name = "Med_Finance";
             this.Text = "Med_Finance";
             this.Load += new System.EventHandler(this.Med_Finance_Load);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -106,9 +157,13 @@ namespace Diploma_Final_Project_1
         #endregion
 
         private System.Windows.Forms.Button btn_income_report;
-        private System.Windows.Forms.Button btn_add_expenses;
-        private System.Windows.Forms.Button btn_viewExpenses;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btn_P_payments;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboBox_category;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_end;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_start;
     }
 }

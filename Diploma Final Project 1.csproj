@@ -367,6 +367,12 @@
     <Compile Include="Med Edit Appoinment.Designer.cs">
       <DependentUpon>Med Edit Appoinment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Med Finance ShortCuts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Med Finance ShortCuts.Designer.cs">
+      <DependentUpon>Med Finance ShortCuts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Med Finance.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -476,6 +482,12 @@
     </Compile>
     <Compile Include="Report_Gen_Drug_Inventory.Designer.cs">
       <DependentUpon>Report_Gen_Drug_Inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Gen_Income.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_Gen_Income.Designer.cs">
+      <DependentUpon>Report_Gen_Income.cs</DependentUpon>
     </Compile>
     <Compile Include="Report_Gen_M_Certificate.cs">
       <SubType>Form</SubType>
@@ -602,6 +614,9 @@
     <EmbeddedResource Include="Med Edit Appoinment.resx">
       <DependentUpon>Med Edit Appoinment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Med Finance ShortCuts.resx">
+      <DependentUpon>Med Finance ShortCuts.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Med Finance.resx">
       <DependentUpon>Med Finance.cs</DependentUpon>
     </EmbeddedResource>
@@ -665,6 +680,9 @@
     </Compile>
     <EmbeddedResource Include="Report_Gen_Drug_Inventory.resx">
       <DependentUpon>Report_Gen_Drug_Inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Gen_Income.resx">
+      <DependentUpon>Report_Gen_Income.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report_Gen_M_Certificate.resx">
       <DependentUpon>Report_Gen_M_Certificate.cs</DependentUpon>
