@@ -68,7 +68,7 @@ namespace Diploma_Final_Project_1
 
                 // Set the DataSource of the DataGridView
                 dataGridView1.DataSource = ds.Tables[0];
-            }
+                }
             }
             catch (Exception ex)
             {

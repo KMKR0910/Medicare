@@ -40,14 +40,15 @@ namespace Diploma_Final_Project_1
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(1435, 1064);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(932, 751);
             this.crystalReportViewer1.TabIndex = 0;
+            this.crystalReportViewer1.Load += new System.EventHandler(this.crystalReportViewer1_Load);
             // 
             // Report_Gen_Income
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1435, 1064);
+            this.ClientSize = new System.Drawing.Size(932, 751);
             this.Controls.Add(this.crystalReportViewer1);
             this.Name = "Report_Gen_Income";
             this.Text = "Report_Gen_Income";

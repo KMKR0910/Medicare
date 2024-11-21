@@ -254,6 +254,7 @@ namespace Diploma_Final_Project_1
             this.btn_genarate.TabIndex = 61;
             this.btn_genarate.Text = "Genarate";
             this.btn_genarate.UseVisualStyleBackColor = true;
+            this.btn_genarate.Click += new System.EventHandler(this.btn_genarate_Click);
             // 
             // txt_description
             // 
