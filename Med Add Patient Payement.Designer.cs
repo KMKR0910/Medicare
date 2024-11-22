@@ -42,9 +42,9 @@ namespace Diploma_Final_Project_1
             this.btn_genarate = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_patient = new System.Windows.Forms.TextBox();
-            this.txt_pay_type = new System.Windows.Forms.TextBox();
             this.txt_paymnet_number = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.comboBox_pay_type = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -164,6 +164,7 @@ namespace Diploma_Final_Project_1
             this.btn_genarate.TabIndex = 90;
             this.btn_genarate.Text = "Genarate Bil Invoice";
             this.btn_genarate.UseVisualStyleBackColor = true;
+            this.btn_genarate.Click += new System.EventHandler(this.btn_genarate_Click);
             // 
             // label4
             // 
@@ -183,14 +184,6 @@ namespace Diploma_Final_Project_1
             this.txt_patient.Name = "txt_patient";
             this.txt_patient.Size = new System.Drawing.Size(372, 44);
             this.txt_patient.TabIndex = 92;
-            // 
-            // txt_pay_type
-            // 
-            this.txt_pay_type.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_pay_type.Location = new System.Drawing.Point(504, 426);
-            this.txt_pay_type.Name = "txt_pay_type";
-            this.txt_pay_type.Size = new System.Drawing.Size(372, 44);
-            this.txt_pay_type.TabIndex = 73;
             // 
             // txt_paymnet_number
             // 
@@ -212,12 +205,25 @@ namespace Diploma_Final_Project_1
             this.dataGridView1.TabIndex = 94;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // comboBox_pay_type
+            // 
+            this.comboBox_pay_type.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_pay_type.FormattingEnabled = true;
+            this.comboBox_pay_type.Items.AddRange(new object[] {
+            "Drug",
+            "Lab Tets"});
+            this.comboBox_pay_type.Location = new System.Drawing.Point(504, 420);
+            this.comboBox_pay_type.Name = "comboBox_pay_type";
+            this.comboBox_pay_type.Size = new System.Drawing.Size(372, 45);
+            this.comboBox_pay_type.TabIndex = 95;
+            // 
             // Med_Add_Patient_Payement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2427, 1449);
+            this.Controls.Add(this.comboBox_pay_type);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txt_paymnet_number);
             this.Controls.Add(this.txt_patient);
@@ -229,7 +235,6 @@ namespace Diploma_Final_Project_1
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_date);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txt_pay_type);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.txt_search);
@@ -259,8 +264,8 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.Button btn_genarate;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_patient;
-        private System.Windows.Forms.TextBox txt_pay_type;
         private System.Windows.Forms.TextBox txt_paymnet_number;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox comboBox_pay_type;
     }
 }

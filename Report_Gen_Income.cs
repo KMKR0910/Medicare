@@ -17,13 +17,18 @@ namespace Diploma_Final_Project_1
         private DateTime _startDate;
         private DateTime _endDate;
         private decimal _totalCost;
-        public Report_Gen_Income(DateTime startDate, DateTime endDate, decimal totalCost)
+        private string _pay1;
+        private string _pay2;
+        private decimal _IncomeLab;
+        public Report_Gen_Income(DateTime startDate, DateTime endDate, decimal totalCost, decimal IncomeLab,String pay1,string pay2)
         {
             InitializeComponent();
             _startDate = startDate;
             _endDate = endDate;
             _totalCost = totalCost;
-
+            _IncomeLab = IncomeLab;
+            _pay1 = pay1;
+            _pay2 = pay2;
         }
 
         private void Report_Gen_Income_Load(object sender, EventArgs e)
@@ -42,8 +47,9 @@ namespace Diploma_Final_Project_1
                 rpt1.SetParameterValue("StartDate", _startDate);
                 rpt1.SetParameterValue("EndDate", _endDate);
                 rpt1.SetParameterValue("TotalCost", _totalCost);
-
-
+                rpt1.SetParameterValue("IncomeLab", _IncomeLab);
+                rpt1.SetParameterValue("Pay1", _pay1); 
+                rpt1.SetParameterValue("Pay2", _pay2);
 
                 // set the report source of the created “crystalReportViewer”
                 this.crystalReportViewer1.ReportSource = rpt1;

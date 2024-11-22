@@ -68,22 +68,47 @@ namespace Diploma_Final_Project_1
 
                 DateTime startDate = dateTimePicker_start.Value;
                 DateTime endDate = dateTimePicker_end.Value;
+                String pay1 = "Drug";
 
                 string sql = @"SELECT SUM([Total_Cost]) AS TotalCost 
                              FROM [tbl_Patient_Payment]
-                             WHERE [Date] BETWEEN @StartDate AND @EndDate";
+                             WHERE [Date] BETWEEN @StartDate AND @EndDate AND [Payment Type]=@payment_type";
 
                 SqlCommand command = new SqlCommand(sql, con);
                 command.Parameters.AddWithValue("@StartDate", startDate);
                 command.Parameters.AddWithValue("@EndDate", endDate);
+                command.Parameters.AddWithValue("@payment_type", pay1);
 
 
                 object result = command.ExecuteScalar();
 
                 decimal totalCost = result != DBNull.Value ? Convert.ToDecimal(result) : 0;
 
+
+
+                //
+                //
+                // For Calculate Laboratory Income
+
+                String pay2 = "Lab Tets";
+
+                string sql2 = @"SELECT SUM([Total_Cost]) AS IncomeLab 
+                             FROM [tbl_Patient_Payment]
+                             WHERE [Date] BETWEEN @StartDate AND @EndDate AND [Payment Type]=@payment_type";
+
+                SqlCommand com2 = new SqlCommand(sql2, con);
+                com2.Parameters.AddWithValue("@StartDate", startDate);
+                com2.Parameters.AddWithValue("@EndDate", endDate);
+                com2.Parameters.AddWithValue("@payment_type", pay2);
+
+
+                object result2 = com2.ExecuteScalar();
+
+                decimal IncomeLab = result2 != DBNull.Value ? Convert.ToDecimal(result2) : 0;
+
+
                 // Pass data to Crystal Report
-                Report_Gen_Income reportForm = new Report_Gen_Income(startDate, endDate, totalCost);
+                Report_Gen_Income reportForm = new Report_Gen_Income(startDate, endDate, totalCost,IncomeLab,pay1,pay2);
                 reportForm.Show();
             }
             catch (Exception ex)

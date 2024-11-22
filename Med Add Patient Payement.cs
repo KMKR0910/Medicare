@@ -18,7 +18,7 @@ namespace Diploma_Final_Project_1
         private static Dictionary<string, int> dailyPaymentCount = new Dictionary<string, int>();
         string paymentId;
         string currentDate;
-        string PH_payment_Type = "Drug";
+        //string PH_payment_Type = "Drug";
         public Med_Add_Patient_Payement()
         {
             InitializeComponent();
@@ -139,7 +139,7 @@ namespace Diploma_Final_Project_1
                 con.Open();
 
 
-                SqlCommand cmd = new SqlCommand("Insert Into [tbl_Patient_Payment] Values('" + paymentId + "','" + txt_date.Text + "','" + txt_pay_type.Text + "','" + numericUpDownCost.Value + "','" + patientID + "')", con);
+                SqlCommand cmd = new SqlCommand("Insert Into [tbl_Patient_Payment] Values('" + paymentId + "','" + txt_date.Text + "','" + comboBox_pay_type.Text + "','" + numericUpDownCost.Value + "','" + patientID + "')", con);
                 cmd.ExecuteNonQuery();
                 con.Close();
                 MessageBox.Show("Payment added ");
@@ -225,7 +225,7 @@ namespace Diploma_Final_Project_1
 
                 con.Close();
                 
-                this.txt_pay_type.Text = PH_payment_Type;
+                //this.txt_pay_type.Text = PH_payment_Type;
 
             }
             catch (Exception ex)
@@ -293,6 +293,11 @@ namespace Diploma_Final_Project_1
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_genarate_Click(object sender, EventArgs e)
         {
 
         }
