@@ -75,10 +75,10 @@ namespace Diploma_Final_Project_1
 
 
                 string sql = @"
-            SELECT p.Name, td.Patient_pay_ID,td.[Payment Type], td.[Total_Cost] ,td.[Date] 
-            FROM [tbl_Patient_Payment] td
-            INNER JOIN tbl_patient_info p ON td.[patirnt_ID] = p.[Patient ID]
-            WHERE p.[Contact Number] = @name ";
+            SELECT p.[Supplier_Name], td.[PaymentID],td.[Payment_Method], td.[Total_Cost] ,td.[Pay_Date]
+            FROM [tbl_drug_payment] td
+            INNER JOIN [tbl_drug_supplier] p ON td.[Suppler_ID] = p.[Supplier_ID]
+            WHERE p.[Contact_Number] = @name ";
                 SqlCommand com = new SqlCommand(sql, con);
 
                 com.Parameters.AddWithValue("@name", this.txt_search.Text);
@@ -104,6 +104,84 @@ namespace Diploma_Final_Project_1
         {
             DateTime currentDate = DateTime.Now.Date;
             this.txt_date.Text = currentDate.ToString("yyyy-MM-dd");
+
+
+            string cs = "Data Source=ASUS; Initial Catalog = Diploma Final Project DB1; Integrated Security=True";
+
+            try
+            {
+
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+
+
+                string sql = "SELECT * FROM [tbl_drug_supplier] WHERE [Contact_Number] = @name ";
+                SqlCommand com = new SqlCommand(sql, con);
+                com.Parameters.AddWithValue("@name", this.txt_search.Text);
+
+
+                SqlDataAdapter dap = new SqlDataAdapter(com);
+                DataSet ds = new DataSet();
+                dap.Fill(ds);
+
+
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+
+                    DataRow rows = ds.Tables[0].Rows[0];
+
+
+                    this.txt_supplier.Text = rows["Supplier_Name"].ToString();
+                    supplierID = rows["Supplier_ID"].ToString();
+
+
+
+                }
+
+                con.Close();
+
+               
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            try
+            {
+
+
+
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+
+
+
+
+
+                string sql = @"
+            SELECT p.[Supplier_Name], td.[PaymentID],td.[Payment_Method], td.[Total_Cost] ,td.[Pay_Date]
+            FROM [tbl_drug_payment] td
+            INNER JOIN [tbl_drug_supplier] p ON td.[Suppler_ID] = p.[Supplier_ID]
+            WHERE p.[Contact_Number] = @name ";
+                SqlCommand com = new SqlCommand(sql, con);
+
+                com.Parameters.AddWithValue("@name", this.txt_search.Text);
+
+
+
+                SqlDataAdapter dap = new SqlDataAdapter(com);
+                DataSet ds = new DataSet();
+                dap.Fill(ds);
+
+                this.dataGridView1.DataSource = ds.Tables[0];
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Pha_Add_Drug_Payment_Load(object sender, EventArgs e)

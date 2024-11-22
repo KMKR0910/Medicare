@@ -31,7 +31,7 @@ namespace Diploma_Final_Project_1
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txt_paymnet_number = new System.Windows.Forms.TextBox();
-            this.txt_patient = new System.Windows.Forms.TextBox();
+            this.txt_supplier = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btn_genarate = new System.Windows.Forms.Button();
             this.btn_clear = new System.Windows.Forms.Button();
@@ -67,13 +67,13 @@ namespace Diploma_Final_Project_1
             this.txt_paymnet_number.Size = new System.Drawing.Size(372, 44);
             this.txt_paymnet_number.TabIndex = 109;
             // 
-            // txt_patient
+            // txt_supplier
             // 
-            this.txt_patient.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_patient.Location = new System.Drawing.Point(583, 307);
-            this.txt_patient.Name = "txt_patient";
-            this.txt_patient.Size = new System.Drawing.Size(372, 44);
-            this.txt_patient.TabIndex = 108;
+            this.txt_supplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_supplier.Location = new System.Drawing.Point(583, 307);
+            this.txt_supplier.Name = "txt_supplier";
+            this.txt_supplier.Size = new System.Drawing.Size(372, 44);
+            this.txt_supplier.TabIndex = 108;
             // 
             // label4
             // 
@@ -218,7 +218,7 @@ namespace Diploma_Final_Project_1
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txt_paymnet_number);
-            this.Controls.Add(this.txt_patient);
+            this.Controls.Add(this.txt_supplier);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btn_genarate);
             this.Controls.Add(this.btn_clear);
@@ -245,7 +245,7 @@ namespace Diploma_Final_Project_1
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txt_paymnet_number;
-        private System.Windows.Forms.TextBox txt_patient;
+        private System.Windows.Forms.TextBox txt_supplier;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btn_genarate;
         private System.Windows.Forms.Button btn_clear;
