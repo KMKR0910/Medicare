@@ -146,7 +146,8 @@ namespace Diploma_Final_Project_1
             this.comboBox_category.FormattingEnabled = true;
             this.comboBox_category.Items.AddRange(new object[] {
             "Rent",
-            "Salary"});
+            "Salary",
+            "Lab"});
             this.comboBox_category.Location = new System.Drawing.Point(1068, 487);
             this.comboBox_category.Name = "comboBox_category";
             this.comboBox_category.Size = new System.Drawing.Size(328, 45);
