@@ -21,10 +21,24 @@ namespace Diploma_Final_Project_1
 
         public Med_Finance()
         {
+            // Assuming you have a GroupBox named groupBox1 on your form
             InitializeComponent();
-            progressChart = new Chart(); // Initialize the chart control
-            progressChart.Dock = DockStyle.Fill; // Fill the form
-            Controls.Add(progressChart);
+
+            // Initialize the chart control
+            progressChart = new Chart();
+
+            // Set the chart's parent to the GroupBox
+            progressChart.Parent = groupBox1;
+
+            // Dock the chart to fill the GroupBox
+            progressChart.Dock = DockStyle.Fill;
+
+            // Optional: Configure other chart properties
+            progressChart.BackColor = Color.White; // Example: Set background color
+
+            // Add the chart to the GroupBox (already done by setting Parent)
+            groupBox1.Controls.Add(progressChart);
+
         }
 
         private void Med_Finance_Load(object sender, EventArgs e)
@@ -62,81 +76,111 @@ namespace Diploma_Final_Project_1
             LoadFinance3();
         }
         private void LoadDataChart()
-
         {
             try
             {
-
-                SqlConnection con = new SqlConnection(cs);
-                con.Open();
-
-            /*    string sqlc = @"
-            SELECT Date, ProgressValue
-            FROM DailyProgress
-            WHERE Date BETWEEN @StartDate AND @EndDate
-            ORDER BY Date;";
-            */
-                // Prepare the chart
-                chart1.Series.Clear(); // Clear previous series
-                chart1.ChartAreas.Clear(); // Clear previous chart areas
-
-                // Create a new chart area and series
-                ChartArea chartArea = new ChartArea();
-                progressChart.ChartAreas.Add(chartArea);
-
-                Series series = new Series("Daily Progress");
-                series.ChartType = SeriesChartType.Column; // Line chart
-                progressChart.Series.Add(series);
-
-
-
-
-
-                String pay1 = "Drug";
-
-                string sql = @"SELECT 
-    ISNULL(SUM([Total_Cost]), 0) AS TotalIncome, 
-    CAST([Date] AS DATE) AS PaymentDate
-FROM [tbl_Patient_Payment]
-WHERE [Payment Type] = @payment_type
-    AND [Date] BETWEEN @StartDate AND @EndDate
-GROUP BY CAST([Date] AS DATE)
-
-ORDER BY PaymentDate
-
-                                ";
-                                
-
-                SqlCommand command = new SqlCommand(sql, con);
-                
-                command.Parameters.AddWithValue("@payment_type", pay1);
-
-                // Add parameters (e.g., StartDate, EndDate)
-                command.Parameters.AddWithValue("@StartDate", DateTime.Now.AddDays(-7)); // Example: Last 7 days
-                command.Parameters.AddWithValue("@EndDate", DateTime.Now);
-
-                
-                SqlDataReader reader = command.ExecuteReader();
-
-                while (reader.Read())
+                using (SqlConnection con = new SqlConnection(cs))
                 {
-                    DateTime date = reader.IsDBNull(reader.GetOrdinal("PaymentDate")) ? DateTime.MinValue : reader.GetDateTime(reader.GetOrdinal("PaymentDate"));
-                    double income = reader.IsDBNull(reader.GetOrdinal("TotalIncome")) ? 0 : reader.GetDouble(reader.GetOrdinal("TotalIncome"));
-                    if (date != DateTime.MinValue && income > 0)
+                    con.Open();
+
+                    // Prepare the chart
+                    progressChart.Series.Clear();
+                    progressChart.ChartAreas.Clear();
+
+                    // Create a new chart area and series
+                    ChartArea chartArea = new ChartArea();
+                    progressChart.ChartAreas.Add(chartArea);
+                    // Series for Drug
+                    Series drugSeries = new Series("Drug");
+                    drugSeries.ChartType = SeriesChartType.Column;
+                    progressChart.Series.Add(drugSeries);
+
+
+
+                    // Series for Lab
+                    Series labSeries = new Series("Lab");
+                    labSeries.ChartType = SeriesChartType.Column;
+                    progressChart.Series.Add(labSeries);
+
+                    int selectedMonth = dateTimePicker_report.Value.Month;
+                    int selectedYear = dateTimePicker_report.Value.Year;
+
+
+                    chartArea.AxisX.Interval = 1; // Show all dates on the X-axis
+                    drugSeries["PixelPointWidth"] = "50"; // Adjust column width if needed
+                    labSeries["PixelPointWidth"] = "50";
+
+                    drugSeries.Color = Color.Blue;
+                    labSeries.Color = Color.Green;
+
+                    drugSeries.IsValueShownAsLabel = true;
+                    labSeries.IsValueShownAsLabel = true;
+
+                    labSeries.IsVisibleInLegend = true;
+
+
+
+                    // Payment type filter
+                    string pay1 = "Drug";
+
+                    // SQL query
+                    string sql = @"
+               SELECT 
+    ISNULL(SUM(CASE WHEN [Payment Type] = 'Drug' THEN [Total_Cost] END), 0) AS DrugIncome,
+    ISNULL(SUM(CASE WHEN [Payment Type] = 'Lab Tets' THEN [Total_Cost] END), 0) AS LabIncome,
+    CAST([Date] AS DATE) AS PaymentDate
+FROM [dbo].[tbl_Patient_Payment]
+WHERE MONTH([Date]) = @Month AND YEAR([Date]) = @Year
+GROUP BY CAST([Date] AS DATE)
+ORDER BY PaymentDate;
+";
+
+                    SqlCommand command = new SqlCommand(sql, con);
+                    command.Parameters.AddWithValue("@Month", selectedMonth);
+                    command.Parameters.AddWithValue("@Year", selectedYear);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        series.Points.AddXY(date, income);
+                        while (reader.Read())
+                        {
+                            DateTime date = reader.IsDBNull(reader.GetOrdinal("PaymentDate"))
+                                            ? DateTime.MinValue
+                                            : reader.GetDateTime(reader.GetOrdinal("PaymentDate"));
+
+                            double drugIncome = reader.IsDBNull(reader.GetOrdinal("DrugIncome"))
+                                                ? 0
+                                                : Convert.ToDouble(reader["DrugIncome"]);
+
+                            double labIncome = reader.IsDBNull(reader.GetOrdinal("LabIncome"))
+                                               ? 0
+                                               : Convert.ToDouble(reader["LabIncome"]);
+
+                            // Add data points to the chart series
+                            if (date != DateTime.MinValue)
+                            {
+                                drugSeries.Points.AddXY(date, drugIncome);
+                                labSeries.Points.AddXY(date, labIncome);
+                            }
+                            if (!reader.HasRows)
+                            {
+                                MessageBox.Show("No data found for the selected period.");
+                            }
+
+                        }
                     }
                 }
-
-                reader.Close();
             }
+
+
+
+
+
             catch (Exception ex)
             {
-                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
         }
+
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
@@ -346,10 +390,10 @@ ORDER BY PaymentDate
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-      
 
-
-
-    
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            LoadDataChart();
+        }
     }
 }
