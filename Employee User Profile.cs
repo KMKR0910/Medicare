@@ -106,104 +106,109 @@ namespace Diploma_Final_Project_1
             
             try
             {
-                string v1 = txt_address_HNO.Text;
-                string v2 = txt_address_StreetName.Text;
-                string v3 = txt_address_city.Text;
 
-                string address = v1 + " , " + v2 + " , " + v3;
-                string sql = ""; 
-                /*
-
-                string email = this.txt_email.Text;
-                string phoneNumber = this.txt_contact.Text;
-
-                if (string.IsNullOrEmpty(this.txt_F_name.Text) || string.IsNullOrEmpty(this.txt_L_Name.Text) || string.IsNullOrEmpty(this.comboBox_postion.Text) || string.IsNullOrEmpty(this.txt_address_HNO.Text) || string.IsNullOrEmpty(this.txt_address_StreetName.Text) || string.IsNullOrEmpty(this.txt_address_city.Text) || string.IsNullOrEmpty(this.dateTimePicker_DOB.Text) || string.IsNullOrEmpty(this.txt_email.Text))
+                if (string.IsNullOrEmpty(this.txt_F_name.Text) || string.IsNullOrEmpty(this.txt_L_Name.Text) || string.IsNullOrEmpty(this.txt_contact.Text))
                 {
-                    MessageBox.Show("All Field must be filled", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("All required fields must be filled.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else {
+                    string v1 = txt_address_HNO.Text;
+                    string v2 = txt_address_StreetName.Text;
+                    string v3 = txt_address_city.Text;
 
-                else if (!email.Contains("@") || !email.Contains("."))
-                {
-                    MessageBox.Show("Invalid Email", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else if (phoneNumber.Length != 10 || !phoneNumber.All(char.IsDigit))
-                {
-                    MessageBox.Show("Invalid Contact Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {*/
-                string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
+                    string address = v1 + " , " + v2 + " , " + v3;
+                    string sql = "";
+                    /*
 
+                    string email = this.txt_email.Text;
+                    string phoneNumber = this.txt_contact.Text;
 
-                // save user details
-                SqlConnection con1 = new SqlConnection(cs);
-                con1.Open();
-                GetUserType();
+                    if (string.IsNullOrEmpty(this.txt_F_name.Text) || string.IsNullOrEmpty(this.txt_L_Name.Text) || string.IsNullOrEmpty(this.comboBox_postion.Text) || string.IsNullOrEmpty(this.txt_address_HNO.Text) || string.IsNullOrEmpty(this.txt_address_StreetName.Text) || string.IsNullOrEmpty(this.txt_address_city.Text) || string.IsNullOrEmpty(this.dateTimePicker_DOB.Text) || string.IsNullOrEmpty(this.txt_email.Text))
+                    {
+                        MessageBox.Show("All Field must be filled", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
 
-                if (userType == "Doctor")
-                {
-                    sql = "UPDATE [tbl_doctor] SET  [First Name]=@Fname, [Last Name]=@Lname, Address=@address, DOB=@DOB, " +
-         "[Email Address]=@email, Qualifications=@qualification, ContactNumber=@number WHERE [Doctor ID]=@userid";
-
-
-                }
-
-                if (userType == "Medical Centre Assistant")
-                {
-                    sql = "UPDATE [tbl_Medical_Centre_Assistant] SET [First Name]=@Fname, [Last Name]=@Lname, [Address]=@address, DOB=@DOB, " +
-        "[Email Address]=@email, Qualifications=@qualification, ContactNumber=@number WHERE [Med_Assistant_ID]=@userid";
+                    else if (!email.Contains("@") || !email.Contains("."))
+                    {
+                        MessageBox.Show("Invalid Email", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else if (phoneNumber.Length != 10 || !phoneNumber.All(char.IsDigit))
+                    {
+                        MessageBox.Show("Invalid Contact Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {*/
+                    string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
 
 
-                }
+                    // save user details
+                    SqlConnection con1 = new SqlConnection(cs);
+                    con1.Open();
+                    GetUserType();
 
-                if (userType == "Pharamacists")
-                {
-                    sql = "UPDATE tbl_Pharamacists SET [First Name]=@Fname, [Last Name]=@Lname, [Address]=@address, DOB=@DOB, " +
-        "[Email Address]=@email, Qualifications=@qualification, ContactNumber=@number WHERE Pharamacists_ID=@userid";
-
-
-                }
-
-                if (userType == "Laboratary Assistant")
-                {
-                    sql = "UPDATE [tbl_Lab_Assistant] SET [First Name]=@Fname, [Last Name]=@Lname, [Address]=@address, DOB=@DOB, " +
-       "[Email Address]=@email,  Qualifications=@qualification, ContactNumber=@number WHERE [Lab-Assistant_ID]=@userid";
+                    if (userType == "Doctor")
+                    {
+                        sql = "UPDATE [tbl_doctor] SET  [First Name]=@Fname, [Last Name]=@Lname, Address=@address, DOB=@DOB, " +
+             "[Email Address]=@email, Qualifications=@qualification, ContactNumber=@number WHERE [Doctor ID]=@userid";
 
 
-                }
-                if (userType == "Admin")
-                {
-                    sql = "UPDATE [tbl_Admin] SET [First Name]=@Fname, [Last Name]=@Lname, [Address]=@address, DOB=@DOB, " +
-      "[Email Address]=@email, Qualifications=@qualification, ContactNumber=@number WHERE [Admin_ID]=@userid";
+                    }
+
+                    if (userType == "Medical Centre Assistant")
+                    {
+                        sql = "UPDATE [tbl_Medical_Centre_Assistant] SET [First Name]=@Fname, [Last Name]=@Lname, [Address]=@address, DOB=@DOB, " +
+            "[Email Address]=@email, Qualifications=@qualification, ContactNumber=@number WHERE [Med_Assistant_ID]=@userid";
 
 
-                }
+                    }
+
+                    if (userType == "Pharamacists")
+                    {
+                        sql = "UPDATE tbl_Pharamacists SET [First Name]=@Fname, [Last Name]=@Lname, [Address]=@address, DOB=@DOB, " +
+            "[Email Address]=@email, Qualifications=@qualification, ContactNumber=@number WHERE Pharamacists_ID=@userid";
+
+
+                    }
+
+                    if (userType == "Laboratary Assistant")
+                    {
+                        sql = "UPDATE [tbl_Lab_Assistant] SET [First Name]=@Fname, [Last Name]=@Lname, [Address]=@address, DOB=@DOB, " +
+           "[Email Address]=@email,  Qualifications=@qualification, ContactNumber=@number WHERE [Lab-Assistant_ID]=@userid";
+
+
+                    }
+                    if (userType == "Admin")
+                    {
+                        sql = "UPDATE [tbl_Admin] SET [First Name]=@Fname, [Last Name]=@Lname, [Address]=@address, DOB=@DOB, " +
+          "[Email Address]=@email, Qualifications=@qualification, ContactNumber=@number WHERE [Admin_ID]=@userid";
+
+
+                    }
 
 
 
-                SqlCommand com = new SqlCommand(sql, con1);
+                    SqlCommand com = new SqlCommand(sql, con1);
 
-                com.Parameters.AddWithValue("@userid", this.txt_userID.Text);
+                    com.Parameters.AddWithValue("@userid", this.txt_userID.Text);
 
-                com.Parameters.AddWithValue("@Fname", this.txt_F_name.Text);
-                com.Parameters.AddWithValue("@Lname", this.txt_L_Name.Text);
+                    com.Parameters.AddWithValue("@Fname", this.txt_F_name.Text);
+                    com.Parameters.AddWithValue("@Lname", this.txt_L_Name.Text);
 
-                com.Parameters.AddWithValue("@address", address);
-                
-                com.Parameters.AddWithValue("@DOB", this.dateTimePicker_DOB.Text);
-                com.Parameters.AddWithValue("@email", this.txt_email.Text);
-                com.Parameters.AddWithValue("@number", this.txt_contact.Text);
+                    com.Parameters.AddWithValue("@address", address);
 
-                com.Parameters.AddWithValue("@qualification", this.txt_qulifications.Text);
-               
+                    com.Parameters.AddWithValue("@DOB", this.dateTimePicker_DOB.Text);
+                    com.Parameters.AddWithValue("@email", this.txt_email.Text);
+                    com.Parameters.AddWithValue("@number", this.txt_contact.Text);
 
-               
-                int ret = com.ExecuteNonQuery();
+                    com.Parameters.AddWithValue("@qualification", this.txt_qulifications.Text);
+
+
+
+                    int ret = com.ExecuteNonQuery();
                     if (ret == 1)
                     {
                         MessageBox.Show("User Updated", "Information");
                     }
-                
 
 
 
@@ -211,8 +216,10 @@ namespace Diploma_Final_Project_1
 
 
 
-                
-                con1.Close();
+
+
+                    con1.Close();
+                        }
             }
             catch (Exception ex)
             {
@@ -334,88 +341,126 @@ namespace Diploma_Final_Project_1
         {
             try
             {
-                string sql = "";
-                
-
-                string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
 
 
-                // save user details
-                SqlConnection con1 = new SqlConnection(cs);
-                con1.Open();
-
-                GetUserType();
-
-                if (userType == "Doctor")
+                if (string.IsNullOrEmpty(this.txt_pwd1.Text) || string.IsNullOrEmpty(this.txt_pwd2.Text))
                 {
-                    sql = @"UPDATE [tbl_doctor]  SET [User Password]=@newPWD WHERE [Doctor ID] =@ID";
-
-
+                    MessageBox.Show("All Field must be filled", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
-                if (userType == "Medical Centre Assistant")
+                else
                 {
-
-                    sql = @"UPDATE [tbl_Medical_Centre_Assistant] SET [User Password]=@newPWD WHERE[Med_Assistant_ID] =@ID";
-
+                    string sql = "";
 
 
-                }
-
-                if (userType == "Pharmacists")
-                {
-                    sql = @"UPDATE  [tbl_Pharamacists] SET [User Password]=@newPWD WHERE[Pharamacists_ID]=@ID";
+                    string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
 
 
-                }
+                    // save user details
+                    SqlConnection con1 = new SqlConnection(cs);
+                    con1.Open();
 
-                if (userType == "Laboratary Assistant")
-                {
-                    sql = @"UPDATE  [tbl_Lab_Assistant] SET [User Password]=@newPWD WHERE [Lab-Assistant_ID] =@ID";
+                    GetUserType();
 
-
-                }
-                if (userType == "Admin")
-                {
-                    sql = @"UPDATE  [tbl_Admin] SET [User Password]=@newPWD WHERE [Admin_ID] =@ID";
-
-
-
-                }
-
-
-                SqlCommand com = new SqlCommand(sql, con1);
-
-                com.Parameters.AddWithValue("@ID", this.txt_userID.Text);
-                com.Parameters.AddWithValue("@newPWD", this.txt_pwd1.Text);
-
-                if (this.txt_pwd1.Text == this.txt_pwd2.Text)
-                {
-
-                    int ret = com.ExecuteNonQuery();
-                    if (ret == 1)
+                    if (userType == "Doctor")
                     {
-                        MessageBox.Show("Reset Password successfully", "Information");
+                        sql = @"UPDATE [tbl_doctor]  SET [User Password]=@newPWD WHERE [Doctor ID] =@ID";
 
 
                     }
 
+                    if (userType == "Medical Centre Assistant")
+                    {
+
+                        sql = @"UPDATE [tbl_Medical_Centre_Assistant] SET [User Password]=@newPWD WHERE[Med_Assistant_ID] =@ID";
+
+
+
+                    }
+
+                    if (userType == "Pharmacists")
+                    {
+                        sql = @"UPDATE  [tbl_Pharamacists] SET [User Password]=@newPWD WHERE[Pharamacists_ID]=@ID";
+
+
+                    }
+
+                    if (userType == "Laboratary Assistant")
+                    {
+                        sql = @"UPDATE  [tbl_Lab_Assistant] SET [User Password]=@newPWD WHERE [Lab-Assistant_ID] =@ID";
+
+
+                    }
+                    if (userType == "Admin")
+                    {
+                        sql = @"UPDATE  [tbl_Admin] SET [User Password]=@newPWD WHERE [Admin_ID] =@ID";
+
+
+
+                    }
+
+
+                    SqlCommand com = new SqlCommand(sql, con1);
+
+                    com.Parameters.AddWithValue("@ID", this.txt_userID.Text);
+                    com.Parameters.AddWithValue("@newPWD", this.txt_pwd1.Text);
+
+                    if (this.txt_pwd1.Text == this.txt_pwd2.Text)
+                    {
+
+                        int ret = com.ExecuteNonQuery();
+                        if (ret == 1)
+                        {
+                            MessageBox.Show("Reset Password successfully", "Information");
+
+
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("The passwords entered do not match. Please try again", "Information");
+
+
+                    }
+
+
+
+
+
+
+
+
+
+                    con1.Close();
                 }
-
-
-
-
-
-
-
-
-
-                con1.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            txt_userID.Clear();
+            txt_F_name.Clear();
+            txt_L_Name.Clear();
+            txt_address_HNO.Clear();
+            txt_address_StreetName.Clear();
+            txt_address_city.Clear();
+           
+            txt_email.Clear();
+            txt_contact.Clear();
+            txt_qulifications.Clear();
+           
+
+
+        }
+
+        private void btn_clear2_Click(object sender, EventArgs e)
+        {
+            txt_pwd1.Clear();
+            txt_pwd2.Clear();
         }
     }
 }

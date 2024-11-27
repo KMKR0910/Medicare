@@ -17,7 +17,7 @@ namespace Diploma_Final_Project_1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             
-            Application.Run(new Med_Finance ());
+            Application.Run(new Main_Dashboard ());
         }
     }
 }

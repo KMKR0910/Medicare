@@ -69,7 +69,7 @@ namespace Diploma_Final_Project_1
                 int appointmentStaus2 = (int)com2.ExecuteScalar();
                 txt_pending.Text = appointmentStaus2.ToString();
 
-
+                loadAppointment();
 
                 con.Close();
 
@@ -272,6 +272,7 @@ namespace Diploma_Final_Project_1
                     MessageBox.Show("Updated", "Information");
                     loadAppointment();
                     Med_Appointments_Load(null, EventArgs.Empty);
+
                 }
                
                 
@@ -289,6 +290,11 @@ namespace Diploma_Final_Project_1
         }
 
         private void txt_appointmentNumber_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker_AP_date_ValueChanged(object sender, EventArgs e)
         {
 
         }

@@ -23,6 +23,7 @@ namespace Diploma_Final_Project_1
             btn_home.BackColor = customC;
             btn_userProfile.BackColor = customC;
 
+
            
           
             btn_employee.BackColor = customC;
@@ -86,7 +87,7 @@ namespace Diploma_Final_Project_1
             form2.TopLevel = false;
             form2.FormBorderStyle = FormBorderStyle.None;
             form2.Dock = DockStyle.Fill;
-
+            if (groupBox_Main == null) return;
             // Add the form to the GroupBox
             groupBox_Main.Controls.Clear();  // Optionally clear previous controls
             groupBox_Main.Controls.Add(form2);

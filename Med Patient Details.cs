@@ -80,43 +80,50 @@ namespace Diploma_Final_Project_1
 
             try
             {
-
-                SqlConnection con = new SqlConnection(cs);
-                con.Open();
-
-
-                string sql = "SELECT *  FROM [tbl_patient_info] WHERE [Contact Number] = @number ";
-                SqlCommand com1 = new SqlCommand(sql, con);
-                com1.Parameters.AddWithValue("@number", this.txt_search.Text);
-                SqlDataAdapter dap = new SqlDataAdapter(com1);
-                DataSet ds = new DataSet();
-                dap.Fill(ds);
-
-
-                if (ds.Tables[0].Rows.Count > 0)
+                if (string.IsNullOrEmpty(this.txt_search.Text))
+                {
+                    MessageBox.Show("Search Field must be filled", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
                 {
 
-                    DataRow rows = ds.Tables[0].Rows[0];
+                    SqlConnection con = new SqlConnection(cs);
+                    con.Open();
 
 
-                    this.txt_Name.Text = rows["Name"].ToString();
-                    this.txt_address.Text = rows["Address"].ToString();
-                    this.dateTimePicker_DOB.Text = rows["DOB"].ToString();
-                    this.txt_contact.Text = rows["Contact Number"].ToString();
-                    this.txt_email.Text = rows["email"].ToString();
-                    this.comboBox_gender.Text = rows["Gender"].ToString();
+                    string sql = "SELECT *  FROM [tbl_patient_info] WHERE [Contact Number] = @number ";
+                    SqlCommand com1 = new SqlCommand(sql, con);
+                    com1.Parameters.AddWithValue("@number", this.txt_search.Text);
+                    SqlDataAdapter dap = new SqlDataAdapter(com1);
+                    DataSet ds = new DataSet();
+                    dap.Fill(ds);
 
-                    // Parse the DOB field to a DateTime object
-                    DateTime dob = DateTime.Parse(rows["DOB"].ToString());
 
-                    // Call the method to calculate the patient's age and display it
-                    CalculateAge(dob);
+                    if (ds.Tables[0].Rows.Count > 0)
+                    {
+
+                        DataRow rows = ds.Tables[0].Rows[0];
+
+
+                        this.txt_Name.Text = rows["Name"].ToString();
+                        this.txt_address.Text = rows["Address"].ToString();
+                        this.dateTimePicker_DOB.Text = rows["DOB"].ToString();
+                        this.txt_contact.Text = rows["Contact Number"].ToString();
+                        this.txt_email.Text = rows["email"].ToString();
+                        this.comboBox_gender.Text = rows["Gender"].ToString();
+
+                        // Parse the DOB field to a DateTime object
+                        DateTime dob = DateTime.Parse(rows["DOB"].ToString());
+
+                        // Call the method to calculate the patient's age and display it
+                        CalculateAge(dob);
+
+                    }
+                    //disconnect from sql server 
+                    con.Close();
+
 
                 }
-                //disconnect from sql server 
-                con.Close();
-
-
             }
             catch (Exception ex)
             {
@@ -229,6 +236,41 @@ namespace Diploma_Final_Project_1
             {
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            try
+            {
+
+
+
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+
+
+
+
+
+                string sql = @"
+                 SELECT td.* 
+                 FROM [tbl_Lab_Test_Report] td
+                 INNER JOIN tbl_patient_info p ON td.[Patient_ID] = p.[Patient ID]
+                  WHERE p.[Contact Number] = @number";
+                SqlCommand com = new SqlCommand(sql, con);
+
+                com.Parameters.AddWithValue("@number", this.txt_search.Text);
+
+
+                SqlDataAdapter dap = new SqlDataAdapter(com);
+                DataSet ds = new DataSet();
+                dap.Fill(ds);
+
+                this.dataGridView_LabReport.DataSource = ds.Tables[0];
+
+
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void btn_edit_Click(object sender, EventArgs e)
         {
@@ -239,36 +281,43 @@ namespace Diploma_Final_Project_1
         {
             try
             {
-                string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
-
-
-                // save user details
-                SqlConnection con1 = new SqlConnection(cs);
-                con1.Open();
-
-
-
-                string sql = "UPDATE [tbl_patient_info] SET [Name]=@name, [Address]=@address, [DOB]=@dob,  [Contact Number]=@number1 ,[Email]=@email ,[Gender]=@gender WHERE [Contact Number]=@number";
-
-                SqlCommand com = new SqlCommand(sql, con1);
-                com.Parameters.AddWithValue("@number", this.txt_search.Text);
-
-                com.Parameters.AddWithValue("@name", this.txt_Name.Text);
-
-                com.Parameters.AddWithValue("@address", this.txt_address.Text);
-                com.Parameters.AddWithValue("@dob", this.dateTimePicker_DOB.Value);
-                
-                com.Parameters.AddWithValue("@number1", this.txt_contact.Text);
-
-                com.Parameters.AddWithValue("@email", this.txt_email.Text);
-                com.Parameters.AddWithValue("@gender", this.comboBox_gender.Text);
-
-                int ret = com.ExecuteNonQuery();
-                if (ret == 1)
+                if (string.IsNullOrEmpty(this.txt_Name.Text) || string.IsNullOrEmpty(this.txt_contact.Text))
                 {
-                    MessageBox.Show("User Updated", "Information");
+                    MessageBox.Show("All Required Field must be filled", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                con1.Close();
+                else
+                {
+                    string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
+
+
+                    // save user details
+                    SqlConnection con1 = new SqlConnection(cs);
+                    con1.Open();
+
+
+
+                    string sql = "UPDATE [tbl_patient_info] SET [Name]=@name, [Address]=@address, [DOB]=@dob,  [Contact Number]=@number1 ,[Email]=@email ,[Gender]=@gender WHERE [Contact Number]=@number";
+
+                    SqlCommand com = new SqlCommand(sql, con1);
+                    com.Parameters.AddWithValue("@number", this.txt_search.Text);
+
+                    com.Parameters.AddWithValue("@name", this.txt_Name.Text);
+
+                    com.Parameters.AddWithValue("@address", this.txt_address.Text);
+                    com.Parameters.AddWithValue("@dob", this.dateTimePicker_DOB.Value);
+
+                    com.Parameters.AddWithValue("@number1", this.txt_contact.Text);
+
+                    com.Parameters.AddWithValue("@email", this.txt_email.Text);
+                    com.Parameters.AddWithValue("@gender", this.comboBox_gender.Text);
+
+                    int ret = com.ExecuteNonQuery();
+                    if (ret == 1)
+                    {
+                        MessageBox.Show("User Updated", "Information");
+                    }
+                    con1.Close();
+                }
             }
             catch (Exception ex)
             {
@@ -303,7 +352,7 @@ namespace Diploma_Final_Project_1
 
         }
 
-        private void btn_cancel_Click(object sender, EventArgs e)
+        private void btn_cancel_Click(object sender, EventArgs e) //delete button
         {
             string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
 
@@ -314,34 +363,27 @@ namespace Diploma_Final_Project_1
                 con.Open();
 
 
-                string sql = "SELECT *  FROM [tbl_patient_info] WHERE [Contact Number] = @number ";
+                string sql = "DELETE  FROM [tbl_patient_info] WHERE [Contact Number] = @number ";
                 SqlCommand com1 = new SqlCommand(sql, con);
                 com1.Parameters.AddWithValue("@number", this.txt_search.Text);
-                SqlDataAdapter dap = new SqlDataAdapter(com1);
-                DataSet ds = new DataSet();
-                dap.Fill(ds);
+               
+                int ret = com1.ExecuteNonQuery();
 
-
-                if (ds.Tables[0].Rows.Count > 0)
+                if (ret > 0)
                 {
+                    MessageBox.Show("Patient record deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    DataRow rows = ds.Tables[0].Rows[0];
-
-
-                    this.txt_Name.Text = rows["Name"].ToString();
-                    this.txt_address.Text = rows["Address"].ToString();
-                    this.dateTimePicker_DOB.Text = rows["DOB"].ToString();
-                    this.txt_contact.Text = rows["Contact Number"].ToString();
-                    this.txt_email.Text = rows["email"].ToString();
-                    this.comboBox_gender.Text = rows["Gender"].ToString();
-
-                    // Parse the DOB field to a DateTime object
-                    DateTime dob = DateTime.Parse(rows["DOB"].ToString());
-
-                    // Call the method to calculate the patient's age and display it
-                    CalculateAge(dob);
-
+                    // Clear the textboxes after deletion
+                    this.txt_search.Clear();
+                    this.txt_Name.Clear();
+                    this.txt_address.Clear();
+                    this.dateTimePicker_DOB.Value = DateTime.Now; // Reset to today's date
+                    this.txt_contact.Clear();
+                    this.txt_email.Clear();
+                    this.comboBox_gender.SelectedIndex = -1; // Reset the combo box
                 }
+
+             
                 //disconnect from sql server 
                 con.Close();
 

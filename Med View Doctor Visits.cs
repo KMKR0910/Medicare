@@ -133,28 +133,29 @@ namespace Diploma_Final_Project_1
 
             try
             {
-                SqlConnection con = new SqlConnection(cs);
+                
+                    SqlConnection con = new SqlConnection(cs);
                 con.Open();
 
 
-                string query = "UPDATE [DoctorSessions] SET [StartTime]=@starttime,[EndTime] =@endtime WHERE [SessionDate]=@date ([Test_Type], [Rep_status],[Test_Price],[Patient_ID],[Lab_test_number]) " +
-                               "VALUES (@type, @status, @Price, @patientID,@number)";
+                string query = "UPDATE [DoctorSessions] SET [StartTime]=@starttime,[EndTime] =@endtime WHERE [SessionDate]=@date";
+                           
                 SqlCommand cmd = new SqlCommand(query, con);
 
                 cmd.Parameters.AddWithValue("@starttime", dateTimePicker2.Text);
                 cmd.Parameters.AddWithValue("@endtime", dateTimePicker3.Text);
                 cmd.Parameters.AddWithValue("@date", date);
-             
+
 
 
                 int ret = cmd.ExecuteNonQuery();
                 if (ret > 0)
                 {
                     MessageBox.Show("Added successfully");
-                   
 
-                }
 
+                
+            }
                 con.Close();
 
             }
@@ -162,6 +163,11 @@ namespace Diploma_Final_Project_1
             {
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

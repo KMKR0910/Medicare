@@ -134,15 +134,24 @@ namespace Diploma_Final_Project_1
             string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
 
             try
+
             {
-                SqlConnection con = new SqlConnection(cs);
-                con.Open();
+
+                if (string.IsNullOrEmpty(this.txt_patient.Text) || string.IsNullOrEmpty(this.txt_paymnet_number.Text) || string.IsNullOrEmpty(this.txt_date.Text) || this.numericUpDownCost.Value==0 || this.comboBox_pay_type.SelectedIndex==-1)
+                {
+                    MessageBox.Show("All Field must be filled", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    SqlConnection con = new SqlConnection(cs);
+                    con.Open();
 
 
-                SqlCommand cmd = new SqlCommand("Insert Into [tbl_Patient_Payment] Values('" + paymentId + "','" + txt_date.Text + "','" + comboBox_pay_type.Text + "','" + numericUpDownCost.Value + "','" + patientID + "')", con);
-                cmd.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("Payment added ");
+                    SqlCommand cmd = new SqlCommand("Insert Into [tbl_Patient_Payment] Values('" + paymentId + "','" + txt_date.Text + "','" + comboBox_pay_type.Text + "','" + numericUpDownCost.Value + "','" + patientID + "')", con);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("Payment added ");
+                }
             }
             catch (Exception ex)
             {
@@ -279,7 +288,10 @@ namespace Diploma_Final_Project_1
 
         private void btn_clear_Click(object sender, EventArgs e)
         {
-
+            txt_patient.Clear();
+            txt_paymnet_number.Clear();
+            numericUpDownCost.Value = 0;
+            comboBox_pay_type.SelectedIndex = -1;  
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

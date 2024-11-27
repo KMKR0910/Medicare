@@ -122,6 +122,8 @@ namespace Diploma_Final_Project_1
                     // Move to the next session
                     currentSessionStartTime = currentSessionEndTime;
                 }
+                MessageBox.Show("Added Successfully", "Information");
+
             }
 
         }
@@ -161,7 +163,16 @@ namespace Diploma_Final_Project_1
             }
         }
 
-        
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            checkBox1.Checked = false;
+            checkBox2.Checked = false;
+            checkBox3.Checked = false;
+            checkBox4.Checked = false;
+            checkBox5.Checked = false;
+            checkBox6.Checked = false;
+            checkBox7.Checked = false;
+        }
     }
     }
 

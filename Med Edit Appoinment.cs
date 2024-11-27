@@ -45,9 +45,10 @@ namespace Diploma_Final_Project_1
                FROM tbl_appoinment app
                JOIN [tbl_patient_info] pat 
                ON app.[Patient ID] = pat.[Patient ID]
-               WHERE app.[Appoinment Number] = @appoinmentnumber AND " ; 
+               WHERE app.[Appoinment Number] = @appoinmentnumber AND [Date] >= @date"; 
                 SqlCommand com1 = new SqlCommand(sql, con);
                 com1.Parameters.AddWithValue("@appoinmentnumber", this.txt_appoinment.Text);
+                com1.Parameters.AddWithValue("@date", DateTime.Today);
                 SqlDataAdapter dap = new SqlDataAdapter(com1);
                 DataSet ds = new DataSet();
                 dap.Fill(ds);
@@ -102,7 +103,22 @@ namespace Diploma_Final_Project_1
                 if (ret == 1)
                 {
                     MessageBox.Show("Appoinment Deleted", "Information");
+
+
+
                 }
+
+                string SessionStatus2 = "Avaliable";
+                string sql1 = "UPDATE [DoctorSessions] SET [AppointmentStatus] = @status WHERE  [AppointmentNumber]=@number AND  [SessionDate]=@date";
+                SqlCommand com1 = new SqlCommand(sql1, con1);
+
+                com1.Parameters.AddWithValue("@date", this.dateTimePicker_date.Value.Date);
+                com1.Parameters.AddWithValue("@status", SessionStatus2);
+                com1.Parameters.AddWithValue("@number", this.txt_appoinment.Text);
+                int ret1 = com1.ExecuteNonQuery();
+
+                
+
                 con1.Close();
             }
             catch (Exception ex)
@@ -115,47 +131,55 @@ namespace Diploma_Final_Project_1
         {
             try
             {
-                string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
 
-                // save user details
-                SqlConnection con1 = new SqlConnection(cs);
-                con1.Open();
-                string selectSql = "SELECT [Patient ID] FROM tbl_patient_info WHERE [Name] = @name";
-                SqlCommand selectCmd = new SqlCommand(selectSql, con1);
-                selectCmd.Parameters.AddWithValue("@name", this.txt_patient_name.Text);
-
-                // Execute the query and retrieve the Patient_ID
-                object result = selectCmd.ExecuteScalar();
-                if (result != null)
+                if (string.IsNullOrEmpty(this.txt_appoinment.Text) || string.IsNullOrEmpty(this.txt_patient_name.Text) || string.IsNullOrEmpty(this.txt_time.Text) )
                 {
-                    int patientId = Convert.ToInt32(result);
+                    MessageBox.Show("All Field must be filled", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
 
+                    // save user details
+                    SqlConnection con1 = new SqlConnection(cs);
+                    con1.Open();
+                    string selectSql = "SELECT [Patient ID] FROM tbl_patient_info WHERE [Name] = @name";
+                    SqlCommand selectCmd = new SqlCommand(selectSql, con1);
+                    selectCmd.Parameters.AddWithValue("@name", this.txt_patient_name.Text);
 
-
-                    string sql = "UPDATE  tbl_appoinment SET Date=@date ,time=@time WHERE [Appoinment Number]=@number  ";
-                    SqlCommand com = new SqlCommand(sql, con1);
-
-
-                    com.Parameters.AddWithValue("@date", this.dateTimePicker_date.Value);
-                    com.Parameters.AddWithValue("@time", this.txt_time.Text);
-                    com.Parameters.AddWithValue("@number", this.txt_appoinment.Text);
-                    
-
-
-
-
-
-
-
-
-
-
-                    int ret = com.ExecuteNonQuery();
-                    if (ret == 1)
+                    // Execute the query and retrieve the Patient_ID
+                    object result = selectCmd.ExecuteScalar();
+                    if (result != null)
                     {
-                        MessageBox.Show("Appoinment Updated", "Information");
+                        int patientId = Convert.ToInt32(result);
+
+
+
+                        string sql = "UPDATE  tbl_appoinment SET Date=@date ,time=@time WHERE [Appoinment Number]=@number  ";
+                        SqlCommand com = new SqlCommand(sql, con1);
+
+
+                        com.Parameters.AddWithValue("@date", this.dateTimePicker_date.Value);
+                        com.Parameters.AddWithValue("@time", this.txt_time.Text);
+                        com.Parameters.AddWithValue("@number", this.txt_appoinment.Text);
+
+
+
+
+
+
+
+
+
+
+
+                        int ret = com.ExecuteNonQuery();
+                        if (ret == 1)
+                        {
+                            MessageBox.Show("Appoinment Updated", "Information");
+                        }
+                        con1.Close();
                     }
-                    con1.Close();
                 }
             }
             catch (Exception ex)
@@ -209,6 +233,16 @@ namespace Diploma_Final_Project_1
             {
                 MessageBox.Show("An error occurred : " + ex.Message);
             }
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            txt_appoinment.Clear();
+            txt_patient_name.Clear();
+            txt_time.Clear();
+            dataGridView_appointment.Rows.Clear();
+
+
         }
     }
 }

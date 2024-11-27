@@ -74,9 +74,11 @@ namespace Diploma_Final_Project_1
                     if (ret == 1)
                     {
                         MessageBox.Show("Appoinment Updated", "Information");
+                        Med_Add_Appoinment_Load(this, EventArgs.Empty);
+
                     }
 
-                   
+
 
                     string sql1 = "UPDATE [DoctorSessions] SET [AppointmentStatus] = @status WHERE  [AppointmentNumber]=@number AND  [SessionDate]=@date";
                     SqlCommand com1 = new SqlCommand(sql1, con1);
@@ -358,6 +360,15 @@ namespace Diploma_Final_Project_1
                 txt_AppoinmentNumber.Text = cellValue;
                 txt_time.Text = cellValue2;
             }
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            txt_contact.Clear();
+            txt_patient_name.Clear();
+            txt_AppoinmentNumber.Clear();
+            txt_time.Clear();
+
         }
     }
 }
