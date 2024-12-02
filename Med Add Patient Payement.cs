@@ -19,6 +19,8 @@ namespace Diploma_Final_Project_1
         string paymentId;
         string currentDate;
         //string PH_payment_Type = "Drug";
+        string cs = "Data Source=ASUS; Initial Catalog = Diploma Final Project DB1; Integrated Security=True";
+
         public Med_Add_Patient_Payement()
         {
             InitializeComponent();
@@ -197,7 +199,6 @@ namespace Diploma_Final_Project_1
 
             private void btn_search_Click(object sender, EventArgs e)
              {
-            string cs = "Data Source=ASUS; Initial Catalog = Diploma Final Project DB1; Integrated Security=True";
 
             try
             {
@@ -257,11 +258,13 @@ namespace Diploma_Final_Project_1
             SELECT p.Name, td.Patient_pay_ID,td.[Payment Type], td.[Total_Cost] ,td.[Date] 
             FROM [tbl_Patient_Payment] td
             INNER JOIN tbl_patient_info p ON td.[patirnt_ID] = p.[Patient ID]
-            WHERE p.[Contact Number] = @name ";
+            WHERE p.[Contact Number] = @name AND td.[Date]=@date";
                 SqlCommand com = new SqlCommand(sql, con);
 
                 com.Parameters.AddWithValue("@name", this.txt_search.Text);
-              
+
+                com.Parameters.AddWithValue("@date", DateTime.Today);
+
 
 
                 SqlDataAdapter dap = new SqlDataAdapter(com);
@@ -312,6 +315,48 @@ namespace Diploma_Final_Project_1
         private void btn_genarate_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_All_Search_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+
+
+
+
+
+                string sql = @"
+            SELECT p.Name, td.Patient_pay_ID,td.[Payment Type], td.[Total_Cost] ,td.[Date] 
+            FROM [tbl_Patient_Payment] td
+            INNER JOIN tbl_patient_info p ON td.[patirnt_ID] = p.[Patient ID]
+            WHERE p.[Contact Number] = @name";
+                SqlCommand com = new SqlCommand(sql, con);
+
+                com.Parameters.AddWithValue("@name", this.txt_search.Text);
+
+          
+
+
+
+                SqlDataAdapter dap = new SqlDataAdapter(com);
+                DataSet ds = new DataSet();
+                dap.Fill(ds);
+
+                this.dataGridView1.DataSource = ds.Tables[0];
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

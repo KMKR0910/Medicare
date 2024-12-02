@@ -45,6 +45,7 @@ namespace Diploma_Final_Project_1
             this.txt_paymnet_number = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.comboBox_pay_type = new System.Windows.Forms.ComboBox();
+            this.btn_All_Search = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -217,12 +218,24 @@ namespace Diploma_Final_Project_1
             this.comboBox_pay_type.Size = new System.Drawing.Size(372, 45);
             this.comboBox_pay_type.TabIndex = 95;
             // 
+            // btn_All_Search
+            // 
+            this.btn_All_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_All_Search.Location = new System.Drawing.Point(815, 151);
+            this.btn_All_Search.Name = "btn_All_Search";
+            this.btn_All_Search.Size = new System.Drawing.Size(216, 55);
+            this.btn_All_Search.TabIndex = 96;
+            this.btn_All_Search.Text = "Search All";
+            this.btn_All_Search.UseVisualStyleBackColor = true;
+            this.btn_All_Search.Click += new System.EventHandler(this.btn_All_Search_Click);
+            // 
             // Med_Add_Patient_Payement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2427, 1449);
+            this.Controls.Add(this.btn_All_Search);
             this.Controls.Add(this.comboBox_pay_type);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txt_paymnet_number);
@@ -267,5 +280,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.TextBox txt_paymnet_number;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox comboBox_pay_type;
+        private System.Windows.Forms.Button btn_All_Search;
     }
 }

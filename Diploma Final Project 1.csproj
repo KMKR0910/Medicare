@@ -206,6 +206,12 @@
       <DependentUpon>CrystalReport_Gen_Income.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CrystalReport_Gen_Patient_B_Invoice.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport_Gen_Patient_B_Invoice.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="doc test 1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -484,6 +490,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report_Gen_Bil_Invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_Gen_Bil_Invoice.Designer.cs">
+      <DependentUpon>Report_Gen_Bil_Invoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report_Gen_Drug_Inventory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -540,6 +552,10 @@
     <EmbeddedResource Include="CrystalReport_Gen_Income.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport_Gen_Income.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport_Gen_Patient_B_Invoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport_Gen_Patient_B_Invoice.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="doc test 1.resx">
       <DependentUpon>doc test 1.cs</DependentUpon>
@@ -689,6 +705,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report_Gen_Bil_Invoice.resx">
+      <DependentUpon>Report_Gen_Bil_Invoice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report_Gen_Drug_Inventory.resx">
       <DependentUpon>Report_Gen_Drug_Inventory.cs</DependentUpon>
     </EmbeddedResource>
