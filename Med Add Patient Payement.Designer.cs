@@ -46,6 +46,7 @@ namespace Diploma_Final_Project_1
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.comboBox_pay_type = new System.Windows.Forms.ComboBox();
             this.btn_All_Search = new System.Windows.Forms.Button();
+            this.txt_patientID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -227,7 +228,15 @@ namespace Diploma_Final_Project_1
             this.btn_All_Search.TabIndex = 96;
             this.btn_All_Search.Text = "Search All";
             this.btn_All_Search.UseVisualStyleBackColor = true;
-            this.btn_All_Search.Click += new System.EventHandler(this.btn_All_Search_Click);
+            this.btn_All_Search.Click += new System.EventHandler(this.btn_All_Search_Click_1);
+            // 
+            // txt_patientID
+            // 
+            this.txt_patientID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_patientID.Location = new System.Drawing.Point(1525, 58);
+            this.txt_patientID.Name = "txt_patientID";
+            this.txt_patientID.Size = new System.Drawing.Size(372, 44);
+            this.txt_patientID.TabIndex = 97;
             // 
             // Med_Add_Patient_Payement
             // 
@@ -235,6 +244,7 @@ namespace Diploma_Final_Project_1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2427, 1449);
+            this.Controls.Add(this.txt_patientID);
             this.Controls.Add(this.btn_All_Search);
             this.Controls.Add(this.comboBox_pay_type);
             this.Controls.Add(this.dataGridView1);
@@ -281,5 +291,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox comboBox_pay_type;
         private System.Windows.Forms.Button btn_All_Search;
+        private System.Windows.Forms.TextBox txt_patientID;
     }
 }

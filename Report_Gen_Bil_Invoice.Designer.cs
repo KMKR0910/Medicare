@@ -51,6 +51,7 @@ namespace Diploma_Final_Project_1
             this.Controls.Add(this.crystalReportViewer1);
             this.Name = "Report_Gen_Bil_Invoice";
             this.Text = "Report_Gen_Bil_Invoice";
+            this.Load += new System.EventHandler(this.Report_Gen_Bil_Invoice_Load);
             this.ResumeLayout(false);
 
         }

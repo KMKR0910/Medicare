@@ -20,6 +20,8 @@ namespace Diploma_Final_Project_1
         string currentDate;
         //string PH_payment_Type = "Drug";
         string cs = "Data Source=ASUS; Initial Catalog = Diploma Final Project DB1; Integrated Security=True";
+        string paymentID;
+        string patientContact;
 
         public Med_Add_Patient_Payement()
         {
@@ -29,6 +31,8 @@ namespace Diploma_Final_Project_1
             btn_genarate.BackColor = customC;
             btn_search.BackColor = customC;
             btn_clear.BackColor = customC;
+            btn_All_Search.BackColor = customC;
+
         }
 
 
@@ -36,6 +40,7 @@ namespace Diploma_Final_Project_1
         {
             
             private SqlConnection connection;
+            
 
             public PaymentGenerator(SqlConnection con)
             {
@@ -79,8 +84,8 @@ namespace Diploma_Final_Project_1
 
         }
 
-            /* Format the payment number with leading zeros
-            string formattedPaymentNumber = paymentNumber.ToString("D3"); // 3 digits, e.g., 001
+             //Format the payment number with leading zeros
+           /* string formattedPaymentNumber = paymentNumber.ToString("D3"); // 3 digits, e.g., 001
 
                 // Generate the payment ID
                 paymentId = "PAY" + currentDate + formattedPaymentNumber;
@@ -122,12 +127,13 @@ namespace Diploma_Final_Project_1
                 PaymentGenerator paymentGenerator = new PaymentGenerator(con);
 
                 // Generate the payment ID
-                string paymentID = paymentGenerator.GeneratePaymentID();
+                paymentID = paymentGenerator.GeneratePaymentID();
 
                 // Display the generated Payment ID (or save it to your database)
 
                 string lastThreeDigits = paymentID.Substring(paymentID.Length - 3);
                 this.txt_paymnet_number.Text = lastThreeDigits;
+              
             }
         }
 
@@ -149,7 +155,7 @@ namespace Diploma_Final_Project_1
                     con.Open();
 
 
-                    SqlCommand cmd = new SqlCommand("Insert Into [tbl_Patient_Payment] Values('" + paymentId + "','" + txt_date.Text + "','" + comboBox_pay_type.Text + "','" + numericUpDownCost.Value + "','" + patientID + "')", con);
+                    SqlCommand cmd = new SqlCommand("Insert Into [tbl_Patient_Payment] Values('" + paymentID + "','" + txt_date.Text + "','" + comboBox_pay_type.Text + "','" + numericUpDownCost.Value + "','" + patientID + "')", con);
                     cmd.ExecuteNonQuery();
                     con.Close();
                     MessageBox.Show("Payment added ");
@@ -172,13 +178,15 @@ namespace Diploma_Final_Project_1
 
 
                 string sql = @"
-            SELECT p.Name, td.Patient_pay_ID,td.[Payment Type], td.[Total_Cost] ,td.[Date] 
+            SELECT p.Name, td.[Payment Type], td.[Total_Cost] ,td.[Date] 
             FROM [tbl_Patient_Payment] td
             INNER JOIN tbl_patient_info p ON td.[patirnt_ID] = p.[Patient ID]
-            WHERE p.[Contact Number] = @name ";
+            WHERE p.[Contact Number] = @name AND td.[Date]=@date";
                 SqlCommand com = new SqlCommand(sql, con);
 
                 com.Parameters.AddWithValue("@name", this.txt_search.Text);
+
+                com.Parameters.AddWithValue("@date", DateTime.Today);
 
 
 
@@ -227,7 +235,9 @@ namespace Diploma_Final_Project_1
 
 
                     this.txt_patient.Text = rows["Name"].ToString();
-                    patientID= rows["Patient ID"].ToString();
+                    txt_patientID.Text = rows["Patient ID"].ToString();
+                    patientID = rows["Patient ID"].ToString();
+                    patientContact = rows["Contact Number"].ToString();
 
 
 
@@ -255,7 +265,7 @@ namespace Diploma_Final_Project_1
 
 
                 string sql = @"
-            SELECT p.Name, td.Patient_pay_ID,td.[Payment Type], td.[Total_Cost] ,td.[Date] 
+            SELECT p.Name,td.[Payment Type], td.[Total_Cost] ,td.[Date] 
             FROM [tbl_Patient_Payment] td
             INNER JOIN tbl_patient_info p ON td.[patirnt_ID] = p.[Patient ID]
             WHERE p.[Contact Number] = @name AND td.[Date]=@date";
@@ -313,12 +323,19 @@ namespace Diploma_Final_Project_1
         }
 
         private void btn_genarate_Click(object sender, EventArgs e)
-        {
 
+        {
+            MessageBox.Show("An error occurred : " + patientID, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            Report_Gen_Bil_Invoice f1 = new Report_Gen_Bil_Invoice(patientID);
+            f1.ShowDialog();
         }
 
-        private void btn_All_Search_Click(object sender, EventArgs e)
+     
+
+        private void btn_All_Search_Click_1(object sender, EventArgs e)
         {
+
             try
             {
 
@@ -332,7 +349,7 @@ namespace Diploma_Final_Project_1
 
 
                 string sql = @"
-            SELECT p.Name, td.Patient_pay_ID,td.[Payment Type], td.[Total_Cost] ,td.[Date] 
+            SELECT p.Name,td.[Payment Type], td.[Total_Cost] ,td.[Date] 
             FROM [tbl_Patient_Payment] td
             INNER JOIN tbl_patient_info p ON td.[patirnt_ID] = p.[Patient ID]
             WHERE p.[Contact Number] = @name";
@@ -340,7 +357,7 @@ namespace Diploma_Final_Project_1
 
                 com.Parameters.AddWithValue("@name", this.txt_search.Text);
 
-          
+
 
 
 
