@@ -14,8 +14,8 @@ namespace Diploma_Final_Project_1
 {
     public partial class Report_Gen_M_Certificate : Form
     {
-        int MC_ID;
-        public Report_Gen_M_Certificate(int MC_ID)
+        string MC_ID;
+        public Report_Gen_M_Certificate(string MC_ID)
         {
             InitializeComponent();
             this.MC_ID = MC_ID;
@@ -30,7 +30,7 @@ namespace Diploma_Final_Project_1
 
 
             string sql = @"
-                 SELECT td.*,p* 
+                 SELECT td.*,p.* 
                  FROM [tbl_M_certificate] td
                  INNER JOIN tbl_patient_info p ON td.[Patient ID] = p.[Patient ID]
                   WHERE td.[MC_ID]  = @MCID";
@@ -47,7 +47,7 @@ namespace Diploma_Final_Project_1
             rpt1.SetDataSource(ds.Tables[0]);
 
             // set the report source of the created “crystalReportViewer”
-            this.crystalReportViewer1.ReportSource = rpt1;
+            this.crystalReportViewer2.ReportSource = rpt1;
 
             //Disconnect
             con.Close();

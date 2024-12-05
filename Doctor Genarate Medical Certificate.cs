@@ -281,7 +281,7 @@ namespace Diploma_Final_Project_1
                 // save  details
                 SqlConnection con1 = new SqlConnection(cs);
                 con1.Open();
-                string selectSql = "SELECT [Patient ID] FROM tbl_patient_info WHERE [Contact Number] = @number";
+                string selectSql = "SELECT [Patient ID] FROM [tbl_patient_info] WHERE [Contact Number] = @number";
                 SqlCommand selectCmd = new SqlCommand(selectSql, con1);
                 selectCmd.Parameters.AddWithValue("@number", this.txt_search.Text);
 
@@ -316,7 +316,7 @@ namespace Diploma_Final_Project_1
             {
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            int MC_ID = Convert.ToInt32(txt_MCID.Text);
+            string MC_ID = txt_MCID.Text;
 
             Report_Gen_M_Certificate f1 = new Report_Gen_M_Certificate(MC_ID);
             f1.ShowDialog();
