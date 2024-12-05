@@ -54,6 +54,7 @@ namespace Diploma_Final_Project_1
             this.crystalReportViewer2.Name = "crystalReportViewer2";
             this.crystalReportViewer2.Size = new System.Drawing.Size(1409, 1352);
             this.crystalReportViewer2.TabIndex = 1;
+            this.crystalReportViewer2.Load += new System.EventHandler(this.crystalReportViewer2_Load);
             // 
             // Report_Gen_M_Certificate
             // 

@@ -18,7 +18,7 @@ namespace Diploma_Final_Project_1
         {
             InitializeComponent();
             Color customC = ColorTranslator.FromHtml("#9083D5 ");
-            btn_cancel.BackColor = customC;
+       
             btn_clear.BackColor = customC;
             btn_save.BackColor = customC;
 
@@ -68,37 +68,47 @@ namespace Diploma_Final_Project_1
 
         private void btn_search_Click(object sender, EventArgs e)
         {
-          
+
             try
             {
 
+                if (string.IsNullOrEmpty(this.txt_search.Text))
+                {
+                    MessageBox.Show("All required fields must be filled.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
 
 
-                SqlConnection con = new SqlConnection(cs);
-                con.Open();
+
+
+
+                    SqlConnection con = new SqlConnection(cs);
+                    con.Open();
 
 
 
 
 
-                string sql = @"
+                    string sql = @"
                  SELECT td.* 
                  FROM tbl_diagnostic_data td
                  INNER JOIN tbl_patient_info p ON td.patient_id = p.[Patient ID]
                   WHERE p.[Contact Number] = @number";
-                SqlCommand com = new SqlCommand(sql, con);
+                    SqlCommand com = new SqlCommand(sql, con);
 
-                com.Parameters.AddWithValue("@number", this.txt_search.Text);
-
-
-                SqlDataAdapter dap = new SqlDataAdapter(com);
-                DataSet ds = new DataSet();
-                dap.Fill(ds);
-
-                this.dataGridView_diagnose.DataSource = ds.Tables[0];
+                    com.Parameters.AddWithValue("@number", this.txt_search.Text);
 
 
-                con.Close();
+                    SqlDataAdapter dap = new SqlDataAdapter(com);
+                    DataSet ds = new DataSet();
+                    dap.Fill(ds);
+
+                    this.dataGridView_diagnose.DataSource = ds.Tables[0];
+
+
+                    con.Close();
+                }
             }
             catch (Exception ex)
             {
@@ -119,16 +129,15 @@ namespace Diploma_Final_Project_1
                  cellValue = row.Cells[0].Value.ToString();
                 
 
-                string cellValue2 = row.Cells[1].Value.ToString();
-                string cellValue3 = row.Cells[2].Value.ToString();
-                string cellValue4 = row.Cells[3].Value.ToString();
+                string cellValue1 = row.Cells[4].Value.ToString();
+                string cellValue2 = row.Cells[2].Value.ToString();
+     
 
                 // Set the value to the TextBox
               
-                txt_medicatins.Text = cellValue2;
-                txt_allergies.Text = cellValue3;
-                txt_description.Text = cellValue4;
-                txt_medicatins.Text = cellValue2;
+                txt_allergies.Text = cellValue1;
+                txt_description.Text = cellValue2;
+             
 
             }
         }
@@ -137,47 +146,55 @@ namespace Diploma_Final_Project_1
         {
             try
             {
-              
 
-
-                // save user details
-                SqlConnection con1 = new SqlConnection(cs);
-                con1.Open();
-
-
-                  string  sql = @"UPDATE  [tbl_diagnostic_data] SET [Description] =@description , Medications =@medication , [Allergies] =@allergies WHERE  [DiagnosNumber]=@id";
-
-
-
-     
-
-
-
-                SqlCommand com = new SqlCommand(sql, con1);
-
-                com.Parameters.AddWithValue("@medication", this.txt_medicatins.Text);
-                com.Parameters.AddWithValue("@description", this.txt_description.Text);
-                com.Parameters.AddWithValue("@allergies", this.txt_allergies.Text);
-                com.Parameters.AddWithValue("@id", cellValue);
-
-
-
-
-
-
-
-
-
-
-                int ret = com.ExecuteNonQuery();
-                if (ret == 1)
+                if (string.IsNullOrEmpty(this.txt_description.Text) || string.IsNullOrEmpty(this.txt_allergies.Text))
                 {
-                    MessageBox.Show("Updated", "Information");
-                    btn_search_Click(null, EventArgs.Empty);
-
-
+                    MessageBox.Show("All required fields must be filled.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                con1.Close();
+                else
+                {
+
+
+
+
+                    // save user details
+                    SqlConnection con1 = new SqlConnection(cs);
+                    con1.Open();
+
+
+                    string sql = @"UPDATE  [tbl_diagnostic_data] SET [Description] =@description , [Allergies] =@allergies WHERE  [DiagnosNumber]=@id";
+
+
+
+
+
+
+
+                    SqlCommand com = new SqlCommand(sql, con1);
+
+                    com.Parameters.AddWithValue("@description", this.txt_description.Text);
+                    com.Parameters.AddWithValue("@allergies", this.txt_allergies.Text);
+                    com.Parameters.AddWithValue("@id", cellValue);
+
+
+
+
+
+
+
+
+
+
+                    int ret = com.ExecuteNonQuery();
+                    if (ret == 1)
+                    {
+                        MessageBox.Show("Updated", "Information");
+                        btn_search_Click(null, EventArgs.Empty);
+
+
+                    }
+                    con1.Close();
+                }
             }
             catch (Exception ex)
             {
@@ -188,6 +205,13 @@ namespace Diploma_Final_Project_1
         private void Doctor_View_Diagnose_Histroy_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            txt_name.Clear();
+            txt_allergies.Clear();
+            txt_description.Clear();
         }
     }
 }

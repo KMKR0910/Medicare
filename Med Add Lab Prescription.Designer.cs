@@ -85,6 +85,7 @@ namespace Diploma_Final_Project_1
             this.btn_cancel.TabIndex = 105;
             this.btn_cancel.Text = "Clear";
             this.btn_cancel.UseVisualStyleBackColor = true;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // btn_delete
             // 
@@ -212,6 +213,7 @@ namespace Diploma_Final_Project_1
             this.comboBox_type.Name = "comboBox_type";
             this.comboBox_type.Size = new System.Drawing.Size(356, 33);
             this.comboBox_type.TabIndex = 115;
+            this.comboBox_type.SelectedIndexChanged += new System.EventHandler(this.comboBox_type_SelectedIndexChanged);
             // 
             // Med_Add_Lab_Prescription
             // 

@@ -190,200 +190,210 @@ ORDER BY PaymentDate;
         {
 
 
+
+
             try
+
             {
-                SqlConnection con = new SqlConnection(cs);
-                con.Open();
+                if (this.dateTimePicker1.Value==default(DateTime) || this.dateTimePicker2.Value == default(DateTime) )
+                {
+                    MessageBox.Show("All required fields must be filled.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    SqlConnection con = new SqlConnection(cs);
+                    con.Open();
 
 
 
-                DateTime startDate = dateTimePicker_start.Value;
-                DateTime endDate = dateTimePicker_end.Value;
-                String pay1 = "Drug";
+                    DateTime startDate = dateTimePicker_start.Value;
+                    DateTime endDate = dateTimePicker_end.Value;
+                    String pay1 = "Drug";
 
-                string sql = @"SELECT SUM([Total_Cost]) AS TotalCost 
+                    string sql = @"SELECT SUM([Total_Cost]) AS TotalCost 
                              FROM [tbl_Patient_Payment]
                              WHERE [Date] BETWEEN @StartDate AND @EndDate AND [Payment Type]=@payment_type";
 
-                SqlCommand command = new SqlCommand(sql, con);
-                command.Parameters.AddWithValue("@StartDate", startDate);
-                command.Parameters.AddWithValue("@EndDate", endDate);
-                command.Parameters.AddWithValue("@payment_type", pay1);
+                    SqlCommand command = new SqlCommand(sql, con);
+                    command.Parameters.AddWithValue("@StartDate", startDate);
+                    command.Parameters.AddWithValue("@EndDate", endDate);
+                    command.Parameters.AddWithValue("@payment_type", pay1);
 
 
-                object result = command.ExecuteScalar();
+                    object result = command.ExecuteScalar();
 
-                decimal totalCost = result != DBNull.Value ? Convert.ToDecimal(result) : 0;
+                    decimal totalCost = result != DBNull.Value ? Convert.ToDecimal(result) : 0;
 
 
 
-                //
-                //
-                // For Calculate Laboratory Income
+                    //
+                    //
+                    // For Calculate Laboratory Income
 
-                String pay2 = "Lab Tets";
+                    String pay2 = "Lab Tets";
 
-                string sql2 = @"SELECT SUM([Total_Cost]) AS IncomeLab 
+                    string sql2 = @"SELECT SUM([Total_Cost]) AS IncomeLab 
                              FROM [tbl_Patient_Payment]
                              WHERE [Date] BETWEEN @StartDate AND @EndDate AND [Payment Type]=@payment_type";
 
-                SqlCommand com2 = new SqlCommand(sql2, con);
-                com2.Parameters.AddWithValue("@StartDate", startDate);
-                com2.Parameters.AddWithValue("@EndDate", endDate);
-                com2.Parameters.AddWithValue("@payment_type", pay2);
+                    SqlCommand com2 = new SqlCommand(sql2, con);
+                    com2.Parameters.AddWithValue("@StartDate", startDate);
+                    com2.Parameters.AddWithValue("@EndDate", endDate);
+                    com2.Parameters.AddWithValue("@payment_type", pay2);
 
 
-                object result2 = com2.ExecuteScalar();
+                    object result2 = com2.ExecuteScalar();
 
-                decimal IncomeLab = result2 != DBNull.Value ? Convert.ToDecimal(result2) : 0;
+                    decimal IncomeLab = result2 != DBNull.Value ? Convert.ToDecimal(result2) : 0;
 
 
-                //
-                // For Calculate Drug Expenses 
+                    //
+                    // For Calculate Drug Expenses 
 
-               
 
-                string sql3 = @"SELECT SUM([Total_Cost]) AS ExpenseDrug 
+
+                    string sql3 = @"SELECT SUM([Total_Cost]) AS ExpenseDrug 
                              FROM [tbl_drug_payments]
                              WHERE [Pay_Date] BETWEEN @StartDate AND @EndDate";
 
-                SqlCommand com3 = new SqlCommand(sql3, con);
-                com3.Parameters.AddWithValue("@StartDate", startDate);
-                com3.Parameters.AddWithValue("@EndDate", endDate);
-             
+                    SqlCommand com3 = new SqlCommand(sql3, con);
+                    com3.Parameters.AddWithValue("@StartDate", startDate);
+                    com3.Parameters.AddWithValue("@EndDate", endDate);
 
 
-                object result3 = com3.ExecuteScalar();
 
-                decimal ExpenseDrug = result3 != DBNull.Value ? Convert.ToDecimal(result3) : 0;
+                    object result3 = com3.ExecuteScalar();
 
-                //
-                //
-                // For Calculate Lab Expenses 
+                    decimal ExpenseDrug = result3 != DBNull.Value ? Convert.ToDecimal(result3) : 0;
+
+                    //
+                    //
+                    // For Calculate Lab Expenses 
 
 
-                string categoryLAB = "Lab";
+                    string categoryLAB = "Lab";
 
-                string sql4 = @"SELECT SUM([Amount]) AS ExpenseLab 
+                    string sql4 = @"SELECT SUM([Amount]) AS ExpenseLab 
                              FROM [tbl_finance]
                              WHERE [Date] BETWEEN @StartDate AND @EndDate AND [Category]= @category";
 
-                SqlCommand com4 = new SqlCommand(sql4, con);
-                com4.Parameters.AddWithValue("@StartDate", startDate);
-                com4.Parameters.AddWithValue("@EndDate", endDate);
-                com4.Parameters.AddWithValue("@category", categoryLAB);
+                    SqlCommand com4 = new SqlCommand(sql4, con);
+                    com4.Parameters.AddWithValue("@StartDate", startDate);
+                    com4.Parameters.AddWithValue("@EndDate", endDate);
+                    com4.Parameters.AddWithValue("@category", categoryLAB);
 
 
 
-                object result4 = com4.ExecuteScalar();
+                    object result4 = com4.ExecuteScalar();
 
-                decimal ExpenseLab = result4 != DBNull.Value ? Convert.ToDecimal(result4) : 0;
-
-
-                //
-                //
-                // For Calculate Employee Salary Expenses - Medical Centre Assistant
+                    decimal ExpenseLab = result4 != DBNull.Value ? Convert.ToDecimal(result4) : 0;
 
 
-                string categorySalary = "Salary";
-                string salarytype1 = "Med";
+                    //
+                    //
+                    // For Calculate Employee Salary Expenses - Medical Centre Assistant
 
-                string sql5 = @"SELECT SUM([Amount]) AS SalaryMed
+
+                    string categorySalary = "Salary";
+                    string salarytype1 = "Med";
+
+                    string sql5 = @"SELECT SUM([Amount]) AS SalaryMed
                               FROM [tbl_finance]
                              WHERE [Date] BETWEEN @StartDate AND @EndDate AND [Category]= @category AND [Description] =@description";
 
-                SqlCommand com5 = new SqlCommand(sql5, con);
-                com5.Parameters.AddWithValue("@StartDate", startDate);
-                com5.Parameters.AddWithValue("@EndDate", endDate);
-                com5.Parameters.AddWithValue("@category", categorySalary);
-                com5.Parameters.AddWithValue("@description", salarytype1);
+                    SqlCommand com5 = new SqlCommand(sql5, con);
+                    com5.Parameters.AddWithValue("@StartDate", startDate);
+                    com5.Parameters.AddWithValue("@EndDate", endDate);
+                    com5.Parameters.AddWithValue("@category", categorySalary);
+                    com5.Parameters.AddWithValue("@description", salarytype1);
 
 
 
 
-                object result5 = com5.ExecuteScalar();
+                    object result5 = com5.ExecuteScalar();
 
-                decimal SalaryMed = result5 != DBNull.Value ? Convert.ToDecimal(result5) : 0;
-
-
-                // For Calculate Employee Salary Expenses -Pharamacists
+                    decimal SalaryMed = result5 != DBNull.Value ? Convert.ToDecimal(result5) : 0;
 
 
-                
-                string salarytype2 = "Pha";
+                    // For Calculate Employee Salary Expenses -Pharamacists
 
-                string sql6 = @"SELECT SUM([Amount]) AS SalaryPha
+
+
+                    string salarytype2 = "Pha";
+
+                    string sql6 = @"SELECT SUM([Amount]) AS SalaryPha
                               FROM [tbl_finance]
                              WHERE [Date] BETWEEN @StartDate AND @EndDate AND [Category]= @category AND [Description] =@description";
 
-                SqlCommand com6 = new SqlCommand(sql6, con);
-                com6.Parameters.AddWithValue("@StartDate", startDate);
-                com6.Parameters.AddWithValue("@EndDate", endDate);
-                com6.Parameters.AddWithValue("@category", categorySalary);
-                com6.Parameters.AddWithValue("@description", salarytype2);
+                    SqlCommand com6 = new SqlCommand(sql6, con);
+                    com6.Parameters.AddWithValue("@StartDate", startDate);
+                    com6.Parameters.AddWithValue("@EndDate", endDate);
+                    com6.Parameters.AddWithValue("@category", categorySalary);
+                    com6.Parameters.AddWithValue("@description", salarytype2);
 
 
 
 
-                object result6= com6.ExecuteScalar();
+                    object result6 = com6.ExecuteScalar();
 
-                decimal SalaryPha = result6 != DBNull.Value ? Convert.ToDecimal(result6) : 0;
+                    decimal SalaryPha = result6 != DBNull.Value ? Convert.ToDecimal(result6) : 0;
 
-                // For Calculate Employee Salary Expenses -Laboaratory Assistant
+                    // For Calculate Employee Salary Expenses -Laboaratory Assistant
 
 
 
-                string salarytype3 = "Lab";
+                    string salarytype3 = "Lab";
 
-                string sql7 = @"SELECT SUM([Amount]) AS SalaryPha
+                    string sql7 = @"SELECT SUM([Amount]) AS SalaryPha
                               FROM [tbl_finance]
                              WHERE [Date] BETWEEN @StartDate AND @EndDate AND [Category]= @category AND [Description] =@description";
 
-                SqlCommand com7 = new SqlCommand(sql7, con);
-                com7.Parameters.AddWithValue("@StartDate", startDate);
-                com7.Parameters.AddWithValue("@EndDate", endDate);
-                com7.Parameters.AddWithValue("@category", categorySalary);
-                com7.Parameters.AddWithValue("@description", salarytype3);
+                    SqlCommand com7 = new SqlCommand(sql7, con);
+                    com7.Parameters.AddWithValue("@StartDate", startDate);
+                    com7.Parameters.AddWithValue("@EndDate", endDate);
+                    com7.Parameters.AddWithValue("@category", categorySalary);
+                    com7.Parameters.AddWithValue("@description", salarytype3);
 
 
 
 
-                object result7 = com7.ExecuteScalar();
+                    object result7 = com7.ExecuteScalar();
 
-                decimal SalaryLab = result7 != DBNull.Value ? Convert.ToDecimal(result7) : 0;
+                    decimal SalaryLab = result7 != DBNull.Value ? Convert.ToDecimal(result7) : 0;
 
-                //
-                // For Calculate Other Expenses 
-                //
+                    //
+                    // For Calculate Other Expenses 
+                    //
 
-       
-              
 
-                string sql8 = @"SELECT SUM([Amount]) AS Others
+
+
+                    string sql8 = @"SELECT SUM([Amount]) AS Others
                               FROM [tbl_finance]
                              WHERE [Date] BETWEEN @StartDate AND @EndDate AND [Category]!= @Other1  AND [Category]!= @Other2    ";
 
-                SqlCommand com8 = new SqlCommand(sql8, con);
-                com8.Parameters.AddWithValue("@StartDate", startDate);
-                com8.Parameters.AddWithValue("@EndDate", endDate);
-                com8.Parameters.AddWithValue("@Other1", categoryLAB);
-                com8.Parameters.AddWithValue("@Other2", categorySalary);
- 
-
-
-
-                object result8 = com8.ExecuteScalar();
-
-                decimal OtherExpenses = result8 != DBNull.Value ? Convert.ToDecimal(result8) : 0;
+                    SqlCommand com8 = new SqlCommand(sql8, con);
+                    com8.Parameters.AddWithValue("@StartDate", startDate);
+                    com8.Parameters.AddWithValue("@EndDate", endDate);
+                    com8.Parameters.AddWithValue("@Other1", categoryLAB);
+                    com8.Parameters.AddWithValue("@Other2", categorySalary);
 
 
 
 
+                    object result8 = com8.ExecuteScalar();
+
+                    decimal OtherExpenses = result8 != DBNull.Value ? Convert.ToDecimal(result8) : 0;
 
 
-                // Pass data to Crystal Report
-                Report_Gen_Income reportForm = new Report_Gen_Income(startDate, endDate, totalCost,IncomeLab,pay1,pay2, ExpenseDrug,  ExpenseLab, categoryLAB, SalaryMed, categorySalary, salarytype1, SalaryPha, salarytype2, SalaryLab, salarytype3, OtherExpenses);
-                reportForm.Show();
+
+
+
+
+                    // Pass data to Crystal Report
+                    Report_Gen_Income reportForm = new Report_Gen_Income(startDate, endDate, totalCost, IncomeLab, pay1, pay2, ExpenseDrug, ExpenseLab, categoryLAB, SalaryMed, categorySalary, salarytype1, SalaryPha, salarytype2, SalaryLab, salarytype3, OtherExpenses);
+                    reportForm.Show();
+                }
             }
             catch (Exception ex)
             {

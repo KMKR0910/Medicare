@@ -47,7 +47,6 @@ namespace Diploma_Final_Project_1
             this.txt_MCID = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.btn_cancel = new System.Windows.Forms.Button();
-            this.btn_save = new System.Windows.Forms.Button();
             this.btn_genarate = new System.Windows.Forms.Button();
             this.txt_description = new System.Windows.Forms.TextBox();
             this.dateTimePicker_start = new System.Windows.Forms.DateTimePicker();
@@ -211,7 +210,6 @@ namespace Diploma_Final_Project_1
             this.groupBox2.Controls.Add(this.txt_MCID);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.btn_cancel);
-            this.groupBox2.Controls.Add(this.btn_save);
             this.groupBox2.Controls.Add(this.btn_genarate);
             this.groupBox2.Controls.Add(this.txt_description);
             this.groupBox2.Controls.Add(this.dateTimePicker_start);
@@ -255,19 +253,9 @@ namespace Diploma_Final_Project_1
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(216, 55);
             this.btn_cancel.TabIndex = 63;
-            this.btn_cancel.Text = "Cancel";
+            this.btn_cancel.Text = "Clear";
             this.btn_cancel.UseVisualStyleBackColor = true;
-            // 
-            // btn_save
-            // 
-            this.btn_save.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_save.Location = new System.Drawing.Point(519, 1007);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(216, 55);
-            this.btn_save.TabIndex = 62;
-            this.btn_save.Text = "Save";
-            this.btn_save.UseVisualStyleBackColor = true;
-            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // btn_genarate
             // 
@@ -418,7 +406,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btn_cancel;
-        private System.Windows.Forms.Button btn_save;
         private System.Windows.Forms.Button btn_genarate;
         private System.Windows.Forms.TextBox txt_description;
         private System.Windows.Forms.DateTimePicker dateTimePicker_start;

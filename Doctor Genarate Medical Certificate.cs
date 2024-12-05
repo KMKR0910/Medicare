@@ -21,9 +21,10 @@ namespace Diploma_Final_Project_1
           
         }
 
+        string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
+
         private void btn_search_Click(object sender, EventArgs e)
         {
-            string cs = "Data Source=ASUS; Initial Catalog = Diploma Final Project DB1; Integrated Security=True";
 
             try
             {
@@ -156,11 +157,10 @@ namespace Diploma_Final_Project_1
 
         }
 
-        private void btn_save_Click(object sender, EventArgs e)
+       /* private void btn_save_Click(object sender, EventArgs e)
         {
             try
             {
-                string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
 
                 // save user details
                 SqlConnection con1 = new SqlConnection(cs);
@@ -201,9 +201,10 @@ namespace Diploma_Final_Project_1
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+       */
         private void Doctor_Genarate_Medical_Certificate_Load(object sender, EventArgs e)
         {
+           
             string newID = GenerateID();
 
             string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
@@ -273,10 +274,58 @@ namespace Diploma_Final_Project_1
 
         private void btn_genarate_Click(object sender, EventArgs e)
         {
-            string MC_ID = txt_MCID.ToString();
+
+            try
+            {
+
+                // save  details
+                SqlConnection con1 = new SqlConnection(cs);
+                con1.Open();
+                string selectSql = "SELECT [Patient ID] FROM tbl_patient_info WHERE [Contact Number] = @number";
+                SqlCommand selectCmd = new SqlCommand(selectSql, con1);
+                selectCmd.Parameters.AddWithValue("@number", this.txt_search.Text);
+
+                // Execute the query and retrieve the Patient_ID
+                object result = selectCmd.ExecuteScalar();
+                if (result != null)
+                {
+                    int patientId = Convert.ToInt32(result);
+
+                    // Now, insert into tbl_M_certificate using the retrieved Patient_ID
+                    string insertSql = @"
+        INSERT INTO tbl_M_certificate (Description, [Issued Date], [Start Date], [End Date], [Patient ID])
+        VALUES (@description, @issue, @start, @end, @id)";
+
+                    SqlCommand insertCmd = new SqlCommand(insertSql, con1);
+                    insertCmd.Parameters.AddWithValue("@description", this.txt_description.Text);
+                    insertCmd.Parameters.AddWithValue("@issue", this.dateTimePicker_Issue.Value);  // Use .Value for DateTimePickers
+                    insertCmd.Parameters.AddWithValue("@start", this.dateTimePicker_start.Value);
+                    insertCmd.Parameters.AddWithValue("@end", this.dateTimePicker_end.Value);
+                    insertCmd.Parameters.AddWithValue("@id", patientId);  // Set the Patient_ID from the previous query
+
+                    // Execute the insert command
+                    insertCmd.ExecuteNonQuery();
+                }
+                else
+                {
+                    // Handle case where no Patient_ID is found for the given Contact Number
+                    MessageBox.Show("No patient found with the given contact number.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            int MC_ID = Convert.ToInt32(txt_MCID.Text);
 
             Report_Gen_M_Certificate f1 = new Report_Gen_M_Certificate(MC_ID);
             f1.ShowDialog();
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            txt_description.Clear();
+            
         }
     }
 }

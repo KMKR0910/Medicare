@@ -40,15 +40,22 @@ namespace Diploma_Final_Project_1
 
             try
             {
-                SqlConnection con = new SqlConnection(cs);
-                con.Open();
+                if (string.IsNullOrEmpty(this.txt_dosage.Text) || string.IsNullOrEmpty(this.txt_duration.Text) || string.IsNullOrEmpty(this.txt_medicine.Text) || string.IsNullOrEmpty(this.txt_prescripton_number.Text))
+                {
+                    MessageBox.Show("All required fields must be filled.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+
+                    SqlConnection con = new SqlConnection(cs);
+                    con.Open();
 
 
-                SqlCommand cmd = new SqlCommand("Insert Into tbl_prescript Values('" + txt_patient_ID.Text + "','" + txt_medicine.Text + "','" + txt_dosage.Text + "','" + txt_duration.Text + "','" + txt_date.Text + "','" + prescriptionNumber + "')", con);
-                cmd.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("added successfully");
-
+                    SqlCommand cmd = new SqlCommand("Insert Into tbl_prescript Values('" + txt_patient_ID.Text + "','" + txt_medicine.Text + "','" + txt_dosage.Text + "','" + txt_duration.Text + "','" + txt_date.Text + "','" + prescriptionNumber + "')", con);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("added successfully");
+                }
             SqlConnection con1 = new SqlConnection(cs);
             con1.Open();
 
@@ -93,38 +100,47 @@ namespace Diploma_Final_Project_1
 
             try
             {
-                DateTime currentDate = DateTime.Now.Date;
-                this.txt_date.Text = currentDate.ToString("yyyy-MM-dd");  // Converts DateTime to string in "YYYY-MM-DD" format
 
-
-                SqlConnection con = new SqlConnection(cs);
-                con.Open();
-
-
-                string sql = "SELECT [Patient ID] FROM tbl_patient_info WHERE [Contact Number] = @name ";
-                SqlCommand com = new SqlCommand(sql, con);
-                com.Parameters.AddWithValue("@name", this.txt_search.Text);
-
-
-                SqlDataAdapter dap = new SqlDataAdapter(com);
-                DataSet ds = new DataSet();
-                dap.Fill(ds);
-
-
-                if (ds.Tables[0].Rows.Count > 0)
+                if (string.IsNullOrEmpty(this.txt_search.Text))
+                {
+                    MessageBox.Show("All required fields must be filled.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
                 {
 
-                    DataRow rows = ds.Tables[0].Rows[0];
+                    DateTime currentDate = DateTime.Now.Date;
+                    this.txt_date.Text = currentDate.ToString("yyyy-MM-dd");  // Converts DateTime to string in "YYYY-MM-DD" format
 
 
-                    this.txt_patient_ID.Text = rows["Patient ID"].ToString();
+                    SqlConnection con = new SqlConnection(cs);
+                    con.Open();
 
 
+                    string sql = "SELECT [Patient ID] FROM tbl_patient_info WHERE [Contact Number] = @name ";
+                    SqlCommand com = new SqlCommand(sql, con);
+                    com.Parameters.AddWithValue("@name", this.txt_search.Text);
+
+
+                    SqlDataAdapter dap = new SqlDataAdapter(com);
+                    DataSet ds = new DataSet();
+                    dap.Fill(ds);
+
+
+                    if (ds.Tables[0].Rows.Count > 0)
+                    {
+
+                        DataRow rows = ds.Tables[0].Rows[0];
+
+
+                        this.txt_patient_ID.Text = rows["Patient ID"].ToString();
+
+
+
+                    }
+
+                    con.Close();
 
                 }
-
-                con.Close();
-
             }
             catch (Exception ex)
             {
@@ -271,6 +287,14 @@ namespace Diploma_Final_Project_1
             {
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            txt_dosage.Clear();
+            txt_duration.Clear();
+            txt_medicine.Clear();
+
         }
     }
 }

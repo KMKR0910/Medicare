@@ -291,5 +291,30 @@ namespace Diploma_Final_Project_1
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void comboBox_type_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
+            SqlConnection con = new SqlConnection(cs);
+            con.Open();
+
+            string selectedType = comboBox_type.SelectedItem.ToString();
+
+            string sql = "SELECT [Test_Price] FROM [tbl_lab_tests] WHERE Type = @type";
+            SqlCommand com = new SqlCommand(sql, con);
+            com.Parameters.AddWithValue("@type", selectedType);
+            object result = com.ExecuteScalar();
+
+            decimal price = Convert.ToDecimal(result);
+            txt_price.Text = price.ToString();
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            txt_description.Clear();
+        
+            txt_price.Clear();
+            comboBox_type.SelectedIndex = -1;
+        }
     }
 }

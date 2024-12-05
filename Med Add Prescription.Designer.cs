@@ -166,6 +166,7 @@ namespace Diploma_Final_Project_1
             this.btn_cancel.TabIndex = 86;
             this.btn_cancel.Text = "Clear";
             this.btn_cancel.UseVisualStyleBackColor = true;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // label4
             // 

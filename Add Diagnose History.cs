@@ -14,7 +14,8 @@ namespace Diploma_Final_Project_1
     public partial class Add_Diagnose_History : Form
     {
         string patientID;
-        string newUserID;
+        string cellValue3;
+        // string newUserID;
         public Add_Diagnose_History()
         {
             InitializeComponent();
@@ -25,51 +26,51 @@ namespace Diploma_Final_Project_1
             btn_add.BackColor = customC;
             btn_update.BackColor = customC;
         }
-        private string GenerateUserID()
-        {
+        /* private string GenerateUserID()
+         {
 
 
-            string lastUserID = null;
-            string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
+             string lastUserID = null;
+             string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
 
-            SqlConnection con = new SqlConnection(cs);
+             SqlConnection con = new SqlConnection(cs);
 
-            try
-            {
+             try
+             {
 
-                con.Open();
-                string query = "SELECT TOP 1 DiagnosNumber FROM tbl_diagnostic_data ORDER BY DiagnosNumber DESC";
+                 con.Open();
+                 string query = "SELECT TOP 1 DiagnosNumber FROM tbl_diagnostic_data ORDER BY DiagnosNumber DESC";
 
-                SqlCommand cmd = new SqlCommand(query, con);
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
-                {
-                    lastUserID = reader["DiagnosNumber"].ToString();
-                }
-
-
-                // If no users exist yet, start with "U001"
-                if (string.IsNullOrEmpty(lastUserID))
-                {
-                    return "DG001";
-                }
-
-                // Extract the numeric part of the UserID and increment it
-                string numericPart = lastUserID.Substring(1);
-                int newNumericPart = int.Parse(numericPart) + 1;
-
-                // Format the new user ID to have leading zeros
-                return "DG" + newNumericPart.ToString("D3");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return null;
-            }
+                 SqlCommand cmd = new SqlCommand(query, con);
+                 SqlDataReader reader = cmd.ExecuteReader();
+                 if (reader.Read())
+                 {
+                     lastUserID = reader["DiagnosNumber"].ToString();
+                 }
 
 
-        }
+                 // If no users exist yet, start with "U001"
+                 if (string.IsNullOrEmpty(lastUserID))
+                 {
+                     return "DG001";
+                 }
 
+                 // Extract the numeric part of the UserID and increment it
+                 string numericPart = lastUserID.Substring(1);
+                 int newNumericPart = int.Parse(numericPart) + 1;
+
+                 // Format the new user ID to have leading zeros
+                 return "DG" + newNumericPart.ToString("D3");
+             }
+             catch (Exception ex)
+             {
+                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                 return null;
+             }
+
+
+         }
+        */
         private void txt_mediccation_TextChanged(object sender, EventArgs e)
         {
 
@@ -77,7 +78,7 @@ namespace Diploma_Final_Project_1
 
         private void txt_search_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btn_search_Click(object sender, EventArgs e)
@@ -105,32 +106,32 @@ namespace Diploma_Final_Project_1
             {
 
 
-                
 
-                    SqlDataReader reader = com.ExecuteReader();
 
-                    if (reader.HasRows)
+                SqlDataReader reader = com.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+
+                    txt_medication.Items.Clear(); // Clear previous results
+
+                    while (reader.Read())
                     {
-                       
-                        txt_medication.Items.Clear(); // Clear previous results
+                        string roomNumber = reader["Medicine"].ToString();
+                        txt_medication.Items.Add(roomNumber); // Display available room numbers
+                        count = count + 1;
 
-                        while (reader.Read())
-                        {
-                            string roomNumber = reader["Medicine"].ToString();
-                            txt_medication.Items.Add(roomNumber); // Display available room numbers
-                            count = count + 1;
-
-                        }
                     }
+                }
 
-                    
-                    con.Close();
-                
-               
+
+                con.Close();
+
+
                 try
                 {
 
-                    
+
                     con.Open();
 
 
@@ -149,7 +150,7 @@ namespace Diploma_Final_Project_1
 
 
                         this.txt_patient_name.Text = rows["Name"].ToString();
-                        patientID= rows["Patient ID"].ToString();
+                        patientID = rows["Patient ID"].ToString();
 
 
 
@@ -176,12 +177,15 @@ namespace Diploma_Final_Project_1
 
 
 
-
                     string sql1 = @"
-                 SELECT DiagnosNumber,Date, Description ,Medications, Allergies
-                 FROM tbl_diagnostic_data";
-                    SqlCommand com1 = new SqlCommand(sql1, con1);
+                 SELECT td.* 
+                 FROM tbl_diagnostic_data td
+                 INNER JOIN tbl_patient_info p ON td.patient_id = p.[Patient ID]
+                  WHERE p.[Contact Number] = @number";
 
+                
+                    SqlCommand com1 = new SqlCommand(sql1, con1);
+                    com1.Parameters.AddWithValue("@number", this.txt_search.Text);
 
 
 
@@ -204,68 +208,85 @@ namespace Diploma_Final_Project_1
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
 
-            try
+
+            if (string.IsNullOrEmpty(this.txt_allergies.Text) || string.IsNullOrEmpty(this.txt_patient_name.Text))
             {
-                SqlConnection con = new SqlConnection(cs);
-                con.Open();
-                
-
-
-
-                SqlCommand cmd = new SqlCommand("Insert Into tbl_diagnostic_data Values('" + newUserID + "','" + txt_date.Text + "','" + txt_description.Text + "','" + txt_medication.Text + "','" + txt_allergies.Text + "','" + patientID + "')", con);
-                cmd.ExecuteNonQuery();
-                con.Close();
-             
-                MessageBox.Show("added successfully");
+                MessageBox.Show("All required fields must be filled.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
+
+                try
+                {
+
+                    string medicationValues = string.Join(",", txt_medication.Items.Cast<object>().Select(item => item.ToString()));
+
+
+
+
+                    SqlConnection con = new SqlConnection(cs);
+                    con.Open();
+
+
+
+
+                    SqlCommand cmd = new SqlCommand("Insert Into tbl_diagnostic_data Values('" + txt_date.Text + "','" + txt_description.Text + "','" + medicationValues + "','" + txt_allergies.Text + "','" + patientID + "')", con);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+
+                    MessageBox.Show("Added successfully");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                try
+                {
+
+
+
+                    SqlConnection con = new SqlConnection(cs);
+                    con.Open();
+
+
+
+
+
+                    string sql1 = @"
+                 SELECT td.* 
+                 FROM tbl_diagnostic_data td
+                 INNER JOIN tbl_patient_info p ON td.patient_id = p.[Patient ID]
+                  WHERE p.[Contact Number] = @number";
+                    SqlCommand com = new SqlCommand(sql1, con);
+
+                    com.Parameters.AddWithValue("@number", this.txt_search.Text);
+
+
+                    SqlDataAdapter dap = new SqlDataAdapter(com);
+                    DataSet ds = new DataSet();
+                    dap.Fill(ds);
+
+                    this.dataGridView1.DataSource = ds.Tables[0];
+
+
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-
-            try
-            {
-
-
-
-                SqlConnection con = new SqlConnection(cs);
-                con.Open();
-
-
-
-
-
-                string sql = @"
-                 SELECT DiagnosNumber,Date, Description ,Medications, Allergies
-                 FROM tbl_diagnostic_data";
-                SqlCommand com = new SqlCommand(sql, con);
-
-
-
-
-                SqlDataAdapter dap = new SqlDataAdapter(com);
-                DataSet ds = new DataSet();
-                dap.Fill(ds);
-
-                this.dataGridView1.DataSource = ds.Tables[0];
-
-
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        } 
 
 
 
         private void Add_Diagnose_History_Load(object sender, EventArgs e)
         {
-             newUserID = GenerateUserID();
-            
+            // newUserID = GenerateUserID();
+            txt_date.Text = DateTime.Today.ToString("yyyy-MM-dd");
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -278,9 +299,10 @@ namespace Diploma_Final_Project_1
                 // Assuming you want the data from the first column (index 0)
                 string cellValue = row.Cells[4].Value.ToString();
                 string cellValue2 = row.Cells[2].Value.ToString();
+                 cellValue3= row.Cells[0].Value.ToString();
 
                 // Set the value to the TextBox
-                
+
                 txt_allergies.Text = cellValue;
                 txt_description.Text = cellValue2;
 
@@ -299,23 +321,123 @@ namespace Diploma_Final_Project_1
 
 
 
-                SqlCommand cmd = new SqlCommand("UPDATE tbl_diagnostic_data SET [Description] = @description, Allergies = @allergies WHERE Name = @name ", con); 
-                cmd.ExecuteNonQuery();
-
+                SqlCommand cmd = new SqlCommand("UPDATE tbl_diagnostic_data SET [Description] = @description, Allergies = @allergies WHERE [DiagnosNumber] = @number ", con); 
+               
                
                 cmd.Parameters.AddWithValue("@description", txt_description.Text);
-                cmd.Parameters.AddWithValue("@name", txt_patient_name.Text);
+
+                cmd.Parameters.AddWithValue("@number", cellValue3);
                 cmd.Parameters.AddWithValue("@allergies", txt_allergies.Text);
+                cmd.ExecuteNonQuery();
 
                 con.Close();
 
-                MessageBox.Show("added successfully");
+                MessageBox.Show("Updated successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            try
+            {
+
+
+
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+
+
+
+
+
+                string sql1 = @"
+                 SELECT td.* 
+                 FROM tbl_diagnostic_data td
+                 INNER JOIN tbl_patient_info p ON td.patient_id = p.[Patient ID]
+                  WHERE p.[Contact Number] = @number";
+                SqlCommand com = new SqlCommand(sql1, con);
+
+                com.Parameters.AddWithValue("@number", this.txt_search.Text);
+
+
+                SqlDataAdapter dap = new SqlDataAdapter(com);
+                DataSet ds = new DataSet();
+                dap.Fill(ds);
+
+                this.dataGridView1.DataSource = ds.Tables[0];
+
+
+                con.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
+
+
+                SqlConnection con1 = new SqlConnection(cs);
+                con1.Open();
+
+
+                string sql = "DELETE  " +
+                             "FROM [tbl_diagnostic_data] " +
+
+                             "WHERE [DiagnosNumber] = @number ";
+
+                SqlCommand com = new SqlCommand(sql, con1);
+
+                com.Parameters.AddWithValue("@number", cellValue3);
+
+
+                int ret = com.ExecuteNonQuery();
+                if (ret > 0)
+                {
+                    MessageBox.Show("Dignosetic Data Deleted", "Information");
+
+
+
+
+                    SqlConnection con = new SqlConnection(cs);
+                    con.Open();
+
+
+
+
+
+                    string sql2 = @"
+                 SELECT td.* 
+                 FROM tbl_diagnostic_data td
+                 INNER JOIN tbl_patient_info p ON td.patient_id = p.[Patient ID]
+                  WHERE p.[Contact Number] = @number";
+                    SqlCommand com2 = new SqlCommand(sql2, con);
+
+
+
+
+                    SqlDataAdapter dap = new SqlDataAdapter(com);
+                    DataSet ds = new DataSet();
+                    dap.Fill(ds);
+
+                    this.dataGridView1.DataSource = ds.Tables[0];
+
+                }
+
+            
+            
+                con1.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

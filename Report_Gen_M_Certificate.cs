@@ -14,8 +14,8 @@ namespace Diploma_Final_Project_1
 {
     public partial class Report_Gen_M_Certificate : Form
     {
-        string MC_ID;
-        public Report_Gen_M_Certificate(String MC_ID)
+        int MC_ID;
+        public Report_Gen_M_Certificate(int MC_ID)
         {
             InitializeComponent();
             this.MC_ID = MC_ID;
@@ -35,7 +35,7 @@ namespace Diploma_Final_Project_1
                  INNER JOIN tbl_patient_info p ON td.[Patient ID] = p.[Patient ID]
                   WHERE td.[MC_ID]  = @MCID";
             SqlCommand com = new SqlCommand(sql, con);
-                com.Parameters.AddWithValue("@MCID", int.Parse(MC_ID));
+                com.Parameters.AddWithValue("@MCID", MC_ID);
 
                 SqlDataAdapter dap = new SqlDataAdapter(com);
             DataSet ds = new DataSet();
@@ -58,5 +58,9 @@ namespace Diploma_Final_Project_1
             }
 }
 
+        private void crystalReportViewer2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

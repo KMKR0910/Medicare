@@ -204,6 +204,7 @@ namespace Diploma_Final_Project_1
             this.btn_delete.TabIndex = 110;
             this.btn_delete.Text = "Delete";
             this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // Add_Diagnose_History
             // 
