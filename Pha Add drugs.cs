@@ -18,7 +18,7 @@ namespace Diploma_Final_Project_1
             InitializeComponent();
             Color customC = ColorTranslator.FromHtml("#9083D5 ");
             btn_add.BackColor = customC;
-            btn_cancel.BackColor = customC;
+
             btn_clear.BackColor = customC;
 
 
@@ -26,7 +26,10 @@ namespace Diploma_Final_Project_1
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            txt_d_name.Clear();
+            txt_pack_size.Clear();
+            numericUpDown_price.Value = 0;
+            numericUpDown_quantity.Value = 0;
         }
 
         private void btn_add_Click(object sender, EventArgs e)
@@ -35,34 +38,43 @@ namespace Diploma_Final_Project_1
 
             try
             {
-                SqlConnection con = new SqlConnection(cs);
-                con.Open();
-                
 
-                string query = "INSERT INTO [tbl_drug_inventory] (Drug_Name, [Pack Size],Drug_Price,Exp_date,Quantity) " +
-                               "VALUES (@DrugName, @PackSize, @DrugPrice, @ExpDate, @Quantity)";
-                SqlCommand cmd = new SqlCommand(query, con);
-
-                cmd.Parameters.AddWithValue("@DrugName", txt_d_name.Text);
-                cmd.Parameters.AddWithValue("@PackSize", txt_pack_size.Text);
-                cmd.Parameters.AddWithValue("@DrugPrice", numericUpDown_price.Value);
-                cmd.Parameters.AddWithValue("@ExpDate", dateTimePicker_exp.Value.Date); 
-                cmd.Parameters.AddWithValue("@Quantity", numericUpDown_quantity.Value);
-
-                int ret = cmd.ExecuteNonQuery();
-                if (ret > 0)
+                if (string.IsNullOrEmpty(this.txt_d_name.Text) || string.IsNullOrEmpty(this.txt_pack_size.Text))
                 {
-                    MessageBox.Show("Added successfully");
-                    txt_d_name.Clear();
-                    txt_pack_size.Clear();
-                    numericUpDown_price.Value = 0;
-                    dateTimePicker_exp.Value = DateTime.Now;
-                    numericUpDown_quantity.Value = 0;
+                    MessageBox.Show("All required fields must be filled Correctly.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+
+                    SqlConnection con = new SqlConnection(cs);
+                    con.Open();
+
+
+                    string query = "INSERT INTO [tbl_drug_inventory] (Drug_Name, [Pack Size],Drug_Price,Exp_date,Quantity) " +
+                                   "VALUES (@DrugName, @PackSize, @DrugPrice, @ExpDate, @Quantity)";
+                    SqlCommand cmd = new SqlCommand(query, con);
+
+                    cmd.Parameters.AddWithValue("@DrugName", txt_d_name.Text);
+                    cmd.Parameters.AddWithValue("@PackSize", txt_pack_size.Text);
+                    cmd.Parameters.AddWithValue("@DrugPrice", numericUpDown_price.Value);
+                    cmd.Parameters.AddWithValue("@ExpDate", dateTimePicker_exp.Value.Date);
+                    cmd.Parameters.AddWithValue("@Quantity", numericUpDown_quantity.Value);
+
+                    int ret = cmd.ExecuteNonQuery();
+                    if (ret > 0)
+                    {
+                        MessageBox.Show("Added successfully");
+                        txt_d_name.Clear();
+                        txt_pack_size.Clear();
+                        numericUpDown_price.Value = 0;
+                        dateTimePicker_exp.Value = DateTime.Now;
+                        numericUpDown_quantity.Value = 0;
+
+                    }
+
+                    con.Close();
 
                 }
-
-                con.Close();
-               
             }
             catch (Exception ex)
             {

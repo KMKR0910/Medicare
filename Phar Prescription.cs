@@ -248,8 +248,8 @@ namespace Diploma_Final_Project_1
             try
             {
 
-
-
+             
+             
 
                 SqlConnection con = new SqlConnection(cs);
                 con.Open();
@@ -262,10 +262,13 @@ namespace Diploma_Final_Project_1
                  SELECT td.* 
                  FROM [tbl_prescript] td
                  INNER JOIN tbl_patient_info p ON td.patientid = p.[Patient ID]
-                  WHERE p.[Contact Number] = @number";
+                  WHERE p.[Contact Number] = @number
+    ORDER BY td.[date] DESC";
+              
                 SqlCommand com = new SqlCommand(sql, con);
 
                 com.Parameters.AddWithValue("@number", this.txt_search.Text);
+               // com.Parameters.AddWithValue("@date", DateTime.Today);
 
 
                 SqlDataAdapter dap = new SqlDataAdapter(com);

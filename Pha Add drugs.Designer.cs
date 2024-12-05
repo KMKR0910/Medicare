@@ -39,7 +39,6 @@ namespace Diploma_Final_Project_1
             this.numericUpDown_price = new System.Windows.Forms.NumericUpDown();
             this.dateTimePicker_exp = new System.Windows.Forms.DateTimePicker();
             this.numericUpDown_quantity = new System.Windows.Forms.NumericUpDown();
-            this.btn_cancel = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
             this.btn_clear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_price)).BeginInit();
@@ -116,6 +115,11 @@ namespace Diploma_Final_Project_1
             // 
             this.numericUpDown_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown_price.Location = new System.Drawing.Point(1067, 453);
+            this.numericUpDown_price.Maximum = new decimal(new int[] {
+            120000,
+            0,
+            0,
+            0});
             this.numericUpDown_price.Name = "numericUpDown_price";
             this.numericUpDown_price.Size = new System.Drawing.Size(236, 44);
             this.numericUpDown_price.TabIndex = 99;
@@ -132,20 +136,14 @@ namespace Diploma_Final_Project_1
             // 
             this.numericUpDown_quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown_quantity.Location = new System.Drawing.Point(1079, 657);
+            this.numericUpDown_quantity.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.numericUpDown_quantity.Name = "numericUpDown_quantity";
             this.numericUpDown_quantity.Size = new System.Drawing.Size(224, 44);
             this.numericUpDown_quantity.TabIndex = 101;
-            // 
-            // btn_cancel
-            // 
-            this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.Location = new System.Drawing.Point(1680, 847);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(236, 104);
-            this.btn_cancel.TabIndex = 103;
-            this.btn_cancel.Text = "Cancel";
-            this.btn_cancel.UseVisualStyleBackColor = true;
-            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // btn_add
             // 
@@ -161,7 +159,7 @@ namespace Diploma_Final_Project_1
             // btn_clear
             // 
             this.btn_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_clear.Location = new System.Drawing.Point(1214, 847);
+            this.btn_clear.Location = new System.Drawing.Point(1549, 847);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(236, 104);
             this.btn_clear.TabIndex = 104;
@@ -176,7 +174,6 @@ namespace Diploma_Final_Project_1
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2427, 1449);
             this.Controls.Add(this.btn_clear);
-            this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.numericUpDown_quantity);
             this.Controls.Add(this.dateTimePicker_exp);
@@ -210,7 +207,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.NumericUpDown numericUpDown_price;
         private System.Windows.Forms.DateTimePicker dateTimePicker_exp;
         private System.Windows.Forms.NumericUpDown numericUpDown_quantity;
-        private System.Windows.Forms.Button btn_cancel;
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.Button btn_clear;
     }
