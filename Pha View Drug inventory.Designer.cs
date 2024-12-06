@@ -35,8 +35,8 @@ namespace Diploma_Final_Project_1
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_genarate = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_clear = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
             this.numericUpDown_quantity = new System.Windows.Forms.NumericUpDown();
             this.dateTimePicker_exp = new System.Windows.Forms.DateTimePicker();
@@ -48,6 +48,7 @@ namespace Diploma_Final_Project_1
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.btn_All = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_quantity)).BeginInit();
@@ -96,8 +97,8 @@ namespace Diploma_Final_Project_1
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btn_genarate);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btn_clear);
+            this.groupBox1.Controls.Add(this.btn_delete);
             this.groupBox1.Controls.Add(this.btn_update);
             this.groupBox1.Controls.Add(this.numericUpDown_quantity);
             this.groupBox1.Controls.Add(this.dateTimePicker_exp);
@@ -120,38 +121,40 @@ namespace Diploma_Final_Project_1
             this.btn_genarate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_genarate.Location = new System.Drawing.Point(53, 561);
             this.btn_genarate.Name = "btn_genarate";
-            this.btn_genarate.Size = new System.Drawing.Size(306, 104);
+            this.btn_genarate.Size = new System.Drawing.Size(306, 132);
             this.btn_genarate.TabIndex = 115;
             this.btn_genarate.Text = "Genarate Report";
             this.btn_genarate.UseVisualStyleBackColor = true;
             this.btn_genarate.Click += new System.EventHandler(this.btn_genarate_Click);
             // 
-            // button2
+            // btn_clear
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(1704, 561);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(236, 104);
-            this.button2.TabIndex = 114;
-            this.button2.Text = "Clear";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_clear.Location = new System.Drawing.Point(1704, 561);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(236, 132);
+            this.btn_clear.TabIndex = 114;
+            this.btn_clear.Text = "Clear";
+            this.btn_clear.UseVisualStyleBackColor = true;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
-            // button1
+            // btn_delete
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1060, 561);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(236, 104);
-            this.button1.TabIndex = 113;
-            this.button1.Text = "Delete";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete.Location = new System.Drawing.Point(1060, 561);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(236, 132);
+            this.btn_delete.TabIndex = 113;
+            this.btn_delete.Text = "Delete";
+            this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_update
             // 
             this.btn_update.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_update.Location = new System.Drawing.Point(534, 561);
             this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(236, 104);
+            this.btn_update.Size = new System.Drawing.Size(236, 132);
             this.btn_update.TabIndex = 112;
             this.btn_update.Text = "Update";
             this.btn_update.UseVisualStyleBackColor = true;
@@ -260,12 +263,24 @@ namespace Diploma_Final_Project_1
             this.label6.TabIndex = 102;
             this.label6.Text = "Drug Price";
             // 
+            // btn_All
+            // 
+            this.btn_All.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_All.Location = new System.Drawing.Point(755, 32);
+            this.btn_All.Name = "btn_All";
+            this.btn_All.Size = new System.Drawing.Size(216, 55);
+            this.btn_All.TabIndex = 71;
+            this.btn_All.Text = "View All";
+            this.btn_All.UseVisualStyleBackColor = true;
+            this.btn_All.Click += new System.EventHandler(this.btn_All_Click);
+            // 
             // Pha_View_Drug_inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2427, 1449);
+            this.Controls.Add(this.btn_All);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.txt_search);
@@ -301,9 +316,10 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_clear;
+        private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Button btn_genarate;
+        private System.Windows.Forms.Button btn_All;
     }
 }

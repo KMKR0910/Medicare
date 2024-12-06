@@ -49,6 +49,7 @@ namespace Diploma_Final_Project_1
             this.label5 = new System.Windows.Forms.Label();
             this.btn_order = new System.Windows.Forms.Button();
             this.txt_order_Id = new System.Windows.Forms.TextBox();
+            this.btn_suppliers = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_quantity)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Items)).BeginInit();
@@ -151,6 +152,7 @@ namespace Diploma_Final_Project_1
             this.btn_clear.TabIndex = 124;
             this.btn_clear.Text = "Clear";
             this.btn_clear.UseVisualStyleBackColor = true;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // btn_remove
             // 
@@ -260,12 +262,24 @@ namespace Diploma_Final_Project_1
             this.txt_order_Id.TabIndex = 126;
             this.txt_order_Id.Text = "Order ID";
             // 
+            // btn_suppliers
+            // 
+            this.btn_suppliers.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_suppliers.Location = new System.Drawing.Point(808, 32);
+            this.btn_suppliers.Name = "btn_suppliers";
+            this.btn_suppliers.Size = new System.Drawing.Size(353, 55);
+            this.btn_suppliers.TabIndex = 129;
+            this.btn_suppliers.Text = "View Suppliers";
+            this.btn_suppliers.UseVisualStyleBackColor = true;
+            this.btn_suppliers.Click += new System.EventHandler(this.btn_suppliers_Click);
+            // 
             // Pha_Drug_Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2427, 1449);
+            this.Controls.Add(this.btn_suppliers);
             this.Controls.Add(this.txt_order_Id);
             this.Controls.Add(this.btn_order);
             this.Controls.Add(this.txt_name);
@@ -311,5 +325,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btn_order;
         private System.Windows.Forms.TextBox txt_order_Id;
+        private System.Windows.Forms.Button btn_suppliers;
     }
 }

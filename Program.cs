@@ -17,7 +17,7 @@ namespace Diploma_Final_Project_1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             
-            Application.Run(new Phar_Prescription  ());
+            Application.Run(new Pha_Drug_Order   ());
         }
     }
 }

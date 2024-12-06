@@ -20,9 +20,10 @@ namespace Diploma_Final_Project_1
             Color customC = ColorTranslator.FromHtml("#9083D5 ");
             btn_genarate.BackColor = customC;
             btn_search.BackColor = customC;
-            button2.BackColor = customC;
+            btn_clear.BackColor = customC;
             btn_update.BackColor = customC;
-            button1.BackColor = customC;
+            btn_delete.BackColor = customC;
+            btn_All.BackColor=customC;
 
         }
         string drugID;
@@ -73,37 +74,45 @@ namespace Diploma_Final_Project_1
 
             try
             {
-                SqlConnection con = new SqlConnection(cs);
-                con.Open();
-
-
-                string sql = "UPDATE [tbl_drug_inventory] " +
-                     "SET Drug_Name = @DrugName, [Pack Size] = @PackSize, Drug_Price = @DrugPrice, Exp_date = @ExpDate, Quantity = @Quantity " +
-                     "WHERE Drug_ID = @DrugID";
-
-                SqlCommand cmd = new SqlCommand(sql, con);
-
-                cmd.Parameters.AddWithValue("@DrugID", drugID);
-                cmd.Parameters.AddWithValue("@DrugName", txt_d_name.Text);
-                cmd.Parameters.AddWithValue("@PackSize", txt_pack_size.Text);
-                cmd.Parameters.AddWithValue("@DrugPrice", numericUpDown_price.Value);
-                cmd.Parameters.AddWithValue("@ExpDate", dateTimePicker_exp.Value.Date);
-                cmd.Parameters.AddWithValue("@Quantity", numericUpDown_quantity.Value);
-
-                int ret = cmd.ExecuteNonQuery();
-                if (ret > 0)
+                if (string.IsNullOrEmpty(this.txt_d_name.Text) || string.IsNullOrEmpty(this.txt_pack_size.Text) || this.numericUpDown_quantity.Value < 0)
                 {
-                    MessageBox.Show("Added successfully");
-                    txt_d_name.Clear();
-                    txt_pack_size.Clear();
-                    numericUpDown_price.Value = 0;
-                    dateTimePicker_exp.Value = DateTime.Now;
-                    numericUpDown_quantity.Value = 0;
+                    MessageBox.Show("All required fields must be filled.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    SqlConnection con = new SqlConnection(cs);
+                    con.Open();
+
+
+                    string sql = "UPDATE [tbl_drug_inventory] " +
+                         "SET Drug_Name = @DrugName, [Pack Size] = @PackSize, Drug_Price = @DrugPrice, Exp_date = @ExpDate, Quantity = @Quantity " +
+                         "WHERE Drug_ID = @DrugID";
+
+                    SqlCommand cmd = new SqlCommand(sql, con);
+
+                    cmd.Parameters.AddWithValue("@DrugID", drugID);
+                    cmd.Parameters.AddWithValue("@DrugName", txt_d_name.Text);
+                    cmd.Parameters.AddWithValue("@PackSize", txt_pack_size.Text);
+                    cmd.Parameters.AddWithValue("@DrugPrice", numericUpDown_price.Value);
+                    cmd.Parameters.AddWithValue("@ExpDate", dateTimePicker_exp.Value.Date);
+                    cmd.Parameters.AddWithValue("@Quantity", numericUpDown_quantity.Value);
+
+                    int ret = cmd.ExecuteNonQuery();
+                    if (ret > 0)
+                    {
+                        MessageBox.Show("Update successfully");
+                        txt_d_name.Clear();
+                        txt_pack_size.Clear();
+                        numericUpDown_price.Value = 0;
+                        dateTimePicker_exp.Value = DateTime.Now;
+                        numericUpDown_quantity.Value = 0;
+                        Pha_View_Drug_inventory_Load(this, EventArgs.Empty);
+
+                    }
+
+                    con.Close();
 
                 }
-
-                con.Close();
-
             }
             catch (Exception ex)
             {
@@ -117,34 +126,41 @@ namespace Diploma_Final_Project_1
 
             try
             {
+                if (string.IsNullOrEmpty(this.txt_search.Text))
+                {
+                    MessageBox.Show("All required fields must be filled.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
 
 
 
-                SqlConnection con = new SqlConnection(cs);
-                con.Open();
+                    SqlConnection con = new SqlConnection(cs);
+                    con.Open();
 
 
 
 
 
-                string sql = @"
+                    string sql = @"
                  SELECT * 
                  FROM [tbl_drug_inventory] 
                
                   WHERE [Drug_Name] = @drugname";
-                SqlCommand com = new SqlCommand(sql, con);
+                    SqlCommand com = new SqlCommand(sql, con);
 
-                com.Parameters.AddWithValue("@drugname", this.txt_search.Text);
-
-
-                SqlDataAdapter dap = new SqlDataAdapter(com);
-                DataSet ds = new DataSet();
-                dap.Fill(ds);
-
-                this.dataGridView1.DataSource = ds.Tables[0];
+                    com.Parameters.AddWithValue("@drugname", this.txt_search.Text);
 
 
-                con.Close();
+                    SqlDataAdapter dap = new SqlDataAdapter(com);
+                    DataSet ds = new DataSet();
+                    dap.Fill(ds);
+
+                    this.dataGridView1.DataSource = ds.Tables[0];
+
+
+                    con.Close();
+                }
             }
             catch (Exception ex)
             {
@@ -194,6 +210,67 @@ namespace Diploma_Final_Project_1
         {
             Report_Gen_Drug_Inventory r1 = new Report_Gen_Drug_Inventory();
             r1.Show();
+        }
+
+      
+
+        private void btn_All_Click(object sender, EventArgs e)
+        {
+            Pha_View_Drug_inventory_Load(this, EventArgs.Empty);
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            
+                txt_d_name.Clear();
+                txt_pack_size.Clear();
+                txt_search.Clear();
+                numericUpDown_price.Value = 0;
+                numericUpDown_quantity.Value = 0;
+            
+        }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
+
+
+                SqlConnection con1 = new SqlConnection(cs);
+                con1.Open();
+
+
+                string sql = "DELETE  " +
+                             "FROM [tbl_drug_inventory] " +
+
+                             "WHERE [Drug_ID] = @drugID ";
+
+                SqlCommand com = new SqlCommand(sql, con1);
+
+                com.Parameters.AddWithValue("@drugID", drugID);
+
+
+                int ret = com.ExecuteNonQuery();
+                if (ret > 0)
+                {
+                    MessageBox.Show("Deleted", "Information");
+                    Pha_View_Drug_inventory_Load(this, EventArgs.Empty);
+                    txt_d_name.Clear();
+                    txt_pack_size.Clear();
+                    numericUpDown_price.Value = 0;
+                    dateTimePicker_exp.Value = DateTime.Now;
+                    numericUpDown_quantity.Value = 0;
+
+                }
+
+
+                con1.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
