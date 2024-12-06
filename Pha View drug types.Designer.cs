@@ -88,6 +88,7 @@ namespace Diploma_Final_Project_1
             this.btn_search.TabIndex = 130;
             this.btn_search.Text = "Search";
             this.btn_search.UseVisualStyleBackColor = true;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // txt_search
             // 
@@ -143,7 +144,7 @@ namespace Diploma_Final_Project_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1226, 760);
+            this.ClientSize = new System.Drawing.Size(2334, 1442);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txt_name);
             this.Controls.Add(this.txt_company);

@@ -16,8 +16,12 @@ namespace Diploma_Final_Project_1
         public Doctor_View_Lab_Tests()
         {
             InitializeComponent();
+          
+            Color customC = ColorTranslator.FromHtml("#9083D5 ");
+            btn_search.BackColor = customC;
+           
         }
-
+        
         private void btn_search_Click(object sender, EventArgs e)
         {
             string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
@@ -126,6 +130,11 @@ namespace Diploma_Final_Project_1
             {
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btn_All_Click(object sender, EventArgs e)
+        {
+            Doctor_View_Lab_Tests_Load(null, EventArgs.Empty) ;
         }
     }
 }

@@ -75,72 +75,81 @@ namespace Diploma_Final_Project_1
 
         private void btn_save_Click(object sender, EventArgs e)
         {
-            try {
-                string sql = "";
-            string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
-
-
-            // save user details
-            SqlConnection con1 = new SqlConnection(cs);
-            con1.Open();
-                GetUserType();
-
-                
-
-                if (userType == "Medical Centre Assistant")
-                {
-
-                    sql = @"UPDATE [tbl_Medical_Centre_Assistant] SET SET Salary =@salary WHERE  [First Name]=@Fname";
-
-
-
-                }
-
-                if (userType == "Pharamacists")
-                {
-                    sql = @"UPDATE  [tbl_Pharamacists] SET Salary =@salary WHERE  [First Name]=@Fname";
-
-
-                }
-
-                if (userType == "Laboratary Assistant")
-                {
-                    sql = @"UPDATE  [tbl_Lab_Assistant] SET Salary =@salary WHERE  [First Name]=@Fname";
-
-
-                }
-                if (userType == "Admin")
-                {
-                    sql = @"UPDATE  [tbl_Admin] SET Salary =@salary WHERE  [First Name]=@Fname";
-
-
-
-                }
-
-
-            SqlCommand com = new SqlCommand(sql, con1);
-
-            com.Parameters.AddWithValue("@salary", this.txt_salary.Text);
-
-            com.Parameters.AddWithValue("@Fname", this.txt_name.Text);
-         
-
-
-
-
-
-
-
-
-            int ret = com.ExecuteNonQuery();
-            if (ret == 1)
+            try
             {
-                MessageBox.Show("User Updated", "Information");
-                    Doctor_Employee_User_Profile_Load();
 
+                if (string.IsNullOrEmpty(this.txt_name.Text) || string.IsNullOrEmpty(this.txt_Postion.Text) || string.IsNullOrEmpty(this.txt_salary.Text))
+                {
+                    MessageBox.Show("All required fields must be filled.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    string sql = "";
+                    string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
+
+
+                    // save user details
+                    SqlConnection con1 = new SqlConnection(cs);
+                    con1.Open();
+                    GetUserType();
+
+
+
+                    if (userType == "Medical Centre Assistant")
+                    {
+
+                        sql = @"UPDATE [tbl_Medical_Centre_Assistant] SET SET Salary =@salary WHERE  [First Name]=@Fname";
+
+
+
+                    }
+
+                    if (userType == "Pharamacists")
+                    {
+                        sql = @"UPDATE  [tbl_Pharamacists] SET Salary =@salary WHERE  [First Name]=@Fname";
+
+
+                    }
+
+                    if (userType == "Laboratary Assistant")
+                    {
+                        sql = @"UPDATE  [tbl_Lab_Assistant] SET Salary =@salary WHERE  [First Name]=@Fname";
+
+
+                    }
+                    if (userType == "Admin")
+                    {
+                        sql = @"UPDATE  [tbl_Admin] SET Salary =@salary WHERE  [First Name]=@Fname";
+
+
+
+                    }
+
+
+                    SqlCommand com = new SqlCommand(sql, con1);
+
+                    com.Parameters.AddWithValue("@salary", this.txt_salary.Text);
+
+                    com.Parameters.AddWithValue("@Fname", this.txt_name.Text);
+
+
+
+
+
+
+
+
+
+                    int ret = com.ExecuteNonQuery();
+                    if (ret == 1)
+                    {
+                        MessageBox.Show("User Updated", "Information");
+                        Doctor_Employee_User_Profile_Load();
+
+                    }
+                    con1.Close();
+                }
             }
-            con1.Close();
-        }
             catch (Exception ex)
             {
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -202,7 +211,9 @@ namespace Diploma_Final_Project_1
 
         private void btn_cancel_Click(object sender, EventArgs e)
         {
-
+            txt_name.Clear();
+            txt_Postion.Clear();
+            txt_salary.Clear();
         }
 
         private void Doctor_Employee_User_Profile_Load(object sender, EventArgs e)

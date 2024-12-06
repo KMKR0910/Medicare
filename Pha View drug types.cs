@@ -30,5 +30,10 @@ namespace Diploma_Final_Project_1
         {
 
         }
+
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

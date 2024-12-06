@@ -42,7 +42,7 @@ namespace Diploma_Final_Project_1
 
                 string sql = "SELECT COUNT(*)  FROM [tbl_appoinment] WHERE [Date] = @date  ";
                 SqlCommand com = new SqlCommand(sql, con);
-                com.Parameters.AddWithValue("@date", this.dateTimePicker_AP_date.Value.Date);
+                com.Parameters.AddWithValue("@date", DateTime.Today.Date);
 
                 int appointmentCount = (int)com.ExecuteScalar();
 
@@ -52,7 +52,7 @@ namespace Diploma_Final_Project_1
                 string sql1 = "SELECT COUNT(*)  FROM [tbl_appoinment] WHERE [Date] = @date AND [status]=@status1 ";
                 SqlCommand com1 = new SqlCommand(sql1, con);
 
-                com1.Parameters.AddWithValue("@date", this.dateTimePicker_AP_date.Value.Date);
+                com1.Parameters.AddWithValue("@date", DateTime.Today.Date);
 
                 com1.Parameters.AddWithValue("@status1", status1);
                 int appointmentStaus1 = (int)com1.ExecuteScalar();
@@ -63,7 +63,7 @@ namespace Diploma_Final_Project_1
                 string sql2 = "SELECT COUNT(*)  FROM [tbl_appoinment] WHERE [Date] = @date AND [status]=@status2 ";
                 SqlCommand com2 = new SqlCommand(sql2, con);
 
-                com2.Parameters.AddWithValue("@date", this.dateTimePicker_AP_date.Value.Date);
+                com2.Parameters.AddWithValue("@date", DateTime.Today.Date);
 
                 com2.Parameters.AddWithValue("@status2", status2);
                 int appointmentStaus2 = (int)com2.ExecuteScalar();
@@ -102,7 +102,7 @@ namespace Diploma_Final_Project_1
 ;
                 SqlCommand com = new SqlCommand(sql, con);
 
-                com.Parameters.AddWithValue("@date", this.dateTimePicker_AP_date.Value);
+                com.Parameters.AddWithValue("@date", DateTime.Today.Date);
 
 
 

@@ -34,6 +34,7 @@ namespace Diploma_Final_Project_1
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btn_genarate = new System.Windows.Forms.Button();
+            this.btn_All = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,12 +87,24 @@ namespace Diploma_Final_Project_1
             this.btn_genarate.UseVisualStyleBackColor = true;
             this.btn_genarate.Click += new System.EventHandler(this.btn_genarate_Click);
             // 
+            // btn_All
+            // 
+            this.btn_All.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_All.Location = new System.Drawing.Point(780, 33);
+            this.btn_All.Name = "btn_All";
+            this.btn_All.Size = new System.Drawing.Size(216, 55);
+            this.btn_All.TabIndex = 117;
+            this.btn_All.Text = "View All";
+            this.btn_All.UseVisualStyleBackColor = true;
+            this.btn_All.Click += new System.EventHandler(this.btn_All_Click);
+            // 
             // Doctor_View_Drug_Inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2427, 1449);
+            this.Controls.Add(this.btn_All);
             this.Controls.Add(this.btn_genarate);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.txt_search);
@@ -113,5 +126,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btn_genarate;
+        private System.Windows.Forms.Button btn_All;
     }
 }

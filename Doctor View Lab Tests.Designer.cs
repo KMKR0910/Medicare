@@ -40,6 +40,7 @@ namespace Diploma_Final_Project_1
             this.txt_search = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView_lab_tests = new System.Windows.Forms.DataGridView();
+            this.btn_All = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_price)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_lab_tests)).BeginInit();
@@ -65,6 +66,7 @@ namespace Diploma_Final_Project_1
             this.txt_description.Location = new System.Drawing.Point(446, 366);
             this.txt_description.Multiline = true;
             this.txt_description.Name = "txt_description";
+            this.txt_description.ReadOnly = true;
             this.txt_description.Size = new System.Drawing.Size(851, 114);
             this.txt_description.TabIndex = 117;
             // 
@@ -89,6 +91,7 @@ namespace Diploma_Final_Project_1
             0,
             131072});
             this.numericUpDown_price.Name = "numericUpDown_price";
+            this.numericUpDown_price.ReadOnly = true;
             this.numericUpDown_price.Size = new System.Drawing.Size(236, 44);
             this.numericUpDown_price.TabIndex = 109;
             // 
@@ -97,6 +100,7 @@ namespace Diploma_Final_Project_1
             this.txt_test_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_test_name.Location = new System.Drawing.Point(446, 53);
             this.txt_test_name.Name = "txt_test_name";
+            this.txt_test_name.ReadOnly = true;
             this.txt_test_name.Size = new System.Drawing.Size(372, 44);
             this.txt_test_name.TabIndex = 105;
             // 
@@ -159,12 +163,24 @@ namespace Diploma_Final_Project_1
             this.dataGridView_lab_tests.TabIndex = 76;
             this.dataGridView_lab_tests.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_lab_tests_CellContentClick);
             // 
+            // btn_All
+            // 
+            this.btn_All.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_All.Location = new System.Drawing.Point(771, 28);
+            this.btn_All.Name = "btn_All";
+            this.btn_All.Size = new System.Drawing.Size(216, 55);
+            this.btn_All.TabIndex = 81;
+            this.btn_All.Text = "View All";
+            this.btn_All.UseVisualStyleBackColor = true;
+            this.btn_All.Click += new System.EventHandler(this.btn_All_Click);
+            // 
             // Doctor_View_Lab_Tests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2427, 1449);
+            this.Controls.Add(this.btn_All);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.txt_search);
@@ -195,5 +211,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.TextBox txt_search;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dataGridView_lab_tests;
+        private System.Windows.Forms.Button btn_All;
     }
 }

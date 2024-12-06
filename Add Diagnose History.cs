@@ -84,7 +84,9 @@ namespace Diploma_Final_Project_1
         private void btn_search_Click(object sender, EventArgs e)
         {
 
-
+            txt_allergies.Clear();
+            txt_description.Clear();
+           
 
             int count = 0;
             string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
@@ -315,25 +317,29 @@ namespace Diploma_Final_Project_1
 
             try
             {
-                SqlConnection con = new SqlConnection(cs);
-                con.Open();
+
+                
+
+                    SqlConnection con = new SqlConnection(cs);
+                    con.Open();
 
 
 
 
-                SqlCommand cmd = new SqlCommand("UPDATE tbl_diagnostic_data SET [Description] = @description, Allergies = @allergies WHERE [DiagnosNumber] = @number ", con); 
-               
-               
-                cmd.Parameters.AddWithValue("@description", txt_description.Text);
+                    SqlCommand cmd = new SqlCommand("UPDATE tbl_diagnostic_data SET [Description] = @description, Allergies = @allergies WHERE [DiagnosNumber] = @number ", con);
 
-                cmd.Parameters.AddWithValue("@number", cellValue3);
-                cmd.Parameters.AddWithValue("@allergies", txt_allergies.Text);
-                cmd.ExecuteNonQuery();
 
-                con.Close();
+                    cmd.Parameters.AddWithValue("@description", txt_description.Text);
 
-                MessageBox.Show("Updated successfully");
-            }
+                    cmd.Parameters.AddWithValue("@number", cellValue3);
+                    cmd.Parameters.AddWithValue("@allergies", txt_allergies.Text);
+                    cmd.ExecuteNonQuery();
+
+                    con.Close();
+
+                    MessageBox.Show("Updated successfully");
+                }
+            
             catch (Exception ex)
             {
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

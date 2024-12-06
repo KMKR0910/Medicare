@@ -56,11 +56,13 @@ namespace Diploma_Final_Project_1
             // 
             // dateTimePicker_AP_date
             // 
+            this.dateTimePicker_AP_date.Enabled = false;
             this.dateTimePicker_AP_date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker_AP_date.Location = new System.Drawing.Point(12, 12);
             this.dateTimePicker_AP_date.Name = "dateTimePicker_AP_date";
             this.dateTimePicker_AP_date.Size = new System.Drawing.Size(543, 44);
             this.dateTimePicker_AP_date.TabIndex = 85;
+            this.dateTimePicker_AP_date.ValueChanged += new System.EventHandler(this.dateTimePicker_AP_date_ValueChanged);
             // 
             // txt_appoinment
             // 

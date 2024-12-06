@@ -17,7 +17,7 @@ namespace Diploma_Final_Project_1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             
-            Application.Run(new Lab_view_lab_test ());
+            Application.Run(new Doctor_View_Supplier ());
         }
     }
 }

@@ -37,12 +37,13 @@ namespace Diploma_Final_Project_1
             this.txt_company = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_contact = new System.Windows.Forms.TextBox();
+            this.txt_address = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txt_email = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.btn_all = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_drug_types)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -56,6 +57,7 @@ namespace Diploma_Final_Project_1
             this.btn_search.TabIndex = 138;
             this.btn_search.Text = "Search";
             this.btn_search.UseVisualStyleBackColor = true;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // txt_search
             // 
@@ -74,6 +76,7 @@ namespace Diploma_Final_Project_1
             this.dataGridView_drug_types.RowTemplate.Height = 33;
             this.dataGridView_drug_types.Size = new System.Drawing.Size(2207, 682);
             this.dataGridView_drug_types.TabIndex = 134;
+            this.dataGridView_drug_types.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_drug_types_CellContentClick);
             // 
             // groupBox1
             // 
@@ -121,22 +124,22 @@ namespace Diploma_Final_Project_1
             this.label4.TabIndex = 145;
             this.label4.Text = "Company Name";
             // 
-            // textBox1
+            // txt_contact
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(527, 1330);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(309, 44);
-            this.textBox1.TabIndex = 148;
+            this.txt_contact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_contact.Location = new System.Drawing.Point(527, 1330);
+            this.txt_contact.Name = "txt_contact";
+            this.txt_contact.Size = new System.Drawing.Size(309, 44);
+            this.txt_contact.TabIndex = 148;
             // 
-            // textBox2
+            // txt_address
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(527, 1176);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(873, 115);
-            this.textBox2.TabIndex = 150;
+            this.txt_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_address.Location = new System.Drawing.Point(527, 1176);
+            this.txt_address.Multiline = true;
+            this.txt_address.Name = "txt_address";
+            this.txt_address.Size = new System.Drawing.Size(873, 115);
+            this.txt_address.TabIndex = 150;
             // 
             // label1
             // 
@@ -158,13 +161,13 @@ namespace Diploma_Final_Project_1
             this.label2.TabIndex = 149;
             this.label2.Text = "Address";
             // 
-            // textBox4
+            // txt_email
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(527, 1417);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(579, 44);
-            this.textBox4.TabIndex = 154;
+            this.txt_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_email.Location = new System.Drawing.Point(527, 1417);
+            this.txt_email.Name = "txt_email";
+            this.txt_email.Size = new System.Drawing.Size(579, 44);
+            this.txt_email.TabIndex = 154;
             // 
             // label6
             // 
@@ -176,15 +179,27 @@ namespace Diploma_Final_Project_1
             this.label6.TabIndex = 153;
             this.label6.Text = "Email Address";
             // 
+            // btn_all
+            // 
+            this.btn_all.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_all.Location = new System.Drawing.Point(787, 40);
+            this.btn_all.Name = "btn_all";
+            this.btn_all.Size = new System.Drawing.Size(216, 55);
+            this.btn_all.TabIndex = 155;
+            this.btn_all.Text = "View All";
+            this.btn_all.UseVisualStyleBackColor = true;
+            this.btn_all.Click += new System.EventHandler(this.btn_all_Click);
+            // 
             // Doctor_View_Supplier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2453, 1520);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.btn_all);
+            this.Controls.Add(this.txt_email);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txt_contact);
+            this.Controls.Add(this.txt_address);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_name);
@@ -213,11 +228,12 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.TextBox txt_company;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_contact;
+        private System.Windows.Forms.TextBox txt_address;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_email;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btn_all;
     }
 }
