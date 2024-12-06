@@ -46,6 +46,7 @@ namespace Diploma_Final_Project_1
             this.viewDrugOrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addDrugOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.financeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addDrugPaymentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox_finance = new System.Windows.Forms.GroupBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
@@ -80,7 +81,7 @@ namespace Diploma_Final_Project_1
             this.groupBox_Home = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_home = new System.Windows.Forms.Button();
-            this.addDrugPaymentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.drugSupplierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox_finance.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -141,7 +142,8 @@ namespace Diploma_Final_Project_1
             this.prescriptionToolStripMenuItem,
             this.drugInventoryToolStripMenuItem,
             this.drugOrderToolStripMenuItem,
-            this.financeToolStripMenuItem});
+            this.financeToolStripMenuItem,
+            this.drugSupplierToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(1, 4, 0, 4);
@@ -239,6 +241,13 @@ namespace Diploma_Final_Project_1
             this.financeToolStripMenuItem.Name = "financeToolStripMenuItem";
             this.financeToolStripMenuItem.Size = new System.Drawing.Size(166, 54);
             this.financeToolStripMenuItem.Text = "Finance";
+            // 
+            // addDrugPaymentsToolStripMenuItem
+            // 
+            this.addDrugPaymentsToolStripMenuItem.Name = "addDrugPaymentsToolStripMenuItem";
+            this.addDrugPaymentsToolStripMenuItem.Size = new System.Drawing.Size(491, 58);
+            this.addDrugPaymentsToolStripMenuItem.Text = "Add Drug Payments";
+            this.addDrugPaymentsToolStripMenuItem.Click += new System.EventHandler(this.addDrugPaymentsToolStripMenuItem_Click);
             // 
             // groupBox_finance
             // 
@@ -613,12 +622,12 @@ namespace Diploma_Final_Project_1
             this.btn_home.Text = "Home";
             this.btn_home.UseVisualStyleBackColor = false;
             // 
-            // addDrugPaymentsToolStripMenuItem
+            // drugSupplierToolStripMenuItem
             // 
-            this.addDrugPaymentsToolStripMenuItem.Name = "addDrugPaymentsToolStripMenuItem";
-            this.addDrugPaymentsToolStripMenuItem.Size = new System.Drawing.Size(491, 58);
-            this.addDrugPaymentsToolStripMenuItem.Text = "Add Drug Payments";
-            this.addDrugPaymentsToolStripMenuItem.Click += new System.EventHandler(this.addDrugPaymentsToolStripMenuItem_Click);
+            this.drugSupplierToolStripMenuItem.Name = "drugSupplierToolStripMenuItem";
+            this.drugSupplierToolStripMenuItem.Size = new System.Drawing.Size(269, 54);
+            this.drugSupplierToolStripMenuItem.Text = "Drug Supplier";
+            this.drugSupplierToolStripMenuItem.Click += new System.EventHandler(this.drugSupplierToolStripMenuItem_Click);
             // 
             // Pha_Home
             // 
@@ -711,5 +720,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.ToolStripMenuItem addDrugPaymentsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem drugSupplierToolStripMenuItem;
     }
 }

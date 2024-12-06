@@ -78,7 +78,7 @@ namespace Diploma_Final_Project_1
             this.btn_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_add.Location = new System.Drawing.Point(71, 632);
             this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(194, 90);
+            this.btn_add.Size = new System.Drawing.Size(194, 112);
             this.btn_add.TabIndex = 94;
             this.btn_add.Text = "Add New";
             this.btn_add.UseVisualStyleBackColor = true;
@@ -125,17 +125,18 @@ namespace Diploma_Final_Project_1
             this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancel.Location = new System.Drawing.Point(912, 623);
             this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(153, 90);
+            this.btn_cancel.Size = new System.Drawing.Size(163, 121);
             this.btn_cancel.TabIndex = 89;
-            this.btn_cancel.Text = "Cancel";
+            this.btn_cancel.Text = "Clear";
             this.btn_cancel.UseVisualStyleBackColor = true;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // btn_save
             // 
             this.btn_save.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_save.Location = new System.Drawing.Point(627, 623);
             this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(142, 90);
+            this.btn_save.Size = new System.Drawing.Size(152, 121);
             this.btn_save.TabIndex = 88;
             this.btn_save.Text = "Save";
             this.btn_save.UseVisualStyleBackColor = true;
@@ -146,7 +147,7 @@ namespace Diploma_Final_Project_1
             this.btn_edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_edit.Location = new System.Drawing.Point(342, 623);
             this.btn_edit.Name = "btn_edit";
-            this.btn_edit.Size = new System.Drawing.Size(173, 90);
+            this.btn_edit.Size = new System.Drawing.Size(173, 121);
             this.btn_edit.TabIndex = 87;
             this.btn_edit.Text = "Edit";
             this.btn_edit.UseVisualStyleBackColor = true;

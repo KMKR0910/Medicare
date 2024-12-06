@@ -19,9 +19,14 @@ namespace Diploma_Final_Project_1
             Color customC = ColorTranslator.FromHtml("#9083D5 ");
             btn_add.BackColor = customC;
             btn_clear.BackColor = customC;
-            btn_genarate.BackColor = customC;
+           
+            btn_search.BackColor = customC;
+            btn_suppliers.BackColor = customC;
         }
-        String supplierID;
+        string supplierID;
+
+        string cs = "Data Source=ASUS; Initial Catalog = Diploma Final Project DB1; Integrated Security=True";
+
 
         private void btn_add_Click(object sender, EventArgs e)
         {
@@ -56,7 +61,7 @@ namespace Diploma_Final_Project_1
                 }
 
                 con.Close();
-                MessageBox.Show("Payment added ");
+              
             }
             catch (Exception ex)
             {
@@ -75,14 +80,12 @@ namespace Diploma_Final_Project_1
 
 
                 string sql = @"
-            SELECT p.[Supplier_Name], td.[PaymentID],td.[Payment_Method], td.[Total_Cost] ,td.[Pay_Date]
-            FROM [tbl_drug_payment] td
-            INNER JOIN [tbl_drug_supplier] p ON td.[Suppler_ID] = p.[Supplier_ID]
-            WHERE p.[Contact_Number] = @name ";
+            SELECT *
+            FROM [tbl_drug_payment]
+            
+           WHERE [Suppler_ID]= @id ";
                 SqlCommand com = new SqlCommand(sql, con);
-
-                com.Parameters.AddWithValue("@name", this.txt_search.Text);
-
+                com.Parameters.AddWithValue("@id", this.txt_search.Text);
 
 
                 SqlDataAdapter dap = new SqlDataAdapter(com);
@@ -106,7 +109,6 @@ namespace Diploma_Final_Project_1
             this.txt_date.Text = currentDate.ToString("yyyy-MM-dd");
 
 
-            string cs = "Data Source=ASUS; Initial Catalog = Diploma Final Project DB1; Integrated Security=True";
 
             try
             {
@@ -115,12 +117,12 @@ namespace Diploma_Final_Project_1
                 con.Open();
 
 
-                string sql = "SELECT * FROM [tbl_drug_supplier] WHERE [Contact_Number] = @name ";
-                SqlCommand com = new SqlCommand(sql, con);
-                com.Parameters.AddWithValue("@name", this.txt_search.Text);
+                string sql = "SELECT *  FROM [tbl_drug_supplier] WHERE [Supplier_ID] = @id ";
+                SqlCommand com1 = new SqlCommand(sql, con);
+                com1.Parameters.AddWithValue("@id", this.txt_search.Text);
 
 
-                SqlDataAdapter dap = new SqlDataAdapter(com);
+                SqlDataAdapter dap = new SqlDataAdapter(com1);
                 DataSet ds = new DataSet();
                 dap.Fill(ds);
 
@@ -187,6 +189,47 @@ namespace Diploma_Final_Project_1
         private void Pha_Add_Drug_Payment_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_suppliers_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+
+
+
+
+                string sql2 = @"
+                 SELECT * 
+                 FROM [tbl_drug_supplier]";
+                SqlCommand com2 = new SqlCommand(sql2, con);
+
+
+
+                SqlDataAdapter dap = new SqlDataAdapter(com2);
+                DataSet ds = new DataSet();
+                dap.Fill(ds);
+
+                this.dataGridView1.DataSource = ds.Tables[0];
+
+
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            txt_supplier.Clear();
+            comboBox1.SelectedIndex = -1;
+            numericUpDownCost.Value = 0;
         }
     }
 }

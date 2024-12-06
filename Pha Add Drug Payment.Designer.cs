@@ -33,7 +33,6 @@ namespace Diploma_Final_Project_1
             this.txt_paymnet_number = new System.Windows.Forms.TextBox();
             this.txt_supplier = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btn_genarate = new System.Windows.Forms.Button();
             this.btn_clear = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
             this.numericUpDownCost = new System.Windows.Forms.NumericUpDown();
@@ -45,6 +44,7 @@ namespace Diploma_Final_Project_1
             this.txt_search = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btn_suppliers = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCost)).BeginInit();
             this.SuspendLayout();
@@ -61,6 +61,7 @@ namespace Diploma_Final_Project_1
             // 
             // txt_paymnet_number
             // 
+            this.txt_paymnet_number.BackColor = System.Drawing.Color.White;
             this.txt_paymnet_number.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_paymnet_number.Location = new System.Drawing.Point(1167, 63);
             this.txt_paymnet_number.Name = "txt_paymnet_number";
@@ -86,16 +87,6 @@ namespace Diploma_Final_Project_1
             this.label4.Text = "Supplier Name";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // btn_genarate
-            // 
-            this.btn_genarate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_genarate.Location = new System.Drawing.Point(520, 1095);
-            this.btn_genarate.Name = "btn_genarate";
-            this.btn_genarate.Size = new System.Drawing.Size(212, 129);
-            this.btn_genarate.TabIndex = 106;
-            this.btn_genarate.Text = "Genarate Bil Invoice";
-            this.btn_genarate.UseVisualStyleBackColor = true;
-            // 
             // btn_clear
             // 
             this.btn_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -105,6 +96,7 @@ namespace Diploma_Final_Project_1
             this.btn_clear.TabIndex = 105;
             this.btn_clear.Text = "Clear";
             this.btn_clear.UseVisualStyleBackColor = true;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // btn_add
             // 
@@ -171,7 +163,7 @@ namespace Diploma_Final_Project_1
             // btn_search
             // 
             this.btn_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_search.Location = new System.Drawing.Point(894, 52);
+            this.btn_search.Location = new System.Drawing.Point(897, 52);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(216, 55);
             this.btn_search.TabIndex = 95;
@@ -209,18 +201,29 @@ namespace Diploma_Final_Project_1
             this.comboBox1.Size = new System.Drawing.Size(372, 45);
             this.comboBox1.TabIndex = 111;
             // 
+            // btn_suppliers
+            // 
+            this.btn_suppliers.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_suppliers.Location = new System.Drawing.Point(1630, 63);
+            this.btn_suppliers.Name = "btn_suppliers";
+            this.btn_suppliers.Size = new System.Drawing.Size(353, 55);
+            this.btn_suppliers.TabIndex = 130;
+            this.btn_suppliers.Text = "View Suppliers";
+            this.btn_suppliers.UseVisualStyleBackColor = true;
+            this.btn_suppliers.Click += new System.EventHandler(this.btn_suppliers_Click);
+            // 
             // Pha_Add_Drug_Payment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2427, 1449);
+            this.Controls.Add(this.btn_suppliers);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txt_paymnet_number);
             this.Controls.Add(this.txt_supplier);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.btn_genarate);
             this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.numericUpDownCost);
@@ -247,7 +250,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.TextBox txt_paymnet_number;
         private System.Windows.Forms.TextBox txt_supplier;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btn_genarate;
         private System.Windows.Forms.Button btn_clear;
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.NumericUpDown numericUpDownCost;
@@ -259,5 +261,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.TextBox txt_search;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btn_suppliers;
     }
 }
