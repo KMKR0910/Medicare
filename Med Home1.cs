@@ -764,5 +764,10 @@ namespace Diploma_Final_Project_1
         {
 
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

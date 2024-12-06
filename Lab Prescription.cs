@@ -31,7 +31,19 @@ namespace Diploma_Final_Project_1
 
         string report_ID;
         DateTime DateTime = DateTime.Now;
+        private void DisableFields()
+        {
+            txt_Name.Enabled = false;
+            txt_address.Enabled = false;
 
+
+            dateTimePicker_DOB.Enabled = false;
+          
+            txt_contact.Enabled = false;
+            txt_age.Enabled = false;
+
+        }
+      
         public int CalculateAge(DateTime dob)
         {
             // Get today's date
@@ -67,7 +79,7 @@ namespace Diploma_Final_Project_1
 
 
                 string sql = @"
-                 SELECT td.* 
+                 SELECT td.[Lab_Report_ID],[Test_Type],[Rep_status],[Test_Price],[Blood_Collected_Time],[Report_Relesed_Time],[Description],[Lab_test_number]
                  FROM [tbl_Lab_Test_Report] td
                  INNER JOIN tbl_patient_info p ON td.Patient_ID = p.[Patient ID]
                   WHERE p.[Contact Number] = @number";
@@ -127,7 +139,7 @@ namespace Diploma_Final_Project_1
                     // Call the method to calculate the patient's age and display it
                     CalculateAge(dob);
                     loadDatagrid();
-
+                    DisableFields();
                 }
                 //disconnect from sql server 
                 con.Close();
@@ -153,16 +165,19 @@ namespace Diploma_Final_Project_1
 
                 // Assuming you want the data from the first column (index 0)
 
-                string cellValue = row.Cells[7].Value.ToString();
+                string cellValue = row.Cells[0].Value.ToString();
                 string cellValue2 = row.Cells[1].Value.ToString();
                 string cellValue3 = row.Cells[3].Value.ToString();
-                string cellValue4 = row.Cells[0].Value.ToString();
+                string cellValue4 = row.Cells[7].Value.ToString();
 
-                report_ID = cellValue4;
-                txt_prescripton_number.Text = cellValue;
+
+                string labtestnumber = cellValue4.Substring(cellValue4.Length - 3);
+
+                report_ID = cellValue;
+              
                 txt_test_name.Text = cellValue2;
                 txt_price.Text = cellValue3;
-               
+                txt_prescripton_number.Text = labtestnumber;
                 
 
             }
@@ -220,7 +235,7 @@ namespace Diploma_Final_Project_1
 
         private void Lab_Prescription_Load(object sender, EventArgs e)
         {
-
+            txt_date.Text = DateTime.Today.ToString("yyyy-MM-dd");  
         }
 
         private void btn_report_relesed_Click(object sender, EventArgs e)

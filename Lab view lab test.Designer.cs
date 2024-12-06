@@ -29,8 +29,8 @@ namespace Diploma_Final_Project_1
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_clear = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
             this.numericUpDown_price = new System.Windows.Forms.NumericUpDown();
             this.txt_test_name = new System.Windows.Forms.TextBox();
@@ -44,30 +44,33 @@ namespace Diploma_Final_Project_1
             this.txt_search = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView_lab_tests = new System.Windows.Forms.DataGridView();
+            this.btn_all = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_price)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_lab_tests)).BeginInit();
             this.SuspendLayout();
             // 
-            // button2
+            // btn_clear
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(1097, 580);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(236, 104);
-            this.button2.TabIndex = 114;
-            this.button2.Text = "Clear";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_clear.Location = new System.Drawing.Point(1097, 580);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(236, 104);
+            this.btn_clear.TabIndex = 114;
+            this.btn_clear.Text = "Clear";
+            this.btn_clear.UseVisualStyleBackColor = true;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
-            // button1
+            // btn_delete
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(775, 580);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(236, 104);
-            this.button1.TabIndex = 113;
-            this.button1.Text = "Delete";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete.Location = new System.Drawing.Point(775, 580);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(236, 104);
+            this.btn_delete.TabIndex = 113;
+            this.btn_delete.Text = "Delete";
+            this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_update
             // 
@@ -127,8 +130,8 @@ namespace Diploma_Final_Project_1
             this.groupBox1.Controls.Add(this.txt_description);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btn_add);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btn_clear);
+            this.groupBox1.Controls.Add(this.btn_delete);
             this.groupBox1.Controls.Add(this.btn_update);
             this.groupBox1.Controls.Add(this.numericUpDown_price);
             this.groupBox1.Controls.Add(this.txt_test_name);
@@ -209,12 +212,24 @@ namespace Diploma_Final_Project_1
             this.dataGridView_lab_tests.TabIndex = 71;
             this.dataGridView_lab_tests.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_lab_tests_CellContentClick);
             // 
+            // btn_all
+            // 
+            this.btn_all.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_all.Location = new System.Drawing.Point(766, 21);
+            this.btn_all.Name = "btn_all";
+            this.btn_all.Size = new System.Drawing.Size(216, 55);
+            this.btn_all.TabIndex = 76;
+            this.btn_all.Text = "View All";
+            this.btn_all.UseVisualStyleBackColor = true;
+            this.btn_all.Click += new System.EventHandler(this.btn_all_Click);
+            // 
             // Lab_view_lab_test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2427, 1451);
+            this.Controls.Add(this.btn_all);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.txt_search);
@@ -234,8 +249,8 @@ namespace Diploma_Final_Project_1
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_clear;
+        private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.NumericUpDown numericUpDown_price;
         private System.Windows.Forms.TextBox txt_test_name;
@@ -249,5 +264,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.TextBox txt_description;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_all;
     }
 }

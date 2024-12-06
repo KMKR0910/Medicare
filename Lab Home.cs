@@ -117,7 +117,7 @@ namespace Diploma_Final_Project_1
         }
         private void LoadDoctorSessions()
         {
-            Doctor_Visit form2 = new Doctor_Visit();
+            View_Doctor_visits form2 = new View_Doctor_visits();
             // Remove borders and make the form a child control
             form2.TopLevel = false;
             form2.FormBorderStyle = FormBorderStyle.None;
@@ -155,7 +155,7 @@ namespace Diploma_Final_Project_1
 
         private void view_doctor_sessionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void groupBox_UserProfile_Enter(object sender, EventArgs e)
@@ -171,6 +171,24 @@ namespace Diploma_Final_Project_1
         private void groupBox_finance_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Main_Dashboard form2 = new Main_Dashboard();
+            form2.Show();
+            this.Hide();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
+
+        private void doctorSessionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadDoctorSessions();
         }
     }
 }

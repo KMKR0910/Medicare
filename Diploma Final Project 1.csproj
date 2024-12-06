@@ -532,6 +532,12 @@
     <Compile Include="View Drug Supplier.Designer.cs">
       <DependentUpon>View Drug Supplier.cs</DependentUpon>
     </Compile>
+    <Compile Include="View_Doctor_visits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_Doctor_visits.Designer.cs">
+      <DependentUpon>View_Doctor_visits.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Add Diagnose History.resx">
       <DependentUpon>Add Diagnose History.cs</DependentUpon>
     </EmbeddedResource>
@@ -725,6 +731,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View Drug Supplier.resx">
       <DependentUpon>View Drug Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Doctor_visits.resx">
+      <DependentUpon>View_Doctor_visits.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
