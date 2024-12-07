@@ -91,6 +91,8 @@ namespace Diploma_Final_Project_1
             this.label3 = new System.Windows.Forms.Label();
             this.linkLabel10 = new System.Windows.Forms.LinkLabel();
             this.linkLabel9 = new System.Windows.Forms.LinkLabel();
+            this.patientRegisterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewPatientDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox_Diagnose.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.groupBox_Patients.SuspendLayout();
@@ -420,19 +422,22 @@ namespace Diploma_Final_Project_1
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(359, 58);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(280, 58);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(359, 58);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(280, 58);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // patientsToolStripMenuItem
             // 
+            this.patientsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.patientRegisterToolStripMenuItem,
+            this.viewPatientDetailsToolStripMenuItem});
             this.patientsToolStripMenuItem.Name = "patientsToolStripMenuItem";
             this.patientsToolStripMenuItem.Size = new System.Drawing.Size(172, 54);
             this.patientsToolStripMenuItem.Text = "Patients";
@@ -735,6 +740,20 @@ namespace Diploma_Final_Project_1
             this.linkLabel9.TabStop = true;
             this.linkLabel9.Text = "Finance Reports";
             // 
+            // patientRegisterToolStripMenuItem
+            // 
+            this.patientRegisterToolStripMenuItem.Name = "patientRegisterToolStripMenuItem";
+            this.patientRegisterToolStripMenuItem.Size = new System.Drawing.Size(486, 58);
+            this.patientRegisterToolStripMenuItem.Text = "Patient Register";
+            this.patientRegisterToolStripMenuItem.Click += new System.EventHandler(this.patientRegisterToolStripMenuItem_Click);
+            // 
+            // viewPatientDetailsToolStripMenuItem
+            // 
+            this.viewPatientDetailsToolStripMenuItem.Name = "viewPatientDetailsToolStripMenuItem";
+            this.viewPatientDetailsToolStripMenuItem.Size = new System.Drawing.Size(486, 58);
+            this.viewPatientDetailsToolStripMenuItem.Text = "View Patient Details";
+            this.viewPatientDetailsToolStripMenuItem.Click += new System.EventHandler(this.viewPatientDetailsToolStripMenuItem_Click);
+            // 
             // Med_Home1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -835,5 +854,7 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.LinkLabel linkLabel10;
         private System.Windows.Forms.LinkLabel linkLabel9;
         private System.Windows.Forms.ToolStripMenuItem incomStatementsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem patientRegisterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewPatientDetailsToolStripMenuItem;
     }
 }

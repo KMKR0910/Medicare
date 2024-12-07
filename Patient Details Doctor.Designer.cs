@@ -282,6 +282,7 @@ namespace Diploma_Final_Project_1
             this.dataGridView_LabReport.RowTemplate.Height = 33;
             this.dataGridView_LabReport.Size = new System.Drawing.Size(1201, 193);
             this.dataGridView_LabReport.TabIndex = 2;
+            this.dataGridView_LabReport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_LabReport_CellContentClick);
             // 
             // label5
             // 

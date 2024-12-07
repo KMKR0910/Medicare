@@ -249,5 +249,11 @@ namespace Diploma_Final_Project_1
         {
 
         }
+
+        private void dataGridView_LabReport_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            MessageBox.Show("You can now view the patient's Laboratory Test Report.");
+
+        }
     }
 }

@@ -374,5 +374,11 @@ namespace Diploma_Final_Project_1
             // Show the form inside the GroupBox
             form2.Show();
         }
+
+        private void viewPatientLabTestsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("You can now view the patient's lab test report.");
+
+        }
     }
 }

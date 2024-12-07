@@ -81,7 +81,7 @@ namespace Diploma_Final_Project_1
 
                 string sql = @"
             SELECT *
-            FROM [tbl_drug_payment]
+            FROM [tbl_drug_payments]
             
            WHERE [Suppler_ID]= @id ";
                 SqlCommand com = new SqlCommand(sql, con);
@@ -162,12 +162,12 @@ namespace Diploma_Final_Project_1
 
                 string sql = @"
             SELECT p.[Supplier_Name], td.[PaymentID],td.[Payment_Method], td.[Total_Cost] ,td.[Pay_Date]
-            FROM [tbl_drug_payment] td
+            FROM [tbl_drug_payments] td
             INNER JOIN [tbl_drug_supplier] p ON td.[Suppler_ID] = p.[Supplier_ID]
-            WHERE p.[Contact_Number] = @name ";
+            WHERE p.[Supplier_ID]  = @id ";
                 SqlCommand com = new SqlCommand(sql, con);
 
-                com.Parameters.AddWithValue("@name", this.txt_search.Text);
+                com.Parameters.AddWithValue("@id", this.txt_search.Text);
 
 
 

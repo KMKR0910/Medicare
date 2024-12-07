@@ -312,5 +312,17 @@ namespace Diploma_Final_Project_1
         {
 
         }
+
+        private void btn_view_report_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("You can now view the patient's Laboratory Test Report.");
+
+        }
+
+        private void btn_print_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("You can print the Laboratory Test Report.");
+
+        }
     }
 }

@@ -91,6 +91,7 @@ namespace Diploma_Final_Project_1
             this.laborataryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewLabTestPricelistsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.drugSupplierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewPatientLabTestsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -718,7 +719,8 @@ namespace Diploma_Final_Project_1
             // laborataryToolStripMenuItem
             // 
             this.laborataryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewLabTestPricelistsToolStripMenuItem});
+            this.viewLabTestPricelistsToolStripMenuItem,
+            this.viewPatientLabTestsToolStripMenuItem});
             this.laborataryToolStripMenuItem.Name = "laborataryToolStripMenuItem";
             this.laborataryToolStripMenuItem.Size = new System.Drawing.Size(217, 54);
             this.laborataryToolStripMenuItem.Text = "Laboratary";
@@ -736,6 +738,13 @@ namespace Diploma_Final_Project_1
             this.drugSupplierToolStripMenuItem.Size = new System.Drawing.Size(285, 54);
             this.drugSupplierToolStripMenuItem.Text = "Drug Suppliers";
             this.drugSupplierToolStripMenuItem.Click += new System.EventHandler(this.drugSupplierToolStripMenuItem_Click);
+            // 
+            // viewPatientLabTestsToolStripMenuItem
+            // 
+            this.viewPatientLabTestsToolStripMenuItem.Name = "viewPatientLabTestsToolStripMenuItem";
+            this.viewPatientLabTestsToolStripMenuItem.Size = new System.Drawing.Size(534, 58);
+            this.viewPatientLabTestsToolStripMenuItem.Text = "View Patient Lab Tests";
+            this.viewPatientLabTestsToolStripMenuItem.Click += new System.EventHandler(this.viewPatientLabTestsToolStripMenuItem_Click);
             // 
             // Doctor_Home1
             // 
@@ -840,5 +849,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.ToolStripMenuItem laborataryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewLabTestPricelistsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem drugSupplierToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewPatientLabTestsToolStripMenuItem;
     }
 }

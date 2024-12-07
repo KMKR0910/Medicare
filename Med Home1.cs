@@ -434,7 +434,7 @@ namespace Diploma_Final_Project_1
 
         private void patientsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            LoadPatient();
+            
         }
 
         private void groupBox_Patients_Enter(object sender, EventArgs e)
@@ -768,6 +768,28 @@ namespace Diploma_Final_Project_1
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void viewPatientDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            LoadPatient();
+        }
+
+        private void patientRegisterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Med_Patient_Register form2 = new Med_Patient_Register();
+            // Remove borders and make the form a child control
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.Dock = DockStyle.Fill;
+
+            // Add the form to the GroupBox
+            groupBoxloc.Controls.Clear();  // Optionally clear previous controls
+            groupBoxloc.Controls.Add(form2);
+
+            // Show the form inside the GroupBox
+            form2.Show();
         }
     }
 }

@@ -36,7 +36,6 @@ namespace Diploma_Final_Project_1
             this.txt_userpwd = new System.Windows.Forms.TextBox();
             this.txt_userID = new System.Windows.Forms.TextBox();
             this.autoComplete1 = new Syncfusion.Windows.Forms.Tools.AutoComplete(this.components);
-            this.btn_cancel = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
             this.dateTimePicker_DOB = new System.Windows.Forms.DateTimePicker();
             this.txt_address = new System.Windows.Forms.TextBox();
@@ -59,12 +58,13 @@ namespace Diploma_Final_Project_1
             // btn_clear
             // 
             this.btn_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_clear.Location = new System.Drawing.Point(488, 1068);
+            this.btn_clear.Location = new System.Drawing.Point(1135, 1052);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(216, 90);
             this.btn_clear.TabIndex = 93;
             this.btn_clear.Text = "Clear";
             this.btn_clear.UseVisualStyleBackColor = true;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // label13
             // 
@@ -114,16 +114,6 @@ namespace Diploma_Final_Project_1
             this.autoComplete1.ParentForm = this;
             this.autoComplete1.Style = Syncfusion.Windows.Forms.Tools.AutoCompleteStyle.Default;
             this.autoComplete1.ThemeName = "Default";
-            // 
-            // btn_cancel
-            // 
-            this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.Location = new System.Drawing.Point(1026, 1068);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(216, 90);
-            this.btn_cancel.TabIndex = 87;
-            this.btn_cancel.Text = "Cancel";
-            this.btn_cancel.UseVisualStyleBackColor = true;
             // 
             // btn_save
             // 
@@ -263,7 +253,6 @@ namespace Diploma_Final_Project_1
             // 
             this.groupBox1.Controls.Add(this.comboBoxGender);
             this.groupBox1.Controls.Add(this.btn_clear);
-            this.groupBox1.Controls.Add(this.btn_cancel);
             this.groupBox1.Controls.Add(this.btn_save);
             this.groupBox1.Controls.Add(this.dateTimePicker_DOB);
             this.groupBox1.Controls.Add(this.txt_address);
@@ -312,7 +301,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.TextBox txt_userpwd;
         private System.Windows.Forms.TextBox txt_userID;
         private Syncfusion.Windows.Forms.Tools.AutoComplete autoComplete1;
-        private System.Windows.Forms.Button btn_cancel;
         private System.Windows.Forms.Button btn_save;
         private System.Windows.Forms.DateTimePicker dateTimePicker_DOB;
         private System.Windows.Forms.TextBox txt_address;

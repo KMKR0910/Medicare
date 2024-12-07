@@ -17,6 +17,11 @@ namespace Diploma_Final_Project_1
         public Med_Patient_Register()
         {
             InitializeComponent();
+            Color customC = ColorTranslator.FromHtml("#9083D5 ");
+            btn_clear.BackColor = customC;
+            btn_save.BackColor = customC;
+
+
         }
         string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
 
@@ -154,7 +159,8 @@ namespace Diploma_Final_Project_1
                 int ret = com.ExecuteNonQuery();
                 if (ret == 1)
                 {
-                    MessageBox.Show("User Registered", "Information");
+                    MessageBox.Show("Patient Registered", "Information");
+                    Med_Patient_Register_Load(null, EventArgs.Empty);
                 }
 
 
@@ -185,6 +191,22 @@ namespace Diploma_Final_Project_1
             {
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            txt_address.Clear();
+            txt_contact.Clear();
+            txt_email.Clear();
+            txt_name.Clear();
+            comboBoxGender.SelectedIndex = -1;
+          
+            
         }
     }
 }

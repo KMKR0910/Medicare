@@ -26,7 +26,6 @@ namespace Diploma_Final_Project_1
             btn_doctor_session.BackColor = customC;
             btn_LabTests.BackColor = customC;
             btn_prescription.BackColor = customC;
-            btn_finance.BackColor = customC;
             linkLabel1.LinkColor = customC;
             linkLabel2.LinkColor = customC;
             linkLabel3.LinkColor = customC;

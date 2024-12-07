@@ -230,6 +230,7 @@ namespace Diploma_Final_Project_1
             this.btn_print.TabIndex = 119;
             this.btn_print.Text = "Print";
             this.btn_print.UseVisualStyleBackColor = true;
+            this.btn_print.Click += new System.EventHandler(this.btn_print_Click);
             // 
             // btn_view_report
             // 
@@ -240,6 +241,7 @@ namespace Diploma_Final_Project_1
             this.btn_view_report.TabIndex = 118;
             this.btn_view_report.Text = "View Report";
             this.btn_view_report.UseVisualStyleBackColor = true;
+            this.btn_view_report.Click += new System.EventHandler(this.btn_view_report_Click);
             // 
             // btn_report_relesed
             // 
