@@ -58,6 +58,7 @@ namespace Diploma_Final_Project_1
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView_Diagnose = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -207,6 +208,7 @@ namespace Diploma_Final_Project_1
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.txt_MCID);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.btn_cancel);
@@ -362,6 +364,17 @@ namespace Diploma_Final_Project_1
             this.dataGridView_Diagnose.Size = new System.Drawing.Size(1123, 368);
             this.dataGridView_Diagnose.TabIndex = 2;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(519, 1001);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(216, 55);
+            this.button1.TabIndex = 66;
+            this.button1.Text = "Genarate";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Doctor_Genarate_Medical_Certificate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -419,5 +432,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.DataGridView dataGridView_Diagnose;
         private System.Windows.Forms.TextBox txt_MCID;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button button1;
     }
 }

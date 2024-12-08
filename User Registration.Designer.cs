@@ -30,9 +30,7 @@ namespace Diploma_Final_Project_1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btn_cancel = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
-            this.numericUpDown_salary = new System.Windows.Forms.NumericUpDown();
             this.dateTimePicker_DOB = new System.Windows.Forms.DateTimePicker();
             this.comboBox_postion = new System.Windows.Forms.ComboBox();
             this.txt_L_Name = new System.Windows.Forms.TextBox();
@@ -44,7 +42,6 @@ namespace Diploma_Final_Project_1
             this.txt_qulifications = new System.Windows.Forms.TextBox();
             this.txt_F_name = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -58,24 +55,11 @@ namespace Diploma_Final_Project_1
             this.txt_userpwd = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.txt_contact2 = new System.Windows.Forms.TextBox();
             this.btn_clear = new System.Windows.Forms.Button();
             this.autoComplete1 = new Syncfusion.Windows.Forms.Tools.AutoComplete(this.components);
             this.label14 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_salary)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.autoComplete1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_cancel
-            // 
-            this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.Location = new System.Drawing.Point(1107, 1253);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(216, 90);
-            this.btn_cancel.TabIndex = 51;
-            this.btn_cancel.Text = "Cancel";
-            this.btn_cancel.UseVisualStyleBackColor = true;
-            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // btn_save
             // 
@@ -87,20 +71,6 @@ namespace Diploma_Final_Project_1
             this.btn_save.Text = "Save";
             this.btn_save.UseVisualStyleBackColor = true;
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
-            // 
-            // numericUpDown_salary
-            // 
-            this.numericUpDown_salary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown_salary.Location = new System.Drawing.Point(425, 723);
-            this.numericUpDown_salary.Maximum = new decimal(new int[] {
-            999999,
-            0,
-            0,
-            0});
-            this.numericUpDown_salary.Name = "numericUpDown_salary";
-            this.numericUpDown_salary.Size = new System.Drawing.Size(328, 44);
-            this.numericUpDown_salary.TabIndex = 49;
-            this.numericUpDown_salary.ValueChanged += new System.EventHandler(this.numericUpDown_salary_ValueChanged);
             // 
             // dateTimePicker_DOB
             // 
@@ -185,10 +155,10 @@ namespace Diploma_Final_Project_1
             // txt_qulifications
             // 
             this.txt_qulifications.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_qulifications.Location = new System.Drawing.Point(419, 819);
+            this.txt_qulifications.Location = new System.Drawing.Point(419, 739);
             this.txt_qulifications.Multiline = true;
             this.txt_qulifications.Name = "txt_qulifications";
-            this.txt_qulifications.Size = new System.Drawing.Size(692, 385);
+            this.txt_qulifications.Size = new System.Drawing.Size(692, 465);
             this.txt_qulifications.TabIndex = 40;
             this.txt_qulifications.TextChanged += new System.EventHandler(this.txt_qulifications_TextChanged);
             // 
@@ -205,23 +175,12 @@ namespace Diploma_Final_Project_1
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(100, 816);
+            this.label11.Location = new System.Drawing.Point(100, 722);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(242, 42);
             this.label11.TabIndex = 38;
             this.label11.Text = "Qualifications";
             this.label11.Click += new System.EventHandler(this.label11_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(100, 719);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(124, 42);
-            this.label10.TabIndex = 37;
-            this.label10.Text = "Salary";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label9
             // 
@@ -363,19 +322,10 @@ namespace Diploma_Final_Project_1
             this.label13.Text = "User Password";
             this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
-            // txt_contact2
-            // 
-            this.txt_contact2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_contact2.Location = new System.Drawing.Point(425, 653);
-            this.txt_contact2.Name = "txt_contact2";
-            this.txt_contact2.Size = new System.Drawing.Size(329, 44);
-            this.txt_contact2.TabIndex = 56;
-            this.txt_contact2.TextChanged += new System.EventHandler(this.txt_contact2_TextChanged);
-            // 
             // btn_clear
             // 
             this.btn_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_clear.Location = new System.Drawing.Point(569, 1253);
+            this.btn_clear.Location = new System.Drawing.Point(1118, 1253);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(216, 90);
             this.btn_clear.TabIndex = 57;
@@ -410,14 +360,11 @@ namespace Diploma_Final_Project_1
             this.ClientSize = new System.Drawing.Size(2427, 1449);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.btn_clear);
-            this.Controls.Add(this.txt_contact2);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txt_userpwd);
             this.Controls.Add(this.txt_userID);
-            this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_save);
-            this.Controls.Add(this.numericUpDown_salary);
             this.Controls.Add(this.dateTimePicker_DOB);
             this.Controls.Add(this.comboBox_postion);
             this.Controls.Add(this.txt_L_Name);
@@ -429,7 +376,6 @@ namespace Diploma_Final_Project_1
             this.Controls.Add(this.txt_qulifications);
             this.Controls.Add(this.txt_F_name);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -442,7 +388,6 @@ namespace Diploma_Final_Project_1
             this.Name = "User_Registration";
             this.Text = "User_Registration";
             this.Load += new System.EventHandler(this.User_Registration_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_salary)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.autoComplete1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -450,10 +395,7 @@ namespace Diploma_Final_Project_1
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_cancel;
         private System.Windows.Forms.Button btn_save;
-        private System.Windows.Forms.NumericUpDown numericUpDown_salary;
         private System.Windows.Forms.DateTimePicker dateTimePicker_DOB;
         private System.Windows.Forms.ComboBox comboBox_postion;
         private System.Windows.Forms.TextBox txt_L_Name;
@@ -465,7 +407,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.TextBox txt_qulifications;
         private System.Windows.Forms.TextBox txt_F_name;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -479,7 +420,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.TextBox txt_userpwd;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txt_contact2;
         private System.Windows.Forms.Button btn_clear;
         private Syncfusion.Windows.Forms.Tools.AutoComplete autoComplete1;
         private System.Windows.Forms.Label label14;

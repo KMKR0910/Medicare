@@ -282,6 +282,21 @@ namespace Diploma_Final_Project_1
         private void btn_genarate_Click(object sender, EventArgs e)
         {
 
+            
+            string MC_ID = txt_MCID.Text;
+
+            Report_Gen_M_Certificate f1 = new Report_Gen_M_Certificate(MC_ID);
+            f1.ShowDialog();
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            txt_description.Clear();
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             try
             {
 
@@ -323,16 +338,6 @@ namespace Diploma_Final_Project_1
             {
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            string MC_ID = txt_MCID.Text;
-
-            Report_Gen_M_Certificate f1 = new Report_Gen_M_Certificate(MC_ID);
-            f1.ShowDialog();
-        }
-
-        private void btn_cancel_Click(object sender, EventArgs e)
-        {
-            txt_description.Clear();
-            
         }
     }
 }

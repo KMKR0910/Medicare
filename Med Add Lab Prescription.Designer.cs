@@ -65,14 +65,18 @@ namespace Diploma_Final_Project_1
             this.txt_date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_date.Location = new System.Drawing.Point(2021, 18);
             this.txt_date.Name = "txt_date";
+            this.txt_date.ReadOnly = true;
             this.txt_date.Size = new System.Drawing.Size(372, 44);
             this.txt_date.TabIndex = 109;
             // 
             // txt_patient_ID
             // 
+            this.txt_patient_ID.BackColor = System.Drawing.Color.White;
             this.txt_patient_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_patient_ID.ForeColor = System.Drawing.Color.White;
             this.txt_patient_ID.Location = new System.Drawing.Point(2021, 101);
             this.txt_patient_ID.Name = "txt_patient_ID";
+            this.txt_patient_ID.ReadOnly = true;
             this.txt_patient_ID.Size = new System.Drawing.Size(372, 44);
             this.txt_patient_ID.TabIndex = 108;
             // 
@@ -180,6 +184,7 @@ namespace Diploma_Final_Project_1
             this.txt_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_price.Location = new System.Drawing.Point(405, 506);
             this.txt_price.Name = "txt_price";
+            this.txt_price.ReadOnly = true;
             this.txt_price.Size = new System.Drawing.Size(372, 44);
             this.txt_price.TabIndex = 114;
             // 
@@ -205,13 +210,14 @@ namespace Diploma_Final_Project_1
             // 
             // comboBox_type
             // 
+            this.comboBox_type.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_type.FormattingEnabled = true;
             this.comboBox_type.Items.AddRange(new object[] {
-            "Test 1",
-            "Test 2"});
+            "Test 01",
+            "Test 02"});
             this.comboBox_type.Location = new System.Drawing.Point(410, 353);
             this.comboBox_type.Name = "comboBox_type";
-            this.comboBox_type.Size = new System.Drawing.Size(356, 33);
+            this.comboBox_type.Size = new System.Drawing.Size(356, 45);
             this.comboBox_type.TabIndex = 115;
             this.comboBox_type.SelectedIndexChanged += new System.EventHandler(this.comboBox_type_SelectedIndexChanged);
             // 

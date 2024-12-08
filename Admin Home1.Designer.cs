@@ -39,28 +39,28 @@ namespace Diploma_Final_Project_1
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.groupBoxloc = new System.Windows.Forms.GroupBox();
-            this.groupBox_users = new System.Windows.Forms.GroupBox();
-            this.btn_employee = new System.Windows.Forms.Button();
-            this.groupBox_userprofile = new System.Windows.Forms.GroupBox();
-            this.btn_userProfile = new System.Windows.Forms.Button();
-            this.groupBox_home = new System.Windows.Forms.GroupBox();
-            this.btn_home = new System.Windows.Forms.Button();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.userProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userRegistrationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.userProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBoxloc = new System.Windows.Forms.GroupBox();
+            this.groupBox_users = new System.Windows.Forms.GroupBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.btn_employee = new System.Windows.Forms.Button();
+            this.groupBox_userprofile = new System.Windows.Forms.GroupBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btn_userProfile = new System.Windows.Forms.Button();
+            this.groupBox_home = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_home = new System.Windows.Forms.Button();
             this.groupBox10.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBoxloc.SuspendLayout();
             this.groupBox_users.SuspendLayout();
-            this.groupBox_userprofile.SuspendLayout();
-            this.groupBox_home.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            this.groupBox_userprofile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.groupBox_home.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,7 +92,7 @@ namespace Diploma_Final_Project_1
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Location = new System.Drawing.Point(31, 154);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(366, 90);
+            this.linkLabel2.Size = new System.Drawing.Size(183, 45);
             this.linkLabel2.TabIndex = 1;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "View Users";
@@ -102,7 +102,7 @@ namespace Diploma_Final_Project_1
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Location = new System.Drawing.Point(31, 85);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(318, 90);
+            this.linkLabel1.Size = new System.Drawing.Size(159, 45);
             this.linkLabel1.TabIndex = 0;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Add User";
@@ -118,7 +118,7 @@ namespace Diploma_Final_Project_1
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(359, 58);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(280, 58);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
@@ -147,6 +147,37 @@ namespace Diploma_Final_Project_1
             this.menuStrip1.TabIndex = 16;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // usersToolStripMenuItem
+            // 
+            this.usersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.userRegistrationToolStripMenuItem,
+            this.viewUsersToolStripMenuItem});
+            this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
+            this.usersToolStripMenuItem.Size = new System.Drawing.Size(131, 54);
+            this.usersToolStripMenuItem.Text = "Users";
+            this.usersToolStripMenuItem.Click += new System.EventHandler(this.usersToolStripMenuItem_Click);
+            // 
+            // userRegistrationToolStripMenuItem
+            // 
+            this.userRegistrationToolStripMenuItem.Name = "userRegistrationToolStripMenuItem";
+            this.userRegistrationToolStripMenuItem.Size = new System.Drawing.Size(443, 58);
+            this.userRegistrationToolStripMenuItem.Text = "User Registration";
+            this.userRegistrationToolStripMenuItem.Click += new System.EventHandler(this.userRegistrationToolStripMenuItem_Click);
+            // 
+            // viewUsersToolStripMenuItem
+            // 
+            this.viewUsersToolStripMenuItem.Name = "viewUsersToolStripMenuItem";
+            this.viewUsersToolStripMenuItem.Size = new System.Drawing.Size(443, 58);
+            this.viewUsersToolStripMenuItem.Text = "View Users";
+            this.viewUsersToolStripMenuItem.Click += new System.EventHandler(this.viewUsersToolStripMenuItem_Click);
+            // 
+            // userProfileToolStripMenuItem
+            // 
+            this.userProfileToolStripMenuItem.Name = "userProfileToolStripMenuItem";
+            this.userProfileToolStripMenuItem.Size = new System.Drawing.Size(230, 54);
+            this.userProfileToolStripMenuItem.Text = "User Profile";
+            this.userProfileToolStripMenuItem.Click += new System.EventHandler(this.userProfileToolStripMenuItem_Click);
+            // 
             // groupBoxloc
             // 
             this.groupBoxloc.BackColor = System.Drawing.Color.White;
@@ -170,6 +201,16 @@ namespace Diploma_Final_Project_1
             this.groupBox_users.TabStop = false;
             this.groupBox_users.Enter += new System.EventHandler(this.groupBox_users_Enter);
             // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::Diploma_Final_Project_1.Properties.Resources._360_F_372435911_7Nq7sVzcNRRYFLQ1iZzQVgRLgXL5C839;
+            this.pictureBox9.Location = new System.Drawing.Point(159, 59);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(251, 142);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 3;
+            this.pictureBox9.TabStop = false;
+            // 
             // btn_employee
             // 
             this.btn_employee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
@@ -192,6 +233,16 @@ namespace Diploma_Final_Project_1
             this.groupBox_userprofile.TabIndex = 10;
             this.groupBox_userprofile.TabStop = false;
             this.groupBox_userprofile.Enter += new System.EventHandler(this.groupBox_userprofile_Enter);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Diploma_Final_Project_1.Properties.Resources._3682281;
+            this.pictureBox2.Location = new System.Drawing.Point(139, 37);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(321, 190);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
             // 
             // btn_userProfile
             // 
@@ -217,6 +268,18 @@ namespace Diploma_Final_Project_1
             this.groupBox_home.TabStop = false;
             this.groupBox_home.Enter += new System.EventHandler(this.groupBox_home_Enter);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(116, 36);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(321, 193);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // btn_home
             // 
             this.btn_home.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
@@ -230,69 +293,6 @@ namespace Diploma_Final_Project_1
             this.btn_home.Text = "Home";
             this.btn_home.UseVisualStyleBackColor = false;
             // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::Diploma_Final_Project_1.Properties.Resources._360_F_372435911_7Nq7sVzcNRRYFLQ1iZzQVgRLgXL5C839;
-            this.pictureBox9.Location = new System.Drawing.Point(159, 59);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(251, 142);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 3;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Diploma_Final_Project_1.Properties.Resources._3682281;
-            this.pictureBox2.Location = new System.Drawing.Point(139, 37);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(321, 190);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(116, 36);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(321, 193);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // usersToolStripMenuItem
-            // 
-            this.usersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.userRegistrationToolStripMenuItem,
-            this.viewUsersToolStripMenuItem});
-            this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
-            this.usersToolStripMenuItem.Size = new System.Drawing.Size(131, 54);
-            this.usersToolStripMenuItem.Text = "Users";
-            this.usersToolStripMenuItem.Click += new System.EventHandler(this.usersToolStripMenuItem_Click);
-            // 
-            // userProfileToolStripMenuItem
-            // 
-            this.userProfileToolStripMenuItem.Name = "userProfileToolStripMenuItem";
-            this.userProfileToolStripMenuItem.Size = new System.Drawing.Size(230, 54);
-            this.userProfileToolStripMenuItem.Text = "User Profile";
-            this.userProfileToolStripMenuItem.Click += new System.EventHandler(this.userProfileToolStripMenuItem_Click);
-            // 
-            // userRegistrationToolStripMenuItem
-            // 
-            this.userRegistrationToolStripMenuItem.Name = "userRegistrationToolStripMenuItem";
-            this.userRegistrationToolStripMenuItem.Size = new System.Drawing.Size(443, 58);
-            this.userRegistrationToolStripMenuItem.Text = "User Registration";
-            this.userRegistrationToolStripMenuItem.Click += new System.EventHandler(this.userRegistrationToolStripMenuItem_Click);
-            // 
-            // viewUsersToolStripMenuItem
-            // 
-            this.viewUsersToolStripMenuItem.Name = "viewUsersToolStripMenuItem";
-            this.viewUsersToolStripMenuItem.Size = new System.Drawing.Size(443, 58);
-            this.viewUsersToolStripMenuItem.Text = "View Users";
-            this.viewUsersToolStripMenuItem.Click += new System.EventHandler(this.viewUsersToolStripMenuItem_Click);
-            // 
             // Admin_Home1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -303,6 +303,7 @@ namespace Diploma_Final_Project_1
             this.Controls.Add(this.groupBoxloc);
             this.Name = "Admin_Home1";
             this.Text = "Admin_Home1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Admin_Home1_Load);
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
@@ -310,10 +311,10 @@ namespace Diploma_Final_Project_1
             this.menuStrip1.PerformLayout();
             this.groupBoxloc.ResumeLayout(false);
             this.groupBox_users.ResumeLayout(false);
-            this.groupBox_userprofile.ResumeLayout(false);
-            this.groupBox_home.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            this.groupBox_userprofile.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.groupBox_home.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -42,7 +42,6 @@ namespace Diploma_Final_Project_1
             dateTimePicker_DOB.Enabled = false;
             txt_email.Enabled = false;
             txt_contact.Enabled = false;
-            txt_contact2.Enabled = false;
             txt_qulifications.Enabled = false;
             txt_pwd1.Enabled = false;
             txt_pwd2.Enabled = false;
@@ -58,7 +57,6 @@ namespace Diploma_Final_Project_1
             dateTimePicker_DOB.Enabled = true;
             txt_email.Enabled = true;
             txt_contact.Enabled = true;
-            txt_contact2.Enabled = true;
             txt_qulifications.Enabled = true;
             txt_pwd1.Enabled = true;
             txt_pwd2.Enabled = true;

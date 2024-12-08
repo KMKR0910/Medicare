@@ -263,6 +263,7 @@ namespace Diploma_Final_Project_1
                 if (ret > 0)
                 {
                     MessageBox.Show("Prescription Deleted", "Information");
+                    btn_cancel_Click(null, EventArgs.Empty);
                     string query = "SELECT [Test_Type],[Rep_status],[Test_Price],[Patient_ID] ,[Description] FROM [tbl_Lab_Test_Report] WHERE [Lab_test_number] = @number";
                     using (SqlCommand cmd1 = new SqlCommand(query, con1))
                     {

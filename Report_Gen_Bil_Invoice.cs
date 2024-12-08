@@ -33,19 +33,20 @@ namespace Diploma_Final_Project_1
 
 
                 string sql = @"
-                 SELECT td.*,p.* 
+                 SELECT td.*,p.[Patient ID],[Name], [Address],[Contact Number]
                  FROM [tbl_Patient_Payment] td
                  INNER JOIN tbl_patient_info p ON td.[patirnt_ID] = p.[Patient ID]
                   WHERE CAST(td.[Date] AS DATE) = @date AND td.[patirnt_ID] = @pID
 ";
                 SqlCommand com = new SqlCommand(sql, con);
-                com.Parameters.AddWithValue("@date", DateTime.Today);
-                com.Parameters.AddWithValue("@pID", patientID);
+                com.Parameters.AddWithValue("@date", DateTime.Today.Date);
+                com.Parameters.AddWithValue("@pID", patientID.Trim());
 
                 SqlDataAdapter dap = new SqlDataAdapter(com);
                 DataSet ds = new DataSet();
                 dap.Fill(ds);
 
+                MessageBox.Show($"Rows retrieved: {ds.Tables[0].Rows.Count}");
 
 
                 CrystalReport_Gen_Patient_B_Invoice rpt1 = new CrystalReport_Gen_Patient_B_Invoice();
@@ -53,7 +54,7 @@ namespace Diploma_Final_Project_1
                 rpt1.Load(@"C:\Users\kasun\source\repos\Diploma Final Project 1\CrystalReport_Gen_Patient_B_Invoice.rpt");
 
                 //rpt1.SetParameterValue("StartDate", _startDate);
-                rpt1.SetDataSource(ds);
+                rpt1.SetDataSource(ds.Tables[0]);
 
                 // set the report source of the created “crystalReportViewer”
                 this.crystalReportViewer1.ReportSource = rpt1;

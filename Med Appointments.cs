@@ -120,8 +120,7 @@ namespace Diploma_Final_Project_1
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        private void loadData()
         {
             string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
             try
@@ -171,8 +170,49 @@ namespace Diploma_Final_Project_1
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            loadAppointment();
-            Med_Appointments_Load(null, EventArgs.Empty);
+            try
+            {
+
+
+
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+
+
+
+
+
+                string sql = @"
+                SELECT a.[time] , a.[Appoinment Number], p.Name, a.[status]
+            FROM [tbl_appoinment] a
+            JOIN tbl_patient_info p ON a.[Patient ID] = p.[Patient ID]
+            
+            WHERE a.[Date] = @date"
+;
+                SqlCommand com = new SqlCommand(sql, con);
+
+                com.Parameters.AddWithValue("@date", monthCalendar1.SelectionRange.Start.Date);
+
+
+                SqlDataAdapter dap = new SqlDataAdapter(com);
+                DataSet ds = new DataSet();
+                dap.Fill(ds);
+
+                this.dataGridView_appointment.DataSource = ds.Tables[0];
+
+
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+
+            loadData();
         }
         private void loadAppointment()
         {
@@ -270,8 +310,9 @@ namespace Diploma_Final_Project_1
                 if (ret >0)
                 {
                     MessageBox.Show("Updated", "Information");
-                    loadAppointment();
-                    Med_Appointments_Load(null, EventArgs.Empty);
+                    loadData();
+
+
 
                 }
                
@@ -282,6 +323,11 @@ namespace Diploma_Final_Project_1
             {
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void monthCalendar1_DateChanged(object p, EventArgs empty)
+        {
+            throw new NotImplementedException();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

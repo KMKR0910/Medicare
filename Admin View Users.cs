@@ -24,6 +24,7 @@ namespace Diploma_Final_Project_1
             btn_reset.BackColor = customC;
             btn_search.BackColor = customC;
             btn_Update.BackColor = customC;
+            btn_all.BackColor = customC;
            
 
         }
@@ -193,25 +194,25 @@ namespace Diploma_Final_Project_1
                     if (userType == "Medical Centre Assistant")
                     {
                         sql = "UPDATE [tbl_Medical_Centre_Assistant] SET  [First Name] = @Fname, " +
-                              "[Last Name] = @Lname, [Address] = @address, DOB = @DOB, [Email Address] = @email, Salary = @salary, " +
+                              "[Last Name] = @Lname, [Address] = @address, DOB = @DOB, [Email Address] = @email, " +
                               "Qualifications = @qualification, ContactNumber = @number WHERE [Med_Assistant_ID] = @userid";
                     }
                     if (userType == "Pharmacists")
                     {
                         sql = "UPDATE [tbl_Pharamacists] SET  [First Name] = @Fname, " +
-                              "[Last Name] = @Lname, [Address] = @address, DOB = @DOB, [Email Address] = @email, Salary = @salary, " +
+                              "[Last Name] = @Lname, [Address] = @address, DOB = @DOB, [Email Address] = @email, " +
                               "Qualifications = @qualification, ContactNumber = @number WHERE [Pharamacists_ID] = @userid";
                     }
                     if (userType == "Laboratory Assistant")
                     {
                         sql = "UPDATE [tbl_Lab_Assistant] SET [First Name] = @Fname, " +
-                              "[Last Name] = @Lname, [Address] = @address, DOB = @DOB, [Email Address] = @email, Salary = @salary, " +
+                              "[Last Name] = @Lname, [Address] = @address, DOB = @DOB, [Email Address] = @email,  " +
                               "Qualifications = @qualification, ContactNumber = @number WHERE [Lab-Assistant_ID] = @userid";
                     }
                     if (userType == "Admin")
                     {
                         sql = "UPDATE [tbl_Admin] SET [First Name] = @Fname, [Last Name] = @Lname, " +
-                              "[Address] = @address, DOB = @DOB, [Email Address] = @email, Salary = @salary, ContactNumber = @number " +
+                              "[Address] = @address, DOB = @DOB, [Email Address] = @email, ContactNumber = @number " +
                               "WHERE [Admin_ID] = @userid";
                     }
 
@@ -241,6 +242,7 @@ namespace Diploma_Final_Project_1
                     if (ret == 1)
                     {
                         MessageBox.Show("User Updated", "Information");
+                        Admin_View_Users_Load(null, EventArgs.Empty);
                     }
 
                 }
@@ -487,13 +489,13 @@ namespace Diploma_Final_Project_1
                 string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
 
                 string sql = "";
-           
+
                 SqlConnection con = new SqlConnection(cs);
                 con.Open();
 
                 if (userType == "Doctor")
                 {
-                    sql = @"DELETE FROM [tbl_doctor] WHERE [Doctor ID] =@ID";
+                    sql = @"DELETE FROM [tbl_doctor] WHERE [Doctor ID] =@userid";
 
 
                 }
@@ -501,7 +503,7 @@ namespace Diploma_Final_Project_1
                 if (userType == "Medical Centre Assistant")
                 {
 
-                    sql = @"DELETE FROM [tbl_Medical_Centre_Assistant]  WHERE[Med_Assistant_ID] =@ID";
+                    sql = @"DELETE FROM [tbl_Medical_Centre_Assistant]  WHERE[Med_Assistant_ID] =@userid";
 
 
 
@@ -510,7 +512,7 @@ namespace Diploma_Final_Project_1
 
                 if (userType == "Pharamacists")
                 {
-                    sql = @"DELETE FROM [tbl_Pharamacists] WHERE[Pharamacists_ID]=@ID";
+                    sql = @"DELETE FROM [tbl_Pharamacists] WHERE[Pharamacists_ID]=@userid";
 
 
 
@@ -518,22 +520,35 @@ namespace Diploma_Final_Project_1
 
                 if (userType == "Laboratary Assistant")
                 {
-                    sql = @"DELETE FROM [tbl_Lab_Assistant] WHERE [Lab-Assistant_ID] =@ID";
+                    sql = @"DELETE FROM [tbl_Lab_Assistant] WHERE [Lab-Assistant_ID] =@userid";
 
 
 
                 }
                 if (userType == "Admin")
                 {
-                    sql = @"DELETE FROM [tbl_Admin] WHERE [Admin_ID] =@ID";
+                    sql = @"DELETE FROM [tbl_Admin] WHERE [Admin_ID] =@userid";
 
 
 
 
                 }
+                SqlCommand com = new SqlCommand(sql, con);
 
 
+                com.Parameters.AddWithValue("@userid", this.txt_userID.Text);
 
+
+                int ret = com.ExecuteNonQuery();
+                if (ret > 0)
+                {
+                    MessageBox.Show("User Deleted", "Information");
+                    btn_Clear1_Click(null, EventArgs.Empty);
+
+                    Admin_View_Users_Load(null, EventArgs.Empty);
+
+
+                }
             }
             catch (Exception ex)
             {
@@ -562,22 +577,27 @@ namespace Diploma_Final_Project_1
             this.txt_pwd1.Clear();
             this.txt_pwd2.Clear();
         }
-       /* private void LoadUserRegister()
+
+        private void btn_all_Click(object sender, EventArgs e)
         {
-            //Create an instance of Form2
-            User_Registration form2 = new User_Registration();
+            Admin_View_Users_Load(null, EventArgs.Empty);
+        }
+        /* private void LoadUserRegister()
+{
+    //Create an instance of Form2
+    User_Registration form2 = new User_Registration();
 
-            // Remove borders and make the form a child control
-            form2.TopLevel = false;
-            form2.FormBorderStyle = FormBorderStyle.None;
-            form2.Dock = DockStyle.Fill;
+    // Remove borders and make the form a child control
+    form2.TopLevel = false;
+    form2.FormBorderStyle = FormBorderStyle.None;
+    form2.Dock = DockStyle.Fill;
 
-            // Add the form to the GroupBox
-            groupBox_Main.Controls.Clear();  // Optionally clear previous controls
-            groupBox_Main.Controls.Add(form2);
+    // Add the form to the GroupBox
+    groupBox_Main.Controls.Clear();  // Optionally clear previous controls
+    groupBox_Main.Controls.Add(form2);
 
-            // Show the form inside the GroupBox
-            form2.Show();
-        }*/
+    // Show the form inside the GroupBox
+    form2.Show();
+}*/
     }
 }

@@ -39,7 +39,6 @@ namespace Diploma_Final_Project_1
             this.btn_Clear1 = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
             this.btn_Update = new System.Windows.Forms.Button();
-            this.txt_contact2 = new System.Windows.Forms.TextBox();
             this.txt_contact = new System.Windows.Forms.TextBox();
             this.txt_F_name = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -68,6 +67,7 @@ namespace Diploma_Final_Project_1
             this.label10 = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.btn_all = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_view_users)).BeginInit();
@@ -180,14 +180,6 @@ namespace Diploma_Final_Project_1
             this.btn_Update.UseVisualStyleBackColor = true;
             this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
             // 
-            // txt_contact2
-            // 
-            this.txt_contact2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_contact2.Location = new System.Drawing.Point(363, 795);
-            this.txt_contact2.Name = "txt_contact2";
-            this.txt_contact2.Size = new System.Drawing.Size(329, 44);
-            this.txt_contact2.TabIndex = 107;
-            // 
             // txt_contact
             // 
             this.txt_contact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -199,7 +191,7 @@ namespace Diploma_Final_Project_1
             // txt_F_name
             // 
             this.txt_F_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_F_name.Location = new System.Drawing.Point(347, 223);
+            this.txt_F_name.Location = new System.Drawing.Point(342, 133);
             this.txt_F_name.Name = "txt_F_name";
             this.txt_F_name.Size = new System.Drawing.Size(328, 44);
             this.txt_F_name.TabIndex = 98;
@@ -248,7 +240,7 @@ namespace Diploma_Final_Project_1
             // txt_L_Name
             // 
             this.txt_L_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_L_Name.Location = new System.Drawing.Point(347, 139);
+            this.txt_L_Name.Location = new System.Drawing.Point(342, 217);
             this.txt_L_Name.Name = "txt_L_Name";
             this.txt_L_Name.Size = new System.Drawing.Size(328, 44);
             this.txt_L_Name.TabIndex = 105;
@@ -356,12 +348,13 @@ namespace Diploma_Final_Project_1
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btn_all);
             this.groupBox2.Controls.Add(this.combobox_user);
             this.groupBox2.Controls.Add(this.btn_search);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(899, 101);
+            this.groupBox2.Size = new System.Drawing.Size(1248, 101);
             this.groupBox2.TabIndex = 116;
             this.groupBox2.TabStop = false;
             // 
@@ -466,6 +459,17 @@ namespace Diploma_Final_Project_1
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Add Users";
             // 
+            // btn_all
+            // 
+            this.btn_all.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_all.Location = new System.Drawing.Point(962, 15);
+            this.btn_all.Name = "btn_all";
+            this.btn_all.Size = new System.Drawing.Size(216, 55);
+            this.btn_all.TabIndex = 121;
+            this.btn_all.Text = "View All";
+            this.btn_all.UseVisualStyleBackColor = true;
+            this.btn_all.Click += new System.EventHandler(this.btn_all_Click);
+            // 
             // Admin_View_Users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -483,7 +487,6 @@ namespace Diploma_Final_Project_1
             this.Controls.Add(this.btn_Clear1);
             this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.btn_Update);
-            this.Controls.Add(this.txt_contact2);
             this.Controls.Add(this.txt_contact);
             this.Controls.Add(this.txt_F_name);
             this.Controls.Add(this.label11);
@@ -525,7 +528,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.Button btn_Clear1;
         private System.Windows.Forms.Button btn_Delete;
         private System.Windows.Forms.Button btn_Update;
-        private System.Windows.Forms.TextBox txt_contact2;
         private System.Windows.Forms.TextBox txt_contact;
         private System.Windows.Forms.TextBox txt_F_name;
         private System.Windows.Forms.Label label11;
@@ -556,5 +558,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button btn_all;
     }
 }

@@ -325,7 +325,6 @@ namespace Diploma_Final_Project_1
         private void btn_genarate_Click(object sender, EventArgs e)
 
         {
-            MessageBox.Show("An error occurred : " + patientID, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             Report_Gen_Bil_Invoice f1 = new Report_Gen_Bil_Invoice(patientID);
             f1.ShowDialog();

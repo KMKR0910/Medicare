@@ -195,12 +195,7 @@ ORDER BY PaymentDate;
             try
 
             {
-                if (this.dateTimePicker1.Value==default(DateTime) || this.dateTimePicker2.Value == default(DateTime) )
-                {
-                    MessageBox.Show("All required fields must be filled.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
+               
                     SqlConnection con = new SqlConnection(cs);
                     con.Open();
 
@@ -393,7 +388,7 @@ ORDER BY PaymentDate;
                     // Pass data to Crystal Report
                     Report_Gen_Income reportForm = new Report_Gen_Income(startDate, endDate, totalCost, IncomeLab, pay1, pay2, ExpenseDrug, ExpenseLab, categoryLAB, SalaryMed, categorySalary, salarytype1, SalaryPha, salarytype2, SalaryLab, salarytype3, OtherExpenses);
                     reportForm.Show();
-                }
+                
             }
             catch (Exception ex)
             {
