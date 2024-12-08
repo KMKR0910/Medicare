@@ -114,7 +114,7 @@ namespace Diploma_Final_Project_1
                         }
                         else if (userType == "Admin")
                         {
-                            Admin_Home m1 = new Admin_Home(UserID);
+                            Admin_Home1 m1 = new Admin_Home1(UserID);
                             m1.Show();
                             this.Hide();
                         }

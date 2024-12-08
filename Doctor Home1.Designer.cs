@@ -90,8 +90,9 @@ namespace Diploma_Final_Project_1
             this.medicalCertificateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.laborataryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewLabTestPricelistsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.drugSupplierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewPatientLabTestsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.drugSupplierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.drugOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -698,10 +699,11 @@ namespace Diploma_Final_Project_1
             this.appoinmentToolStripMenuItem,
             this.diagnosisToolStripMenuItem,
             this.financeToolStripMenuItem,
-            this.drugInventoryReportToolStripMenuItem,
             this.medicalCertificateToolStripMenuItem,
             this.laborataryToolStripMenuItem,
-            this.drugSupplierToolStripMenuItem});
+            this.drugInventoryReportToolStripMenuItem,
+            this.drugSupplierToolStripMenuItem,
+            this.drugOrderToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(1, 4, 0, 4);
@@ -732,6 +734,13 @@ namespace Diploma_Final_Project_1
             this.viewLabTestPricelistsToolStripMenuItem.Text = "View Lab Test Pricelists";
             this.viewLabTestPricelistsToolStripMenuItem.Click += new System.EventHandler(this.viewLabTestPricelistsToolStripMenuItem_Click);
             // 
+            // viewPatientLabTestsToolStripMenuItem
+            // 
+            this.viewPatientLabTestsToolStripMenuItem.Name = "viewPatientLabTestsToolStripMenuItem";
+            this.viewPatientLabTestsToolStripMenuItem.Size = new System.Drawing.Size(534, 58);
+            this.viewPatientLabTestsToolStripMenuItem.Text = "View Patient Lab Tests";
+            this.viewPatientLabTestsToolStripMenuItem.Click += new System.EventHandler(this.viewPatientLabTestsToolStripMenuItem_Click);
+            // 
             // drugSupplierToolStripMenuItem
             // 
             this.drugSupplierToolStripMenuItem.Name = "drugSupplierToolStripMenuItem";
@@ -739,12 +748,12 @@ namespace Diploma_Final_Project_1
             this.drugSupplierToolStripMenuItem.Text = "Drug Suppliers";
             this.drugSupplierToolStripMenuItem.Click += new System.EventHandler(this.drugSupplierToolStripMenuItem_Click);
             // 
-            // viewPatientLabTestsToolStripMenuItem
+            // drugOrderToolStripMenuItem
             // 
-            this.viewPatientLabTestsToolStripMenuItem.Name = "viewPatientLabTestsToolStripMenuItem";
-            this.viewPatientLabTestsToolStripMenuItem.Size = new System.Drawing.Size(534, 58);
-            this.viewPatientLabTestsToolStripMenuItem.Text = "View Patient Lab Tests";
-            this.viewPatientLabTestsToolStripMenuItem.Click += new System.EventHandler(this.viewPatientLabTestsToolStripMenuItem_Click);
+            this.drugOrderToolStripMenuItem.Name = "drugOrderToolStripMenuItem";
+            this.drugOrderToolStripMenuItem.Size = new System.Drawing.Size(229, 54);
+            this.drugOrderToolStripMenuItem.Text = "Drug Order";
+            this.drugOrderToolStripMenuItem.Click += new System.EventHandler(this.drugOrderToolStripMenuItem_Click);
             // 
             // Doctor_Home1
             // 
@@ -850,5 +859,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.ToolStripMenuItem viewLabTestPricelistsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem drugSupplierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewPatientLabTestsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem drugOrderToolStripMenuItem;
     }
 }

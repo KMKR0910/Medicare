@@ -380,5 +380,22 @@ namespace Diploma_Final_Project_1
             MessageBox.Show("You can now view the patient's lab test report.");
 
         }
+
+        private void drugOrderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Doctor_View_Drug_Order form2 = new Doctor_View_Drug_Order();
+            // Remove borders and make the form a child control
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.Dock = DockStyle.Fill;
+
+            // Add the form to the GroupBox
+            groupBoxloc.Controls.Clear();  // Optionally clear previous controls
+            groupBoxloc.Controls.Add(form2);
+
+            // Show the form inside the GroupBox
+            form2.Show();
+        }
     }
 }

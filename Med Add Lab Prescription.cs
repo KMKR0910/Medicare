@@ -300,7 +300,7 @@ namespace Diploma_Final_Project_1
 
             string selectedType = comboBox_type.SelectedItem.ToString();
 
-            string sql = "SELECT [Test_Price] FROM [tbl_lab_tests] WHERE Type = @type";
+            string sql = "SELECT [Test_Price] FROM [tbl_lab_tests] WHERE [Test_Name] = @type";
             SqlCommand com = new SqlCommand(sql, con);
             com.Parameters.AddWithValue("@type", selectedType);
             object result = com.ExecuteScalar();

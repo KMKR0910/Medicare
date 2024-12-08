@@ -183,5 +183,10 @@ namespace Diploma_Final_Project_1
         {
             Application.Exit();
         }
+
+        private void groupBox_Home_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -97,14 +97,14 @@ namespace Diploma_Final_Project_1
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(359, 58);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(280, 58);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(359, 58);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(280, 58);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -255,6 +255,7 @@ namespace Diploma_Final_Project_1
             this.groupBox_Home.Size = new System.Drawing.Size(557, 375);
             this.groupBox_Home.TabIndex = 5;
             this.groupBox_Home.TabStop = false;
+            this.groupBox_Home.Enter += new System.EventHandler(this.groupBox_Home_Enter);
             // 
             // pictureBox1
             // 

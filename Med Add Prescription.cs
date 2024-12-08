@@ -59,7 +59,7 @@ namespace Diploma_Final_Project_1
             SqlConnection con1 = new SqlConnection(cs);
             con1.Open();
 
-            string query = "SELECT  [patientid],[Medicine],[Dosage],[Duration]FROM tbl_prescript WHERE PrescriptionNumber = @number";
+            string query = "SELECT  [patientid],[Medicine],[Dosage],[Duration],[PrescriptionNumber] FROM tbl_prescript WHERE PrescriptionNumber = @number";
             using (SqlCommand cmd1 = new SqlCommand(query, con1))
             {
                 // Add parameter to the command

@@ -305,9 +305,9 @@ namespace Diploma_Final_Project_1
 
                     SqlCommand insertCmd = new SqlCommand(insertSql, con1);
                     insertCmd.Parameters.AddWithValue("@description", this.txt_description.Text);
-                    insertCmd.Parameters.AddWithValue("@issue", this.dateTimePicker_Issue.Value.Date);  // Use .Value for DateTimePickers
-                    insertCmd.Parameters.AddWithValue("@start", this.dateTimePicker_start.Value.Date);
-                    insertCmd.Parameters.AddWithValue("@end", this.dateTimePicker_end.Value.Date);
+                    insertCmd.Parameters.AddWithValue("@issue", this.dateTimePicker_Issue.Value);  // Use .Value for DateTimePickers
+                    insertCmd.Parameters.AddWithValue("@start", this.dateTimePicker_start.Value);
+                    insertCmd.Parameters.AddWithValue("@end", this.dateTimePicker_end.Value);
                     insertCmd.Parameters.AddWithValue("@id", patientId);  // Set the Patient_ID from the previous query
 
                     // Execute the insert command
