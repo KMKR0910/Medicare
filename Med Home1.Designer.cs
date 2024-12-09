@@ -60,6 +60,8 @@ namespace Diploma_Final_Project_1
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.patientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.patientRegisterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewPatientDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.diagnosisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.view_DiagnoseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.add_DiagnoseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -91,8 +93,6 @@ namespace Diploma_Final_Project_1
             this.label3 = new System.Windows.Forms.Label();
             this.linkLabel10 = new System.Windows.Forms.LinkLabel();
             this.linkLabel9 = new System.Windows.Forms.LinkLabel();
-            this.patientRegisterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewPatientDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox_Diagnose.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.groupBox_Patients.SuspendLayout();
@@ -114,7 +114,7 @@ namespace Diploma_Final_Project_1
             // 
             // groupBox_Diagnose
             // 
-            this.groupBox_Diagnose.Controls.Add(this.pictureBox7);
+            this.groupBox_Diagnose.Controls.Add(this.pictureBox6);
             this.groupBox_Diagnose.Controls.Add(this.btn_diaganosisData);
             this.groupBox_Diagnose.Location = new System.Drawing.Point(1656, 515);
             this.groupBox_Diagnose.Name = "groupBox_Diagnose";
@@ -126,7 +126,7 @@ namespace Diploma_Final_Project_1
             // pictureBox7
             // 
             this.pictureBox7.Image = global::Diploma_Final_Project_1.Properties.Resources.medical_record_line_icon_patient_diagnosis_report_linear_pictogram_health_information_on_clipboard_outline_icon_hospital_note_diagnostic_document_editable_stroke_isolated_illustration_vector;
-            this.pictureBox7.Location = new System.Drawing.Point(182, 50);
+            this.pictureBox7.Location = new System.Drawing.Point(161, 66);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(251, 142);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -219,7 +219,7 @@ namespace Diploma_Final_Project_1
             // 
             // groupBox_doctor_session
             // 
-            this.groupBox_doctor_session.Controls.Add(this.pictureBox6);
+            this.groupBox_doctor_session.Controls.Add(this.pictureBox7);
             this.groupBox_doctor_session.Controls.Add(this.btn_doctor_session);
             this.groupBox_doctor_session.Location = new System.Drawing.Point(905, 516);
             this.groupBox_doctor_session.Name = "groupBox_doctor_session";
@@ -231,7 +231,7 @@ namespace Diploma_Final_Project_1
             // pictureBox6
             // 
             this.pictureBox6.Image = global::Diploma_Final_Project_1.Properties.Resources.images__3_;
-            this.pictureBox6.Location = new System.Drawing.Point(159, 49);
+            this.pictureBox6.Location = new System.Drawing.Point(182, 67);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(251, 142);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -442,6 +442,20 @@ namespace Diploma_Final_Project_1
             this.patientsToolStripMenuItem.Size = new System.Drawing.Size(172, 54);
             this.patientsToolStripMenuItem.Text = "Patients";
             this.patientsToolStripMenuItem.Click += new System.EventHandler(this.patientsToolStripMenuItem_Click);
+            // 
+            // patientRegisterToolStripMenuItem
+            // 
+            this.patientRegisterToolStripMenuItem.Name = "patientRegisterToolStripMenuItem";
+            this.patientRegisterToolStripMenuItem.Size = new System.Drawing.Size(486, 58);
+            this.patientRegisterToolStripMenuItem.Text = "Patient Register";
+            this.patientRegisterToolStripMenuItem.Click += new System.EventHandler(this.patientRegisterToolStripMenuItem_Click);
+            // 
+            // viewPatientDetailsToolStripMenuItem
+            // 
+            this.viewPatientDetailsToolStripMenuItem.Name = "viewPatientDetailsToolStripMenuItem";
+            this.viewPatientDetailsToolStripMenuItem.Size = new System.Drawing.Size(486, 58);
+            this.viewPatientDetailsToolStripMenuItem.Text = "View Patient Details";
+            this.viewPatientDetailsToolStripMenuItem.Click += new System.EventHandler(this.viewPatientDetailsToolStripMenuItem_Click);
             // 
             // diagnosisToolStripMenuItem
             // 
@@ -739,20 +753,6 @@ namespace Diploma_Final_Project_1
             this.linkLabel9.TabIndex = 15;
             this.linkLabel9.TabStop = true;
             this.linkLabel9.Text = "Finance Reports";
-            // 
-            // patientRegisterToolStripMenuItem
-            // 
-            this.patientRegisterToolStripMenuItem.Name = "patientRegisterToolStripMenuItem";
-            this.patientRegisterToolStripMenuItem.Size = new System.Drawing.Size(486, 58);
-            this.patientRegisterToolStripMenuItem.Text = "Patient Register";
-            this.patientRegisterToolStripMenuItem.Click += new System.EventHandler(this.patientRegisterToolStripMenuItem_Click);
-            // 
-            // viewPatientDetailsToolStripMenuItem
-            // 
-            this.viewPatientDetailsToolStripMenuItem.Name = "viewPatientDetailsToolStripMenuItem";
-            this.viewPatientDetailsToolStripMenuItem.Size = new System.Drawing.Size(486, 58);
-            this.viewPatientDetailsToolStripMenuItem.Text = "View Patient Details";
-            this.viewPatientDetailsToolStripMenuItem.Click += new System.EventHandler(this.viewPatientDetailsToolStripMenuItem_Click);
             // 
             // Med_Home1
             // 

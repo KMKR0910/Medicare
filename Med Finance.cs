@@ -17,7 +17,8 @@ namespace Diploma_Final_Project_1
     {
         private Chart progressChart; // Chart control
         string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
-
+        DateTime startDate;
+        DateTime endDate;
 
         public Med_Finance()
         {
@@ -195,14 +196,28 @@ ORDER BY PaymentDate;
             try
 
             {
-               
+                
+
+
                     SqlConnection con = new SqlConnection(cs);
                     con.Open();
 
+            
+                if (comboBox_type.SelectedIndex == 0)
+                {
+                    startDate = DateTime.Now.AddDays(-365);
+                    endDate = DateTime.Now;
+                }
+                else if(comboBox_type.SelectedIndex==1)
+                {
+                    startDate = DateTime.Now.AddDays(-7);
+                    endDate = DateTime.Now;
+                }
 
 
-                    DateTime startDate = dateTimePicker_start.Value;
-                    DateTime endDate = dateTimePicker_end.Value;
+               // string startDate = dateTimePicker_start.Value.Date.ToString();
+                //string endDate = dateTimePicker_end.Value.Date.ToString();
+
                     String pay1 = "Drug";
 
                     string sql = @"SELECT SUM([Total_Cost]) AS TotalCost 
@@ -399,6 +414,16 @@ ORDER BY PaymentDate;
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             LoadDataChart();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox_type_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

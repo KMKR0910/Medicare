@@ -765,7 +765,7 @@ namespace Diploma_Final_Project_1
             this.Controls.Add(this.groupBox10);
             this.Controls.Add(this.groupBoxloc);
             this.Name = "Doctor_Home1";
-            this.Text = "Doctor_Home1";
+            this.Text = "Doctor Dashboard";
             this.Load += new System.EventHandler(this.Doctor_Home1_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

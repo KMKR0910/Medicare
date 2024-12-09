@@ -302,7 +302,7 @@ namespace Diploma_Final_Project_1
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBoxloc);
             this.Name = "Admin_Home1";
-            this.Text = "Admin_Home1";
+            this.Text = "Admin Dashboard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Admin_Home1_Load);
             this.groupBox10.ResumeLayout(false);

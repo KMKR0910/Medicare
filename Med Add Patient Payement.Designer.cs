@@ -88,9 +88,9 @@ namespace Diploma_Final_Project_1
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(116, 423);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(259, 42);
+            this.label3.Size = new System.Drawing.Size(462, 84);
             this.label3.TabIndex = 72;
-            this.label3.Text = "Payment Type";
+            this.label3.Text = "Payment For";
             // 
             // txt_date
             // 
