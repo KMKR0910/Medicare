@@ -90,7 +90,6 @@ namespace Diploma_Final_Project_1
             this.viewPatientLabTestsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.drugSupplierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.drugOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logOutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -259,6 +258,7 @@ namespace Diploma_Final_Project_1
             this.groupBox4.Size = new System.Drawing.Size(557, 371);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
+            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
             // pictureBox5
             // 
@@ -448,7 +448,7 @@ namespace Diploma_Final_Project_1
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Location = new System.Drawing.Point(31, 154);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(488, 90);
+            this.linkLabel2.Size = new System.Drawing.Size(244, 45);
             this.linkLabel2.TabIndex = 1;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Doctor Session";
@@ -576,8 +576,6 @@ namespace Diploma_Final_Project_1
             // 
             // homeToolStripMenuItem
             // 
-            this.homeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.logOutToolStripMenuItem1});
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
             this.homeToolStripMenuItem.Size = new System.Drawing.Size(141, 54);
             this.homeToolStripMenuItem.Text = "Home";
@@ -729,13 +727,6 @@ namespace Diploma_Final_Project_1
             this.drugOrderToolStripMenuItem.Text = "Drug Order";
             this.drugOrderToolStripMenuItem.Click += new System.EventHandler(this.drugOrderToolStripMenuItem_Click);
             // 
-            // logOutToolStripMenuItem1
-            // 
-            this.logOutToolStripMenuItem1.Name = "logOutToolStripMenuItem1";
-            this.logOutToolStripMenuItem1.Size = new System.Drawing.Size(359, 58);
-            this.logOutToolStripMenuItem1.Text = "Log Out";
-            this.logOutToolStripMenuItem1.Click += new System.EventHandler(this.logOutToolStripMenuItem1_Click);
-            // 
             // Doctor_Home1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -838,6 +829,5 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.ToolStripMenuItem drugSupplierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewPatientLabTestsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem drugOrderToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem1;
     }
 }

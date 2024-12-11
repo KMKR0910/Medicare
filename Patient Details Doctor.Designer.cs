@@ -208,6 +208,7 @@ namespace Diploma_Final_Project_1
             this.dataGridView_Diagnose.RowTemplate.Height = 33;
             this.dataGridView_Diagnose.Size = new System.Drawing.Size(1213, 193);
             this.dataGridView_Diagnose.TabIndex = 2;
+            this.dataGridView_Diagnose.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Diagnose_CellContentClick);
             // 
             // groupBox2
             // 

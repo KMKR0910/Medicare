@@ -43,6 +43,7 @@ namespace Diploma_Final_Project_1
             this.dataGridView_diagnose = new System.Windows.Forms.DataGridView();
             this.btn_search = new System.Windows.Forms.Button();
             this.txt_search = new System.Windows.Forms.TextBox();
+            this.btn_all = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_diagnose)).BeginInit();
             this.SuspendLayout();
@@ -190,12 +191,24 @@ namespace Diploma_Final_Project_1
             this.txt_search.Size = new System.Drawing.Size(471, 44);
             this.txt_search.TabIndex = 57;
             // 
+            // btn_all
+            // 
+            this.btn_all.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_all.Location = new System.Drawing.Point(883, 21);
+            this.btn_all.Name = "btn_all";
+            this.btn_all.Size = new System.Drawing.Size(216, 70);
+            this.btn_all.TabIndex = 58;
+            this.btn_all.Text = "View All";
+            this.btn_all.UseVisualStyleBackColor = true;
+            this.btn_all.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Doctor_View_Diagnose_Histroy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2427, 1449);
+            this.Controls.Add(this.btn_all);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.txt_search);
             this.Controls.Add(this.groupBox1);
@@ -225,5 +238,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.TextBox txt_search;
         private System.Windows.Forms.TextBox txt_description;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_all;
     }
 }

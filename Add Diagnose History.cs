@@ -196,6 +196,9 @@ namespace Diploma_Final_Project_1
                     dap.Fill(ds);
 
                     this.dataGridView1.DataSource = ds.Tables[0];
+                    dataGridView1.Columns[0].HeaderText = "Diagnose Number";
+                    dataGridView1.Columns[5].HeaderText = "Patient ID";
+
 
 
                     con1.Close();
@@ -272,6 +275,8 @@ namespace Diploma_Final_Project_1
                     dap.Fill(ds);
 
                     this.dataGridView1.DataSource = ds.Tables[0];
+                    dataGridView1.Columns[0].HeaderText = "Diagnose Number";
+                    dataGridView1.Columns[5].HeaderText = "Patient ID";
 
 
                     con.Close();
@@ -433,11 +438,14 @@ namespace Diploma_Final_Project_1
                     dap.Fill(ds);
 
                     this.dataGridView1.DataSource = ds.Tables[0];
+                    dataGridView1.Columns[0].HeaderText = "Diagnose Number";
+                    dataGridView1.Columns[5].HeaderText = "Patient ID";
+
 
                 }
 
-            
-            
+
+
                 con1.Close();
             }
             catch (Exception ex)

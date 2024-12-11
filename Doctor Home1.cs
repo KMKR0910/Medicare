@@ -251,7 +251,7 @@ namespace Diploma_Final_Project_1
 
         private void groupBox6_Enter(object sender, EventArgs e)
         {
-
+            viewLabTestPricelistsToolStripMenuItem_Click(null, EventArgs.Empty);
         }
 
         private void groupBox8_Enter(object sender, EventArgs e)
@@ -438,6 +438,11 @@ namespace Diploma_Final_Project_1
             Main_Dashboard form2 = new Main_Dashboard();
             form2.Show();
             this.Hide();
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+            LoadPatient();
         }
     }
 }

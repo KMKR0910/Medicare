@@ -84,7 +84,7 @@ namespace Diploma_Final_Project_1
 
 
                 string sql = @"
-                SELECT a.[time], a.[Appoinment Number], p.Name, a.[status]
+                    SELECT a.[Appoinment Number] , a.[time] , p.Name, a.[status]
             FROM [tbl_appoinment] a
             JOIN tbl_patient_info p ON a.[Patient ID] = p.[Patient ID]
             
@@ -101,6 +101,8 @@ namespace Diploma_Final_Project_1
                 dap.Fill(ds);
 
                 this.dataGridView_appointment.DataSource = ds.Tables[0];
+                dataGridView_appointment.Columns[1].HeaderText = "Time";
+                dataGridView_appointment.Columns[3].HeaderText = "Status";
 
 
                 con.Close();
@@ -174,7 +176,7 @@ namespace Diploma_Final_Project_1
 
 
                 string sql = @"
-                SELECT a.[time] , a.[Appoinment Number], p.Name, a.[status]
+                SELECT a.[Appoinment Number] , a.[time] , p.Name, a.[status]
             FROM [tbl_appoinment] a
             JOIN tbl_patient_info p ON a.[Patient ID] = p.[Patient ID]
             
@@ -190,6 +192,9 @@ namespace Diploma_Final_Project_1
                 dap.Fill(ds);
 
                 this.dataGridView_appointment.DataSource = ds.Tables[0];
+                dataGridView_appointment.Columns[1].HeaderText = "Time";
+                dataGridView_appointment.Columns[3].HeaderText = "Status";
+
 
 
                 con.Close();

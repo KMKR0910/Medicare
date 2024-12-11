@@ -21,6 +21,7 @@ namespace Diploma_Final_Project_1
        
             btn_clear.BackColor = customC;
             btn_save.BackColor = customC;
+            btn_all.BackColor = customC;
 
             btn_search.BackColor = customC;
         }
@@ -212,6 +213,55 @@ namespace Diploma_Final_Project_1
             txt_name.Clear();
             txt_allergies.Clear();
             txt_description.Clear();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (string.IsNullOrEmpty(this.txt_search.Text))
+                {
+                    MessageBox.Show("All required fields must be filled.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+
+
+
+
+
+                    SqlConnection con = new SqlConnection(cs);
+                    con.Open();
+
+
+
+
+
+                    string sql = @"
+                 SELECT td.* 
+                 FROM tbl_diagnostic_data td
+                 INNER JOIN tbl_patient_info p ON td.patient_id = p.[Patient ID]
+                  ";
+                    SqlCommand com = new SqlCommand(sql, con);
+
+               
+
+
+                    SqlDataAdapter dap = new SqlDataAdapter(com);
+                    DataSet ds = new DataSet();
+                    dap.Fill(ds);
+
+                    this.dataGridView_diagnose.DataSource = ds.Tables[0];
+
+
+                    con.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

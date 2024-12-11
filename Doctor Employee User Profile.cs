@@ -197,6 +197,8 @@ namespace Diploma_Final_Project_1
                 dap.Fill(ds);
 
                 this.dataGridView_Employees.DataSource = ds.Tables[0];
+                dataGridView_Employees.Columns[4].HeaderText = "Contact Number";
+                dataGridView_Employees.Columns[4].HeaderText = "Date Of Birth";
 
 
                 con.Close();
