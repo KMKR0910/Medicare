@@ -47,6 +47,7 @@ namespace Diploma_Final_Project_1
             this.addDrugOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.financeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addDrugPaymentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.drugSupplierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox_finance = new System.Windows.Forms.GroupBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
@@ -81,7 +82,6 @@ namespace Diploma_Final_Project_1
             this.groupBox_Home = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_home = new System.Windows.Forms.Button();
-            this.drugSupplierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox_finance.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -249,6 +249,13 @@ namespace Diploma_Final_Project_1
             this.addDrugPaymentsToolStripMenuItem.Text = "Add Drug Payments";
             this.addDrugPaymentsToolStripMenuItem.Click += new System.EventHandler(this.addDrugPaymentsToolStripMenuItem_Click);
             // 
+            // drugSupplierToolStripMenuItem
+            // 
+            this.drugSupplierToolStripMenuItem.Name = "drugSupplierToolStripMenuItem";
+            this.drugSupplierToolStripMenuItem.Size = new System.Drawing.Size(269, 54);
+            this.drugSupplierToolStripMenuItem.Text = "Drug Supplier";
+            this.drugSupplierToolStripMenuItem.Click += new System.EventHandler(this.drugSupplierToolStripMenuItem_Click);
+            // 
             // groupBox_finance
             // 
             this.groupBox_finance.Controls.Add(this.pictureBox10);
@@ -319,6 +326,7 @@ namespace Diploma_Final_Project_1
             this.linkLabel4.TabIndex = 16;
             this.linkLabel4.TabStop = true;
             this.linkLabel4.Text = "View drug inventory";
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
             // 
             // linkLabel3
             // 
@@ -329,6 +337,7 @@ namespace Diploma_Final_Project_1
             this.linkLabel3.TabIndex = 15;
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "New drugs";
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
             // linkLabel2
             // 
@@ -339,6 +348,7 @@ namespace Diploma_Final_Project_1
             this.linkLabel2.TabIndex = 14;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Supplier Information";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // linkLabel8
             // 
@@ -349,6 +359,7 @@ namespace Diploma_Final_Project_1
             this.linkLabel8.TabIndex = 7;
             this.linkLabel8.TabStop = true;
             this.linkLabel8.Text = "Drug Payments";
+            this.linkLabel8.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel8_LinkClicked);
             // 
             // linkLabel6
             // 
@@ -359,6 +370,7 @@ namespace Diploma_Final_Project_1
             this.linkLabel6.TabIndex = 5;
             this.linkLabel6.TabStop = true;
             this.linkLabel6.Text = "Patients Information";
+            this.linkLabel6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel6_LinkClicked);
             // 
             // linkLabel1
             // 
@@ -369,6 +381,7 @@ namespace Diploma_Final_Project_1
             this.linkLabel1.TabIndex = 0;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Drug Orders";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // btn_patients
             // 
@@ -621,13 +634,6 @@ namespace Diploma_Final_Project_1
             this.btn_home.TabIndex = 0;
             this.btn_home.Text = "Home";
             this.btn_home.UseVisualStyleBackColor = false;
-            // 
-            // drugSupplierToolStripMenuItem
-            // 
-            this.drugSupplierToolStripMenuItem.Name = "drugSupplierToolStripMenuItem";
-            this.drugSupplierToolStripMenuItem.Size = new System.Drawing.Size(269, 54);
-            this.drugSupplierToolStripMenuItem.Text = "Drug Supplier";
-            this.drugSupplierToolStripMenuItem.Click += new System.EventHandler(this.drugSupplierToolStripMenuItem_Click);
             // 
             // Pha_Home
             // 

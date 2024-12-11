@@ -200,6 +200,7 @@ namespace Diploma_Final_Project_1
             // 
             // dataGridView_Diagnose
             // 
+            this.dataGridView_Diagnose.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_Diagnose.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Diagnose.Location = new System.Drawing.Point(29, 52);
             this.dataGridView_Diagnose.Name = "dataGridView_Diagnose";
@@ -233,6 +234,7 @@ namespace Diploma_Final_Project_1
             // 
             // dataGridView_Prescription
             // 
+            this.dataGridView_Prescription.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_Prescription.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Prescription.Location = new System.Drawing.Point(29, 52);
             this.dataGridView_Prescription.Name = "dataGridView_Prescription";
@@ -254,6 +256,7 @@ namespace Diploma_Final_Project_1
             // 
             // dataGridView_M_Certificate
             // 
+            this.dataGridView_M_Certificate.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_M_Certificate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_M_Certificate.Location = new System.Drawing.Point(29, 52);
             this.dataGridView_M_Certificate.Name = "dataGridView_M_Certificate";
@@ -275,6 +278,7 @@ namespace Diploma_Final_Project_1
             // 
             // dataGridView_LabReport
             // 
+            this.dataGridView_LabReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_LabReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_LabReport.Location = new System.Drawing.Point(41, 52);
             this.dataGridView_LabReport.Name = "dataGridView_LabReport";

@@ -273,5 +273,35 @@ namespace Diploma_Final_Project_1
             // Show the form inside the GroupBox
             form2.Show();
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            groupBox_drugOrder_Enter(null, EventArgs.Empty);
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            drugSupplierToolStripMenuItem_Click(null, EventArgs.Empty);
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            addDrugsToolStripMenuItem_Click(null, EventArgs.Empty);
+        }
+
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            groupBox_inventrory_Enter(null, EventArgs.Empty);
+        }
+
+        private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            groupBox_Patients_Enter(null, EventArgs.Empty);
+        }
+
+        private void linkLabel8_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            addDrugPaymentsToolStripMenuItem_Click(null, EventArgs.Empty);
+        }
     }
 }

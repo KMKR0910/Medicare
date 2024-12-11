@@ -29,6 +29,8 @@ namespace Diploma_Final_Project_1
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_appointmentNumber = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -70,7 +72,7 @@ namespace Diploma_Final_Project_1
             // 
             this.txt_appointmentNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_appointmentNumber.Location = new System.Drawing.Point(484, 267);
-            this.txt_appointmentNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_appointmentNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txt_appointmentNumber.Name = "txt_appointmentNumber";
             this.txt_appointmentNumber.Size = new System.Drawing.Size(228, 44);
             this.txt_appointmentNumber.TabIndex = 86;
@@ -91,7 +93,7 @@ namespace Diploma_Final_Project_1
             // 
             this.txt_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_name.Location = new System.Drawing.Point(484, 154);
-            this.txt_name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_name.Margin = new System.Windows.Forms.Padding(4);
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(352, 44);
             this.txt_name.TabIndex = 85;
@@ -100,7 +102,7 @@ namespace Diploma_Final_Project_1
             // 
             this.txt_pending.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_pending.Location = new System.Drawing.Point(532, 463);
-            this.txt_pending.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_pending.Margin = new System.Windows.Forms.Padding(4);
             this.txt_pending.Name = "txt_pending";
             this.txt_pending.Size = new System.Drawing.Size(352, 44);
             this.txt_pending.TabIndex = 86;
@@ -109,7 +111,7 @@ namespace Diploma_Final_Project_1
             // 
             this.txt_completed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_completed.Location = new System.Drawing.Point(532, 338);
-            this.txt_completed.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_completed.Margin = new System.Windows.Forms.Padding(4);
             this.txt_completed.Name = "txt_completed";
             this.txt_completed.Size = new System.Drawing.Size(352, 44);
             this.txt_completed.TabIndex = 85;
@@ -142,9 +144,9 @@ namespace Diploma_Final_Project_1
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(22, 633);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1360, 571);
             this.groupBox1.TabIndex = 87;
             this.groupBox1.TabStop = false;
@@ -155,7 +157,7 @@ namespace Diploma_Final_Project_1
             // 
             this.btn_complete.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_complete.Location = new System.Drawing.Point(48, 442);
-            this.btn_complete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_complete.Margin = new System.Windows.Forms.Padding(4);
             this.btn_complete.Name = "btn_complete";
             this.btn_complete.Size = new System.Drawing.Size(216, 108);
             this.btn_complete.TabIndex = 108;
@@ -199,7 +201,7 @@ namespace Diploma_Final_Project_1
             // splitContainer1
             // 
             this.splitContainer1.Location = new System.Drawing.Point(12, 121);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -226,7 +228,7 @@ namespace Diploma_Final_Project_1
             // 
             this.txt_appoinment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_appoinment.Location = new System.Drawing.Point(532, 206);
-            this.txt_appoinment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_appoinment.Margin = new System.Windows.Forms.Padding(4);
             this.txt_appoinment.Name = "txt_appoinment";
             this.txt_appoinment.Size = new System.Drawing.Size(352, 44);
             this.txt_appoinment.TabIndex = 80;
@@ -244,9 +246,26 @@ namespace Diploma_Final_Project_1
             // 
             // dataGridView_appointment
             // 
+            this.dataGridView_appointment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_appointment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_appointment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_appointment.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView_appointment.Location = new System.Drawing.Point(22, 121);
-            this.dataGridView_appointment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView_appointment.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView_appointment.Name = "dataGridView_appointment";
             this.dataGridView_appointment.RowHeadersWidth = 82;
             this.dataGridView_appointment.RowTemplate.Height = 33;
@@ -259,7 +278,7 @@ namespace Diploma_Final_Project_1
             this.dateTimePicker_AP_date.Enabled = false;
             this.dateTimePicker_AP_date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker_AP_date.Location = new System.Drawing.Point(20, 33);
-            this.dateTimePicker_AP_date.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker_AP_date.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker_AP_date.Name = "dateTimePicker_AP_date";
             this.dateTimePicker_AP_date.Size = new System.Drawing.Size(544, 44);
             this.dateTimePicker_AP_date.TabIndex = 83;
@@ -273,7 +292,7 @@ namespace Diploma_Final_Project_1
             this.ClientSize = new System.Drawing.Size(2428, 1448);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.dateTimePicker_AP_date);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Med_Appointments";
             this.Text = "Med_Appointments";
             this.Load += new System.EventHandler(this.Med_Appointments_Load);

@@ -669,7 +669,7 @@ namespace Diploma_Final_Project_1
 
         private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            LoadPatient();
         }
 
         private void groupBox_finance_Enter(object sender, EventArgs e)
@@ -684,7 +684,7 @@ namespace Diploma_Final_Project_1
 
         private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            LoadAddAppoinments();
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -694,12 +694,12 @@ namespace Diploma_Final_Project_1
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            LoadAddDoctorSession();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            LoadAppoinments();
         }
 
         private void groupBox10_Enter(object sender, EventArgs e)
@@ -762,7 +762,7 @@ namespace Diploma_Final_Project_1
 
         private void incomStatementsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            LoadFinance();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -790,6 +790,22 @@ namespace Diploma_Final_Project_1
 
             // Show the form inside the GroupBox
             form2.Show();
+        }
+
+        private void linkLabel3_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            patientRegisterToolStripMenuItem_Click(null, EventArgs.Empty);
+        }
+
+        private void linkLabel10_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            LoadViewPatientPayments();
+
+        }
+
+        private void linkLabel9_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            LoadFinance();
         }
     }
 }

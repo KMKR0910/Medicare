@@ -31,8 +31,9 @@ namespace Diploma_Final_Project_1
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Med_Home1));
             this.groupBox_Diagnose = new System.Windows.Forms.GroupBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.btn_diaganosisData = new System.Windows.Forms.Button();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.groupBox_Patients = new System.Windows.Forms.GroupBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btn_patients = new System.Windows.Forms.Button();
@@ -40,7 +41,6 @@ namespace Diploma_Final_Project_1
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btn_appoinments = new System.Windows.Forms.Button();
             this.groupBox_doctor_session = new System.Windows.Forms.GroupBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.btn_doctor_session = new System.Windows.Forms.Button();
             this.groupBox_UserProfile = new System.Windows.Forms.GroupBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -94,13 +94,13 @@ namespace Diploma_Final_Project_1
             this.linkLabel10 = new System.Windows.Forms.LinkLabel();
             this.linkLabel9 = new System.Windows.Forms.LinkLabel();
             this.groupBox_Diagnose.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.groupBox_Patients.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.groupBox_Appoinments.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.groupBox_doctor_session.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.groupBox_UserProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox_Home.SuspendLayout();
@@ -123,16 +123,16 @@ namespace Diploma_Final_Project_1
             this.groupBox_Diagnose.TabStop = false;
             this.groupBox_Diagnose.Enter += new System.EventHandler(this.groupBox_Diagnose_Enter);
             // 
-            // pictureBox7
+            // pictureBox6
             // 
-            this.pictureBox7.Image = global::Diploma_Final_Project_1.Properties.Resources.medical_record_line_icon_patient_diagnosis_report_linear_pictogram_health_information_on_clipboard_outline_icon_hospital_note_diagnostic_document_editable_stroke_isolated_illustration_vector;
-            this.pictureBox7.Location = new System.Drawing.Point(161, 66);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(251, 142);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 3;
-            this.pictureBox7.TabStop = false;
-            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
+            this.pictureBox6.Image = global::Diploma_Final_Project_1.Properties.Resources.images__3_;
+            this.pictureBox6.Location = new System.Drawing.Point(182, 67);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(251, 142);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 2;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // btn_diaganosisData
             // 
@@ -146,6 +146,17 @@ namespace Diploma_Final_Project_1
             this.btn_diaganosisData.Text = "Diagnosis Data";
             this.btn_diaganosisData.UseVisualStyleBackColor = false;
             this.btn_diaganosisData.Click += new System.EventHandler(this.btn_diaganosisData_Click);
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::Diploma_Final_Project_1.Properties.Resources.medical_record_line_icon_patient_diagnosis_report_linear_pictogram_health_information_on_clipboard_outline_icon_hospital_note_diagnostic_document_editable_stroke_isolated_illustration_vector;
+            this.pictureBox7.Location = new System.Drawing.Point(161, 66);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(251, 142);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 3;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // groupBox_Patients
             // 
@@ -227,17 +238,6 @@ namespace Diploma_Final_Project_1
             this.groupBox_doctor_session.TabIndex = 9;
             this.groupBox_doctor_session.TabStop = false;
             this.groupBox_doctor_session.Enter += new System.EventHandler(this.groupBox_doctor_session_Enter);
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::Diploma_Final_Project_1.Properties.Resources.images__3_;
-            this.pictureBox6.Location = new System.Drawing.Point(182, 67);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(251, 142);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 2;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // btn_doctor_session
             // 
@@ -743,6 +743,7 @@ namespace Diploma_Final_Project_1
             this.linkLabel10.TabIndex = 16;
             this.linkLabel10.TabStop = true;
             this.linkLabel10.Text = "Patient Payments";
+            this.linkLabel10.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel10_LinkClicked_1);
             // 
             // linkLabel9
             // 
@@ -753,6 +754,7 @@ namespace Diploma_Final_Project_1
             this.linkLabel9.TabIndex = 15;
             this.linkLabel9.TabStop = true;
             this.linkLabel9.Text = "Finance Reports";
+            this.linkLabel9.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel9_LinkClicked_1);
             // 
             // Med_Home1
             // 
@@ -768,13 +770,13 @@ namespace Diploma_Final_Project_1
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Med_Home1_Load);
             this.groupBox_Diagnose.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.groupBox_Patients.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.groupBox_Appoinments.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.groupBox_doctor_session.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.groupBox_UserProfile.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox_Home.ResumeLayout(false);
