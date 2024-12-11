@@ -96,6 +96,7 @@ namespace Diploma_Final_Project_1
             this.linkLabel2.TabIndex = 1;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "View Users";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // linkLabel1
             // 
@@ -106,6 +107,7 @@ namespace Diploma_Final_Project_1
             this.linkLabel1.TabIndex = 0;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Add User";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // fileToolStripMenuItem
             // 
@@ -297,6 +299,7 @@ namespace Diploma_Final_Project_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2909, 1583);
             this.Controls.Add(this.groupBox10);
             this.Controls.Add(this.menuStrip1);

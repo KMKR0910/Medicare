@@ -145,5 +145,15 @@ namespace Diploma_Final_Project_1
         {
             viewUsersToolStripMenuItem_Click(null, EventArgs.Empty);
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            userRegistrationToolStripMenuItem_Click(null, EventArgs.Empty);
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            viewUsersToolStripMenuItem_Click(null, EventArgs.Empty);
+        }
     }
 }

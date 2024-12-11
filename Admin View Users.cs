@@ -25,7 +25,10 @@ namespace Diploma_Final_Project_1
             btn_search.BackColor = customC;
             btn_Update.BackColor = customC;
             btn_all.BackColor = customC;
-           
+
+        
+
+
 
         }
         string userType;
@@ -146,7 +149,11 @@ namespace Diploma_Final_Project_1
                 dap.Fill(ds);
 
                 this.dataGridView_view_users.DataSource = ds.Tables[0];
-
+                dataGridView_view_users.Columns[0].HeaderText = "ID";
+                dataGridView_view_users.Columns[3].HeaderText = "Email";
+                dataGridView_view_users.Columns[4].HeaderText = "Contact Number";
+                dataGridView_view_users.Columns[5].HeaderText = "Date Of Birth";
+               
 
                 con.Close();
             }
@@ -265,8 +272,7 @@ namespace Diploma_Final_Project_1
                 {
                     // Get the current row
                     DataGridViewRow row = dataGridView_view_users.Rows[e.RowIndex];
-
-                    // Assuming you want the data from the first column (index 0)
+                   
                     string cellValue = row.Cells[0].Value.ToString();
                     string cellValue1 = row.Cells[1].Value.ToString();
                     string cellValue2 = row.Cells[2].Value.ToString();

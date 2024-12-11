@@ -103,8 +103,8 @@ namespace Diploma_Final_Project_1
             this.fileToolStripMenuItem,
             this.homeToolStripMenuItem,
             this.prescriptionToolStripMenuItem,
-            this.doctorSessionsToolStripMenuItem,
-            this.laboratoryTestsToolStripMenuItem});
+            this.laboratoryTestsToolStripMenuItem,
+            this.doctorSessionsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(1, 4, 0, 4);
@@ -193,10 +193,11 @@ namespace Diploma_Final_Project_1
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Location = new System.Drawing.Point(31, 263);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(331, 45);
+            this.linkLabel2.Size = new System.Drawing.Size(552, 90);
             this.linkLabel2.TabIndex = 1;
             this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Lab Test Prescription";
+            this.linkLabel2.Text = "Patient\'s Lab Test";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // linkLabel1
             // 
@@ -207,6 +208,7 @@ namespace Diploma_Final_Project_1
             this.linkLabel1.TabIndex = 0;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Lab Tests Price Lists";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // btn_LabTests
             // 
@@ -292,7 +294,7 @@ namespace Diploma_Final_Project_1
             // 
             this.groupBox_doctor_session.Controls.Add(this.pictureBox8);
             this.groupBox_doctor_session.Controls.Add(this.btn_doctor_session);
-            this.groupBox_doctor_session.Location = new System.Drawing.Point(915, 721);
+            this.groupBox_doctor_session.Location = new System.Drawing.Point(1669, 708);
             this.groupBox_doctor_session.Name = "groupBox_doctor_session";
             this.groupBox_doctor_session.Size = new System.Drawing.Size(560, 371);
             this.groupBox_doctor_session.TabIndex = 9;

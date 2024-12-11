@@ -32,10 +32,10 @@ namespace Diploma_Final_Project_1
             linkLabel4.LinkColor = customC;
             linkLabel5.LinkColor = customC;
             linkLabel6.LinkColor = customC;
-            linkLabel7.LinkColor = customC;
-            linkLabel8.LinkColor = customC;
+          
+            
             linkLabel9.LinkColor = customC;
-            linkLabel10.LinkColor = customC;
+           
           
 
 
@@ -396,6 +396,48 @@ namespace Diploma_Final_Project_1
 
             // Show the form inside the GroupBox
             form2.Show();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            LoadAppoinment();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            LoadDoctorSession();
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            medicalCertificateToolStripMenuItem_Click(null, EventArgs.Empty);
+        }
+
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            addDiagnositicDataToolStripMenuItem_Click(null, EventArgs.Empty);
+        }
+
+        private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            editDiagnosticDataToolStripMenuItem_Click(null, EventArgs.Empty);
+        }
+
+        private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            LoadPatient();
+        }
+
+        private void linkLabel9_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            financeToolStripMenuItem_Click(null, EventArgs.Empty);
+        }
+
+        private void logOutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Main_Dashboard form2 = new Main_Dashboard();
+            form2.Show();
+            this.Hide();
         }
     }
 }

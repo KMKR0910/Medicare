@@ -189,5 +189,15 @@ namespace Diploma_Final_Project_1
         {
             LoadDoctorSessions();
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            laboratoryTestsToolStripMenuItem_Click(null, EventArgs.Empty);
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            prescriptionToolStripMenuItem_Click(null, EventArgs.Empty);
+        }
     }
 }

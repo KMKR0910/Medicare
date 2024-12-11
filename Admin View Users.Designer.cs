@@ -29,6 +29,9 @@ namespace Diploma_Final_Project_1
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txt_pwd2 = new System.Windows.Forms.TextBox();
             this.txt_pwd1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -58,6 +61,7 @@ namespace Diploma_Final_Project_1
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btn_all = new System.Windows.Forms.Button();
             this.combobox_user = new System.Windows.Forms.ComboBox();
             this.btn_search = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
@@ -67,7 +71,6 @@ namespace Diploma_Final_Project_1
             this.label10 = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.btn_all = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_view_users)).BeginInit();
@@ -358,6 +361,17 @@ namespace Diploma_Final_Project_1
             this.groupBox2.TabIndex = 116;
             this.groupBox2.TabStop = false;
             // 
+            // btn_all
+            // 
+            this.btn_all.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_all.Location = new System.Drawing.Point(962, 15);
+            this.btn_all.Name = "btn_all";
+            this.btn_all.Size = new System.Drawing.Size(216, 55);
+            this.btn_all.TabIndex = 121;
+            this.btn_all.Text = "View All";
+            this.btn_all.UseVisualStyleBackColor = true;
+            this.btn_all.Click += new System.EventHandler(this.btn_all_Click);
+            // 
             // combobox_user
             // 
             this.combobox_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -407,9 +421,37 @@ namespace Diploma_Final_Project_1
             // 
             // dataGridView_view_users
             // 
-            this.dataGridView_view_users.ColumnHeadersHeight = 46;
+            this.dataGridView_view_users.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_view_users.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridView_view_users.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_view_users.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView_view_users.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_view_users.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView_view_users.Location = new System.Drawing.Point(1069, 169);
             this.dataGridView_view_users.Name = "dataGridView_view_users";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_view_users.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView_view_users.RowHeadersVisible = false;
             this.dataGridView_view_users.RowHeadersWidth = 82;
             this.dataGridView_view_users.RowTemplate.Height = 33;
             this.dataGridView_view_users.Size = new System.Drawing.Size(1275, 715);
@@ -458,17 +500,6 @@ namespace Diploma_Final_Project_1
             this.linkLabel1.TabIndex = 118;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Add Users";
-            // 
-            // btn_all
-            // 
-            this.btn_all.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_all.Location = new System.Drawing.Point(962, 15);
-            this.btn_all.Name = "btn_all";
-            this.btn_all.Size = new System.Drawing.Size(216, 55);
-            this.btn_all.TabIndex = 121;
-            this.btn_all.Text = "View All";
-            this.btn_all.UseVisualStyleBackColor = true;
-            this.btn_all.Click += new System.EventHandler(this.btn_all_Click);
             // 
             // Admin_View_Users
             // 

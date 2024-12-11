@@ -64,10 +64,7 @@ namespace Diploma_Final_Project_1
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
             this.linkLabel5 = new System.Windows.Forms.LinkLabel();
             this.linkLabel6 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel7 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel8 = new System.Windows.Forms.LinkLabel();
             this.linkLabel9 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel10 = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -93,6 +90,7 @@ namespace Diploma_Final_Project_1
             this.viewPatientLabTestsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.drugSupplierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.drugOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -443,16 +441,18 @@ namespace Diploma_Final_Project_1
             this.linkLabel1.TabIndex = 0;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Appoinments";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Location = new System.Drawing.Point(31, 154);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(321, 45);
+            this.linkLabel2.Size = new System.Drawing.Size(488, 90);
             this.linkLabel2.TabIndex = 1;
             this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "New Doctor Session";
+            this.linkLabel2.Text = "Doctor Session";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // linkLabel3
             // 
@@ -463,6 +463,7 @@ namespace Diploma_Final_Project_1
             this.linkLabel3.TabIndex = 2;
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "New Medical Certificates";
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
             // linkLabel4
             // 
@@ -473,6 +474,7 @@ namespace Diploma_Final_Project_1
             this.linkLabel4.TabIndex = 3;
             this.linkLabel4.TabStop = true;
             this.linkLabel4.Text = "New Diaganosis Data";
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
             // 
             // linkLabel5
             // 
@@ -483,6 +485,7 @@ namespace Diploma_Final_Project_1
             this.linkLabel5.TabIndex = 4;
             this.linkLabel5.TabStop = true;
             this.linkLabel5.Text = "Edit Diagnosis Data";
+            this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel5_LinkClicked);
             // 
             // linkLabel6
             // 
@@ -493,46 +496,18 @@ namespace Diploma_Final_Project_1
             this.linkLabel6.TabIndex = 5;
             this.linkLabel6.TabStop = true;
             this.linkLabel6.Text = "Patients Information";
-            // 
-            // linkLabel7
-            // 
-            this.linkLabel7.AutoSize = true;
-            this.linkLabel7.Location = new System.Drawing.Point(37, 677);
-            this.linkLabel7.Name = "linkLabel7";
-            this.linkLabel7.Size = new System.Drawing.Size(199, 45);
-            this.linkLabel7.TabIndex = 6;
-            this.linkLabel7.TabStop = true;
-            this.linkLabel7.Text = "Patients List";
-            // 
-            // linkLabel8
-            // 
-            this.linkLabel8.AutoSize = true;
-            this.linkLabel8.Location = new System.Drawing.Point(37, 987);
-            this.linkLabel8.Name = "linkLabel8";
-            this.linkLabel8.Size = new System.Drawing.Size(249, 45);
-            this.linkLabel8.TabIndex = 7;
-            this.linkLabel8.TabStop = true;
-            this.linkLabel8.Text = "Drug Payments";
+            this.linkLabel6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel6_LinkClicked);
             // 
             // linkLabel9
             // 
             this.linkLabel9.AutoSize = true;
-            this.linkLabel9.Location = new System.Drawing.Point(38, 1166);
+            this.linkLabel9.Location = new System.Drawing.Point(31, 977);
             this.linkLabel9.Name = "linkLabel9";
             this.linkLabel9.Size = new System.Drawing.Size(259, 45);
             this.linkLabel9.TabIndex = 8;
             this.linkLabel9.TabStop = true;
             this.linkLabel9.Text = "Finance Reports";
-            // 
-            // linkLabel10
-            // 
-            this.linkLabel10.AutoSize = true;
-            this.linkLabel10.Location = new System.Drawing.Point(37, 1076);
-            this.linkLabel10.Name = "linkLabel10";
-            this.linkLabel10.Size = new System.Drawing.Size(278, 45);
-            this.linkLabel10.TabIndex = 9;
-            this.linkLabel10.TabStop = true;
-            this.linkLabel10.Text = "Patient Payments";
+            this.linkLabel9.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel9_LinkClicked);
             // 
             // label1
             // 
@@ -570,10 +545,7 @@ namespace Diploma_Final_Project_1
             this.groupBox10.Controls.Add(this.label3);
             this.groupBox10.Controls.Add(this.label2);
             this.groupBox10.Controls.Add(this.label1);
-            this.groupBox10.Controls.Add(this.linkLabel10);
             this.groupBox10.Controls.Add(this.linkLabel9);
-            this.groupBox10.Controls.Add(this.linkLabel8);
-            this.groupBox10.Controls.Add(this.linkLabel7);
             this.groupBox10.Controls.Add(this.linkLabel6);
             this.groupBox10.Controls.Add(this.linkLabel5);
             this.groupBox10.Controls.Add(this.linkLabel4);
@@ -604,6 +576,8 @@ namespace Diploma_Final_Project_1
             // 
             // homeToolStripMenuItem
             // 
+            this.homeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.logOutToolStripMenuItem1});
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
             this.homeToolStripMenuItem.Size = new System.Drawing.Size(141, 54);
             this.homeToolStripMenuItem.Text = "Home";
@@ -755,6 +729,13 @@ namespace Diploma_Final_Project_1
             this.drugOrderToolStripMenuItem.Text = "Drug Order";
             this.drugOrderToolStripMenuItem.Click += new System.EventHandler(this.drugOrderToolStripMenuItem_Click);
             // 
+            // logOutToolStripMenuItem1
+            // 
+            this.logOutToolStripMenuItem1.Name = "logOutToolStripMenuItem1";
+            this.logOutToolStripMenuItem1.Size = new System.Drawing.Size(359, 58);
+            this.logOutToolStripMenuItem1.Text = "Log Out";
+            this.logOutToolStripMenuItem1.Click += new System.EventHandler(this.logOutToolStripMenuItem1_Click);
+            // 
             // Doctor_Home1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -831,10 +812,7 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.LinkLabel linkLabel4;
         private System.Windows.Forms.LinkLabel linkLabel5;
         private System.Windows.Forms.LinkLabel linkLabel6;
-        private System.Windows.Forms.LinkLabel linkLabel7;
-        private System.Windows.Forms.LinkLabel linkLabel8;
         private System.Windows.Forms.LinkLabel linkLabel9;
-        private System.Windows.Forms.LinkLabel linkLabel10;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -860,5 +838,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.ToolStripMenuItem drugSupplierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewPatientLabTestsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem drugOrderToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem1;
     }
 }
