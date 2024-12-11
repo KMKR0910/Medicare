@@ -16,5 +16,10 @@ namespace Diploma_Final_Project_1
         {
             InitializeComponent();
         }
+
+        private void View_Doctor_visits_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

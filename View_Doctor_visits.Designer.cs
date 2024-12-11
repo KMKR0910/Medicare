@@ -64,6 +64,7 @@ namespace Diploma_Final_Project_1
             this.Controls.Add(this.dateTimePicker1);
             this.Name = "View_Doctor_visits";
             this.Text = "View_Doctor_visits";
+            this.Load += new System.EventHandler(this.View_Doctor_visits_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_visits)).EndInit();
             this.ResumeLayout(false);
 
