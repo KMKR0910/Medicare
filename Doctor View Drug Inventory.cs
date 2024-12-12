@@ -43,7 +43,7 @@ namespace Diploma_Final_Project_1
 
 
                 string sql = @"
-                 SELECT * 
+                 SELECT [Drug_Name], [Drug_Price],[Pack Size],[Quantity],[Exp_date] 
                  FROM [tbl_drug_inventory] 
                
                   WHERE [Drug_Name] = @drugname";
@@ -57,7 +57,10 @@ namespace Diploma_Final_Project_1
                 dap.Fill(ds);
 
                 this.dataGridView1.DataSource = ds.Tables[0];
+                dataGridView1.Columns[0].HeaderText = "Drug Name";
 
+                dataGridView1.Columns[1].HeaderText = "Price";
+                dataGridView1.Columns[4].HeaderText = "Expire Date";
 
                 con.Close();
             }
@@ -83,7 +86,7 @@ namespace Diploma_Final_Project_1
 
 
                 string sql = @"
-                 SELECT * 
+                 SELECT [Drug_Name], [Drug_Price],[Pack Size],[Quantity],[Exp_date]
                  FROM [tbl_drug_inventory]";
                 SqlCommand com = new SqlCommand(sql, con);
 
@@ -94,6 +97,10 @@ namespace Diploma_Final_Project_1
                 dap.Fill(ds);
 
                 this.dataGridView1.DataSource = ds.Tables[0];
+                dataGridView1.Columns[0].HeaderText = "Drug Name";
+
+                dataGridView1.Columns[1].HeaderText = "Price";
+                dataGridView1.Columns[4].HeaderText = "Expire Date";
 
 
                 con.Close();
@@ -112,41 +119,15 @@ namespace Diploma_Final_Project_1
 
         private void btn_All_Click(object sender, EventArgs e)
         {
-            try
-            {
+            Doctor_View_Drug_Inventory_Load(null, EventArgs.Empty);
 
 
 
-                SqlConnection con = new SqlConnection(cs);
-                con.Open();
+        }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
-
-
-
-                string sql = @"
-                 SELECT * 
-                 FROM [tbl_drug_inventory] 
-               
-                ";
-                SqlCommand com = new SqlCommand(sql, con);
-
-     
-
-
-                SqlDataAdapter dap = new SqlDataAdapter(com);
-                DataSet ds = new DataSet();
-                dap.Fill(ds);
-
-                this.dataGridView1.DataSource = ds.Tables[0];
-
-
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
     }
 }

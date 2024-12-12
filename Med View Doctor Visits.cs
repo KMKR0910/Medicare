@@ -20,8 +20,14 @@ namespace Diploma_Final_Project_1
             btn_cancel.BackColor = customC;
             btn_delete.BackColor = customC;
             btn_save.BackColor = customC;
+            dateTimePicker2.ShowUpDown = true;
+            dateTimePicker2.Format = DateTimePickerFormat.Time;
+            dateTimePicker3.ShowUpDown = true;
+            dateTimePicker3.Format = DateTimePickerFormat.Time;
+
         }
         string date;
+        string cellValue3;
         private void Med_View_Doctor_Visits_Load(object sender, EventArgs e)
         {
             string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
@@ -39,12 +45,12 @@ namespace Diploma_Final_Project_1
 
 
                 string sql = @"
-                SELECT TOP 1 [SessionDate],[StartTime]
-            FROM [DoctorSessions] 
-            
-            
-            WHERE [SessionDate] = @date";
-                ;
+           SELECT 
+        [SessionID],
+          [StartTime] ,
+        [EndTime]  
+         FROM [DoctorSessions]
+         WHERE [SessionDate] = @date";
                 SqlCommand com = new SqlCommand(sql, con);
 
                 com.Parameters.AddWithValue("@date", dateTimePicker1.Value.Date);
@@ -82,7 +88,7 @@ namespace Diploma_Final_Project_1
 
                 string sql = @"
            SELECT 
-        [SessionDate],
+        [SessionID],
           [StartTime] ,
         [EndTime]  
          FROM [DoctorSessions]
@@ -117,7 +123,7 @@ namespace Diploma_Final_Project_1
                 DataGridViewRow row = dataGridView_visits.Rows[e.RowIndex];
 
                 // Assuming you want the data from the first column (index 0)
-                date = row.Cells[0].Value.ToString();
+                cellValue3 = row.Cells[0].Value.ToString();
                 string cellValue = row.Cells[1].Value.ToString();
                 string cellValue2 = row.Cells[2].Value.ToString();
 
@@ -138,24 +144,25 @@ namespace Diploma_Final_Project_1
                 con.Open();
 
 
-                string query = "UPDATE [DoctorSessions] SET [StartTime]=@starttime,[EndTime] =@endtime WHERE [SessionDate]=@date";
+                string query = "UPDATE [DoctorSessions] SET [StartTime]=@starttime,[EndTime] =@endtime WHERE [SessionID]=@id";
                            
                 SqlCommand cmd = new SqlCommand(query, con);
 
                 cmd.Parameters.AddWithValue("@starttime", dateTimePicker2.Text);
                 cmd.Parameters.AddWithValue("@endtime", dateTimePicker3.Text);
-                cmd.Parameters.AddWithValue("@date", date);
+                cmd.Parameters.AddWithValue("@id", cellValue3);
 
 
 
                 int ret = cmd.ExecuteNonQuery();
                 if (ret > 0)
                 {
-                    MessageBox.Show("Added successfully");
+                    MessageBox.Show("Saved successfully");
+                    dateTimePicker1_ValueChanged(null, EventArgs.Empty);
 
 
-                
-            }
+
+                }
                 con.Close();
 
             }
@@ -168,6 +175,48 @@ namespace Diploma_Final_Project_1
         private void btn_delete_Click(object sender, EventArgs e)
         {
 
+            string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
+
+            try
+            {
+
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+
+
+                string query = "DELETE FROM DoctorSessions WHERE SessionID = @sessionId";
+                SqlCommand cmd = new SqlCommand(query, con);
+
+               
+                cmd.Parameters.AddWithValue("@sessionId", cellValue3);
+
+
+
+                int ret = cmd.ExecuteNonQuery();
+                if (ret > 0)
+                {
+                    MessageBox.Show("Deleted successfully");
+                    dateTimePicker1_ValueChanged(null, EventArgs.Empty);
+
+
+
+                }
+                con.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            dateTimePicker2.Value = DateTime.Today.Date.AddHours(0).AddMinutes(0);
+
+            dateTimePicker3.Value = DateTime.Today.Date.AddHours(0).AddMinutes(0);
+
         }
     }
-}
+    }
+

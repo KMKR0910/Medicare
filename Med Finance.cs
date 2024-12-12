@@ -202,8 +202,8 @@ ORDER BY PaymentDate;
                     SqlConnection con = new SqlConnection(cs);
                     con.Open();
 
-            
-                if (comboBox_type.SelectedIndex == 0)
+
+                /*if (comboBox_type.SelectedIndex == 0)
                 {
                     startDate = DateTime.Now.AddDays(-365);
                     endDate = DateTime.Now;
@@ -213,10 +213,10 @@ ORDER BY PaymentDate;
                     startDate = DateTime.Now.AddDays(-7);
                     endDate = DateTime.Now;
                 }
+                */
 
-
-               // string startDate = dateTimePicker_start.Value.Date.ToString();
-                //string endDate = dateTimePicker_end.Value.Date.ToString();
+                 startDate = dateTimePicker_start.Value.Date;
+                 endDate = dateTimePicker_end.Value.Date;
 
                     String pay1 = "Drug";
 
@@ -422,6 +422,16 @@ ORDER BY PaymentDate;
         }
 
         private void comboBox_type_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }

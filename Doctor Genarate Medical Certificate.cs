@@ -22,6 +22,7 @@ namespace Diploma_Final_Project_1
             Color customC = ColorTranslator.FromHtml("#9083D5 ");
             btn_search.BackColor = customC;
             btn_genarate.BackColor = customC;
+            button1.BackColor = customC;
 
             btn_cancel.BackColor = customC;
             

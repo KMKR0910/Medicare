@@ -19,6 +19,7 @@ namespace Diploma_Final_Project_1
           
             Color customC = ColorTranslator.FromHtml("#9083D5 ");
             btn_search.BackColor = customC;
+            btn_All.BackColor = customC;
            
         }
         
@@ -39,7 +40,7 @@ namespace Diploma_Final_Project_1
 
 
                 string sql = @"
-                 SELECT *
+                 SELECT [Test_Name],[Test_Price],[Description]
                  FROM [tbl_lab_tests] 
                
                   WHERE Test_Name = @name";
@@ -53,6 +54,9 @@ namespace Diploma_Final_Project_1
                 dap.Fill(ds);
 
                 this.dataGridView_lab_tests.DataSource = ds.Tables[0];
+                dataGridView_lab_tests.Columns[0].HeaderText = "Test Name";
+
+                dataGridView_lab_tests.Columns[1].HeaderText = "Price";
 
 
                 con.Close();
@@ -80,7 +84,7 @@ namespace Diploma_Final_Project_1
 
 
                 string sql = @"
-                 SELECT *
+                  SELECT [Test_Name],[Test_Price],[Description]
                  FROM [tbl_lab_tests] ";
                 SqlCommand com = new SqlCommand(sql, con);
 
@@ -92,6 +96,10 @@ namespace Diploma_Final_Project_1
                 dap.Fill(ds);
 
                 this.dataGridView_lab_tests.DataSource = ds.Tables[0];
+                dataGridView_lab_tests.Columns[0].HeaderText = "Test Name"; 
+
+                dataGridView_lab_tests.Columns[1].HeaderText = "Price"; 
+
 
 
                 con.Close();
@@ -113,9 +121,9 @@ namespace Diploma_Final_Project_1
 
                     // Assuming you want the data from the first column (index 0)
                     
-                    string cellValue = row.Cells[1].Value.ToString();
-                    string cellValue1 = row.Cells[2].Value.ToString();
-                    string cellValue2 = row.Cells[3].Value.ToString();
+                    string cellValue = row.Cells[0].Value.ToString();
+                    string cellValue1 = row.Cells[1].Value.ToString();
+                    string cellValue2 = row.Cells[2].Value.ToString();
 
 
                     // Set the value to the TextBox

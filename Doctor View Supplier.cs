@@ -44,7 +44,8 @@ namespace Diploma_Final_Project_1
 
 
                 string sql = @"
-                 SELECT * 
+                                 SELECT [Company_Name],[Supplier_Name],[Company_Address],[Contact_Number],[Email]
+
                  FROM [tbl_drug_supplier] 
                 ";
                 SqlCommand com = new SqlCommand(sql, con);
@@ -57,6 +58,10 @@ namespace Diploma_Final_Project_1
                 dap.Fill(ds);
 
                 this.dataGridView_drug_types.DataSource = ds.Tables[0];
+                dataGridView_drug_types.Columns[0].HeaderText = "Company Name";
+                dataGridView_drug_types.Columns[1].HeaderText = "Supplier Name";
+                dataGridView_drug_types.Columns[2].HeaderText = "Company Address";
+                dataGridView_drug_types.Columns[3].HeaderText = "Contact Number";
 
 
                 con.Close();
@@ -83,7 +88,7 @@ namespace Diploma_Final_Project_1
 
 
                 string sql = @"
-                 SELECT * 
+                 SELECT [Company_Name],[Supplier_Name],[Company_Address],[Contact_Number],[Email]
                  FROM [tbl_drug_supplier]
 WHERE [Company_Name] = @name
                 ";
@@ -97,6 +102,11 @@ WHERE [Company_Name] = @name
                 dap.Fill(ds);
 
                 this.dataGridView_drug_types.DataSource = ds.Tables[0];
+                dataGridView_drug_types.Columns[0].HeaderText = "Company Name";
+                dataGridView_drug_types.Columns[1].HeaderText = "Supplier Name";
+                dataGridView_drug_types.Columns[2].HeaderText = "Company Address";
+                dataGridView_drug_types.Columns[3].HeaderText = "Contact Number";
+
 
 
                 con.Close();
@@ -117,11 +127,11 @@ WHERE [Company_Name] = @name
                 // Assuming you want the data from the first column (index 0)
 
               
-                string cellValue1 = row.Cells[1].Value.ToString();
-                string cellValue2 = row.Cells[2].Value.ToString();
-                string cellValue3 = row.Cells[3].Value.ToString();
-                string cellValue4 = row.Cells[4].Value.ToString();
-                string cellValue5 = row.Cells[5].Value.ToString();
+                string cellValue1 = row.Cells[0].Value.ToString();
+                string cellValue2 = row.Cells[1].Value.ToString();
+                string cellValue3 = row.Cells[2].Value.ToString();
+                string cellValue4 = row.Cells[3].Value.ToString();
+                string cellValue5 = row.Cells[4].Value.ToString();
 
 
                 txt_company.Text = cellValue1;

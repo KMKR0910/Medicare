@@ -89,7 +89,8 @@ namespace Diploma_Final_Project_1
             this.viewLabTestPricelistsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewPatientLabTestsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.drugSupplierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.drugOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewDrugOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.doctorSessionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -622,8 +623,8 @@ namespace Diploma_Final_Project_1
             // editDiagnosticDataToolStripMenuItem
             // 
             this.editDiagnosticDataToolStripMenuItem.Name = "editDiagnosticDataToolStripMenuItem";
-            this.editDiagnosticDataToolStripMenuItem.Size = new System.Drawing.Size(511, 58);
-            this.editDiagnosticDataToolStripMenuItem.Text = "Edit Diagnostic Data";
+            this.editDiagnosticDataToolStripMenuItem.Size = new System.Drawing.Size(512, 58);
+            this.editDiagnosticDataToolStripMenuItem.Text = "View Diagnostic Data";
             this.editDiagnosticDataToolStripMenuItem.Click += new System.EventHandler(this.editDiagnosticDataToolStripMenuItem_Click);
             // 
             // financeToolStripMenuItem
@@ -637,7 +638,8 @@ namespace Diploma_Final_Project_1
             // 
             this.drugInventoryReportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewDrugInventoryToolStripMenuItem,
-            this.viewDrugInventoryReportToolStripMenuItem});
+            this.viewDrugInventoryReportToolStripMenuItem,
+            this.viewDrugOrderToolStripMenuItem});
             this.drugInventoryReportToolStripMenuItem.Name = "drugInventoryReportToolStripMenuItem";
             this.drugInventoryReportToolStripMenuItem.Size = new System.Drawing.Size(299, 54);
             this.drugInventoryReportToolStripMenuItem.Text = "Drug Inventory ";
@@ -675,11 +677,11 @@ namespace Diploma_Final_Project_1
             this.laborataryToolStripMenuItem,
             this.drugInventoryReportToolStripMenuItem,
             this.drugSupplierToolStripMenuItem,
-            this.drugOrderToolStripMenuItem});
+            this.doctorSessionToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(1, 4, 0, 4);
-            this.menuStrip1.Size = new System.Drawing.Size(2883, 62);
+            this.menuStrip1.Size = new System.Drawing.Size(1441, 62);
             this.menuStrip1.TabIndex = 13;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -720,24 +722,32 @@ namespace Diploma_Final_Project_1
             this.drugSupplierToolStripMenuItem.Text = "Drug Suppliers";
             this.drugSupplierToolStripMenuItem.Click += new System.EventHandler(this.drugSupplierToolStripMenuItem_Click);
             // 
-            // drugOrderToolStripMenuItem
+            // viewDrugOrderToolStripMenuItem
             // 
-            this.drugOrderToolStripMenuItem.Name = "drugOrderToolStripMenuItem";
-            this.drugOrderToolStripMenuItem.Size = new System.Drawing.Size(229, 54);
-            this.drugOrderToolStripMenuItem.Text = "Drug Order";
-            this.drugOrderToolStripMenuItem.Click += new System.EventHandler(this.drugOrderToolStripMenuItem_Click);
+            this.viewDrugOrderToolStripMenuItem.Name = "viewDrugOrderToolStripMenuItem";
+            this.viewDrugOrderToolStripMenuItem.Size = new System.Drawing.Size(618, 58);
+            this.viewDrugOrderToolStripMenuItem.Text = "View Drug Order";
+            this.viewDrugOrderToolStripMenuItem.Click += new System.EventHandler(this.viewDrugOrderToolStripMenuItem_Click);
+            // 
+            // doctorSessionToolStripMenuItem
+            // 
+            this.doctorSessionToolStripMenuItem.Name = "doctorSessionToolStripMenuItem";
+            this.doctorSessionToolStripMenuItem.Size = new System.Drawing.Size(288, 54);
+            this.doctorSessionToolStripMenuItem.Text = "Doctor Session";
+            this.doctorSessionToolStripMenuItem.Click += new System.EventHandler(this.doctorSessionToolStripMenuItem_Click);
             // 
             // Doctor_Home1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(2883, 1512);
+            this.ClientSize = new System.Drawing.Size(1441, 756);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBox10);
             this.Controls.Add(this.groupBoxloc);
             this.Name = "Doctor_Home1";
             this.Text = "Doctor Dashboard";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Doctor_Home1_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -828,6 +838,7 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.ToolStripMenuItem viewLabTestPricelistsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem drugSupplierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewPatientLabTestsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem drugOrderToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewDrugOrderToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem doctorSessionToolStripMenuItem;
     }
 }

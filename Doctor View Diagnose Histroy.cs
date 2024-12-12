@@ -92,7 +92,7 @@ namespace Diploma_Final_Project_1
 
 
                     string sql = @"
-                 SELECT td.* 
+                 SELECT td.[DiagnosNumber],td.[Allergies],td.[Description],p.[Name] 
                  FROM tbl_diagnostic_data td
                  INNER JOIN tbl_patient_info p ON td.patient_id = p.[Patient ID]
                   WHERE p.[Contact Number] = @number";
@@ -122,7 +122,7 @@ namespace Diploma_Final_Project_1
         {
             if (e.RowIndex >= 0)
             {
-                GetPatientName();
+                
                 // Get the current row
                 DataGridViewRow row = dataGridView_diagnose.Rows[e.RowIndex];
 
@@ -130,15 +130,17 @@ namespace Diploma_Final_Project_1
                  cellValue = row.Cells[0].Value.ToString();
                 
 
-                string cellValue1 = row.Cells[4].Value.ToString();
+                string cellValue1 = row.Cells[1].Value.ToString();
                 string cellValue2 = row.Cells[2].Value.ToString();
-     
+                string cellValue3 = row.Cells[3].Value.ToString();
+
 
                 // Set the value to the TextBox
-              
+
                 txt_allergies.Text = cellValue1;
                 txt_description.Text = cellValue2;
-             
+                txt_name.Text = cellValue3;
+
 
             }
         }
@@ -220,12 +222,7 @@ namespace Diploma_Final_Project_1
             try
             {
 
-                if (string.IsNullOrEmpty(this.txt_search.Text))
-                {
-                    MessageBox.Show("All required fields must be filled.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
+               
 
 
 
@@ -234,12 +231,12 @@ namespace Diploma_Final_Project_1
                     SqlConnection con = new SqlConnection(cs);
                     con.Open();
 
+              
 
 
 
-
-                    string sql = @"
-                 SELECT td.* 
+                string sql = @"
+                 SELECT td.[DiagnosNumber],td.[Allergies],td.[Description],p.[Name] 
                  FROM tbl_diagnostic_data td
                  INNER JOIN tbl_patient_info p ON td.patient_id = p.[Patient ID]
                   ";
@@ -257,7 +254,7 @@ namespace Diploma_Final_Project_1
 
                     con.Close();
                 }
-            }
+            
             catch (Exception ex)
             {
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

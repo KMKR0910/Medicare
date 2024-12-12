@@ -122,10 +122,10 @@ namespace Diploma_Final_Project_1
                     // Move to the next session
                     currentSessionStartTime = currentSessionEndTime;
                 }
-                MessageBox.Show("Added Successfully", "Information");
+                
 
             }
-
+            MessageBox.Show("Added Successfully", "Information");
         }
 
         private void SaveToDatabase(string day, string startTime, string endTime, int appointmentNumber)

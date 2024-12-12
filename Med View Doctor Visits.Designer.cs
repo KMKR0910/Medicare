@@ -66,7 +66,7 @@ namespace Diploma_Final_Project_1
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView_visits.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView_visits.Location = new System.Drawing.Point(52, 110);
-            this.dataGridView_visits.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView_visits.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView_visits.Name = "dataGridView_visits";
             this.dataGridView_visits.RowHeadersWidth = 82;
             this.dataGridView_visits.RowTemplate.Height = 33;
@@ -78,7 +78,7 @@ namespace Diploma_Final_Project_1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Location = new System.Drawing.Point(52, 23);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(584, 44);
             this.dateTimePicker1.TabIndex = 1;
@@ -94,9 +94,9 @@ namespace Diploma_Final_Project_1
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(76, 752);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(2312, 552);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
@@ -105,18 +105,19 @@ namespace Diploma_Final_Project_1
             // 
             this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancel.Location = new System.Drawing.Point(1744, 388);
-            this.btn_cancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_cancel.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(216, 90);
             this.btn_cancel.TabIndex = 121;
             this.btn_cancel.Text = "Clear";
             this.btn_cancel.UseVisualStyleBackColor = true;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // btn_delete
             // 
             this.btn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_delete.Location = new System.Drawing.Point(1016, 388);
-            this.btn_delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(4);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(216, 90);
             this.btn_delete.TabIndex = 120;
@@ -128,7 +129,7 @@ namespace Diploma_Final_Project_1
             // 
             this.btn_save.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_save.Location = new System.Drawing.Point(336, 388);
-            this.btn_save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_save.Margin = new System.Windows.Forms.Padding(4);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(216, 90);
             this.btn_save.TabIndex = 119;
@@ -141,7 +142,7 @@ namespace Diploma_Final_Project_1
             this.dateTimePicker3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dateTimePicker3.Location = new System.Drawing.Point(1188, 158);
-            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(400, 44);
             this.dateTimePicker3.TabIndex = 118;
@@ -151,7 +152,7 @@ namespace Diploma_Final_Project_1
             this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dateTimePicker2.Location = new System.Drawing.Point(1188, 69);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(400, 44);
             this.dateTimePicker2.TabIndex = 117;
@@ -187,7 +188,7 @@ namespace Diploma_Final_Project_1
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.dataGridView_visits);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Med_View_Doctor_Visits";
             this.Text = "Med_View_Doctor_Visits";
             this.Load += new System.EventHandler(this.Med_View_Doctor_Visits_Load);
