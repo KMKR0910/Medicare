@@ -93,6 +93,13 @@ namespace Diploma_Final_Project_1
                 dap.Fill(ds);
 
                 this.dataGridView_lab.DataSource = ds.Tables[0];
+                dataGridView_lab.Columns[0].HeaderText = "Lab Report ID";
+                dataGridView_lab.Columns[1].HeaderText = "Test Name";
+                dataGridView_lab.Columns[2].HeaderText = "Status";
+                dataGridView_lab.Columns[3].HeaderText = "Price";
+                dataGridView_lab.Columns[4].HeaderText = "Blood Collected Date";
+                dataGridView_lab.Columns[5].HeaderText = "Report Released Date";
+                dataGridView_lab.Columns[7].HeaderText = "Lab Test Number";
 
 
                 con.Close();

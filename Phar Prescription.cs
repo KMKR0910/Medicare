@@ -145,7 +145,7 @@ namespace Diploma_Final_Project_1
 
 
                 string sql = @"
-                 SELECT td.* 
+                 SELECT td.[Medicine],td.[Dosage],td.[Duration],td.[date],td.[PrescriptionNumber]
                  FROM [tbl_prescript] td
                  INNER JOIN tbl_patient_info p ON td.patientid = p.[Patient ID]
                   WHERE p.[Contact Number] = @number";
@@ -159,6 +159,8 @@ namespace Diploma_Final_Project_1
                 dap.Fill(ds);
 
                 this.dataGridView_Prescription.DataSource = ds.Tables[0];
+                dataGridView_Prescription.Columns[3].HeaderText = "Date";
+
 
 
                 con.Close();
@@ -180,13 +182,13 @@ namespace Diploma_Final_Project_1
 
                     // Assuming you want the data from the first column (index 0)
 
-                    string cellValue2 = row.Cells[1].Value.ToString();
-                    string cellValue3 = row.Cells[2].Value.ToString();
-                    string cellValue4 = row.Cells[3].Value.ToString();
-                    string cellValue5 = row.Cells[5].Value.ToString();
+                    string cellValue2 = row.Cells[0].Value.ToString();
+                    string cellValue3 = row.Cells[1].Value.ToString();
+                    string cellValue4 = row.Cells[2].Value.ToString();
+                    string cellValue5 = row.Cells[4].Value.ToString();
                     // Set the value to the TextBox
                     txt_medicine.Text = cellValue2;
-                    txt_dosage.Text = cellValue2;
+                    txt_dosage.Text = cellValue3;
                     txt_duration.Text = cellValue4;
                     txt_prescripton_number.Text = cellValue5;
                 }
@@ -259,7 +261,7 @@ namespace Diploma_Final_Project_1
 
 
                 string sql = @"
-                 SELECT td.* 
+                 SELECT td.[Medicine],td.[Dosage],td.[Duration],td.[date],td.[PrescriptionNumber]
                  FROM [tbl_prescript] td
                  INNER JOIN tbl_patient_info p ON td.patientid = p.[Patient ID]
                   WHERE p.[Contact Number] = @number
@@ -276,6 +278,8 @@ namespace Diploma_Final_Project_1
                 dap.Fill(ds);
 
                 this.dataGridView_Prescription.DataSource = ds.Tables[0];
+                dataGridView_Prescription.Columns[3].HeaderText = "Date";
+
 
 
                 con.Close();

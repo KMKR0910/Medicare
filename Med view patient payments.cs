@@ -42,7 +42,7 @@ namespace Diploma_Final_Project_1
                 string cellValue5 = row.Cells[0].Value.ToString();
                 // Set the value to the TextBox
                 txt_patient.Text = cellValue5;
-                txt_pay_type.Text = cellValue2;
+               
                 dateTimePicker_date.Text = cellValue4;
                 numericUpDownCost.Value = Convert.ToDecimal(cellValue3);
 
@@ -109,7 +109,7 @@ namespace Diploma_Final_Project_1
         private void btn_update_Click(object sender, EventArgs e)
         {
 
-
+            txt_patient_TextChanged(null, EventArgs.Empty);
 
 
 
@@ -124,14 +124,14 @@ namespace Diploma_Final_Project_1
                 con1.Open();
 
 
-
-                string sql = "UPDATE  [tbl_Patient_Payment] SET [Date] =@date, [Payment Type] =@paymentType,[Total_Cost] =@cost,[patirnt_ID] =@id, WHERE  Patient_pay_ID=@pay_ID";
+                MessageBox.Show(PID);
+                string sql = "UPDATE  [tbl_Patient_Payment] SET [Date] =@date, [Payment Type] =@paymentType,[Total_Cost] =@cost,[patirnt_ID] =@id WHERE  Patient_pay_ID=@pay_ID";
 
                 SqlCommand com = new SqlCommand(sql, con1);
 
-                com.Parameters.AddWithValue("@id", this.PID);
+                com.Parameters.AddWithValue("@id", PID);
                 com.Parameters.AddWithValue("@date", this.dateTimePicker_date.Value.Date);
-                com.Parameters.AddWithValue("@paymentType", this.txt_pay_type);
+                com.Parameters.AddWithValue("@paymentType", this.comboBox_pay_type.Text);
 
                 com.Parameters.AddWithValue("@cost", this.numericUpDownCost.Value);
                 com.Parameters.AddWithValue("@pay_ID", this.cellValue);
@@ -183,7 +183,7 @@ namespace Diploma_Final_Project_1
                     DataRow rows = ds.Tables[0].Rows[0];
 
 
-                    this.PID = rows["Patient ID"].ToString();
+                    PID = rows["Patient ID"].ToString();
 
                 }
                 con.Close();
@@ -193,6 +193,52 @@ namespace Diploma_Final_Project_1
             {
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
+
+
+                SqlConnection con1 = new SqlConnection(cs);
+                con1.Open();
+
+
+                string sql = "DELETE  " +
+                             "FROM [tbl_Patient_Payment] " +
+
+                             "WHERE [Patient_pay_ID] = @number ";
+
+                SqlCommand com = new SqlCommand(sql, con1);
+
+                com.Parameters.AddWithValue("@number", cellValue);
+
+
+                int ret = com.ExecuteNonQuery();
+                if (ret > 0)
+                {
+                    MessageBox.Show("Deleted", "Information");
+                   
+                }
+
+
+                con1.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            txt_patient.Clear();
+            txt_pay_type.Clear();
+            numericUpDownCost.Value = 0;
         }
     }
 }

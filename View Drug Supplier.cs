@@ -74,7 +74,7 @@ namespace Diploma_Final_Project_1
 
 
                 string sql = @"
-                 SELECT * 
+                 SELECT [Supplier_ID],[Company_Name],[Supplier_Name],[Company_Address],[Contact_Number],[Email]
                  FROM [tbl_drug_supplier] 
                 ";
                 SqlCommand com = new SqlCommand(sql, con);
@@ -87,6 +87,11 @@ namespace Diploma_Final_Project_1
                 dap.Fill(ds);
 
                 this.dataGridView_drug_supplier.DataSource = ds.Tables[0];
+                dataGridView_drug_supplier.Columns[0].HeaderText = "Supplier ID";
+                dataGridView_drug_supplier.Columns[1].HeaderText = "Company Name";
+                dataGridView_drug_supplier.Columns[2].HeaderText = "Supplier Name";
+                dataGridView_drug_supplier.Columns[3].HeaderText = "Adress";
+                dataGridView_drug_supplier.Columns[4].HeaderText = "Contact Number";
 
 
                 con.Close();

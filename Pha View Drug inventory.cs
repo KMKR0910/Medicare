@@ -157,6 +157,10 @@ namespace Diploma_Final_Project_1
                     dap.Fill(ds);
 
                     this.dataGridView1.DataSource = ds.Tables[0];
+                    dataGridView1.Columns[0].HeaderText = "Drug ID";
+                    dataGridView1.Columns[1].HeaderText = "Name";
+                    dataGridView1.Columns[3].HeaderText = "Price";
+                    dataGridView1.Columns[4].HeaderText = "Expire Date";
 
 
                     con.Close();
@@ -196,6 +200,12 @@ namespace Diploma_Final_Project_1
                 dap.Fill(ds);
 
                 this.dataGridView1.DataSource = ds.Tables[0];
+                dataGridView1.Columns[0].HeaderText = "Drug ID";
+                dataGridView1.Columns[1].HeaderText = "Name";
+                dataGridView1.Columns[3].HeaderText = "Price";
+                dataGridView1.Columns[4].HeaderText = "Expire Date";
+               
+
 
 
                 con.Close();

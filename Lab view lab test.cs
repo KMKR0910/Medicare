@@ -61,6 +61,9 @@ namespace Diploma_Final_Project_1
                     dap.Fill(ds);
 
                     this.dataGridView_lab_tests.DataSource = ds.Tables[0];
+                    dataGridView_lab_tests.Columns[0].HeaderText = "ID";
+                    dataGridView_lab_tests.Columns[1].HeaderText = "Name";
+                    dataGridView_lab_tests.Columns[2].HeaderText = "Price";
 
 
                     con.Close();
@@ -102,6 +105,9 @@ namespace Diploma_Final_Project_1
 
                 this.dataGridView_lab_tests.DataSource = ds.Tables[0];
 
+                dataGridView_lab_tests.Columns[0].HeaderText = "ID";
+                dataGridView_lab_tests.Columns[1].HeaderText = "Name";
+                dataGridView_lab_tests.Columns[2].HeaderText = "Price";
 
                 con.Close();
             }
