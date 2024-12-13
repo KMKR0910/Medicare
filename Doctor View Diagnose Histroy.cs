@@ -193,7 +193,7 @@ namespace Diploma_Final_Project_1
                     if (ret == 1)
                     {
                         MessageBox.Show("Updated", "Information");
-                        btn_search_Click(null, EventArgs.Empty);
+                        button1_Click(null, EventArgs.Empty);
 
 
                     }

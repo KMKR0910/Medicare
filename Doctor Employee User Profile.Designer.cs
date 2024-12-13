@@ -121,6 +121,7 @@ namespace Diploma_Final_Project_1
             this.txt_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_name.Location = new System.Drawing.Point(345, 221);
             this.txt_name.Name = "txt_name";
+            this.txt_name.ReadOnly = true;
             this.txt_name.Size = new System.Drawing.Size(519, 44);
             this.txt_name.TabIndex = 80;
             this.txt_name.TextChanged += new System.EventHandler(this.txt_name_TextChanged);
@@ -130,6 +131,7 @@ namespace Diploma_Final_Project_1
             this.txt_Postion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Postion.Location = new System.Drawing.Point(345, 136);
             this.txt_Postion.Name = "txt_Postion";
+            this.txt_Postion.ReadOnly = true;
             this.txt_Postion.Size = new System.Drawing.Size(519, 44);
             this.txt_Postion.TabIndex = 81;
             this.txt_Postion.TextChanged += new System.EventHandler(this.txt_Postion_TextChanged);

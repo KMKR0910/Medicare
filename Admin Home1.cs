@@ -18,7 +18,7 @@ namespace Diploma_Final_Project_1
             Color customC = ColorTranslator.FromHtml("#9083D5 ");
             btn_employee.BackColor = customC;
             btn_home.BackColor = customC;
-
+            
             btn_userProfile.BackColor = customC;
             linkLabel1.LinkColor = customC;
             linkLabel2.LinkColor = customC;
