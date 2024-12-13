@@ -142,7 +142,7 @@ namespace Diploma_Final_Project_1
 
 
                 string sql = @"
-                 SELECT td.* 
+                 SELECT td.[Allergies], td.[Description],td.[Medications]
                  FROM tbl_diagnostic_data td
                  INNER JOIN tbl_patient_info p ON td.patient_id = p.[Patient ID]
                   WHERE p.[Contact Number] = @number";
@@ -178,9 +178,9 @@ namespace Diploma_Final_Project_1
 
 
                 string sql = @"
-                 SELECT td.* 
-                 FROM [tbl_prescription] td
-                 INNER JOIN tbl_patient_info p ON td.[Patient ID] = p.[Patient ID]
+                 SELECT td.[date],td.[Medicine],td.[Dosage],td.[Duration] 
+                 FROM [tbl_prescript] td
+                 INNER JOIN tbl_patient_info p ON td.patientid = p.[Patient ID]
                   WHERE p.[Contact Number] = @number";
                 SqlCommand com = new SqlCommand(sql, con);
 
@@ -192,6 +192,7 @@ namespace Diploma_Final_Project_1
                 dap.Fill(ds);
 
                 this.dataGridView_Prescription.DataSource = ds.Tables[0];
+                dataGridView_Prescription.Columns[0].HeaderText = "Date";
 
 
                 con.Close();
@@ -214,7 +215,7 @@ namespace Diploma_Final_Project_1
 
 
                 string sql = @"
-                 SELECT td.* 
+                 SELECT td.[Issued Date],td.[Description],td.[Start Date],td.[End Date]
                  FROM [tbl_M_certificate] td
                  INNER JOIN tbl_patient_info p ON td.[Patient ID] = p.[Patient ID]
                   WHERE p.[Contact Number] = @number";
@@ -228,6 +229,7 @@ namespace Diploma_Final_Project_1
                 dap.Fill(ds);
 
                 this.dataGridView_M_Certificate.DataSource = ds.Tables[0];
+               
 
 
                 con.Close();
@@ -249,7 +251,42 @@ namespace Diploma_Final_Project_1
 
 
                 string sql = @"
-                 SELECT td.* 
+                 SELECT td.[Issued Date],td.[Description],td.[Start Date],td.[End Date]
+                 FROM [tbl_M_certificate] td
+                 INNER JOIN tbl_patient_info p ON td.[Patient ID] = p.[Patient ID]
+                  WHERE p.[Contact Number] = @number";
+                SqlCommand com = new SqlCommand(sql, con);
+
+                com.Parameters.AddWithValue("@number", this.txt_search.Text);
+
+
+                SqlDataAdapter dap = new SqlDataAdapter(com);
+                DataSet ds = new DataSet();
+                dap.Fill(ds);
+
+                this.dataGridView_LabReport.DataSource = ds.Tables[0];
+
+
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            try
+            {
+
+
+
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+
+                //LAB
+
+
+
+                string sql = @"
+                 SELECT td.[Test_Type],td.[Rep_status],td.[Blood_Collected_Time],td.[Report_Relesed_Time]
                  FROM [tbl_Lab_Test_Report] td
                  INNER JOIN tbl_patient_info p ON td.[Patient_ID] = p.[Patient ID]
                   WHERE p.[Contact Number] = @number";
@@ -263,6 +300,10 @@ namespace Diploma_Final_Project_1
                 dap.Fill(ds);
 
                 this.dataGridView_LabReport.DataSource = ds.Tables[0];
+                dataGridView_LabReport.Columns[0].HeaderText = "Test Name";
+                dataGridView_LabReport.Columns[1].HeaderText = "Status";
+                dataGridView_LabReport.Columns[2].HeaderText = "Boold Collected Date";
+                dataGridView_LabReport.Columns[3].HeaderText = "Report Released Date";
 
 
                 con.Close();

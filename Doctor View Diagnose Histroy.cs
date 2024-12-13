@@ -106,6 +106,7 @@ namespace Diploma_Final_Project_1
                     dap.Fill(ds);
 
                     this.dataGridView_diagnose.DataSource = ds.Tables[0];
+                    dataGridView_diagnose.Columns[0].HeaderText = "Diagnose Number";
 
 
                     con.Close();
@@ -250,9 +251,10 @@ namespace Diploma_Final_Project_1
                     dap.Fill(ds);
 
                     this.dataGridView_diagnose.DataSource = ds.Tables[0];
+                dataGridView_diagnose.Columns[0].HeaderText = "Diagnose Number";
 
 
-                    con.Close();
+                con.Close();
                 }
             
             catch (Exception ex)

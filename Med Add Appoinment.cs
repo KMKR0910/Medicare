@@ -185,6 +185,9 @@ namespace Diploma_Final_Project_1
                 dap.Fill(ds);
 
                 this.dataGridView_appointment.DataSource = ds.Tables[0];
+                dataGridView_appointment.Columns[2].HeaderText = "Name";
+                dataGridView_appointment.Columns[3].HeaderText = "Status";
+          
 
 
                 con.Close();
@@ -325,12 +328,17 @@ namespace Diploma_Final_Project_1
 
 
                 this.dataGridView_appointment.DataSource = ds.Tables[0];
+               
 
                 if (ds.Tables[0].Rows.Count > 0)
                 {
 
 
                     this.dataGridView_appointment.DataSource = ds.Tables[0];
+                    dataGridView_appointment.Columns[0].HeaderText = "Appoinment Number";
+                    dataGridView_appointment.Columns[1].HeaderText = "Start Time";
+                    dataGridView_appointment.Columns[2].HeaderText = "End Time";
+                    dataGridView_appointment.Columns[3].HeaderText = "Status";
 
                 }
                 else

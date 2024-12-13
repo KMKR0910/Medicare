@@ -19,7 +19,7 @@ namespace Diploma_Final_Project_1
              Color customC = ColorTranslator.FromHtml("#9083D5 ");
             btn_search.BackColor = customC;
             btn_clear.BackColor = customC;
-
+            btn_all.BackColor = customC;
             btn_delete.BackColor = customC;
             btn_save.BackColor = customC;
         }
@@ -76,6 +76,8 @@ namespace Diploma_Final_Project_1
 
                 // Bind the result to the DataGridView
                 dataGridView1.DataSource = dt;
+                dataGridView1.Columns[4].HeaderText = "Payment Method";
+                
 
             }
             catch (Exception ex)
@@ -151,6 +153,7 @@ namespace Diploma_Final_Project_1
                 if (ret ==1)
                 {
                     MessageBox.Show("Updated", "Information");
+                    btn_Click(null, EventArgs.Empty);
                 }
 
 
@@ -159,6 +162,104 @@ namespace Diploma_Final_Project_1
             {
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DateTime fromDate = dateTimePicker_start.Value;
+                DateTime toDate = dateTimePicker_end.Value;
+                string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
+
+               
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+                string query = @"
+                    SELECT 
+                        
+                        [Date],
+                        [Category],
+                        [Amount],
+                        [Description],
+                        [payment method]
+                    FROM [tbl_finance] 
+                    
+                   WHERE ([Date] BETWEEN @fromDate AND @toDate)
+       ";
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@fromDate", fromDate);
+                cmd.Parameters.AddWithValue("@toDate", toDate);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                // Bind the result to the DataGridView
+                dataGridView1.DataSource = dt;
+                dataGridView1.Columns[4].HeaderText = "Payment Method";
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
+
+
+                SqlConnection con1 = new SqlConnection(cs);
+                con1.Open();
+
+
+                string sql = @"DELETE  " +
+                             "FROM [tbl_finance] " +
+
+                             "WHERE[Date] = @Date AND[Category] = @category AND[Amount] = @amount";
+
+                SqlCommand com = new SqlCommand(sql, con1);
+                com.Parameters.AddWithValue("@date", this.dateTimePicker1.Value.Date);
+                com.Parameters.AddWithValue("@category", this.comboBox_category.Text);
+                com.Parameters.AddWithValue("@amount", this.txt_amount.Text);
+                com.Parameters.AddWithValue("@description", this.txt_description.Text);
+                com.Parameters.AddWithValue("@paymentMethod", this.comboBox_payment_method.Text);
+
+
+
+
+               
+
+
+                int ret = com.ExecuteNonQuery();
+                if (ret > 0)
+                {
+                    MessageBox.Show("Deleted", "Information");
+                    btn_Click(null, EventArgs.Empty);
+
+                }
+
+
+                con1.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            txt_amount.Clear();
+            txt_description.Clear();
+            comboBox_category.SelectedIndex = -1;
+            comboBox_payment_method.SelectedIndex = -1;
         }
     }
 }

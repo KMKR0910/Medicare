@@ -75,6 +75,9 @@ namespace Diploma_Final_Project_1
 
                 // Set the DataSource of the DataGridView
                 dataGridView1.DataSource = ds.Tables[0];
+                dataGridView1.Columns[0].HeaderText = "Patient ID";
+                    dataGridView1.Columns[4].HeaderText = "Prescription Number";
+
                 }
             }
             catch (Exception ex)
@@ -277,6 +280,10 @@ namespace Diploma_Final_Project_1
 
                         // Set the DataSource of the DataGridView
                         dataGridView1.DataSource = ds.Tables[0];
+                        dataGridView1.Columns[0].HeaderText = "Patient ID";
+                      
+
+
                     }
                 }
             

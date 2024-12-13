@@ -139,6 +139,14 @@ namespace Diploma_Final_Project_1
 
                     // Set the DataSource of the DataGridView
                     dataGridView1.DataSource = ds.Tables[0];
+                    dataGridView1.Columns[0].HeaderText = "Test Name";
+                    dataGridView1.Columns[1].HeaderText = "Status";
+                    dataGridView1.Columns[2].HeaderText = "Price";
+                    dataGridView1.Columns[3].HeaderText = "Patient ID";
+
+                    dataGridView1.Columns[4].HeaderText = "Description";
+
+
                 }
 
             }
@@ -280,6 +288,12 @@ namespace Diploma_Final_Project_1
 
                         // Set the DataSource of the DataGridView
                         dataGridView1.DataSource = ds.Tables[0];
+                        dataGridView1.Columns[0].HeaderText = "Test Name";
+                        dataGridView1.Columns[1].HeaderText = "Status";
+                        dataGridView1.Columns[2].HeaderText = "Price";
+                        dataGridView1.Columns[3].HeaderText = "Patient ID";
+
+                        dataGridView1.Columns[4].HeaderText = "Description";
                     }
 
                 }

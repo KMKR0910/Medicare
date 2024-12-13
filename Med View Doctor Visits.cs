@@ -104,6 +104,10 @@ namespace Diploma_Final_Project_1
                 dap.Fill(ds);
 
                 this.dataGridView_visits.DataSource = ds.Tables[0];
+                dataGridView_visits.Columns[0].HeaderText = "Session Id";
+                dataGridView_visits.Columns[1].HeaderText = "Start Time";
+                dataGridView_visits.Columns[2].HeaderText = "End Time";
+               
 
 
                 con.Close();

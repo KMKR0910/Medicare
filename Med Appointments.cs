@@ -111,6 +111,8 @@ namespace Diploma_Final_Project_1
                 dap.Fill(ds);
 
                 this.dataGridView_appointment.DataSource = ds.Tables[0];
+                dataGridView_appointment.Columns[0].HeaderText = "Time";
+
 
 
                 con.Close();
@@ -199,6 +201,8 @@ namespace Diploma_Final_Project_1
                 dap.Fill(ds);
 
                 this.dataGridView_appointment.DataSource = ds.Tables[0];
+                dataGridView_appointment.Columns[0].HeaderText = "Time";
+
 
 
                 con.Close();
@@ -247,6 +251,7 @@ namespace Diploma_Final_Project_1
                 dap.Fill(ds);
 
                 this.dataGridView_appointment.DataSource = ds.Tables[0];
+                dataGridView_appointment.Columns[0].HeaderText = "Time";
 
 
                 con.Close();

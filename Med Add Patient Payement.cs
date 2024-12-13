@@ -195,6 +195,7 @@ namespace Diploma_Final_Project_1
                 dap.Fill(ds);
 
                 this.dataGridView1.DataSource = ds.Tables[0];
+                dataGridView1.Columns[2].HeaderText = "Amount";
 
 
 
@@ -282,6 +283,8 @@ namespace Diploma_Final_Project_1
                 dap.Fill(ds);
 
                 this.dataGridView1.DataSource = ds.Tables[0];
+                dataGridView1.Columns[2].HeaderText = "Amount";
+
 
 
 
@@ -365,6 +368,7 @@ namespace Diploma_Final_Project_1
                 dap.Fill(ds);
 
                 this.dataGridView1.DataSource = ds.Tables[0];
+                dataGridView1.Columns[2].HeaderText = "Amount";
 
 
 

@@ -24,8 +24,8 @@ namespace Diploma_Final_Project_1
 
 
         }
-        string PID;
-        string cellValue;
+        string PID;//pstientID
+        string cellValue;//paymentid
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -35,13 +35,13 @@ namespace Diploma_Final_Project_1
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
 
                 // Assuming you want the data from the first column (index 0)
-                cellValue = row.Cells[1].Value.ToString();
-                string cellValue2 = row.Cells[2].Value.ToString();
-                string cellValue3 = row.Cells[3].Value.ToString();
-                string cellValue4 = row.Cells[4].Value.ToString();
+                cellValue = row.Cells[4].Value.ToString();
+                string cellValue2 = row.Cells[1].Value.ToString();
+                string cellValue3 = row.Cells[2].Value.ToString();
+                string cellValue4 = row.Cells[3].Value.ToString();
                 string cellValue5 = row.Cells[0].Value.ToString();
                 // Set the value to the TextBox
-                txt_patient.Text = cellValue;
+                txt_patient.Text = cellValue5;
                 txt_pay_type.Text = cellValue2;
                 dateTimePicker_date.Text = cellValue4;
                 numericUpDownCost.Value = Convert.ToDecimal(cellValue3);
@@ -72,7 +72,7 @@ namespace Diploma_Final_Project_1
 
 
                 string sql = @"
-            SELECT p.Name, td.Patient_pay_ID,td.[Payment Type], td.[Total_Cost] ,td.[Date] 
+            SELECT p.Name,td.[Payment Type], td.[Total_Cost] ,td.[Date] ,td.Patient_pay_ID
             FROM [tbl_Patient_Payment] td
             INNER JOIN tbl_patient_info p ON td.[patirnt_ID] = p.[Patient ID]
             WHERE td.Date BETWEEN @startDate AND @endDate ";
@@ -88,6 +88,9 @@ namespace Diploma_Final_Project_1
                 dap.Fill(ds);
 
                 this.dataGridView1.DataSource = ds.Tables[0];
+                dataGridView1.Columns[2].HeaderText = "Amount";
+                dataGridView1.Columns[4].HeaderText = "Payment Number";
+          
 
 
 
