@@ -172,7 +172,7 @@ namespace Diploma_Final_Project_1
             FROM [tbl_appoinment] a
             JOIN tbl_patient_info p ON a.[Patient ID] = p.[Patient ID]
             
-            WHERE a.[Date] = @date"
+            WHERE a.[Date] >= @date"
 ;
                 SqlCommand com = new SqlCommand(sql, con);
 
