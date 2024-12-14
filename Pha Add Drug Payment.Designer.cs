@@ -29,10 +29,9 @@ namespace Diploma_Final_Project_1
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txt_paymnet_number = new System.Windows.Forms.TextBox();
             this.txt_supplier = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btn_clear = new System.Windows.Forms.Button();
@@ -44,7 +43,6 @@ namespace Diploma_Final_Project_1
             this.label3 = new System.Windows.Forms.Label();
             this.btn_search = new System.Windows.Forms.Button();
             this.txt_search = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btn_suppliers = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -54,23 +52,23 @@ namespace Diploma_Final_Project_1
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridView1.Location = new System.Drawing.Point(1276, 289);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 82;
@@ -78,20 +76,12 @@ namespace Diploma_Final_Project_1
             this.dataGridView1.Size = new System.Drawing.Size(1064, 1074);
             this.dataGridView1.TabIndex = 110;
             // 
-            // txt_paymnet_number
-            // 
-            this.txt_paymnet_number.BackColor = System.Drawing.Color.White;
-            this.txt_paymnet_number.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_paymnet_number.Location = new System.Drawing.Point(1167, 63);
-            this.txt_paymnet_number.Name = "txt_paymnet_number";
-            this.txt_paymnet_number.Size = new System.Drawing.Size(372, 44);
-            this.txt_paymnet_number.TabIndex = 109;
-            // 
             // txt_supplier
             // 
             this.txt_supplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_supplier.Location = new System.Drawing.Point(583, 307);
             this.txt_supplier.Name = "txt_supplier";
+            this.txt_supplier.ReadOnly = true;
             this.txt_supplier.Size = new System.Drawing.Size(372, 44);
             this.txt_supplier.TabIndex = 108;
             // 
@@ -131,13 +121,14 @@ namespace Diploma_Final_Project_1
             // numericUpDownCost
             // 
             this.numericUpDownCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDownCost.Location = new System.Drawing.Point(583, 630);
+            this.numericUpDownCost.Location = new System.Drawing.Point(583, 427);
             this.numericUpDownCost.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
             this.numericUpDownCost.Name = "numericUpDownCost";
+            this.numericUpDownCost.ReadOnly = true;
             this.numericUpDownCost.Size = new System.Drawing.Size(372, 44);
             this.numericUpDownCost.TabIndex = 103;
             // 
@@ -145,7 +136,7 @@ namespace Diploma_Final_Project_1
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(195, 617);
+            this.label2.Location = new System.Drawing.Point(195, 423);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(188, 42);
             this.label2.TabIndex = 102;
@@ -156,6 +147,7 @@ namespace Diploma_Final_Project_1
             this.txt_date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_date.Location = new System.Drawing.Point(583, 522);
             this.txt_date.Name = "txt_date";
+            this.txt_date.ReadOnly = true;
             this.txt_date.Size = new System.Drawing.Size(372, 44);
             this.txt_date.TabIndex = 101;
             // 
@@ -173,7 +165,7 @@ namespace Diploma_Final_Project_1
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(195, 426);
+            this.label3.Location = new System.Drawing.Point(195, 613);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(300, 42);
             this.label3.TabIndex = 98;
@@ -182,31 +174,21 @@ namespace Diploma_Final_Project_1
             // btn_search
             // 
             this.btn_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_search.Location = new System.Drawing.Point(897, 52);
+            this.btn_search.Location = new System.Drawing.Point(85, 151);
             this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(216, 55);
+            this.btn_search.Size = new System.Drawing.Size(283, 55);
             this.btn_search.TabIndex = 95;
-            this.btn_search.Text = "Search";
+            this.btn_search.Text = "Enter Order ID";
             this.btn_search.UseVisualStyleBackColor = true;
             this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // txt_search
             // 
             this.txt_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_search.Location = new System.Drawing.Point(441, 58);
+            this.txt_search.Location = new System.Drawing.Point(493, 151);
             this.txt_search.Name = "txt_search";
             this.txt_search.Size = new System.Drawing.Size(372, 44);
             this.txt_search.TabIndex = 96;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(115, 58);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(284, 42);
-            this.label5.TabIndex = 97;
-            this.label5.Text = "Search Supplier";
             // 
             // comboBox1
             // 
@@ -215,7 +197,7 @@ namespace Diploma_Final_Project_1
             this.comboBox1.Items.AddRange(new object[] {
             "Cash",
             "Card"});
-            this.comboBox1.Location = new System.Drawing.Point(583, 426);
+            this.comboBox1.Location = new System.Drawing.Point(583, 610);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(372, 45);
             this.comboBox1.TabIndex = 111;
@@ -223,11 +205,11 @@ namespace Diploma_Final_Project_1
             // btn_suppliers
             // 
             this.btn_suppliers.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_suppliers.Location = new System.Drawing.Point(1630, 63);
+            this.btn_suppliers.Location = new System.Drawing.Point(85, 52);
             this.btn_suppliers.Name = "btn_suppliers";
             this.btn_suppliers.Size = new System.Drawing.Size(353, 55);
             this.btn_suppliers.TabIndex = 130;
-            this.btn_suppliers.Text = "View Suppliers";
+            this.btn_suppliers.Text = "View All Orders";
             this.btn_suppliers.UseVisualStyleBackColor = true;
             this.btn_suppliers.Click += new System.EventHandler(this.btn_suppliers_Click);
             // 
@@ -240,7 +222,6 @@ namespace Diploma_Final_Project_1
             this.Controls.Add(this.btn_suppliers);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.txt_paymnet_number);
             this.Controls.Add(this.txt_supplier);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btn_clear);
@@ -252,7 +233,6 @@ namespace Diploma_Final_Project_1
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.txt_search);
-            this.Controls.Add(this.label5);
             this.Name = "Pha_Add_Drug_Payment";
             this.Text = "Pha_Add_Drug_Payment";
             this.Load += new System.EventHandler(this.Pha_Add_Drug_Payment_Load);
@@ -266,7 +246,6 @@ namespace Diploma_Final_Project_1
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox txt_paymnet_number;
         private System.Windows.Forms.TextBox txt_supplier;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btn_clear;
@@ -278,7 +257,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.TextBox txt_search;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btn_suppliers;
     }

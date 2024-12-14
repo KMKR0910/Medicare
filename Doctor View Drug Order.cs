@@ -14,9 +14,12 @@ namespace Diploma_Final_Project_1
 {
     public partial class Doctor_View_Drug_Order : Form
     {
-        public Doctor_View_Drug_Order()
+
+        private string _userId;
+        public Doctor_View_Drug_Order(string userID)
         {
             InitializeComponent();
+            _userId = userID;
         }
         string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
         string orderID;
@@ -137,12 +140,13 @@ INNER JOIN
                 con.Open();
 
 
-                string query = "UPDATE [tbl_Drug_order] SET [Order_Status]= @status,[Ordered_date]=@date WHERE [OrderID]=@orderID";
+                string query = "UPDATE [tbl_Drug_order] SET [Order_Status]= @status,[Ordered_date]=@date,[DoctorID]=@doctorID  WHERE [OrderID]=@orderID";
 
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@status", status1);
                 cmd.Parameters.AddWithValue("@orderID", orderID);
                 cmd.Parameters.AddWithValue("@date", DateTime.Today);
+                cmd.Parameters.AddWithValue("@doctorID", _userId);
 
                 int ret = cmd.ExecuteNonQuery();
                 Doctor_View_Drug_Order_Load(this, EventArgs.Empty);

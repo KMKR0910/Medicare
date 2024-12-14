@@ -48,7 +48,7 @@ namespace Diploma_Final_Project_1
         private void LoadEmployeeInGroupBox1()
         {
             //Create an instance of Form2
-            Doctor_Employee_User_Profile form2 = new Doctor_Employee_User_Profile();
+            Doctor_Employee_User_Profile form2 = new Doctor_Employee_User_Profile(UserID);
 
             // Remove borders and make the form a child control
             form2.TopLevel = false;

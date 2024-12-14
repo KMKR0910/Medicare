@@ -13,8 +13,11 @@ using System.Data.SqlClient;
 namespace Diploma_Final_Project_1
 {
     public partial class Doctor_Employee_User_Profile : Form
+
+
     {
-        public Doctor_Employee_User_Profile()
+        private string _userId;
+        public Doctor_Employee_User_Profile(string userID)
         {
             InitializeComponent();
             DisableFields();
@@ -22,6 +25,7 @@ namespace Diploma_Final_Project_1
             btn_cancel.BackColor = customC;
             btn_edit.BackColor = customC;
             btn_save.BackColor = customC;
+            _userId = userID;
 
         }
         string cellValue;
@@ -98,7 +102,7 @@ namespace Diploma_Final_Project_1
                     if (userType == "Medical Centre Assistant")
                     {
 
-                        sql = @"UPDATE [tbl_Medical_Centre_Assistant] SET SET Salary =@salary WHERE  [First Name]=@Fname";
+                        sql = @"UPDATE [tbl_Medical_Centre_Assistant] SET Salary =@salary,[Doctor ID]=@doctorID WHERE  [First Name]=@Fname";
 
 
 
@@ -106,20 +110,20 @@ namespace Diploma_Final_Project_1
 
                     if (userType == "Pharamacists")
                     {
-                        sql = @"UPDATE  [tbl_Pharamacists] SET Salary =@salary WHERE  [First Name]=@Fname";
+                        sql = @"UPDATE  [tbl_Pharamacists] SET Salary =@salary,[Doctor ID]=@doctorID WHERE  [First Name]=@Fname";
 
 
                     }
 
                     if (userType == "Laboratary Assistant")
                     {
-                        sql = @"UPDATE  [tbl_Lab_Assistant] SET Salary =@salary WHERE  [First Name]=@Fname";
+                        sql = @"UPDATE  [tbl_Lab_Assistant] SET Salary =@salary , [Doctor ID]=@doctorID WHERE  [First Name]=@Fname";
 
 
                     }
                     if (userType == "Admin")
                     {
-                        sql = @"UPDATE  [tbl_Admin] SET Salary =@salary WHERE  [First Name]=@Fname";
+                        sql = @"UPDATE  [tbl_Admin] SET Salary =@salary , [Doctor ID]=@doctorID WHERE  [First Name]=@Fname";
 
 
 
@@ -129,7 +133,7 @@ namespace Diploma_Final_Project_1
                     SqlCommand com = new SqlCommand(sql, con1);
 
                     com.Parameters.AddWithValue("@salary", this.txt_salary.Text);
-
+                    com.Parameters.AddWithValue("@doctorID", _userId);
                     com.Parameters.AddWithValue("@Fname", this.txt_name.Text);
 
 

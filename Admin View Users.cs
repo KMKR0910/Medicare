@@ -71,7 +71,7 @@ namespace Diploma_Final_Project_1
 
                     if (userType == "Pharamacists")
                     {
-                        sql = @"[Pharamacists_ID] AS UserID , [First Name],[Last Name],[Email Address],[ContactNumber],[DOB]
+                        sql = @"SELECT[Pharamacists_ID] AS UserID , [First Name],[Last Name],[Email Address],[ContactNumber],[DOB]
                  FROM [tbl_Pharamacists]";
 
                     }
@@ -204,7 +204,7 @@ namespace Diploma_Final_Project_1
                               "[Last Name] = @Lname, [Address] = @address, DOB = @DOB, [Email Address] = @email, " +
                               "Qualifications = @qualification, ContactNumber = @number WHERE [Med_Assistant_ID] = @userid";
                     }
-                    if (userType == "Pharmacists")
+                    if (userType == "Pharamacists")
                     {
                         sql = "UPDATE [tbl_Pharamacists] SET  [First Name] = @Fname, " +
                               "[Last Name] = @Lname, [Address] = @address, DOB = @DOB, [Email Address] = @email, " +
@@ -297,7 +297,7 @@ namespace Diploma_Final_Project_1
                     }
                     if (cellValue.StartsWith("PHA", StringComparison.OrdinalIgnoreCase))
                     {
-                        userType = "Pharmacists";
+                        userType = "Pharamacists";
                     }
                     if (cellValue.StartsWith("LAB", StringComparison.OrdinalIgnoreCase))
                     {
@@ -320,7 +320,7 @@ namespace Diploma_Final_Project_1
                         sql = "SELECT [Address],[Qualifications]  FROM  [tbl_Medical_Centre_Assistant] WHERE [Med_Assistant_ID] = @userid";
                     }
 
-                    if (userType == "Pharmacists")
+                    if (userType == "Pharamacists")
                     {
                         sql = "SELECT [Address] ,[Qualifications] FROM [tbl_Pharamacists] WHERE [Pharamacists_ID] = @userid";
                     }

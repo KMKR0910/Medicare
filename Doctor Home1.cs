@@ -53,7 +53,7 @@ namespace Diploma_Final_Project_1
         private void LoadEmployeeInGroupBox1()
         {
             //Create an instance of Form2
-            Doctor_Employee_User_Profile form2 = new Doctor_Employee_User_Profile();
+            Doctor_Employee_User_Profile form2 = new Doctor_Employee_User_Profile(UserID);
 
             // Remove borders and make the form a child control
             form2.TopLevel = false;
@@ -436,7 +436,7 @@ namespace Diploma_Final_Project_1
         private void viewDrugOrderToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            Doctor_View_Drug_Order form2 = new Doctor_View_Drug_Order();
+            Doctor_View_Drug_Order form2 = new Doctor_View_Drug_Order(UserID);
             // Remove borders and make the form a child control
             form2.TopLevel = false;
             form2.FormBorderStyle = FormBorderStyle.None;

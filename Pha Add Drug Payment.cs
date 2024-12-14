@@ -38,7 +38,7 @@ namespace Diploma_Final_Project_1
                 con.Open();
 
 
-                string query = "INSERT INTO tbl_drug_payments (Pay_Date, Payment_Method, Total_Cost, Suppler_ID)VALUES(@Pay_Date, @Payment_Method, @Total_Cost, @Suppler_ID)";
+                string query = "INSERT INTO tbl_drug_payments (Pay_Date, Payment_Method, Total_Cost, Suppler_ID,[OrderID])VALUES(@Pay_Date, @Payment_Method, @Total_Cost, @Suppler_ID,@orderID)";
                 
                 SqlCommand cmd = new SqlCommand(query, con);
 
@@ -46,7 +46,7 @@ namespace Diploma_Final_Project_1
                 cmd.Parameters.AddWithValue("@Payment_Method", comboBox1.SelectedItem);
                 cmd.Parameters.AddWithValue("@Total_Cost", numericUpDownCost.Value);
                 cmd.Parameters.AddWithValue("@Suppler_ID", supplierID);
-
+                cmd.Parameters.AddWithValue("@orderID", txt_search.Text);
 
                 int ret = cmd.ExecuteNonQuery();
                 if (ret > 0)
@@ -83,7 +83,7 @@ namespace Diploma_Final_Project_1
             SELECT *
             FROM [tbl_drug_payments]
             
-           WHERE [Suppler_ID]= @id ";
+           WHERE [OrderID]= @id ";
                 SqlCommand com = new SqlCommand(sql, con);
                 com.Parameters.AddWithValue("@id", this.txt_search.Text);
 
@@ -117,7 +117,11 @@ namespace Diploma_Final_Project_1
                 con.Open();
 
 
-                string sql = "SELECT *  FROM [tbl_drug_supplier] WHERE [Supplier_ID] = @id ";
+                string sql = @"SELECT o.*, 
+           s.[Supplier_Name]  
+    FROM [tbl_Drug_order] o
+    JOIN [tbl_drug_supplier] s ON o.[Supplier_ID] = s.[Supplier_ID]
+    WHERE o.[OrderID] = @id";
                 SqlCommand com1 = new SqlCommand(sql, con);
                 com1.Parameters.AddWithValue("@id", this.txt_search.Text);
 
@@ -134,6 +138,9 @@ namespace Diploma_Final_Project_1
 
 
                     this.txt_supplier.Text = rows["Supplier_Name"].ToString();
+                    // Example: Setting the value from the DataTable
+                    this.numericUpDownCost.Value = Convert.ToDecimal(rows["Total_Amount"]);
+
                     supplierID = rows["Supplier_ID"].ToString();
 
 
@@ -195,19 +202,27 @@ namespace Diploma_Final_Project_1
         {
             try
             {
-
+               string status4 = "Supplier Confirmed";
 
                 SqlConnection con = new SqlConnection(cs);
                 con.Open();
 
 
-
+                
 
                 string sql2 = @"
-                 SELECT * 
-                 FROM [tbl_drug_supplier]";
+    SELECT o.[OrderID], 
+       o.[Total_Amount], 
+       o.[Received_date], 
+       s.[Supplier_Name]   
+FROM [tbl_Drug_order] o
+
+JOIN [tbl_drug_supplier] s ON o.[Supplier_ID] = s.[Supplier_ID]WHERE [Order_Status]=@status4
+";
+                
                 SqlCommand com2 = new SqlCommand(sql2, con);
 
+                com2.Parameters.AddWithValue("@status4", status4);
 
 
                 SqlDataAdapter dap = new SqlDataAdapter(com2);
@@ -227,9 +242,8 @@ namespace Diploma_Final_Project_1
 
         private void btn_clear_Click(object sender, EventArgs e)
         {
-            txt_supplier.Clear();
-            comboBox1.SelectedIndex = -1;
-            numericUpDownCost.Value = 0;
+            txt_search.Clear();
+          
         }
     }
 }
