@@ -186,7 +186,7 @@ namespace Diploma_Final_Project_1
 
 
 
-            Add_Diagnose_History form2 = new Add_Diagnose_History();
+            Add_Diagnose_History form2 = new Add_Diagnose_History(UserID);
             // Remove borders and make the form a child control
             form2.TopLevel = false;
             form2.FormBorderStyle = FormBorderStyle.None;
@@ -206,7 +206,7 @@ namespace Diploma_Final_Project_1
 
 
 
-            Med_Add_Prescription form2 = new Med_Add_Prescription();
+            Med_Add_Prescription form2 = new Med_Add_Prescription(UserID);
             // Remove borders and make the form a child control
             form2.TopLevel = false;
             form2.FormBorderStyle = FormBorderStyle.None;
@@ -226,7 +226,7 @@ namespace Diploma_Final_Project_1
 
 
 
-            Med_Add_Lab_Prescription form2 = new Med_Add_Lab_Prescription();
+            Med_Add_Lab_Prescription form2 = new Med_Add_Lab_Prescription(UserID);
             // Remove borders and make the form a child control
             form2.TopLevel = false;
             form2.FormBorderStyle = FormBorderStyle.None;
@@ -286,7 +286,7 @@ namespace Diploma_Final_Project_1
 
 
 
-            Med_Add_expenses form2 = new Med_Add_expenses();
+            Med_Add_expenses form2 = new Med_Add_expenses(UserID);
             // Remove borders and make the form a child control
             form2.TopLevel = false;
             form2.FormBorderStyle = FormBorderStyle.None;
@@ -346,7 +346,7 @@ namespace Diploma_Final_Project_1
 
 
 
-            Med_Add_Patient_Payement form2 = new Med_Add_Patient_Payement();
+            Med_Add_Patient_Payement form2 = new Med_Add_Patient_Payement(UserID);
             // Remove borders and make the form a child control
             form2.TopLevel = false;
             form2.FormBorderStyle = FormBorderStyle.None;

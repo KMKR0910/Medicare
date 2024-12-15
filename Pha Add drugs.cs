@@ -13,14 +13,15 @@ namespace Diploma_Final_Project_1
 {
     public partial class Pha_Add_drugs : Form
     {
-        public Pha_Add_drugs()
+        private string _userId;
+        public Pha_Add_drugs(string userID)
         {
             InitializeComponent();
             Color customC = ColorTranslator.FromHtml("#9083D5 ");
             btn_add.BackColor = customC;
 
             btn_clear.BackColor = customC;
-
+            _userId = userID;
 
         }
 
@@ -50,8 +51,8 @@ namespace Diploma_Final_Project_1
                     con.Open();
 
 
-                    string query = "INSERT INTO [tbl_drug_inventory] (Drug_Name, [Pack Size],Drug_Price,Exp_date,Quantity) " +
-                                   "VALUES (@DrugName, @PackSize, @DrugPrice, @ExpDate, @Quantity)";
+                    string query = "INSERT INTO [tbl_drug_inventory] (Drug_Name, [Pack Size],Drug_Price,Exp_date,Quantity,[Pharamacists_ID]) " +
+                                   "VALUES (@DrugName, @PackSize, @DrugPrice, @ExpDate, @Quantity,@phaID)";
                     SqlCommand cmd = new SqlCommand(query, con);
 
                     cmd.Parameters.AddWithValue("@DrugName", txt_d_name.Text);
@@ -59,6 +60,8 @@ namespace Diploma_Final_Project_1
                     cmd.Parameters.AddWithValue("@DrugPrice", numericUpDown_price.Value);
                     cmd.Parameters.AddWithValue("@ExpDate", dateTimePicker_exp.Value.Date);
                     cmd.Parameters.AddWithValue("@Quantity", numericUpDown_quantity.Value);
+                    cmd.Parameters.AddWithValue("@phaID", _userId);
+
 
                     int ret = cmd.ExecuteNonQuery();
                     if (ret > 0)

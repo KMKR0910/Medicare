@@ -16,7 +16,8 @@ namespace Diploma_Final_Project_1
     public partial class Med_Add_expenses : Form
     {
         string type = "Expenses";
-        public Med_Add_expenses()
+        private string _userId;
+        public Med_Add_expenses(string userID)
         {
             InitializeComponent();
             Color customC = ColorTranslator.FromHtml("#9083D5 ");
@@ -24,6 +25,7 @@ namespace Diploma_Final_Project_1
            
 
             btn_clear.BackColor = customC;
+            _userId = userID;
         }
 
         private void btn_add_Click(object sender, EventArgs e)
@@ -40,8 +42,8 @@ namespace Diploma_Final_Project_1
 
 
 
-                string sql = "INSERT INTO tbl_finance ([Finance Type],Date,Category,Amount,Description,[payment method])" +
-                "VALUES (@type,@date,@category,@amount,@description,@pay)";
+                string sql = "INSERT INTO tbl_finance ([Finance Type],Date,Category,Amount,Description,[payment method],[Med_Assistant_ID])" +
+                "VALUES (@type,@date,@category,@amount,@description,@pay,@medID)";
                 SqlCommand com = new SqlCommand(sql, con1);
 
                 com.Parameters.AddWithValue("@type", this.type);
@@ -50,6 +52,7 @@ namespace Diploma_Final_Project_1
                 com.Parameters.AddWithValue("@amount", this.txt_amount.Text);
                 com.Parameters.AddWithValue("@description", this.txt_description.Text);
                 com.Parameters.AddWithValue("@pay", this.comboBox_payment_method.Text);
+                com.Parameters.AddWithValue("@medID",_userId);
 
 
 

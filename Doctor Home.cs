@@ -276,7 +276,7 @@ namespace Diploma_Final_Project_1
         private void genarateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Create an instance of Form2
-            Doctor_Genarate_Medical_Certificate  form2 = new Doctor_Genarate_Medical_Certificate();
+            Doctor_Genarate_Medical_Certificate  form2 = new Doctor_Genarate_Medical_Certificate(UserID);
 
             // Remove borders and make the form a child control
             form2.TopLevel = false;

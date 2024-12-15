@@ -13,8 +13,10 @@ using System.Data.SqlClient;
 namespace Diploma_Final_Project_1
 {
     public partial class Med_Add_Lab_Prescription : Form
+
     {
-        public Med_Add_Lab_Prescription()
+        private string _userId;
+        public Med_Add_Lab_Prescription(string userID)
         {
             InitializeComponent();
             Color customC = ColorTranslator.FromHtml("#9083D5 ");
@@ -23,6 +25,7 @@ namespace Diploma_Final_Project_1
 
             btn_cancel.BackColor = customC;
             btn_delete.BackColor = customC;
+            _userId = userID;
         }
         string prescriptionNumber;
         string status = "Not Collected";
@@ -86,8 +89,8 @@ namespace Diploma_Final_Project_1
                 con.Open();
 
 
-                string query = "INSERT INTO [tbl_Lab_Test_Report] ([Test_Type], [Rep_status],[Test_Price],[Patient_ID],[Lab_test_number],[Description]) " +
-                               "VALUES (@type, @status, @Price, @patientID,@number,@description)";
+                string query = "INSERT INTO [tbl_Lab_Test_Report] ([Test_Type], [Rep_status],[Test_Price],[Patient_ID],[Lab_test_number],[Description],[Med_Assistant_ID]) " +
+                               "VALUES (@type, @status, @Price, @patientID,@number,@description,@medID)";
                 SqlCommand cmd = new SqlCommand(query, con);
 
                 cmd.Parameters.AddWithValue("@type", comboBox_type.Text);
@@ -96,6 +99,7 @@ namespace Diploma_Final_Project_1
                 cmd.Parameters.AddWithValue("@patientID", txt_patient_ID.Text);
                 cmd.Parameters.AddWithValue("@number", prescriptionNumber);
                 cmd.Parameters.AddWithValue("@description", this.txt_description.Text);
+                cmd.Parameters.AddWithValue("@medID", _userId);
 
 
                 int ret = cmd.ExecuteNonQuery();

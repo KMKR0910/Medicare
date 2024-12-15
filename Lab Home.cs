@@ -85,7 +85,7 @@ namespace Diploma_Final_Project_1
         private void prescriptionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Create an instance of Form2
-            Lab_Prescription form2 = new Lab_Prescription();
+            Lab_Prescription form2 = new Lab_Prescription(UserID);
 
             // Remove borders and make the form a child control
             form2.TopLevel = false;

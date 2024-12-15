@@ -15,8 +15,14 @@ namespace Diploma_Final_Project_1
     {
         string patientID;
         string cellValue3;
+        string docID;
+        string medID;
+        string docIDValue;
+        string medIDValue;
+
+        private string _userId;
         // string newUserID;
-        public Add_Diagnose_History()
+        public Add_Diagnose_History(string userID)
         {
             InitializeComponent();
             Color customC = ColorTranslator.FromHtml("#9083D5 ");
@@ -25,6 +31,7 @@ namespace Diploma_Final_Project_1
 
             btn_add.BackColor = customC;
             btn_update.BackColor = customC;
+            _userId = userID;
         }
         /* private string GenerateUserID()
          {
@@ -214,6 +221,24 @@ namespace Diploma_Final_Project_1
         private void btn_add_Click(object sender, EventArgs e)
         {
 
+            if (_userId.StartsWith("DOC", StringComparison.OrdinalIgnoreCase))
+            {
+                docID = "DOC1";
+                
+                
+
+            }
+            if (_userId.StartsWith("MED", StringComparison.OrdinalIgnoreCase))
+            {
+                medID = "MED1";
+               
+            }
+            else
+            {
+                docIDValue = "NULL";
+                medIDValue = "NULL";
+            }
+
 
             if (string.IsNullOrEmpty(this.txt_allergies.Text) || string.IsNullOrEmpty(this.txt_patient_name.Text))
             {
@@ -237,7 +262,7 @@ namespace Diploma_Final_Project_1
 
 
 
-                    SqlCommand cmd = new SqlCommand("Insert Into tbl_diagnostic_data Values('" + txt_date.Text + "','" + txt_description.Text + "','" + medicationValues + "','" + txt_allergies.Text + "','" + patientID + "')", con);
+                    SqlCommand cmd = new SqlCommand("Insert Into tbl_diagnostic_data Values('" + txt_date.Text + "','" + txt_description.Text + "','" + medicationValues + "','" + txt_allergies.Text + "','" + patientID + "','" + docID + "')", con);
                     cmd.ExecuteNonQuery();
                     con.Close();
 

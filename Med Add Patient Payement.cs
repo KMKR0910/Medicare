@@ -22,8 +22,10 @@ namespace Diploma_Final_Project_1
         string cs = "Data Source=ASUS; Initial Catalog = Diploma Final Project DB1; Integrated Security=True";
         string paymentID;
         string patientContact;
+        private string _userId;
 
-        public Med_Add_Patient_Payement()
+
+        public Med_Add_Patient_Payement(string userID)
         {
             InitializeComponent();
             Color customC = ColorTranslator.FromHtml("#9083D5 ");
@@ -32,6 +34,7 @@ namespace Diploma_Final_Project_1
             btn_search.BackColor = customC;
             btn_clear.BackColor = customC;
             btn_All_Search.BackColor = customC;
+            _userId = userID;
 
         }
 
@@ -155,7 +158,7 @@ namespace Diploma_Final_Project_1
                     con.Open();
 
 
-                    SqlCommand cmd = new SqlCommand("Insert Into [tbl_Patient_Payment] Values('" + paymentID + "','" + txt_date.Text + "','" + comboBox_pay_type.Text + "','" + numericUpDownCost.Value + "','" + patientID + "')", con);
+                    SqlCommand cmd = new SqlCommand("Insert Into [tbl_Patient_Payment] Values('" + paymentID + "','" + txt_date.Text + "','" + comboBox_pay_type.Text + "','" + numericUpDownCost.Value + "','" + patientID + "','" + _userId + "')", con);
                     cmd.ExecuteNonQuery();
                     con.Close();
                     MessageBox.Show("Payment added ");

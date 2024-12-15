@@ -265,6 +265,7 @@ namespace Diploma_Final_Project_1
             this.groupBox_finance.Size = new System.Drawing.Size(605, 370);
             this.groupBox_finance.TabIndex = 11;
             this.groupBox_finance.TabStop = false;
+            this.groupBox_finance.Enter += new System.EventHandler(this.groupBox_finance_Enter);
             // 
             // pictureBox10
             // 

@@ -380,12 +380,6 @@
     <Compile Include="Med Edit Appoinment.Designer.cs">
       <DependentUpon>Med Edit Appoinment.cs</DependentUpon>
     </Compile>
-    <Compile Include="Med Finance ShortCuts.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Med Finance ShortCuts.Designer.cs">
-      <DependentUpon>Med Finance ShortCuts.cs</DependentUpon>
-    </Compile>
     <Compile Include="Med Finance.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -646,9 +640,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Med Edit Appoinment.resx">
       <DependentUpon>Med Edit Appoinment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Med Finance ShortCuts.resx">
-      <DependentUpon>Med Finance ShortCuts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Med Finance.resx">
       <DependentUpon>Med Finance.cs</DependentUpon>

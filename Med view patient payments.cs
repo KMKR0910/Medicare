@@ -26,6 +26,7 @@ namespace Diploma_Final_Project_1
         }
         string PID;//pstientID
         string cellValue;//paymentid
+        string cellValue5;
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -39,7 +40,7 @@ namespace Diploma_Final_Project_1
                 string cellValue2 = row.Cells[1].Value.ToString();
                 string cellValue3 = row.Cells[2].Value.ToString();
                 string cellValue4 = row.Cells[3].Value.ToString();
-                string cellValue5 = row.Cells[0].Value.ToString();
+                cellValue5 = row.Cells[0].Value.ToString();
                 // Set the value to the TextBox
                 txt_patient.Text = cellValue5;
                
@@ -109,14 +110,46 @@ namespace Diploma_Final_Project_1
         private void btn_update_Click(object sender, EventArgs e)
         {
 
-            txt_patient_TextChanged(null, EventArgs.Empty);
+            string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
+
+            try
+            {
+
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+
+
+                string sql = "SELECT [Patient ID]  FROM [tbl_patient_info] WHERE Name = @name ";
+                SqlCommand com1 = new SqlCommand(sql, con);
+                com1.Parameters.AddWithValue("@name", cellValue5);
+                SqlDataAdapter dap = new SqlDataAdapter(com1);
+                DataSet ds = new DataSet();
+                dap.Fill(ds);
+
+
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+
+                    DataRow rows = ds.Tables[0].Rows[0];
+
+
+                    PID = rows["Patient ID"].ToString();
+                   
+
+                }
+                con.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
 
 
 
             try
             {
-                string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
 
 
                 // save user details
@@ -124,7 +157,6 @@ namespace Diploma_Final_Project_1
                 con1.Open();
 
 
-                MessageBox.Show(PID);
                 string sql = "UPDATE  [tbl_Patient_Payment] SET [Date] =@date, [Payment Type] =@paymentType,[Total_Cost] =@cost,[patirnt_ID] =@id WHERE  Patient_pay_ID=@pay_ID";
 
                 SqlCommand com = new SqlCommand(sql, con1);
@@ -145,9 +177,10 @@ namespace Diploma_Final_Project_1
 
 
                 int ret = com.ExecuteNonQuery();
-                if (ret == 1)
+                if (ret > 0)
                 {
                     MessageBox.Show("Updated", "Information");
+                    dateTimePicker_end_ValueChanged(null, EventArgs.Empty);
 
                 }
                 con1.Close();
@@ -160,39 +193,7 @@ namespace Diploma_Final_Project_1
 
         private void txt_patient_TextChanged(object sender, EventArgs e)
         {
-            string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
-
-            try
-            {
-
-                SqlConnection con = new SqlConnection(cs);
-                con.Open();
-
-
-                string sql = "SELECT [Patient ID]  FROM [tbl_patient_info] WHERE Name = @name ";
-                SqlCommand com1 = new SqlCommand(sql, con);
-                com1.Parameters.AddWithValue("@name", cellValue);
-                SqlDataAdapter dap = new SqlDataAdapter(com1);
-                DataSet ds = new DataSet();
-                dap.Fill(ds);
-
-
-                if (ds.Tables[0].Rows.Count > 0)
-                {
-
-                    DataRow rows = ds.Tables[0].Rows[0];
-
-
-                    PID = rows["Patient ID"].ToString();
-
-                }
-                con.Close();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            
         }
 
         private void btn_delete_Click(object sender, EventArgs e)
@@ -220,7 +221,7 @@ namespace Diploma_Final_Project_1
                 if (ret > 0)
                 {
                     MessageBox.Show("Deleted", "Information");
-                   
+                    dateTimePicker_end_ValueChanged(null, EventArgs.Empty);
                 }
 
 

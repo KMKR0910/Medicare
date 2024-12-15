@@ -14,7 +14,9 @@ namespace Diploma_Final_Project_1
 {
     public partial class Lab_Prescription : Form
     {
-        public Lab_Prescription()
+
+        private string _userId;
+        public Lab_Prescription(string userID)
         {
             InitializeComponent();
             Color customC = ColorTranslator.FromHtml("#9083D5 ");
@@ -23,6 +25,7 @@ namespace Diploma_Final_Project_1
             btn_search.BackColor = customC;
             btn_view_report.BackColor = customC;
             btn_report_relesed.BackColor = customC;
+            _userId = userID;
 
 
         }
@@ -203,13 +206,15 @@ namespace Diploma_Final_Project_1
 
 
 
-                string sql = "UPDATE  [tbl_Lab_Test_Report] SET [Rep_status] =@status , [Blood_Collected_Time]=@time WHERE  [Lab_Report_ID]=@id";
+                string sql = "UPDATE  [tbl_Lab_Test_Report] SET [Rep_status] =@status , [Blood_Collected_Time]=@time,[Lab-Assistant_ID]=@labID WHERE  [Lab_Report_ID]=@id";
 
                 SqlCommand com = new SqlCommand(sql, con1);
 
                 com.Parameters.AddWithValue("@status", status);
                 com.Parameters.AddWithValue("@time", DateTime);
                 com.Parameters.AddWithValue("@id", report_ID);
+                com.Parameters.AddWithValue("@labID", _userId);
+
 
 
 
@@ -258,13 +263,14 @@ namespace Diploma_Final_Project_1
 
 
 
-                string sql = "UPDATE  [tbl_Lab_Test_Report] SET [Rep_status] =@status ,[Report_Relesed_Time]=@time WHERE  [Lab_Report_ID]=@id";
+                string sql = "UPDATE  [tbl_Lab_Test_Report] SET [Rep_status] =@status ,[Report_Relesed_Time]=@time ,[Lab-Assistant_ID]=@labID WHERE  [Lab_Report_ID]=@id";
 
                 SqlCommand com = new SqlCommand(sql, con1);
 
                 com.Parameters.AddWithValue("@status", status2);
                 com.Parameters.AddWithValue("@time", DateTime);
                 com.Parameters.AddWithValue("@id", report_ID);
+                com.Parameters.AddWithValue("@labID", _userId);
 
 
 

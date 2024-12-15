@@ -143,7 +143,7 @@ namespace Diploma_Final_Project_1
 
         private void addDrugsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Pha_Add_drugs form2 = new Pha_Add_drugs();
+            Pha_Add_drugs form2 = new Pha_Add_drugs(UserID);
             // Remove borders and make the form a child control
             form2.TopLevel = false;
             form2.FormBorderStyle = FormBorderStyle.None;
@@ -243,7 +243,7 @@ namespace Diploma_Final_Project_1
 
         private void addDrugPaymentsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Pha_Add_Drug_Payment form2 = new Pha_Add_Drug_Payment();
+            Pha_Add_Drug_Payment form2 = new Pha_Add_Drug_Payment(UserID);
             // Remove borders and make the form a child control
             form2.TopLevel = false;
             form2.FormBorderStyle = FormBorderStyle.None;
@@ -301,6 +301,12 @@ namespace Diploma_Final_Project_1
 
         private void linkLabel8_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            addDrugPaymentsToolStripMenuItem_Click(null, EventArgs.Empty);
+        }
+
+        private void groupBox_finance_Enter(object sender, EventArgs e)
+        {
+
             addDrugPaymentsToolStripMenuItem_Click(null, EventArgs.Empty);
         }
     }

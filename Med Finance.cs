@@ -47,7 +47,7 @@ namespace Diploma_Final_Project_1
 
         }
 
-        private void LoadFinance3()
+       /* private void LoadFinance3()
         {
             //Create an instance of Form2
             Med_Add_expenses form2 = new Med_Add_expenses();
@@ -62,19 +62,19 @@ namespace Diploma_Final_Project_1
             // Show the form inside the GroupBox
             form2.Show();
             this.Hide();
-        }
+        }*/
 
 
 
         private void btn_add_expenses_Click(object sender, EventArgs e)
         {
-            LoadFinance3();
+           // LoadFinance3();
 
         }
 
         private void btn_viewExpenses_Click(object sender, EventArgs e)
         {
-            LoadFinance3();
+            //LoadFinance3();
         }
         private void LoadDataChart()
         {

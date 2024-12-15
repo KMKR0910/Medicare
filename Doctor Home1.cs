@@ -296,7 +296,7 @@ namespace Diploma_Final_Project_1
 
         private void addDiagnositicDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Add_Diagnose_History form2 = new Add_Diagnose_History();
+            Add_Diagnose_History form2 = new Add_Diagnose_History(UserID);
             // Remove borders and make the form a child control
             form2.TopLevel = false;
             form2.FormBorderStyle = FormBorderStyle.None;
@@ -329,7 +329,7 @@ namespace Diploma_Final_Project_1
         private void medicalCertificateToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            Doctor_Genarate_Medical_Certificate form2 = new Doctor_Genarate_Medical_Certificate();
+            Doctor_Genarate_Medical_Certificate form2 = new Doctor_Genarate_Medical_Certificate(UserID);
             // Remove borders and make the form a child control
             form2.TopLevel = false;
             form2.FormBorderStyle = FormBorderStyle.None;

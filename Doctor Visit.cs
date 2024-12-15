@@ -23,7 +23,7 @@ namespace Diploma_Final_Project_1
         }
         string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
 
-
+        string value1 = "DOC1";
 
         private void Doctor_Visit_Load(object sender, EventArgs e)
         {
@@ -134,10 +134,11 @@ namespace Diploma_Final_Project_1
             {
                 int ret;
                 string status = "Avaliable";
+               
                 using (SqlConnection conn = new SqlConnection(cs))
                 {
                     conn.Open();
-                    string query = "INSERT INTO DoctorSessions (SessionDate, StartTime, EndTime, AppointmentNumber,AppointmentStatus) VALUES (@day, @startTime, @endTime, @appointmentNumber,@status)";
+                    string query = "INSERT INTO DoctorSessions (SessionDate, StartTime, EndTime, AppointmentNumber,AppointmentStatus,[Doctor ID]) VALUES (@day, @startTime, @endTime, @appointmentNumber,@status,@doctorID)";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
@@ -146,9 +147,11 @@ namespace Diploma_Final_Project_1
                         cmd.Parameters.AddWithValue("@endTime", endTime);
                         cmd.Parameters.AddWithValue("@appointmentNumber", appointmentNumber);
                         cmd.Parameters.AddWithValue("@status", status);
+                        cmd.Parameters.AddWithValue("@doctorID", value1);
 
 
-                         ret = cmd.ExecuteNonQuery();
+
+                        ret = cmd.ExecuteNonQuery();
                         
                     }
                   

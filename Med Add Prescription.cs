@@ -13,7 +13,9 @@ namespace Diploma_Final_Project_1
 {
     public partial class Med_Add_Prescription : Form
     {
-        public Med_Add_Prescription()
+
+        private string _userId;
+        public Med_Add_Prescription(string userID)
         {
             InitializeComponent();
             Color customC = ColorTranslator.FromHtml("#9083D5 ");
@@ -22,8 +24,9 @@ namespace Diploma_Final_Project_1
 
             btn_cancel.BackColor = customC;
             btn_delete.BackColor = customC;
-        
-           
+            _userId = userID;
+
+
         }
         string prescriptionNumber;
 
@@ -51,7 +54,7 @@ namespace Diploma_Final_Project_1
                     con.Open();
 
 
-                    SqlCommand cmd = new SqlCommand("Insert Into tbl_prescript Values('" + txt_patient_ID.Text + "','" + txt_medicine.Text + "','" + txt_dosage.Text + "','" + txt_duration.Text + "','" + txt_date.Text + "','" + prescriptionNumber + "')", con);
+                    SqlCommand cmd = new SqlCommand("Insert Into tbl_prescript Values('" + txt_patient_ID.Text + "','" + txt_medicine.Text + "','" + txt_dosage.Text + "','" + txt_duration.Text + "','" + txt_date.Text + "','" + prescriptionNumber + "','" + _userId + "')", con);
                     cmd.ExecuteNonQuery();
                     con.Close();
                     MessageBox.Show("added successfully");

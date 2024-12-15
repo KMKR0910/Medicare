@@ -15,7 +15,10 @@ namespace Diploma_Final_Project_1
 {
     public partial class Doctor_Genarate_Medical_Certificate : Form
     {
-        public Doctor_Genarate_Medical_Certificate()
+
+        private string _userId;
+        string userType;
+        public Doctor_Genarate_Medical_Certificate(string userID)
         {
             InitializeComponent();
           
@@ -25,7 +28,8 @@ namespace Diploma_Final_Project_1
             button1.BackColor = customC;
 
             btn_cancel.BackColor = customC;
-            
+            _userId = userID;
+
 
         }
 
@@ -316,16 +320,16 @@ namespace Diploma_Final_Project_1
 
                     // Now, insert into tbl_M_certificate using the retrieved Patient_ID
                     string insertSql = @"
-        INSERT INTO tbl_M_certificate (Description, [Issued Date], [Start Date], [End Date], [Patient ID])
-        VALUES (@description, @issue, @start, @end, @id)";
+        INSERT INTO tbl_M_certificate (Description, [Issued Date], [Start Date], [End Date], [Patient ID],[Doctor ID])
+        VALUES (@description, @issue, @start, @end, @id,@doctorID)";
 
                     SqlCommand insertCmd = new SqlCommand(insertSql, con1);
                     insertCmd.Parameters.AddWithValue("@description", this.txt_description.Text);
                     insertCmd.Parameters.AddWithValue("@issue", this.dateTimePicker_Issue.Value);  // Use .Value for DateTimePickers
                     insertCmd.Parameters.AddWithValue("@start", this.dateTimePicker_start.Value);
                     insertCmd.Parameters.AddWithValue("@end", this.dateTimePicker_end.Value);
-                    insertCmd.Parameters.AddWithValue("@id", patientId);  // Set the Patient_ID from the previous query
-
+                    insertCmd.Parameters.AddWithValue("@id", patientId);// Set the Patient_ID from the previous query
+                    insertCmd.Parameters.AddWithValue("@doctorID",_userId);
                     // Execute the insert command
                     insertCmd.ExecuteNonQuery();
                 }

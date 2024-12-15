@@ -12,8 +12,10 @@ using System.Data.SqlClient;
 namespace Diploma_Final_Project_1
 {
     public partial class Pha_Add_Drug_Payment : Form
+
     {
-        public Pha_Add_Drug_Payment()
+        private string _userId;
+        public Pha_Add_Drug_Payment(string userID)
         {
             InitializeComponent();
             Color customC = ColorTranslator.FromHtml("#9083D5 ");
@@ -22,6 +24,7 @@ namespace Diploma_Final_Project_1
            
             btn_search.BackColor = customC;
             btn_suppliers.BackColor = customC;
+            _userId = userID;
         }
         string supplierID;
 
@@ -38,7 +41,7 @@ namespace Diploma_Final_Project_1
                 con.Open();
 
 
-                string query = "INSERT INTO tbl_drug_payments (Pay_Date, Payment_Method, Total_Cost, Suppler_ID,[OrderID])VALUES(@Pay_Date, @Payment_Method, @Total_Cost, @Suppler_ID,@orderID)";
+                string query = "INSERT INTO tbl_drug_payments (Pay_Date, Payment_Method, Total_Cost, Suppler_ID,[OrderID],[Pharamacists_ID])VALUES(@Pay_Date, @Payment_Method, @Total_Cost, @Suppler_ID,@orderID,@phaID)";
                 
                 SqlCommand cmd = new SqlCommand(query, con);
 
@@ -47,6 +50,7 @@ namespace Diploma_Final_Project_1
                 cmd.Parameters.AddWithValue("@Total_Cost", numericUpDownCost.Value);
                 cmd.Parameters.AddWithValue("@Suppler_ID", supplierID);
                 cmd.Parameters.AddWithValue("@orderID", txt_search.Text);
+                cmd.Parameters.AddWithValue("@phaID", _userId);
 
                 int ret = cmd.ExecuteNonQuery();
                 if (ret > 0)
