@@ -102,20 +102,20 @@ namespace Diploma_Final_Project_1
                     if (userType == "Medical Centre Assistant")
                     {
 
-                        sql = @"UPDATE [tbl_Medical_Centre_Assistant] SET Salary =@salary,[Doctor ID]=@doctorID WHERE  [First Name]=@Fname";
+                        sql = @"UPDATE [tbl_Medical_Centre_Assistant] SET Salary =@salary, [Doctor ID]=@doctorID WHERE  [First Name]=@Fname";
 
 
 
                     }
 
-                    if (userType == "Pharamacists")
+                    if (userType == "Pharmacists")
                     {
-                        sql = @"UPDATE  [tbl_Pharamacists] SET Salary =@salary,[Doctor ID]=@doctorID WHERE  [First Name]=@Fname";
+                        sql = @"UPDATE  [tbl_Pharamacists] SET Salary =@salary, [Doctor ID]=@doctorID WHERE  [First Name]=@Fname";
 
 
                     }
 
-                    if (userType == "Laboratary Assistant")
+                    if (userType == "Laboratory Assistant")
                     {
                         sql = @"UPDATE  [tbl_Lab_Assistant] SET Salary =@salary , [Doctor ID]=@doctorID WHERE  [First Name]=@Fname";
 
@@ -123,7 +123,7 @@ namespace Diploma_Final_Project_1
                     }
                     if (userType == "Admin")
                     {
-                        sql = @"UPDATE  [tbl_Admin] SET Salary =@salary , [Doctor ID]=@doctorID WHERE  [First Name]=@Fname";
+                        sql = @"UPDATE  [tbl_Admin] SET Salary =@salary  WHERE  [First Name]=@Fname";
 
 
 

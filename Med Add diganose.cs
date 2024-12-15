@@ -11,16 +11,14 @@ using System.Data.SqlClient;
 
 namespace Diploma_Final_Project_1
 {
-    public partial class Add_Diagnose_History : Form
+    public partial class Med_Add_diganose : Form
     {
         string patientID;
         string cellValue3;
-      
-
         private string _userId;
-        // string newUserID;
-        public Add_Diagnose_History(string userID)
+        public Med_Add_diganose(string userID)
         {
+            InitializeComponent();
             InitializeComponent();
             Color customC = ColorTranslator.FromHtml("#9083D5 ");
             btn_search.BackColor = customC;
@@ -30,67 +28,19 @@ namespace Diploma_Final_Project_1
             btn_update.BackColor = customC;
             _userId = userID;
         }
-        /* private string GenerateUserID()
-         {
 
+        private void Med_Add_diganose_Load(object sender, EventArgs e)
 
-             string lastUserID = null;
-             string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
-
-             SqlConnection con = new SqlConnection(cs);
-
-             try
-             {
-
-                 con.Open();
-                 string query = "SELECT TOP 1 DiagnosNumber FROM tbl_diagnostic_data ORDER BY DiagnosNumber DESC";
-
-                 SqlCommand cmd = new SqlCommand(query, con);
-                 SqlDataReader reader = cmd.ExecuteReader();
-                 if (reader.Read())
-                 {
-                     lastUserID = reader["DiagnosNumber"].ToString();
-                 }
-
-
-                 // If no users exist yet, start with "U001"
-                 if (string.IsNullOrEmpty(lastUserID))
-                 {
-                     return "DG001";
-                 }
-
-                 // Extract the numeric part of the UserID and increment it
-                 string numericPart = lastUserID.Substring(1);
-                 int newNumericPart = int.Parse(numericPart) + 1;
-
-                 // Format the new user ID to have leading zeros
-                 return "DG" + newNumericPart.ToString("D3");
-             }
-             catch (Exception ex)
-             {
-                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                 return null;
-             }
-
-
-         }
-        */
-        private void txt_mediccation_TextChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void txt_search_TextChanged(object sender, EventArgs e)
-        {
-
+            // newUserID = GenerateUserID();
+            txt_date.Text = DateTime.Today.ToString("yyyy-MM-dd");
         }
 
         private void btn_search_Click(object sender, EventArgs e)
         {
-
             txt_allergies.Clear();
             txt_description.Clear();
-           
+
 
             int count = 0;
             string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
@@ -189,7 +139,7 @@ namespace Diploma_Final_Project_1
                  INNER JOIN tbl_patient_info p ON td.patient_id = p.[Patient ID]
                   WHERE p.[Contact Number] = @number";
 
-                
+
                     SqlCommand com1 = new SqlCommand(sql1, con1);
                     com1.Parameters.AddWithValue("@number", this.txt_search.Text);
 
@@ -218,9 +168,6 @@ namespace Diploma_Final_Project_1
         private void btn_add_Click(object sender, EventArgs e)
         {
 
-          
-
-
             if (string.IsNullOrEmpty(this.txt_allergies.Text) || string.IsNullOrEmpty(this.txt_patient_name.Text))
             {
                 MessageBox.Show("All required fields must be filled.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -242,12 +189,23 @@ namespace Diploma_Final_Project_1
 
 
 
+                    string query = "INSERT INTO tbl_diagnostic_data ([Date], [Description], [Medications], [Allergies], [patient_id], [Med_Assistant_ID]) " +
+                                   "VALUES (@Date, @Description, @Medication, @Allergies, @PatientID, @UserID)";
 
-                    SqlCommand cmd = new SqlCommand("Insert Into tbl_diagnostic_data Values('" + txt_date.Text + "','" + txt_description.Text + "','" + medicationValues + "','" + txt_allergies.Text + "','" + patientID + "','" + _userId + "')", con);
-                    cmd.ExecuteNonQuery();
-                    con.Close();
+                    // Create the SqlCommand object
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        // Add parameters to the command object
+                        cmd.Parameters.AddWithValue("@Date", txt_date.Text);
+                        cmd.Parameters.AddWithValue("@Description", txt_description.Text);
+                        cmd.Parameters.AddWithValue("@Medication", medicationValues);
+                        cmd.Parameters.AddWithValue("@Allergies", txt_allergies.Text);
+                        cmd.Parameters.AddWithValue("@PatientID", patientID);
+                        cmd.Parameters.AddWithValue("@UserID", _userId);
 
-                    MessageBox.Show("Added successfully");
+
+                        MessageBox.Show("Added successfully");
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -292,14 +250,6 @@ namespace Diploma_Final_Project_1
                     MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        } 
-
-
-
-        private void Add_Diagnose_History_Load(object sender, EventArgs e)
-        {
-            // newUserID = GenerateUserID();
-            txt_date.Text = DateTime.Today.ToString("yyyy-MM-dd");
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -312,7 +262,7 @@ namespace Diploma_Final_Project_1
                 // Assuming you want the data from the first column (index 0)
                 string cellValue = row.Cells[4].Value.ToString();
                 string cellValue2 = row.Cells[2].Value.ToString();
-                 cellValue3= row.Cells[0].Value.ToString();
+                cellValue3 = row.Cells[0].Value.ToString();
 
                 // Set the value to the TextBox
 
@@ -329,28 +279,28 @@ namespace Diploma_Final_Project_1
             try
             {
 
-                
-
-                    SqlConnection con = new SqlConnection(cs);
-                    con.Open();
 
 
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
 
 
-                    SqlCommand cmd = new SqlCommand("UPDATE tbl_diagnostic_data SET [Description] = @description, Allergies = @allergies WHERE [DiagnosNumber] = @number ", con);
 
 
-                    cmd.Parameters.AddWithValue("@description", txt_description.Text);
+                SqlCommand cmd = new SqlCommand("UPDATE tbl_diagnostic_data SET [Description] = @description, Allergies = @allergies WHERE [DiagnosNumber] = @number ", con);
 
-                    cmd.Parameters.AddWithValue("@number", cellValue3);
-                    cmd.Parameters.AddWithValue("@allergies", txt_allergies.Text);
-                    cmd.ExecuteNonQuery();
 
-                    con.Close();
+                cmd.Parameters.AddWithValue("@description", txt_description.Text);
 
-                    MessageBox.Show("Updated successfully");
-                }
-            
+                cmd.Parameters.AddWithValue("@number", cellValue3);
+                cmd.Parameters.AddWithValue("@allergies", txt_allergies.Text);
+                cmd.ExecuteNonQuery();
+
+                con.Close();
+
+                MessageBox.Show("Updated successfully");
+            }
+
             catch (Exception ex)
             {
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -390,7 +340,6 @@ namespace Diploma_Final_Project_1
             {
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void btn_delete_Click(object sender, EventArgs e)
@@ -460,4 +409,5 @@ namespace Diploma_Final_Project_1
             }
         }
     }
-}
+    }
+

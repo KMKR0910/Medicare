@@ -13,11 +13,12 @@ namespace Diploma_Final_Project_1
 {
     public partial class User_Registration : Form
     {
-        public User_Registration()
+        private string _userIdreg;
+        public User_Registration(string userID)
         {
             InitializeComponent();
             Color customC = ColorTranslator.FromHtml("#9083D5 ");
-        
+            _userIdreg = userID;
             btn_clear.BackColor = customC;
             btn_save.BackColor = customC;
         }
@@ -278,28 +279,28 @@ namespace Diploma_Final_Project_1
 
                     if (userType == "Medical Centre Assistant")
                     {
-                        sql = "INSERT INTO [tbl_Medical_Centre_Assistant] ([Med_Assistant_ID] ,[User Password],[First Name],[Last Name],[Address],DOB,[Email Address],Qualifications,ContactNumber)" +
-                            "VALUES (@userid,@userpwd,@Fname,@Lname,@address,@DOB,@email,@qualification,@number)";
+                        sql = "INSERT INTO [tbl_Medical_Centre_Assistant] ([Med_Assistant_ID] ,[User Password],[First Name],[Last Name],[Address],DOB,[Email Address],Qualifications,ContactNumber,[Admin_ID])" +
+                            "VALUES (@userid,@userpwd,@Fname,@Lname,@address,@DOB,@email,@qualification,@number,@adminID)";
 
                     }
 
                     if (userType == "Pharamacists")
                     {
-                        sql = "INSERT INTO tbl_Pharamacists (Pharamacists_ID,[User Password],[First Name],[Last Name],[Address],DOB,[Email Address],Qualifications,ContactNumber)" +
-                            "VALUES (@userid,@userpwd,@Fname,@Lname,@address,@DOB,@email,@qualification,@number)";
+                        sql = "INSERT INTO tbl_Pharamacists (Pharamacists_ID,[User Password],[First Name],[Last Name],[Address],DOB,[Email Address],Qualifications,ContactNumber,[Admin_ID])" +
+                            "VALUES (@userid,@userpwd,@Fname,@Lname,@address,@DOB,@email,@qualification,@number,@adminID)";
 
                     }
 
                     if (userType == "Laboratary Assistant")
                     {
-                        sql = "INSERT INTO [tbl_Lab_Assistant] ([Lab-Assistant_ID],[User Password],[First Name],[Last Name],[Address],DOB,[Email Address],Qualifications,ContactNumber)" +
-                            "VALUES (@userid,@userpwd,@Fname,@Lname,@address,@DOB,@email,@qualification,@number)";
+                        sql = "INSERT INTO [tbl_Lab_Assistant] ([Lab-Assistant_ID],[User Password],[First Name],[Last Name],[Address],DOB,[Email Address],Qualifications,ContactNumber,[Admin_ID])" +
+                            "VALUES (@userid,@userpwd,@Fname,@Lname,@address,@DOB,@email,@qualification,@number,@adminID)";
 
                     }
                     if (userType == "Admin")
                     {
                         sql = "INSERT INTO [tbl_Admin] ([Admin_ID],[User Password],[First Name],[Last Name],[Address],DOB,[Email Address],Qualifications,ContactNumber)" +
-                            "VALUES (@userid,@userpwd,@Fname,@Lname,@address,@DOB,@email,@qualification,@number)";
+                            "VALUES (@userid,@userpwd,@Fname,@Lname,@address,@DOB,@email,@qualification,@number,)";
 
                     }
 
@@ -319,6 +320,7 @@ namespace Diploma_Final_Project_1
 
                     com.Parameters.AddWithValue("@qualification", this.txt_qulifications.Text);
                     com.Parameters.AddWithValue("@number", this.txt_contact.Text);
+                    com.Parameters.AddWithValue("@adminID", _userIdreg);
 
 
 

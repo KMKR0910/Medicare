@@ -344,6 +344,12 @@
     <Compile Include="Med Add Appoinment.Designer.cs">
       <DependentUpon>Med Add Appoinment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Med Add diganose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Med Add diganose.Designer.cs">
+      <DependentUpon>Med Add diganose.cs</DependentUpon>
+    </Compile>
     <Compile Include="Med Add expenses.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -622,6 +628,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Med Add Appoinment.resx">
       <DependentUpon>Med Add Appoinment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Med Add diganose.resx">
+      <DependentUpon>Med Add diganose.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Med Add expenses.resx">
       <DependentUpon>Med Add expenses.cs</DependentUpon>

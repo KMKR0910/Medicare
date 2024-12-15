@@ -66,7 +66,7 @@ namespace Diploma_Final_Project_1
         private void LoadUserRegister()
         {
             //Create an instance of Form2
-            User_Registration form2 = new User_Registration();
+            User_Registration form2 = new User_Registration(UserID);
 
             // Remove borders and make the form a child control
             form2.TopLevel = false;

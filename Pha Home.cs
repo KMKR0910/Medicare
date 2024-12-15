@@ -121,7 +121,7 @@ namespace Diploma_Final_Project_1
 
         private void addDrugOrderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Pha_Drug_Order form2 = new Pha_Drug_Order();
+            Pha_Drug_Order form2 = new Pha_Drug_Order(UserID);
             // Remove borders and make the form a child control
             form2.TopLevel = false;
             form2.FormBorderStyle = FormBorderStyle.None;

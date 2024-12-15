@@ -191,6 +191,7 @@ namespace Diploma_Final_Project_1
             this.groupBoxloc.Size = new System.Drawing.Size(2427, 1449);
             this.groupBoxloc.TabIndex = 18;
             this.groupBoxloc.TabStop = false;
+            this.groupBoxloc.Enter += new System.EventHandler(this.groupBoxloc_Enter);
             // 
             // groupBox_users
             // 

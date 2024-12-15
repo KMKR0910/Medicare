@@ -15,11 +15,15 @@ using System.Globalization;
 namespace Diploma_Final_Project_1
 {
     public partial class Doctor_Visit : Form
+
+
     {
-        public Doctor_Visit()
+        private string _userId;
+        public Doctor_Visit(string userID)
         {
             InitializeComponent();
-            
+            _userId = userID;
+
         }
         string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
 
@@ -138,7 +142,7 @@ namespace Diploma_Final_Project_1
                 using (SqlConnection conn = new SqlConnection(cs))
                 {
                     conn.Open();
-                    string query = "INSERT INTO DoctorSessions (SessionDate, StartTime, EndTime, AppointmentNumber,AppointmentStatus,[Doctor ID]) VALUES (@day, @startTime, @endTime, @appointmentNumber,@status,@doctorID)";
+                    string query = "INSERT INTO DoctorSessions (SessionDate, StartTime, EndTime, AppointmentNumber,AppointmentStatus,[Doctor ID],[Med_Assistant_ID]) VALUES (@day, @startTime, @endTime, @appointmentNumber,@status,@doctorID,@medID)";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
@@ -148,6 +152,7 @@ namespace Diploma_Final_Project_1
                         cmd.Parameters.AddWithValue("@appointmentNumber", appointmentNumber);
                         cmd.Parameters.AddWithValue("@status", status);
                         cmd.Parameters.AddWithValue("@doctorID", value1);
+                        cmd.Parameters.AddWithValue("@medID", _userId);
 
 
 

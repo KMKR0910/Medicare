@@ -14,12 +14,15 @@ namespace Diploma_Final_Project_1
 {
     public partial class Pha_Drug_Order : Form
     {
-        public Pha_Drug_Order()
+
+        private string _userId;
+        public Pha_Drug_Order(string userID)
         {
             InitializeComponent();
             Color customC = ColorTranslator.FromHtml("#9083D5 ");
             btn_search.BackColor = customC;
             btn_add.BackColor = customC;
+            _userId = userID;
 
             btn_clear.BackColor = customC;
             btn_remove.BackColor = customC;
@@ -87,11 +90,12 @@ namespace Diploma_Final_Project_1
                 con.Open();
 
 
-                string query = "INSERT INTO [tbl_Drug_order]([Order_Status],[Supplier_ID]) " +
-                               "VALUES (@status,@supplierID)";
+                string query = "INSERT INTO [tbl_Drug_order]([Order_Status],[Supplier_ID],[Pharamacists_ID]) " +
+                               "VALUES (@status,@supplierID,@phaID)";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@status", status1);
                 cmd.Parameters.AddWithValue("@supplierID", SupplierID);
+                cmd.Parameters.AddWithValue("@phaID", _userId);
 
                 int ret = cmd.ExecuteNonQuery();
 
