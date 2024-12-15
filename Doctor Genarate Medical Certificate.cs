@@ -316,7 +316,8 @@ namespace Diploma_Final_Project_1
                 object result = selectCmd.ExecuteScalar();
                 if (result != null)
                 {
-                    int patientId = Convert.ToInt32(result);
+                    string patientId = result.ToString();
+
 
                     // Now, insert into tbl_M_certificate using the retrieved Patient_ID
                     string insertSql = @"
