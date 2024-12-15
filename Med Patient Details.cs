@@ -13,14 +13,15 @@ namespace Diploma_Final_Project_1
 {
     public partial class Med_Patient_Details : Form
     {
-        public Med_Patient_Details()
+        private string _userId;
+        public Med_Patient_Details(string userID)
         {
             InitializeComponent();
             DisableFields();
             Color customC = ColorTranslator.FromHtml("#9083D5 ");
             btn_search.BackColor = customC;
             btn_save.BackColor = customC;
-
+            _userId = userID;
             btn_edit.BackColor = customC;
             btn_cancel.BackColor = customC;
         }
@@ -337,7 +338,7 @@ namespace Diploma_Final_Project_1
 
 
 
-                    string sql = "UPDATE [tbl_patient_info] SET [Name]=@name, [Address]=@address, [DOB]=@dob,  [Contact Number]=@number1 ,[Email]=@email ,[Gender]=@gender WHERE [Contact Number]=@number";
+                    string sql = "UPDATE [tbl_patient_info] SET [Name]=@name, [Address]=@address, [DOB]=@dob,  [Contact Number]=@number1 ,[Email]=@email ,[Gender]=@gender,[Med_Assistant_ID]=@medID WHERE [Contact Number]=@number";
 
                     SqlCommand com = new SqlCommand(sql, con1);
                     com.Parameters.AddWithValue("@number", this.txt_search.Text);
@@ -351,9 +352,10 @@ namespace Diploma_Final_Project_1
 
                     com.Parameters.AddWithValue("@email", this.txt_email.Text);
                     com.Parameters.AddWithValue("@gender", this.comboBox_gender.Text);
+                    com.Parameters.AddWithValue("@medID", _userId);
 
                     int ret = com.ExecuteNonQuery();
-                    if (ret == 1)
+                    if (ret >= 1)
                     {
                         MessageBox.Show("User Updated", "Information");
                     }

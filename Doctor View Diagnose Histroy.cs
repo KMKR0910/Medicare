@@ -14,7 +14,8 @@ namespace Diploma_Final_Project_1
 {
     public partial class Doctor_View_Diagnose_Histroy : Form
     {
-        public Doctor_View_Diagnose_Histroy()
+        private string _userId;
+        public Doctor_View_Diagnose_Histroy(string userID)
         {
             InitializeComponent();
             Color customC = ColorTranslator.FromHtml("#9083D5 ");
@@ -22,6 +23,7 @@ namespace Diploma_Final_Project_1
             btn_clear.BackColor = customC;
             btn_save.BackColor = customC;
             btn_all.BackColor = customC;
+            _userId = userID;
 
             btn_search.BackColor = customC;
         }
@@ -166,7 +168,7 @@ namespace Diploma_Final_Project_1
                     con1.Open();
 
 
-                    string sql = @"UPDATE  [tbl_diagnostic_data] SET [Description] =@description , [Allergies] =@allergies WHERE  [DiagnosNumber]=@id";
+                    string sql = @"UPDATE  [tbl_diagnostic_data] SET [Description] =@description , [Allergies] =@allergies,[Med_Assistant_ID]=@medID WHERE  [DiagnosNumber]=@id";
 
 
 
@@ -179,6 +181,7 @@ namespace Diploma_Final_Project_1
                     com.Parameters.AddWithValue("@description", this.txt_description.Text);
                     com.Parameters.AddWithValue("@allergies", this.txt_allergies.Text);
                     com.Parameters.AddWithValue("@id", cellValue);
+                    com.Parameters.AddWithValue("@medID", _userId);
 
 
 

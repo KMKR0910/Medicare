@@ -90,8 +90,8 @@ namespace Diploma_Final_Project_1
 
         private void btn_patients_Click(object sender, EventArgs e)
         {
-            Med_Patient_Details home = new Med_Patient_Details();
-            home.Show();
+           // Med_Patient_Details home = new Med_Patient_Details(use);
+           // home.Show();
         }
 
         private void btn_finance_Click(object sender, EventArgs e)

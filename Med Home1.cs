@@ -106,7 +106,7 @@ namespace Diploma_Final_Project_1
 
 
 
-            Med_Patient_Details form2 = new Med_Patient_Details();
+            Med_Patient_Details form2 = new Med_Patient_Details(UserID);
             // Remove borders and make the form a child control
             form2.TopLevel = false;
             form2.FormBorderStyle = FormBorderStyle.None;
@@ -166,7 +166,7 @@ namespace Diploma_Final_Project_1
 
 
 
-            Doctor_View_Diagnose_Histroy form2 = new Doctor_View_Diagnose_Histroy();
+            Doctor_View_Diagnose_Histroy form2 = new Doctor_View_Diagnose_Histroy(UserID);
             // Remove borders and make the form a child control
             form2.TopLevel = false;
             form2.FormBorderStyle = FormBorderStyle.None;

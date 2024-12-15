@@ -310,7 +310,7 @@ namespace Diploma_Final_Project_1
             form2.Show();
         }
 
-        private void editDiagnosticDataToolStripMenuItem_Click(object sender, EventArgs e)
+       /* private void editDiagnosticDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Doctor_View_Diagnose_Histroy form2 = new Doctor_View_Diagnose_Histroy();
             // Remove borders and make the form a child control
@@ -324,7 +324,7 @@ namespace Diploma_Final_Project_1
 
             // Show the form inside the GroupBox
             form2.Show();
-        }
+        }*/
 
         private void medicalCertificateToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -408,7 +408,7 @@ namespace Diploma_Final_Project_1
 
         private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            editDiagnosticDataToolStripMenuItem_Click(null, EventArgs.Empty);
+           // editDiagnosticDataToolStripMenuItem_Click(null, EventArgs.Empty);
         }
 
         private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

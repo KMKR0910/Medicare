@@ -241,13 +241,24 @@ namespace Diploma_Final_Project_1
                     con.Open();
 
 
+                    string query = "INSERT INTO tbl_diagnostic_data " +
+                                   "([Date], [Description], [Medications], [Allergies], [patient_id], [Doctor ID]) " +
+                                   "VALUES (@date, @description, @medications, @allergies, @patientID, @userID)";
 
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@date", txt_date.Text);
+                        cmd.Parameters.AddWithValue("@description", txt_description.Text);
+                        cmd.Parameters.AddWithValue("@medications", medicationValues);
+                        cmd.Parameters.AddWithValue("@allergies", txt_allergies.Text);
+                        cmd.Parameters.AddWithValue("@patientID", patientID);
+                        cmd.Parameters.AddWithValue("@userID", _userId);
 
-                    SqlCommand cmd = new SqlCommand("Insert Into tbl_diagnostic_data Values('" + txt_date.Text + "','" + txt_description.Text + "','" + medicationValues + "','" + txt_allergies.Text + "','" + patientID + "','" + _userId + "')", con);
-                    cmd.ExecuteNonQuery();
+                        cmd.ExecuteNonQuery();
+                    }
                     con.Close();
-
                     MessageBox.Show("Added successfully");
+
                 }
                 catch (Exception ex)
                 {
@@ -337,14 +348,15 @@ namespace Diploma_Final_Project_1
 
 
 
-                    SqlCommand cmd = new SqlCommand("UPDATE tbl_diagnostic_data SET [Description] = @description, Allergies = @allergies WHERE [DiagnosNumber] = @number ", con);
+                    SqlCommand cmd = new SqlCommand("UPDATE tbl_diagnostic_data SET [Description] = @description, Allergies = @allergies,[Doctor ID]=@docID WHERE [DiagnosNumber] = @number ", con);
 
 
                     cmd.Parameters.AddWithValue("@description", txt_description.Text);
 
                     cmd.Parameters.AddWithValue("@number", cellValue3);
                     cmd.Parameters.AddWithValue("@allergies", txt_allergies.Text);
-                    cmd.ExecuteNonQuery();
+                cmd.Parameters.AddWithValue("@docID", _userId);
+                cmd.ExecuteNonQuery();
 
                     con.Close();
 

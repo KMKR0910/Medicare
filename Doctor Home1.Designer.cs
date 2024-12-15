@@ -78,18 +78,17 @@ namespace Diploma_Final_Project_1
             this.appoinmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.diagnosisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addDiagnositicDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editDiagnosticDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.financeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.drugInventoryReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewDrugInventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewDrugInventoryReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewDrugOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.medicalCertificateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.laborataryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewLabTestPricelistsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewPatientLabTestsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.drugSupplierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewDrugOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.doctorSessionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -606,8 +605,7 @@ namespace Diploma_Final_Project_1
             // diagnosisToolStripMenuItem
             // 
             this.diagnosisToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addDiagnositicDataToolStripMenuItem,
-            this.editDiagnosticDataToolStripMenuItem});
+            this.addDiagnositicDataToolStripMenuItem});
             this.diagnosisToolStripMenuItem.Name = "diagnosisToolStripMenuItem";
             this.diagnosisToolStripMenuItem.Size = new System.Drawing.Size(202, 54);
             this.diagnosisToolStripMenuItem.Text = "Diagnosis";
@@ -619,13 +617,6 @@ namespace Diploma_Final_Project_1
             this.addDiagnositicDataToolStripMenuItem.Size = new System.Drawing.Size(511, 58);
             this.addDiagnositicDataToolStripMenuItem.Text = "Add Diagnositic Data";
             this.addDiagnositicDataToolStripMenuItem.Click += new System.EventHandler(this.addDiagnositicDataToolStripMenuItem_Click);
-            // 
-            // editDiagnosticDataToolStripMenuItem
-            // 
-            this.editDiagnosticDataToolStripMenuItem.Name = "editDiagnosticDataToolStripMenuItem";
-            this.editDiagnosticDataToolStripMenuItem.Size = new System.Drawing.Size(512, 58);
-            this.editDiagnosticDataToolStripMenuItem.Text = "View Diagnostic Data";
-            this.editDiagnosticDataToolStripMenuItem.Click += new System.EventHandler(this.editDiagnosticDataToolStripMenuItem_Click);
             // 
             // financeToolStripMenuItem
             // 
@@ -658,6 +649,13 @@ namespace Diploma_Final_Project_1
             this.viewDrugInventoryReportToolStripMenuItem.Size = new System.Drawing.Size(618, 58);
             this.viewDrugInventoryReportToolStripMenuItem.Text = "View Drug Inventory Report";
             this.viewDrugInventoryReportToolStripMenuItem.Click += new System.EventHandler(this.viewDrugInventoryReportToolStripMenuItem_Click);
+            // 
+            // viewDrugOrderToolStripMenuItem
+            // 
+            this.viewDrugOrderToolStripMenuItem.Name = "viewDrugOrderToolStripMenuItem";
+            this.viewDrugOrderToolStripMenuItem.Size = new System.Drawing.Size(618, 58);
+            this.viewDrugOrderToolStripMenuItem.Text = "View Drug Order";
+            this.viewDrugOrderToolStripMenuItem.Click += new System.EventHandler(this.viewDrugOrderToolStripMenuItem_Click);
             // 
             // menuStrip1
             // 
@@ -721,13 +719,6 @@ namespace Diploma_Final_Project_1
             this.drugSupplierToolStripMenuItem.Size = new System.Drawing.Size(285, 54);
             this.drugSupplierToolStripMenuItem.Text = "Drug Suppliers";
             this.drugSupplierToolStripMenuItem.Click += new System.EventHandler(this.drugSupplierToolStripMenuItem_Click);
-            // 
-            // viewDrugOrderToolStripMenuItem
-            // 
-            this.viewDrugOrderToolStripMenuItem.Name = "viewDrugOrderToolStripMenuItem";
-            this.viewDrugOrderToolStripMenuItem.Size = new System.Drawing.Size(618, 58);
-            this.viewDrugOrderToolStripMenuItem.Text = "View Drug Order";
-            this.viewDrugOrderToolStripMenuItem.Click += new System.EventHandler(this.viewDrugOrderToolStripMenuItem_Click);
             // 
             // doctorSessionToolStripMenuItem
             // 
@@ -832,7 +823,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.ToolStripMenuItem viewDrugInventoryReportToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem addDiagnositicDataToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editDiagnosticDataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem medicalCertificateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem laborataryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewLabTestPricelistsToolStripMenuItem;

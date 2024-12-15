@@ -239,8 +239,9 @@ namespace Diploma_Final_Project_1
                     "Supplier_Name = @supplier_name, " +
                     "Company_Address = @address, " +
                     "Contact_Number = @number, " +
-                    "Email = @email " +
-                    "WHERE Supplier_ID = @supplier_id";
+                   "Email = @email, " +  
+               "[Pharamacists_ID] = @phaID " + 
+               "WHERE Supplier_ID = @supplier_id";
 
                     SqlCommand cmd = new SqlCommand(query, con);
 
@@ -251,6 +252,7 @@ namespace Diploma_Final_Project_1
                     cmd.Parameters.AddWithValue("@address", txt_address.Text);
                     cmd.Parameters.AddWithValue("@number", txt_contact_number.Text);
                     cmd.Parameters.AddWithValue("@email", txt_email.Text);
+                    cmd.Parameters.AddWithValue("@phaID", _userId);
 
 
                     int ret = cmd.ExecuteNonQuery();

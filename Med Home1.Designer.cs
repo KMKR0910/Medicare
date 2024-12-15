@@ -64,7 +64,6 @@ namespace Diploma_Final_Project_1
             this.viewPatientDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.diagnosisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.view_DiagnoseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.add_DiagnoseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.prescriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addDrugPrescriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addLabPrescriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -458,8 +457,7 @@ namespace Diploma_Final_Project_1
             // diagnosisToolStripMenuItem
             // 
             this.diagnosisToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.view_DiagnoseToolStripMenuItem,
-            this.add_DiagnoseToolStripMenuItem});
+            this.view_DiagnoseToolStripMenuItem});
             this.diagnosisToolStripMenuItem.Name = "diagnosisToolStripMenuItem";
             this.diagnosisToolStripMenuItem.Size = new System.Drawing.Size(202, 54);
             this.diagnosisToolStripMenuItem.Text = "Diagnosis";
@@ -471,13 +469,6 @@ namespace Diploma_Final_Project_1
             this.view_DiagnoseToolStripMenuItem.Size = new System.Drawing.Size(405, 58);
             this.view_DiagnoseToolStripMenuItem.Text = "View Diagnose";
             this.view_DiagnoseToolStripMenuItem.Click += new System.EventHandler(this.view_DiagnoseToolStripMenuItem_Click);
-            // 
-            // add_DiagnoseToolStripMenuItem
-            // 
-            this.add_DiagnoseToolStripMenuItem.Name = "add_DiagnoseToolStripMenuItem";
-            this.add_DiagnoseToolStripMenuItem.Size = new System.Drawing.Size(405, 58);
-            this.add_DiagnoseToolStripMenuItem.Text = "Add Diagnose";
-            this.add_DiagnoseToolStripMenuItem.Click += new System.EventHandler(this.add_DiagnoseToolStripMenuItem_Click);
             // 
             // prescriptionToolStripMenuItem
             // 
@@ -817,7 +808,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.ToolStripMenuItem view_doctor_sessionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem add_doctor_sessionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem view_DiagnoseToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem add_DiagnoseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addDrugPrescriptionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addLabPrescriptionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addAppoinmentToolStripMenuItem;
