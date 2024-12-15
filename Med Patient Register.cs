@@ -14,12 +14,14 @@ namespace Diploma_Final_Project_1
 {
     public partial class Med_Patient_Register : Form
     {
-        public Med_Patient_Register()
+        private string _userId;
+        public Med_Patient_Register(string userID)
         {
             InitializeComponent();
             Color customC = ColorTranslator.FromHtml("#9083D5 ");
             btn_clear.BackColor = customC;
             btn_save.BackColor = customC;
+            _userId = userID;
 
 
         }
@@ -125,8 +127,8 @@ namespace Diploma_Final_Project_1
                 con1.Open();
 
                
-                   string sql = "INSERT INTO [tbl_patient_info] ([Patient ID],[Name],[Address],[DOB],[Contact Number],[Email],[Gender],[Password])" +
-                        "VALUES (@userid,@name,@address,@DOB,@number,@email,@gender,@userpwd)";
+                   string sql = "INSERT INTO [tbl_patient_info] ([Patient ID],[Name],[Address],[DOB],[Contact Number],[Email],[Gender],[Password],[Med_Assistant_ID])" +
+                        "VALUES (@userid,@name,@address,@DOB,@number,@email,@gender,@userpwd,@medID)";
 
               
 
@@ -148,6 +150,7 @@ namespace Diploma_Final_Project_1
                 com.Parameters.AddWithValue("@gender", this.comboBoxGender.SelectedItem);
              
                 com.Parameters.AddWithValue("@number", this.txt_contact.Text);
+                com.Parameters.AddWithValue("@medID", _userId);
 
 
 

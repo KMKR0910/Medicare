@@ -246,7 +246,7 @@ namespace Diploma_Final_Project_1
 
 
 
-            Med_Add_Appoinment form2 = new Med_Add_Appoinment();
+            Med_Add_Appoinment form2 = new Med_Add_Appoinment(UserID);
             // Remove borders and make the form a child control
             form2.TopLevel = false;
             form2.FormBorderStyle = FormBorderStyle.None;
@@ -778,7 +778,7 @@ namespace Diploma_Final_Project_1
 
         private void patientRegisterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Med_Patient_Register form2 = new Med_Patient_Register();
+            Med_Patient_Register form2 = new Med_Patient_Register(UserID);
             // Remove borders and make the form a child control
             form2.TopLevel = false;
             form2.FormBorderStyle = FormBorderStyle.None;

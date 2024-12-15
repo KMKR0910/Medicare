@@ -262,7 +262,7 @@ namespace Diploma_Final_Project_1
 
 
 
-                    SqlCommand cmd = new SqlCommand("Insert Into tbl_diagnostic_data Values('" + txt_date.Text + "','" + txt_description.Text + "','" + medicationValues + "','" + txt_allergies.Text + "','" + patientID + "','" + docID + "')", con);
+                    SqlCommand cmd = new SqlCommand("Insert Into tbl_diagnostic_data Values('" + txt_date.Text + "','" + txt_description.Text + "','" + medicationValues + "','" + txt_allergies.Text + "','" + patientID + "','" + docID + "',)", con);
                     cmd.ExecuteNonQuery();
                     con.Close();
 

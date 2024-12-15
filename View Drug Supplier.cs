@@ -12,8 +12,11 @@ using System.Data.SqlClient;
 namespace Diploma_Final_Project_1
 {
     public partial class View_Drug_Supplier : Form
+
+
     {
-        public View_Drug_Supplier()
+        private string _userId;
+        public View_Drug_Supplier(string userID)
         {
             InitializeComponent();
 
@@ -23,6 +26,7 @@ namespace Diploma_Final_Project_1
 
             btn_edit.BackColor = customC;
             btn_cancel.BackColor = customC;
+            _userId = userID;
         }
         string Sup_ID;
         private void DisableFields()
@@ -140,8 +144,8 @@ namespace Diploma_Final_Project_1
                     con.Open();
 
 
-                    string query = "INSERT INTO [tbl_drug_supplier] (Company_Name, Supplier_Name ,Company_Address,Contact_Number,Email,[Password]) " +
-                                   "VALUES (@company_name, @supplier_name, @address, @number,@email,@password)";
+                    string query = "INSERT INTO [tbl_drug_supplier] (Company_Name, Supplier_Name ,Company_Address,Contact_Number,Email,[Password],[Pharamacists_ID]) " +
+                                   "VALUES (@company_name, @supplier_name, @address, @number,@email,@password,@phaID)";
                     SqlCommand cmd = new SqlCommand(query, con);
 
                     cmd.Parameters.AddWithValue("@company_name", txt_company_name.Text);
@@ -150,6 +154,7 @@ namespace Diploma_Final_Project_1
                     cmd.Parameters.AddWithValue("@number", txt_contact_number.Text);
                     cmd.Parameters.AddWithValue("@email", txt_email.Text);
                     cmd.Parameters.AddWithValue("@password", newpassword);
+                    cmd.Parameters.AddWithValue("@phaID", _userId);
 
 
                     int ret = cmd.ExecuteNonQuery();

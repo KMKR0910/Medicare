@@ -18,7 +18,8 @@ namespace Diploma_Final_Project_1
         string status = "Pending";
         string SessionStatus1 = "Booked";
         string SessionStatus2 = "Avaliable";
-        public Med_Add_Appoinment()
+             private string _userId;
+        public Med_Add_Appoinment(string userID)
         {
             InitializeComponent();
             Color customC = ColorTranslator.FromHtml("#9083D5 ");
@@ -26,6 +27,7 @@ namespace Diploma_Final_Project_1
             btn_add.BackColor = customC;
 
             btn_clear.BackColor = customC;
+            _userId = userID;
         }
 
         string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
@@ -51,8 +53,8 @@ namespace Diploma_Final_Project_1
                   
 
 
-                    string sql = "INSERT INTO tbl_appoinment ([Patient ID],Date,time,[Appoinment Number],[status])" +
-                    "VALUES (@id,@date,@time,@number,@status)";
+                    string sql = "INSERT INTO tbl_appoinment ([Patient ID],Date,time,[Appoinment Number],[status],[Med_Assistant_ID])" +
+                    "VALUES (@id,@date,@time,@number,@status,@medid)";
                     SqlCommand com = new SqlCommand(sql, con1);
 
 
@@ -61,6 +63,7 @@ namespace Diploma_Final_Project_1
                     com.Parameters.AddWithValue("@number", this.txt_AppoinmentNumber.Text);
                     com.Parameters.AddWithValue("@id", patientId);
                     com.Parameters.AddWithValue("@status", status);
+                    com.Parameters.AddWithValue("@medid", _userId);
 
 
 

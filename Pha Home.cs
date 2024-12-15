@@ -216,7 +216,7 @@ namespace Diploma_Final_Project_1
 
         private void groupBox_Diagnose_Enter(object sender, EventArgs e)
         {
-            View_Drug_Supplier form2 = new View_Drug_Supplier();
+            View_Drug_Supplier form2 = new View_Drug_Supplier(UserID);
             // Remove borders and make the form a child control
             form2.TopLevel = false;
             form2.FormBorderStyle = FormBorderStyle.None;
@@ -260,7 +260,7 @@ namespace Diploma_Final_Project_1
 
         private void drugSupplierToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            View_Drug_Supplier form2 = new View_Drug_Supplier();
+            View_Drug_Supplier form2 = new View_Drug_Supplier(UserID);
             // Remove borders and make the form a child control
             form2.TopLevel = false;
             form2.FormBorderStyle = FormBorderStyle.None;
