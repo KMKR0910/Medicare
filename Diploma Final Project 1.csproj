@@ -33,27 +33,98 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>packages\BouncyCastle.Cryptography.2.3.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Google.Protobuf, Version=3.26.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Protobuf.3.26.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.1.3.8\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.Streams.1.3.8\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
     <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\MaterialSkin.2.2.3.1\lib\net461\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
+    <Reference Include="MySql.Data, Version=9.0.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.9.0.0\lib\net462\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="RestSharp, Version=110.2.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
       <HintPath>packages\RestSharp.110.2.0\lib\net471\RestSharp.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="Syncfusion.Grid.Base, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>packages\Syncfusion.Grid.Base.27.1.48\lib\net462\Syncfusion.Grid.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Windows, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>packages\Syncfusion.Grid.Windows.27.1.48\lib\net462\Syncfusion.Grid.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>packages\Syncfusion.Licensing.27.1.48\lib\net462\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Base, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>packages\Syncfusion.Shared.Base.27.1.48\lib\net462\Syncfusion.Shared.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Windows, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>packages\Syncfusion.Shared.Windows.27.1.48\lib\net462\Syncfusion.Shared.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SpellChecker.Base, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>packages\Syncfusion.SpellChecker.Base.27.1.48\lib\net462\Syncfusion.SpellChecker.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Base, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>packages\Syncfusion.Tools.Base.27.1.48\lib\net462\Syncfusion.Tools.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Windows, Version=27.1462.48.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>packages\Syncfusion.Tools.Windows.27.1.48\lib\net462\Syncfusion.Tools.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.CodeDom, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.CodeDom.8.0.0\lib\net462\System.CodeDom.dll</HintPath>
     </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Configuration.ConfigurationManager.8.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.8.0.1\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
+    </Reference>
     <Reference Include="System.Management" />
     <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
@@ -74,10 +145,14 @@
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="System.Transactions" />
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -87,8 +162,68 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="ZstdSharp, Version=0.8.0.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
+      <HintPath>packages\ZstdSharp.Port.0.8.0\lib\net462\ZstdSharp.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add Diagnose History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Diagnose History.Designer.cs">
+      <DependentUpon>Add Diagnose History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Home.Designer.cs">
+      <DependentUpon>Admin Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Home1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Home1.Designer.cs">
+      <DependentUpon>Admin Home1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin View Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin View Users.Designer.cs">
+      <DependentUpon>Admin View Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReports_Gen_M_Certificate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReports_Gen_M_Certificate.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport_Drug_inventory.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport_Drug_inventory.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport_Gen_Income.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport_Gen_Income.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport_Gen_Patient_B_Invoice.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport_Gen_Patient_B_Invoice.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Doctor Appoinments1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor Appoinments1.Designer.cs">
+      <DependentUpon>Doctor Appoinments1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Doctor Appointment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +248,48 @@
     <Compile Include="Doctor Home.Designer.cs">
       <DependentUpon>Doctor Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="Doctor Home1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor Home1.Designer.cs">
+      <DependentUpon>Doctor Home1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor User Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor User Profile.Designer.cs">
+      <DependentUpon>Doctor User Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor View Diagnose Histroy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor View Diagnose Histroy.Designer.cs">
+      <DependentUpon>Doctor View Diagnose Histroy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor View Drug Inventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor View Drug Inventory.Designer.cs">
+      <DependentUpon>Doctor View Drug Inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor View Drug Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor View Drug Order.Designer.cs">
+      <DependentUpon>Doctor View Drug Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor View Lab Tests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor View Lab Tests.Designer.cs">
+      <DependentUpon>Doctor View Lab Tests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor View Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor View Supplier.Designer.cs">
+      <DependentUpon>Doctor View Supplier.cs</DependentUpon>
+    </Compile>
     <Compile Include="Doctor Visit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,11 +308,65 @@
     <Compile Include="Generate Medical Certificate.Designer.cs">
       <DependentUpon>Generate Medical Certificate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lab Add lab tests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab Add lab tests.Designer.cs">
+      <DependentUpon>Lab Add lab tests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lab Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab Home.Designer.cs">
+      <DependentUpon>Lab Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lab Prescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab Prescription.Designer.cs">
+      <DependentUpon>Lab Prescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lab view lab test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab view lab test.Designer.cs">
+      <DependentUpon>Lab view lab test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main Dashboard.Designer.cs">
+      <DependentUpon>Main Dashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Med Add Appoinment.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Med Add Appoinment.Designer.cs">
       <DependentUpon>Med Add Appoinment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Med Add diganose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Med Add diganose.Designer.cs">
+      <DependentUpon>Med Add diganose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Med Add expenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Med Add expenses.Designer.cs">
+      <DependentUpon>Med Add expenses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Med Add Lab Prescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Med Add Lab Prescription.Designer.cs">
+      <DependentUpon>Med Add Lab Prescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Med Add Patient Payement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Med Add Patient Payement.Designer.cs">
+      <DependentUpon>Med Add Patient Payement.cs</DependentUpon>
     </Compile>
     <Compile Include="Med Add Prescription.cs">
       <SubType>Form</SubType>
@@ -155,11 +386,23 @@
     <Compile Include="Med Edit Appoinment.Designer.cs">
       <DependentUpon>Med Edit Appoinment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Med Finance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Med Finance.Designer.cs">
+      <DependentUpon>Med Finance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Med home.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Med home.Designer.cs">
       <DependentUpon>Med home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Med Home1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Med Home1.Designer.cs">
+      <DependentUpon>Med Home1.cs</DependentUpon>
     </Compile>
     <Compile Include="Med Patient Details.cs">
       <SubType>Form</SubType>
@@ -167,11 +410,77 @@
     <Compile Include="Med Patient Details.Designer.cs">
       <DependentUpon>Med Patient Details.cs</DependentUpon>
     </Compile>
+    <Compile Include="Med Patient Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Med Patient Register.Designer.cs">
+      <DependentUpon>Med Patient Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Med View Doctor Visits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Med View Doctor Visits.Designer.cs">
+      <DependentUpon>Med View Doctor Visits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Med View expenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Med View expenses.Designer.cs">
+      <DependentUpon>Med View expenses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Med view patient payments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Med view patient payments.Designer.cs">
+      <DependentUpon>Med view patient payments.cs</DependentUpon>
+    </Compile>
     <Compile Include="Patient Details Doctor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Patient Details Doctor.Designer.cs">
       <DependentUpon>Patient Details Doctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pha Add Drug Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pha Add Drug Payment.Designer.cs">
+      <DependentUpon>Pha Add Drug Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pha Add drugs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pha Add drugs.Designer.cs">
+      <DependentUpon>Pha Add drugs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pha Drug Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pha Drug Order.Designer.cs">
+      <DependentUpon>Pha Drug Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pha Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pha Home.Designer.cs">
+      <DependentUpon>Pha Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pha View Drug inventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pha View Drug inventory.Designer.cs">
+      <DependentUpon>Pha View Drug inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pha View Drug Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pha View Drug Order.Designer.cs">
+      <DependentUpon>Pha View Drug Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pha View drug types.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pha View drug types.Designer.cs">
+      <DependentUpon>Pha View drug types.cs</DependentUpon>
     </Compile>
     <Compile Include="Phar Prescription.cs">
       <SubType>Form</SubType>
@@ -181,6 +490,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report_Gen_Bil_Invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_Gen_Bil_Invoice.Designer.cs">
+      <DependentUpon>Report_Gen_Bil_Invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Gen_Drug_Inventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_Gen_Drug_Inventory.Designer.cs">
+      <DependentUpon>Report_Gen_Drug_Inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Gen_Income.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_Gen_Income.Designer.cs">
+      <DependentUpon>Report_Gen_Income.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Gen_M_Certificate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_Gen_M_Certificate.Designer.cs">
+      <DependentUpon>Report_Gen_M_Certificate.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Registration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +526,49 @@
     <Compile Include="Users Login.Designer.cs">
       <DependentUpon>Users Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="View Drug Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Drug Supplier.Designer.cs">
+      <DependentUpon>View Drug Supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_Doctor_visits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_Doctor_visits.Designer.cs">
+      <DependentUpon>View_Doctor_visits.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Add Diagnose History.resx">
+      <DependentUpon>Add Diagnose History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Home.resx">
+      <DependentUpon>Admin Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Home1.resx">
+      <DependentUpon>Admin Home1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin View Users.resx">
+      <DependentUpon>Admin View Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReports_Gen_M_Certificate.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReports_Gen_M_Certificate.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport_Drug_inventory.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport_Drug_inventory.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport_Gen_Income.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport_Gen_Income.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport_Gen_Patient_B_Invoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport_Gen_Patient_B_Invoice.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor Appoinments1.resx">
+      <DependentUpon>Doctor Appoinments1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Doctor Appointment.resx">
       <DependentUpon>Doctor Appointment.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,6 +581,27 @@
     <EmbeddedResource Include="Doctor Home.resx">
       <DependentUpon>Doctor Home.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Doctor Home1.resx">
+      <DependentUpon>Doctor Home1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor User Profile.resx">
+      <DependentUpon>Doctor User Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor View Diagnose Histroy.resx">
+      <DependentUpon>Doctor View Diagnose Histroy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor View Drug Inventory.resx">
+      <DependentUpon>Doctor View Drug Inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor View Drug Order.resx">
+      <DependentUpon>Doctor View Drug Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor View Lab Tests.resx">
+      <DependentUpon>Doctor View Lab Tests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor View Supplier.resx">
+      <DependentUpon>Doctor View Supplier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Doctor Visit.resx">
       <DependentUpon>Doctor Visit.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,8 +611,35 @@
     <EmbeddedResource Include="Generate Medical Certificate.resx">
       <DependentUpon>Generate Medical Certificate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Lab Add lab tests.resx">
+      <DependentUpon>Lab Add lab tests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab Home.resx">
+      <DependentUpon>Lab Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab Prescription.resx">
+      <DependentUpon>Lab Prescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab view lab test.resx">
+      <DependentUpon>Lab view lab test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main Dashboard.resx">
+      <DependentUpon>Main Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Med Add Appoinment.resx">
       <DependentUpon>Med Add Appoinment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Med Add diganose.resx">
+      <DependentUpon>Med Add diganose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Med Add expenses.resx">
+      <DependentUpon>Med Add expenses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Med Add Lab Prescription.resx">
+      <DependentUpon>Med Add Lab Prescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Med Add Patient Payement.resx">
+      <DependentUpon>Med Add Patient Payement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Med Add Prescription.resx">
       <DependentUpon>Med Add Prescription.cs</DependentUpon>
@@ -226,14 +650,53 @@
     <EmbeddedResource Include="Med Edit Appoinment.resx">
       <DependentUpon>Med Edit Appoinment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Med Finance.resx">
+      <DependentUpon>Med Finance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Med home.resx">
       <DependentUpon>Med home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Med Home1.resx">
+      <DependentUpon>Med Home1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Med Patient Details.resx">
       <DependentUpon>Med Patient Details.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Med Patient Register.resx">
+      <DependentUpon>Med Patient Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Med View Doctor Visits.resx">
+      <DependentUpon>Med View Doctor Visits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Med View expenses.resx">
+      <DependentUpon>Med View expenses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Med view patient payments.resx">
+      <DependentUpon>Med view patient payments.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Patient Details Doctor.resx">
       <DependentUpon>Patient Details Doctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pha Add Drug Payment.resx">
+      <DependentUpon>Pha Add Drug Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pha Add drugs.resx">
+      <DependentUpon>Pha Add drugs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pha Drug Order.resx">
+      <DependentUpon>Pha Drug Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pha Home.resx">
+      <DependentUpon>Pha Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pha View Drug inventory.resx">
+      <DependentUpon>Pha View Drug inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pha View Drug Order.resx">
+      <DependentUpon>Pha View Drug Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pha View drug types.resx">
+      <DependentUpon>Pha View drug types.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Phar Prescription.resx">
       <DependentUpon>Phar Prescription.cs</DependentUpon>
@@ -246,12 +709,31 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report_Gen_Bil_Invoice.resx">
+      <DependentUpon>Report_Gen_Bil_Invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Gen_Drug_Inventory.resx">
+      <DependentUpon>Report_Gen_Drug_Inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Gen_Income.resx">
+      <DependentUpon>Report_Gen_Income.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Gen_M_Certificate.resx">
+      <DependentUpon>Report_Gen_M_Certificate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User Registration.resx">
       <DependentUpon>User Registration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users Login.resx">
       <DependentUpon>Users Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View Drug Supplier.resx">
+      <DependentUpon>View Drug Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Doctor_visits.resx">
+      <DependentUpon>View_Doctor_visits.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -266,6 +748,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MetroFramework.txt" />
+    <None Include="Resources\Screenshot 2024-09-19 031429.png" />
+    <None Include="Resources\images %284%29.jpeg" />
+    <None Include="Resources\360_F_372435911_7Nq7sVzcNRRYFLQ1iZzQVgRLgXL5C839.jpg" />
+    <None Include="Resources\medical-record-line-icon-patient-diagnosis-report-linear-pictogram-health-information-on-clipboard-outline-icon-hospital-note-diagnostic-document-editable-stroke-isolated-illustration-vector1.jpg" />
+    <None Include="Resources\medical-record-line-icon-patient-diagnosis-report-linear-pictogram-health-information-on-clipboard-outline-icon-hospital-note-diagnostic-document-editable-stroke-isolated-illustration-vector.jpg" />
+    <None Include="Resources\images %283%29.png" />
+    <None Include="Resources\4883268-200.png" />
+    <None Include="Resources\images %282%29.png" />
+    <None Include="Resources\3682281.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

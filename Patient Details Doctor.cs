@@ -16,30 +16,12 @@ namespace Diploma_Final_Project_1
         public Patient_Details_Doctor()
         {
             InitializeComponent();
-            DisableFields();
-        }
-        private void DisableFields()
-        {
-            txt_Name.Enabled = false;
-            txt_address.Enabled = false;
-
-
-            dateTimePicker_DOB.Enabled = false;
+            Color customC = ColorTranslator.FromHtml("#9083D5 ");
+            btn_search.BackColor = customC;
             
-            txt_contact.Enabled = false;
-            txt_age.Enabled = false;
 
         }
-        private void EnableFields()
-        {
-            txt_Name.Enabled = true;
-            txt_address.Enabled = true;
-            dateTimePicker_DOB.Enabled = true;
-
-            txt_contact.Enabled = true;
-            txt_age.Enabled = true;
-
-        }
+       
         public int CalculateAge(DateTime dob)
         {
             // Get today's date
@@ -58,25 +40,9 @@ namespace Diploma_Final_Project_1
             return age;
         }
       
-        private void label4_Click(object sender, EventArgs e)
-        {
+      
 
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void Patient_Details_Doctor_Load(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void btn_search_Click(object sender, EventArgs e)
         {
@@ -107,7 +73,8 @@ namespace Diploma_Final_Project_1
                     this.txt_address.Text = rows["Address"].ToString();
                     this.dateTimePicker_DOB.Text = rows["DOB"].ToString();
                     this.txt_contact.Text = rows["Contact Number"].ToString();
-                   
+                    this.txt_gender.Text = rows["Gender"].ToString();
+
 
                     // Parse the DOB field to a DateTime object
                     DateTime dob = DateTime.Parse(rows["DOB"].ToString());
@@ -127,7 +94,7 @@ namespace Diploma_Final_Project_1
             }
             try
             {
-
+                //diagnose data
 
 
                 SqlConnection con = new SqlConnection(cs);
@@ -138,7 +105,7 @@ namespace Diploma_Final_Project_1
 
 
                 string sql = @"
-                 SELECT td.* 
+                 SELECT td.[Allergies], td.[Description],td.[Medications]
                  FROM tbl_diagnostic_data td
                  INNER JOIN tbl_patient_info p ON td.patient_id = p.[Patient ID]
                   WHERE p.[Contact Number] = @number";
@@ -152,7 +119,7 @@ namespace Diploma_Final_Project_1
                 dap.Fill(ds);
 
                 this.dataGridView_Diagnose.DataSource = ds.Tables[0];
-
+               
 
                 con.Close();
             }
@@ -171,12 +138,12 @@ namespace Diploma_Final_Project_1
 
 
 
-
+                //prescription
 
                 string sql = @"
-                 SELECT td.* 
-                 FROM [tbl_prescription] td
-                 INNER JOIN tbl_patient_info p ON td.[Patient ID] = p.[Patient ID]
+                 SELECT td.[date],td.[Medicine],td.[Dosage],td.[Duration] 
+                 FROM [tbl_prescript] td
+                 INNER JOIN tbl_patient_info p ON td.patientid = p.[Patient ID]
                   WHERE p.[Contact Number] = @number";
                 SqlCommand com = new SqlCommand(sql, con);
 
@@ -188,6 +155,7 @@ namespace Diploma_Final_Project_1
                 dap.Fill(ds);
 
                 this.dataGridView_Prescription.DataSource = ds.Tables[0];
+                dataGridView_Prescription.Columns[0].HeaderText = "Date";
 
 
                 con.Close();
@@ -205,11 +173,11 @@ namespace Diploma_Final_Project_1
                 con.Open();
 
 
-
+                //MC
 
 
                 string sql = @"
-                 SELECT td.* 
+                 SELECT td.[Issued Date],td.[Description],td.[Start Date],td.[End Date]
                  FROM [tbl_M_certificate] td
                  INNER JOIN tbl_patient_info p ON td.[Patient ID] = p.[Patient ID]
                   WHERE p.[Contact Number] = @number";
@@ -223,6 +191,45 @@ namespace Diploma_Final_Project_1
                 dap.Fill(ds);
 
                 this.dataGridView_M_Certificate.DataSource = ds.Tables[0];
+               
+
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            try
+            {
+
+
+
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+
+                //LAB
+
+
+
+                string sql = @"
+                 SELECT td.[Test_Type],td.[Rep_status],td.[Blood_Collected_Time],td.[Report_Relesed_Time]
+                 FROM [tbl_Lab_Test_Report] td
+                 INNER JOIN tbl_patient_info p ON td.[Patient_ID] = p.[Patient ID]
+                  WHERE p.[Contact Number] = @number";
+                SqlCommand com = new SqlCommand(sql, con);
+
+                com.Parameters.AddWithValue("@number", this.txt_search.Text);
+
+
+                SqlDataAdapter dap = new SqlDataAdapter(com);
+                DataSet ds = new DataSet();
+                dap.Fill(ds);
+
+                this.dataGridView_LabReport.DataSource = ds.Tables[0];
+                dataGridView_LabReport.Columns[0].HeaderText = "Test Name";
+                dataGridView_LabReport.Columns[1].HeaderText = "Status";
+                dataGridView_LabReport.Columns[2].HeaderText = "Boold Collected Date";
+                dataGridView_LabReport.Columns[3].HeaderText = "Report Released Date";
 
 
                 con.Close();
@@ -231,6 +238,32 @@ namespace Diploma_Final_Project_1
             {
                 MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void Patient_Details_Doctor_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_search_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView_LabReport_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            MessageBox.Show("You can now view the patient's Laboratory Test Report.");
+
+        }
+
+        private void dataGridView_Diagnose_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

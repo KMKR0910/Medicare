@@ -17,6 +17,8 @@ namespace Diploma_Final_Project_1
         public Phar_Prescription()
         {
             InitializeComponent();
+            Color customC = ColorTranslator.FromHtml("#9083D5 ");
+            btn_search.BackColor = customC;
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)
@@ -143,9 +145,9 @@ namespace Diploma_Final_Project_1
 
 
                 string sql = @"
-                 SELECT td.* 
-                 FROM [tbl_prescription] td
-                 INNER JOIN tbl_patient_info p ON td.[Patient ID] = p.[Patient ID]
+                 SELECT td.[Medicine],td.[Dosage],td.[Duration],td.[date],td.[PrescriptionNumber]
+                 FROM [tbl_prescript] td
+                 INNER JOIN tbl_patient_info p ON td.patientid = p.[Patient ID]
                   WHERE p.[Contact Number] = @number";
                 SqlCommand com = new SqlCommand(sql, con);
 
@@ -157,6 +159,8 @@ namespace Diploma_Final_Project_1
                 dap.Fill(ds);
 
                 this.dataGridView_Prescription.DataSource = ds.Tables[0];
+                dataGridView_Prescription.Columns[3].HeaderText = "Date";
+
 
 
                 con.Close();
@@ -169,21 +173,120 @@ namespace Diploma_Final_Project_1
 
         private void dataGridView_Prescription_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            try
             {
-                // Get the current row
-                DataGridViewRow row = dataGridView_Prescription.Rows[e.RowIndex];
+                if (e.RowIndex >= 0)
+                {
+                    // Get the current row
+                    DataGridViewRow row = dataGridView_Prescription.Rows[e.RowIndex];
 
-                // Assuming you want the data from the first column (index 0)
-                string cellValue = row.Cells[0].Value.ToString();
-                string cellValue2 = row.Cells[1].Value.ToString();
-                string cellValue3 = row.Cells[2].Value.ToString();
+                    // Assuming you want the data from the first column (index 0)
 
-                // Set the value to the TextBox
-                txt_prescription.Text = cellValue;
-                txt_drugs.Text = cellValue2;
-                txt_description.Text = cellValue2;
+                    string cellValue2 = row.Cells[0].Value.ToString();
+                    string cellValue3 = row.Cells[1].Value.ToString();
+                    string cellValue4 = row.Cells[2].Value.ToString();
+                    string cellValue5 = row.Cells[4].Value.ToString();
+                    // Set the value to the TextBox
+                    txt_medicine.Text = cellValue2;
+                    txt_dosage.Text = cellValue3;
+                    txt_duration.Text = cellValue4;
+                    txt_prescripton_number.Text = cellValue5;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
+        private void btn_search_Click_1(object sender, EventArgs e)
+        {
+            string cs = "Data Source=ASUS; Initial Catalog =Diploma Final Project DB1; Integrated Security=True";
+
+            try
+            {
+
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+
+
+                string sql = "SELECT *  FROM [tbl_patient_info] WHERE [Contact Number] = @number ";
+                SqlCommand com1 = new SqlCommand(sql, con);
+                com1.Parameters.AddWithValue("@number", this.txt_search.Text);
+                SqlDataAdapter dap = new SqlDataAdapter(com1);
+                DataSet ds = new DataSet();
+                dap.Fill(ds);
+
+
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+
+                    DataRow rows = ds.Tables[0].Rows[0];
+
+
+                    this.txt_Name.Text = rows["Name"].ToString();
+                    this.txt_address.Text = rows["Address"].ToString();
+                    this.dateTimePicker_DOB.Text = rows["DOB"].ToString();
+                    this.txt_contact.Text = rows["Contact Number"].ToString();
+
+
+                    // Parse the DOB field to a DateTime object
+                    DateTime dob = DateTime.Parse(rows["DOB"].ToString());
+
+                    // Call the method to calculate the patient's age and display it
+                    CalculateAge(dob);
+
+                }
+                //disconnect from sql server 
+                con.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            try
+            {
+
+             
+             
+
+                SqlConnection con = new SqlConnection(cs);
+                con.Open();
+
+
+
+
+
+                string sql = @"
+                 SELECT td.[Medicine],td.[Dosage],td.[Duration],td.[date],td.[PrescriptionNumber]
+                 FROM [tbl_prescript] td
+                 INNER JOIN tbl_patient_info p ON td.patientid = p.[Patient ID]
+                  WHERE p.[Contact Number] = @number
+    ORDER BY td.[date] DESC";
+              
+                SqlCommand com = new SqlCommand(sql, con);
+
+                com.Parameters.AddWithValue("@number", this.txt_search.Text);
+               // com.Parameters.AddWithValue("@date", DateTime.Today);
+
+
+                SqlDataAdapter dap = new SqlDataAdapter(com);
+                DataSet ds = new DataSet();
+                dap.Fill(ds);
+
+                this.dataGridView_Prescription.DataSource = ds.Tables[0];
+                dataGridView_Prescription.Columns[3].HeaderText = "Date";
+
+
+
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
