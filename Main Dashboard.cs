@@ -183,5 +183,10 @@ namespace Diploma_Final_Project_1
         {
 
         }
+
+        private void txt_username_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -101,6 +101,7 @@ namespace Diploma_Final_Project_1
             this.txt_username.Name = "txt_username";
             this.txt_username.Size = new System.Drawing.Size(441, 38);
             this.txt_username.TabIndex = 37;
+            this.txt_username.TextChanged += new System.EventHandler(this.txt_username_TextChanged);
             // 
             // label2
             // 

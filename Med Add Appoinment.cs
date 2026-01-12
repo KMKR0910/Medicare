@@ -74,7 +74,7 @@ namespace Diploma_Final_Project_1
 
 
                     int ret = com.ExecuteNonQuery();
-                    if (ret == 1)
+                    if (ret >0)
                     {
                         MessageBox.Show("Appoinment Updated", "Information");
                         Med_Add_Appoinment_Load(this, EventArgs.Empty);
