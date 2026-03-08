@@ -58,7 +58,9 @@ namespace Diploma_Final_Project_1
             this.btn_clear = new System.Windows.Forms.Button();
             this.autoComplete1 = new Syncfusion.Windows.Forms.Tools.AutoComplete(this.components);
             this.label14 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.autoComplete1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_save
@@ -105,7 +107,6 @@ namespace Diploma_Final_Project_1
             this.txt_L_Name.Name = "txt_L_Name";
             this.txt_L_Name.Size = new System.Drawing.Size(328, 44);
             this.txt_L_Name.TabIndex = 46;
-            this.txt_L_Name.TextChanged += new System.EventHandler(this.txt_L_Name_TextChanged);
             // 
             // txt_address_HNO
             // 
@@ -352,6 +353,10 @@ namespace Diploma_Final_Project_1
             this.label14.TabIndex = 63;
             this.label14.Text = "City";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // User_Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -389,6 +394,7 @@ namespace Diploma_Final_Project_1
             this.Text = "User_Registration";
             this.Load += new System.EventHandler(this.User_Registration_Load);
             ((System.ComponentModel.ISupportInitialize)(this.autoComplete1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -423,5 +429,6 @@ namespace Diploma_Final_Project_1
         private System.Windows.Forms.Button btn_clear;
         private Syncfusion.Windows.Forms.Tools.AutoComplete autoComplete1;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
